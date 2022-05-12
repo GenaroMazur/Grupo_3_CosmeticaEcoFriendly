@@ -57,3 +57,6 @@ parte de programación, estoy sintiendo atracción por la rama del frontend. En 
 - [Lemon](https://www.lemon.me/) por la implementación de las funcionalidades en el inicio suyo, siendo que al scrollear hacia abajo, el título va haciendo un movimiento ascendente perdiéndose luego en la barra superior. También por como aparecen los títulos y el efecto flotante en algunas imágenes.
 - [Antares Cervecería](https://www.cervezaantares.com/) por exclusivamente una de sus funcionalidades. Las etiquetas al ser seleccionadas por el cursor, aparecen líneas como con un efecto de subrayado que al no colocar el cursor sobre esas etiquetas, desaparece.
 - [M&NDistribuciones](https://myndistribuciones.com.ar/) por las funcionalidades de búsqueda de producto y el botón de promociones.
+
+## trello del grupo
+-[Trello](https://trello.com/b/d33TT4WU/proyecto-dh%E3%80%8Acosm%C3%A9tica-eco-friendly%E3%80%8B)
