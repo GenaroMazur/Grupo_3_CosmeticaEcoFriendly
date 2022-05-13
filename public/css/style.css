@@ -1,0 +1,12 @@
+article#login{
+    background-color:aliceblue;
+}
+article#register{
+    background-color:aliceblue;
+}
+#login>section{
+    text-align: center;
+}
+#register>section{
+    text-align: center;
+}
