@@ -1,19 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 8px 0px;
+}
 /*  Estilo de Login y Register Genaro*/
-article#login{
-    background-color:aliceblue;
-}
-article#register{
-    background-color:aliceblue;
-}
 #login>section{
     text-align: center;
 }
 #register>section{
     text-align: center;
 }
+.form{
+    background-color:#fce4d4;
+    padding: 5px 0px;
+}
 #login .button{
     background-color:#889B65;
+    padding: 5px 15px;
+    margin-top: 5px;
+    border: outset 1px #a4b97c;
 }
 #register .button{
     background-color:#889B65;
+    padding: 5px 15px;
+    margin-top: 5px;
+    border: outset 1px #a4b97c;
 }
