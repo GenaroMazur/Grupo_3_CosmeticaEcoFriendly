@@ -1,15 +1,12 @@
 /*  Estilo de Login y Register Genaro*/
-article#login{
-    background-color:aliceblue;
-}
-article#register{
-    background-color:aliceblue;
-}
 #login>section{
     text-align: center;
 }
 #register>section{
     text-align: center;
+}
+.form{
+    background-color:#fce4d4;
 }
 #login .button{
     background-color:#889B65;
