@@ -11,3 +11,9 @@ article#register{
 #register>section{
     text-align: center;
 }
+#login .button{
+    background-color:#889B65;
+}
+#register .button{
+    background-color:#889B65;
+}

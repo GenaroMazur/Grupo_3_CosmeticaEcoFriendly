@@ -12,13 +12,11 @@
         <h1>Cosmetica Eco Friendly</h1>
         <img src="" alt="logo">
         <nav>
-            <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/DetalleDeProducto">Productos</a></li>
-                <li><a href="/CarritoDeCompras">Carrito</a></li>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/registro">Registro</a></li>
-            </ul>
+            <span><a href="/">Inicio</a></span>
+            <span><a href="/DetalleDeProducto">Productos</a></span>
+            <span><a href="/CarritoDeCompras">Carrito</a></span>
+            <span><a href="/login">Login</a></span>
+            <span><a href="/registro">Registro</a></span>
         </nav>
     </header>
     <article id="login">
@@ -29,12 +27,14 @@
             <img src="/img/jabon_2.jpg" alt="Logo login" width="30px">
             <h2>Login</h2>
             <form action="post">
+                <span>Nombre de usuario</span><br>
                 <input type="text"><br>
+                <span>Contraseña</span><br>
                 <input type="checkbox" name="hidden" id="hidden">
                 <input type="password" name="password" id=""><br>
-                <input type="button" value="Login">
+                <input type="button" value="Login" class="button">
             </form>
-            <p1>¿ No tienes una cuenta ? Create una!<a href="/registro"><button>Sign up</button></a></p1>
+            <p1>¿ No tienes una cuenta ? Create una!<a href="/registro"><button class="button">Sign up</button></a></p1>
         </section>
     </article>
     <aside>
