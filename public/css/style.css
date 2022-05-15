@@ -42,6 +42,11 @@ form>input{
 .img{
     width: 35%;
 }
+.form>img{
+    border-radius: 100%;
+    width: 18vw;
+    height:18vw;
+}
 #login .button{
     background-color:#889B65;
     padding: 5px 15px;
