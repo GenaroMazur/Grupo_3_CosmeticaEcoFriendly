@@ -3,6 +3,7 @@
 }
 body{
     margin: 8px 0px;
+    background-color: #eacc85
 }
 /*  Estilo de Login y Register Genaro*/
 #login{
@@ -42,11 +43,6 @@ form>input{
 .img{
     width: 35%;
 }
-.form>img{
-    border-radius: 100%;
-    width: 18vw;
-    height:18vw;
-}
 #login .button{
     background-color:#889B65;
     padding: 5px 15px;
@@ -59,5 +55,12 @@ form>input{
     margin-top: 5px;
     border: outset 1px #a4b97c;
 }
-
+/*  Estilo de home Fabri*/
+ body#index{
+     background-color: #eacc85
+ }
+ #x-icon{
+     border-radius: 100%;
+     width: 100%;
+ }
 
