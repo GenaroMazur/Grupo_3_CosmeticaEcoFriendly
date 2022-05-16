@@ -5,6 +5,18 @@ body{
     margin: 8px 0px;
 }
 /*  Estilo de Login y Register Genaro*/
+#login{
+    padding-top: 5px;
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+#register{
+    padding-top: 5px;
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+}
 #login>section{
     text-align: center;
 }
@@ -14,6 +26,21 @@ body{
 .form{
     background-color:#fce4d4;
     padding: 5px 0px;
+    width: 65%;
+    vertical-align: middle;
+}
+form>.text{
+    background: color #fae4d6; ;
+    border: #483c2c solid 2px;
+    border-radius: 4px;
+}
+form>input{
+    margin:8px;
+    padding: 5px;
+    box-shadow: 1px 1px 3px;
+}
+.img{
+    width: 35%;
 }
 #login .button{
     background-color:#889B65;
