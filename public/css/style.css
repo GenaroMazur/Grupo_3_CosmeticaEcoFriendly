@@ -10,12 +10,14 @@ body{
     height: 60vh;
     display: flex;
     flex-wrap: wrap;
+    margin-top:4px;
 }
 #register{
     padding-top: 5px;
     height: 60vh;
     display: flex;
     flex-wrap: wrap;
+    margin-top:4px;
 }
 #login>section{
     text-align: center;
