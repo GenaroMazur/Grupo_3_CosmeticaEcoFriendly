@@ -3,7 +3,6 @@
 }
 body{
     margin: 8px 0px;
-    background-color: #eacc85
 }
 /*  Estilo de Login y Register Genaro*/
 #login{
@@ -11,7 +10,7 @@ body{
     height: 60vh;
     display: flex;
     flex-wrap: wrap;
-    margin-top:4px;
+    margin:8px 0px;
 }
 #register{
     padding-top: 5px;
@@ -30,7 +29,11 @@ body{
     background-color:#fce4d4;
     padding: 5px 0px;
     width: 65%;
-    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 form>.text{
     background: color #fae4d6; ;
@@ -44,6 +47,14 @@ form>input{
 }
 .img{
     width: 35%;
+    max-height: 90vh;
+}
+#form_log{
+    border-radius: 100%;
+    width:20vw;
+    height:20vw;
+    max-width:150px;
+    max-height:150px;
 }
 #login .button{
     background-color:#889B65;
@@ -56,6 +67,12 @@ form>input{
     padding: 5px 15px;
     margin-top: 5px;
     border: outset 1px #a4b97c;
+}
+.formulario{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 /*  Estilo de home Fabri*/
  body#index{
