@@ -5,75 +5,44 @@ body{
     margin: 8px 0px;
 }
 /*  Estilo de Login y Register Genaro*/
-#login{
-    padding-top: 5px;
-    height: 60vh;
+.container{
     display: flex;
-    flex-wrap: wrap;
-    margin:8px 0px;
-}
-#register{
-    padding-top: 5px;
-    height: 60vh;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top:4px;
-}
-#login>section{
-    text-align: center;
-}
-#register>section{
-    text-align: center;
+    flex-wrap: nowrap;
+    max-height: 50vw
 }
 .form{
-    background-color:#fce4d4;
-    padding: 5px 0px;
-    width: 65%;
+    width: 55vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
+    text-align: justify;
 }
-form>.text{
-    background: color #fae4d6; ;
-    border: #483c2c solid 2px;
-    border-radius: 4px;
-}
-form>input{
-    margin:8px;
-    padding: 5px;
-    box-shadow: 1px 1px 3px;
-}
-.img{
-    width: 35%;
-    max-height: 90vh;
-}
-#form_log{
-    border-radius: 100%;
-    width:20vw;
-    height:20vw;
-    max-width:150px;
-    max-height:150px;
-}
-#login .button{
-    background-color:#889B65;
-    padding: 5px 15px;
-    margin-top: 5px;
-    border: outset 1px #a4b97c;
-}
-#register .button{
-    background-color:#889B65;
-    padding: 5px 15px;
-    margin-top: 5px;
-    border: outset 1px #a4b97c;
-}
-.formulario{
-    display:flex;
+.form form{
+    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
+    align-content: center;
+    padding: 1%;
 }
+.textArea{
+    padding: 3% 30%;
+    margin:1.8%;
+    text-align: center;
+}
+.form img{
+    width: 25vw;
+    height: 25vw;
+    border-radius: 100%;
+    max-width: 150px;
+    max-height: 150px;
+}
+.img{
+    width: 45vw;
+}
+
 /*  Estilo de home Fabri*/
  body#index{
      background-color: #eacc85
