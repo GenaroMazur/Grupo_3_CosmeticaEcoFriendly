@@ -8,7 +8,8 @@ body{
 .container{
     display: flex;
     flex-wrap: nowrap;
-    max-height: 50vw
+    max-height: 50vw;
+    background: #fce4d4;
 }
 .form{
     width: 55vw;
@@ -27,20 +28,35 @@ body{
     align-content: center;
     padding: 1%;
 }
+form>*{
+    margin:10px 0px;
+}
+form>span{
+    margin-top: 0px;
+}
 .textArea{
+    background-color: #f8f3f0;
     padding: 3% 30%;
     margin:1.8%;
     text-align: center;
+    border-radius: 5px;
+    border: #eacc85 inset 1px;
 }
 .form img{
     width: 25vw;
     height: 25vw;
-    border-radius: 100%;
     max-width: 150px;
     max-height: 150px;
 }
 .img{
     width: 45vw;
+}
+.button{
+    background-color: #889b65;
+    padding: 4px 10px;
+    margin:1.8% 0%;
+    border: #889b65 unset 1px;
+    border-radius: 5px;
 }
 
 /*  Estilo de home Fabri*/
