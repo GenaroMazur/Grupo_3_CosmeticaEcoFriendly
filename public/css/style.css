@@ -4,6 +4,7 @@
 body{
     margin: 0px 0px;
 }
+
 /*  Estilo de Login y Register Genaro*/
 .container{
     display: flex;
@@ -67,6 +68,7 @@ form>span{
     border: #889b65 unset 1px;
     border-radius: 5px;
 }
+
 /*  Estilo de home Fabri*/
 body#index{
     background-color: #eacc85
@@ -76,15 +78,22 @@ body#index{
      width: 100%;
     }
 
-/* Medias */
+/* -------------- Medias ----------------- */
+
+/* -------------tablet---------------- */
 @media(min-width:481px){
+
     /*  Estilo de Login y Register Genaro*/
     .form{
         margin:3% 20%;
         border-radius:20px;
     }
+
 }
+
+/* -------------escritorio-------------- */
 @media(min-width:750px){
+
     /*  Estilo de Login y Register Genaro*/
     .img{
         visibility:visible;
@@ -104,4 +113,5 @@ body#index{
     .container{
         background-image: none;
     }
+
 }
