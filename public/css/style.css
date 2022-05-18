@@ -2,65 +2,116 @@
     box-sizing: border-box;
 }
 body{
-    margin: 8px 0px;
-    background-color: #eacc85
+    margin: 0px 0px;
 }
+
 /*  Estilo de Login y Register Genaro*/
-#login{
-    padding-top: 5px;
-    height: 60vh;
+.container{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    background: #fce4d4;
+    background-image: url(/img/jabon_1.jpg);
+    background-repeat:round;
 }
-#register{
-    padding-top: 5px;
-    height: 60vh;
-    display: flex;
-    flex-wrap: wrap;
-}
-#login>section{
-    text-align: center;
-}
-#register>section{
-    text-align: center;
+.container a{
+    text-decoration: none;
+    color: #464646;
 }
 .form{
-    background-color:#fce4d4;
-    padding: 5px 0px;
-    width: 65%;
-    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fce4d4aa;
+    flex-grow: 1;
+    color: #464646;
+    text-align: center;
+    padding:4%;
 }
-form>.text{
-    background: color #fae4d6; ;
-    border: #483c2c solid 2px;
-    border-radius: 4px;
+.form form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items:center;
+    align-content: center;
+    padding: 1%;
 }
-form>input{
-    margin:8px;
-    padding: 5px;
-    box-shadow: 1px 1px 3px;
+form>*{
+    margin:10px 0px;
+}
+form>span{
+    margin-top: 0px;
+}
+.textArea{
+    background-color: #f8f3f0;
+    padding: 3% 30%;
+    margin:1.8%;
+    text-align: center;
+    border: #ddc387b5 inset 1px;
+}
+.form img{
+    width: 25vw;
+    height: 25vw;
+    max-width: 150px;
+    max-height: 150px;
 }
 .img{
-    width: 35%;
+    width: 45vw;
+    visibility: hidden;
+    display: none;
 }
-#login .button{
-    background-color:#889B65;
-    padding: 5px 15px;
-    margin-top: 5px;
-    border: outset 1px #a4b97c;
+.button{
+    background-color: #889b65;
+    padding: 4px 10px;
+    margin:1.8% 0%;
+    border: #889b65 unset 1px;
+    border-radius: 5px;
 }
-#register .button{
-    background-color:#889B65;
-    padding: 5px 15px;
-    margin-top: 5px;
-    border: outset 1px #a4b97c;
-}
+
 /*  Estilo de home Fabri*/
- body#index{
-     background-color: #eacc85
+body#index{
+    background-color: #eacc85
  }
  head #x-icon{
      border-radius: 100%;
      width: 100%;
- }
+    }
 
+/* -------------- Medias ----------------- */
+
+/* -------------tablet---------------- */
+@media(min-width:481px){
+
+    /*  Estilo de Login y Register Genaro*/
+    .form{
+        margin:3% 20%;
+        border-radius:20px;
+    }
+
+}
+
+/* -------------escritorio-------------- */
+@media(min-width:750px){
+
+    /*  Estilo de Login y Register Genaro*/
+    .img{
+        visibility:visible;
+        display:block;
+    }
+    .form{
+        background-color: #fce4d4;
+        margin:0px;
+        border-radius: 0px;
+    }
+    form>.textArea{
+        margin: 8% 0px 0px;
+    }
+    .hidden{
+        align-self: flex-start;
+    }
+    .container{
+        background-image: none;
+    }
+
+}
