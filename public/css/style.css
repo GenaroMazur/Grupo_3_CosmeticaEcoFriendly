@@ -2,23 +2,31 @@
     box-sizing: border-box;
 }
 body{
-    margin: 8px 0px;
+    margin: 0px 0px;
 }
 /*  Estilo de Login y Register Genaro*/
 .container{
     display: flex;
     flex-wrap: nowrap;
-    max-height: 50vw;
     background: #fce4d4;
+    background-image: url(/img/jabon_1.jpg);
+    background-repeat:round;
+}
+.container a{
+    text-decoration: none;
+    color: #464646;
 }
 .form{
-    width: 55vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    text-align: justify;
+    background-color: #fce4d4aa;
+    flex-grow: 1;
+    color: #464646;
+    text-align: center;
+    padding:4%;
 }
 .form form{
     display: flex;
@@ -39,8 +47,7 @@ form>span{
     padding: 3% 30%;
     margin:1.8%;
     text-align: center;
-    border-radius: 5px;
-    border: #eacc85 inset 1px;
+    border: #ddc387b5 inset 1px;
 }
 .form img{
     width: 25vw;
@@ -50,6 +57,8 @@ form>span{
 }
 .img{
     width: 45vw;
+    visibility: hidden;
+    display: none;
 }
 .button{
     background-color: #889b65;
@@ -58,13 +67,41 @@ form>span{
     border: #889b65 unset 1px;
     border-radius: 5px;
 }
-
 /*  Estilo de home Fabri*/
- body#index{
-     background-color: #eacc85
+body#index{
+    background-color: #eacc85
  }
  #x-icon{
      border-radius: 100%;
      width: 100%;
- }
+    }
 
+/* Medias */
+@media(min-width:481px){
+    /*  Estilo de Login y Register Genaro*/
+    .form{
+        margin:3% 20%;
+        border-radius:20px;
+    }
+}
+@media(min-width:750px){
+    /*  Estilo de Login y Register Genaro*/
+    .img{
+        visibility:visible;
+        display:block;
+    }
+    .form{
+        background-color: #fce4d4;
+        margin:0px;
+        border-radius: 0px;
+    }
+    form>.textArea{
+        margin: 8% 0px 0px;
+    }
+    .hidden{
+        align-self: flex-start;
+    }
+    .container{
+        background-image: none;
+    }
+}
