@@ -4,7 +4,47 @@
 body{
     margin: 0px 0px;
 }
-
+/*  Estilo de Carrito de Compras Cami*/
+article{
+    background-color:#889b65;
+}
+.caja-carrito{
+    background-color: #eacc85;
+}
+section{
+    background-color: white;
+    display: flex;
+    justify-content: space-around ;
+}
+.detalle-producto{
+  width: 75px;
+  align-self: center;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit:fill
+}
+.descripcion-carrito{
+    flex-direction: column;
+}
+.boton-eliminar{
+  width: 35px;
+  align-self: center;
+}
+.total-compras{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.subtotal-2{
+    display: flex;
+    background-color: #eacc85;
+}
+.recuadro-total{
+    display: flex;
+}
 /*  Estilo de Login y Register Genaro*/
 .container{
     display: flex;
