@@ -385,8 +385,51 @@ h1.titulo-header{
     text-align: left;
 }
 /* estilos detalle del producto joel*/
+main{
+    display: flex;
+}
+.article-producto{
+    background-color: #889b65;
 
 
+}
+.bloque1{
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5rem;
+}
+img.img-detalle-producto{
+    width: 24rem;
+    height: 20rem;
+}
+
+.precio-cantidad-tipo{
+    padding-left: 3rem;
+}
+
+
+.bloque2{
+    
+    background-color: #eacc85;
+}
+
+.informacion-producto{
+    display: flex;
+
+}
+
+.texto-producto{
+    flex-direction: column;
+}
+.informacion-producto h3{
+    padding: 2rem;
+}
+
+.texto-producto p{
+    padding: 2rem;
+}
 
 /* -------------- Medias ----------------- */
 

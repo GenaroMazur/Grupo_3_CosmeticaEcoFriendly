@@ -37,30 +37,44 @@
     <main>      
         <article class="article-producto">
             <div class="bloque1">
-                <img src="" alt="imagen producto 1">
-            </div>  
                 <div>
+                    <img src="./img/jabon_1.jpg" alt="imagen producto 1" class="img-detalle-producto">
+                </div>         
+                <div class="precio-cantidad-tipo">
                     <h3>Productos 1</h3>
-                </div>
                     <div>
-                            <div>
-                                precio
-                            </div>
-                            <div>
-                                tipo
-                            </div>
+                        <p>precio</p>
+                        <input type="number" min="0" max="100" placeholder="cantidad">
                     </div>
-            <!--bloque 2-->
-            <nav>
-                <div>
-                    <h3>Descripcion</h3>
-                    <h3>ingredientes</h3>
-                    <h3>procedimiento</h3>
+                    <div class="tipo-cabello">
+                        <p>tipo</p>
+                        <div class="selector">
+                            <select>
+                                <option value="cabello seco">cabello seco</option>
+                                <option value="cabello rizado">cabello rizado</option>
+                                <option value="cabello liso">cabello liso</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p>boton añadir carrito</p>
                 </div>
-                <div>
-                    <h3>Descripcion</h3>
+            </div>
+            <!--bloque 2-->
+            <nav class="bloque2">
+                <div class="informacion-producto">
                     <div>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt ducimus optio impedit praesentium modi omnis, excepturi, accusamus itaque expedita nemo consequuntur minus. Fugit, voluptas dicta? Assumenda quidem cupiditate ratione at!           
+                        <h3>Descripcion</h3>
+                    </div>
+                    <div>
+                        <h3>ingredientes</h3>
+                    </div>
+                    <div>
+                        <h3>procedimiento</h3>
+                    </div>
+                </div>
+                <div class="texto-producto">
+                    <div>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt ducimus optio impedit praesentium modi omnis, excepturi, accusamus itaque expedita nemo consequuntur minus. Fugit, voluptas dicta? Assumenda quidem cupiditate ratione at!</p>
                     </div>
                 </div>
             </nav>
