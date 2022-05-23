@@ -42,11 +42,15 @@
             <h2>Login</h2>
             <p>Bienvenido de vuelta! Por favor ingresa tu cuenta para acceder a la página</p>
             <form action="" method="post">
-                <label for="name">Nombre de usuario</label>
-                <input type="text" placeholder="Username" class="textArea" id="name">
-                <label for="pass">Contraseña</label>
-                <input type="password" name="password" placeholder="Password" id="pass" class="textArea">
-                <label><input type="checkbox">Mostrar</label>
+                <div>
+                    <label for="name">Nombre de usuario</label>
+                    <input type="text" placeholder="Username" class="textArea" name="name" id="name">
+                </div>
+                <div>
+                    <label for="pass">Contraseña</label>
+                    <input type="password" name="password" placeholder="Password" id="pass" class="textArea">
+                    <label><input type="checkbox">Mostrar</label>
+                </div>
                 <span><a href="" target="_blank">¿ no recuerdas tu contraseña ?</a></span>
                 <input type="submit" value="Login" class="button">
             </form>

@@ -39,18 +39,24 @@
             <img src="/img/la_vie_icon.png" alt="logo registro">
             <h2>Regístrate</h2>
             <form action="post">
-                <label for="name">Nombre de usuario</label>
-                <input type="text" id="name" placeholder="Nombre de usuario"class="textArea">
-                <label for="pass">Contraseña</label>
-                <input type="password" id="pass" placeholder="Nueva contraseña"class="textArea">
-                <span class="hidden"><input type="checkbox">Mostrar</span>
-                <label for="copass">Confirmar Contraseña</label>
-                <input type="password" id="copass" placeholder="Confirmar contraseña"class="textArea">
-                <span class="hidden"><input type="checkbox">Mostrar</span>
-                <label for="email">Correo</label>
-                <input type="email" id="email" placeholder="Email"class="textArea">
-                <label for="coemail">Confirmar Correo</label>
-                <input type="email" id="coemail" placeholder="Confirmar Email"class="textArea">
+                <div>    
+                    <label for="name">Nombre de usuario</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre de usuario"class="textArea">
+                </div>
+                <div>
+                    <label for="pass">Contraseña</label>
+                    <input type="password" name="password" id="pass" placeholder="Nueva contraseña"class="textArea">
+                    <span class="hidden"><input type="checkbox">Mostrar</span>
+                </div>
+                <div>
+                    <label for="copass">Confirmar Contraseña</label>
+                    <input type="password" name="confirmPass" id="copass" placeholder="Confirmar contraseña"class="textArea">
+                    <span class="hidden"><input type="checkbox">Mostrar</span>
+                </div>
+                <div>
+                    <label for="email">Correo</label>
+                    <input type="email" name="email" id="email" placeholder="Email"class="textArea">
+                </div>
                 <input type="button" value="Registrarse"class="button">
             </form>
             <p>¿ Ya tienes una cuenta ? <a href="/login"><button class="button">Login</button ></a></p>
