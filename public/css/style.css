@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 *{
     box-sizing: border-box;
-    
 }
 
 
 body{
     margin: 0px 0px;
+    font-family: robo;
 }
 /*header general*/
 header{
@@ -16,21 +18,8 @@ header{
     justify-content: space-around;
 }
 
-/*  Estilo de Carrito de Compras Cami*/
-article{
-    background-color:#889b65;
-}
-.caja-carrito{
-    background-color: #eacc85;
-}
-section{
-    background-color: white;
+.nav-2{
     display: flex;
-    justify-content: space-around ;
-}
-.detalle-producto{
-  width: 75px;
-  align-self: center;
 }
 img{
     max-width: 100%;
@@ -75,15 +64,37 @@ img{
     justify-content: center;
 }
 
+
+/*  Estilo de Carrito de Compras Cami*/
+.article-carrito{
+    background-color:#889b65;
+}
+.caja-carrito{
+    background-color: #eacc85;
+}
+section{
+    background-color: white;
+    display: flex;
+    justify-content: space-around ;
+}
+.detalle-producto{
+  width: 75px;
+  align-self: center;
+}
+
+
+
 /* footer general*/
 footer{
     background-color: #cdbd9d;
     display: flex;
     justify-content: space-between;
+    padding: 20px 10px 15px 20px;
+    margin: auto;
 }
 
 .info-footer{
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     
 }
@@ -106,7 +117,9 @@ footer{
 .logo-footer{
     height: 50px;
     width: 50px;
+    align-self: center;
 }
+
 .ig-icon{
     height: 15px;
     width: 15px;
@@ -115,6 +128,13 @@ footer{
 .wpp-icon{
     height: 15px;
     width: 15px;
+    margin: 0px 0px 3px 0px;
+}
+
+.redes-sociales2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .redes-sociales{
@@ -122,6 +142,7 @@ footer{
     flex-direction: column;
     align-items: center;
 }
+
 
 .nosotros{
     display: flex;
@@ -132,9 +153,6 @@ footer{
     display: flex;
     flex-direction: column;
 }
-
-
-
 
 .descripcion-carrito{
     flex-direction: column;
@@ -226,8 +244,74 @@ body#index{
 
 }
 
+#section-index{
+    background-color: #cdbd9d;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.cuadro{
+    width: 100%;
+    max-width: 1200px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.cuadro .tarjeta{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    transition: all 0.25s;
+    background-color: #f8f3f0;
+    text-align: center;
+}
+
+.cuadro .tarjeta:hover{
+    transform: translateY(-15px);
+    box-shadow: o 12px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cuadro .tarjeta img{
+    width: 330px;
+    height: 220px;
+}
+
+.cuadro .tarjeta h3{
+    font-weight: 600;
+    text-align: center;
+}
+
+.cuadro .tarjeta p{
+    padding: 0.3rem;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.cuadro .tarjeta a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #889b65;
+}
+
+
+.cuadro2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
 header#index{ 
     background-color: #cdbd9d;
+    justify-items:flex-start;
 }
 
 .parrafo-header{
@@ -245,6 +329,8 @@ header#index{
     background: right fixed url(/img/fondo-header.jpg);
     background-position: right;
     background-repeat: no-repeat;
+    justify-content: space-around;
+    
 }
 
 
@@ -256,7 +342,6 @@ header#index{
     align-items: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
-    
 }
 
 a.a-nav{
@@ -266,24 +351,29 @@ a.a-nav{
     opacity: 0.8;
     text-decoration: none;
     border-radius: 50px;
-    font-size: 0.9em;
+    font-size: 1em;
     transition: all .25s;
 }
-a:hover{
+
+.nav-2{
+    align-self: flex-start;
+    margin-top: 7rem;
+    font-weight: 400;
+    font-size: 17px
+}
+a.a-nav:hover{
     background: #fff;
     color:#000;
     
 }
 
 h1.titulo-header{
-    font-weight: 600;
+    font-weight: 600rem;
     font-size: 6em;
     text-align: left;
 }
- head#x-icon{
-     border-radius: 50%;
-     width: 50%;
-}
+/* estilos detalle del producto joel*/
+
 
 
 /* -------------- Medias ----------------- */
