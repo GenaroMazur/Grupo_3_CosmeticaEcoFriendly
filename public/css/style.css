@@ -212,6 +212,12 @@ form>*{
 form>span{
     margin-top: 0px;
 }
+form>div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
 .textArea{
     background-color: #f8f3f0;
     padding: 3% 30%;
@@ -224,6 +230,8 @@ form>span{
     height: 25vw;
     max-width: 150px;
     max-height: 150px;
+    display: none;
+    visibility: hidden;
 }
 .img{
     width: 45vw;
@@ -234,8 +242,12 @@ form>span{
     background-color: #889b65;
     padding: 4px 10px;
     margin:1.8% 0%;
-    border: #889b65 unset 1px;
-    border-radius: 5px;
+    border: 1px;
+    border-radius: 15px;
+    margin: auto 1rem;
+}
+.button:hover{
+    background-color:#9fb478 ;
 }
 
 /*  Estilo de home Fabri*/
@@ -385,6 +397,10 @@ h1.titulo-header{
     .form{
         margin:3% 20%;
         border-radius:20px;
+    }
+    .form img{
+        display: block;
+        visibility: visible;
     }
 
 }

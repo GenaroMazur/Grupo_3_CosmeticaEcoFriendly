@@ -41,12 +41,18 @@
             <img src="/img/la_vie_icon.png" alt="Logo login">
             <h2>Login</h2>
             <p>Bienvenido de vuelta! Por favor ingresa tu cuenta para acceder a la página</p>
-            <form action="post">
-                <input type="text" placeholder="Username" class="textArea">
-                <input type="password" name="password" placeholder="Password" class="textArea">
-                <span class="hidden"><input type="checkbox">Mostrar</span>
+            <form action="" method="post">
+                <div>
+                    <label for="name">Nombre de usuario</label>
+                    <input type="text" placeholder="Username" class="textArea" name="name" id="name">
+                </div>
+                <div>
+                    <label for="pass">Contraseña</label>
+                    <input type="password" name="password" placeholder="Password" id="pass" class="textArea">
+                    <label><input type="checkbox">Mostrar</label>
+                </div>
                 <span><a href="" target="_blank">¿ no recuerdas tu contraseña ?</a></span>
-                <input type="button" value="Login" class="button">
+                <input type="submit" value="Login" class="button">
             </form>
             <p1>¿ No tienes una cuenta ? Create una!<a href="/registro"><button class="button">Sign up</button></a></p1>
         </section>
