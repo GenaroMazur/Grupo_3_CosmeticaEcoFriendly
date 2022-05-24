@@ -7,7 +7,6 @@
 
 body{
     margin: 0px 0px;
-    font-family: robo;
 }
 /*header general*/
 header{
@@ -261,7 +260,6 @@ body#index{
     display: flex;
     flex-direction: column;
 
-
 }
 .cuadro{
     width: 100%;
@@ -322,15 +320,12 @@ body#index{
 }
 .background-fondo-productos{
     display: flex;
-    flex-wrap: wrap;
-    
-    border: 1px solid rgba(255,255,255,1);
     border-radius: 10px;
     margin: 4rem;
 }
 .producto-nuevo{
     background-color: #fce4d4;
-    margin: 2rem;
+    margin: 1rem;
     border: 1px solid rgba(255,255,255,1);
     border-radius: 30px;
     text-align: center;
@@ -360,15 +355,17 @@ header#index{
     background-color: #cdbd9d;
     justify-items:flex-start;
 }
-
+.titulo-header{
+    margin-left: 2rem;
+}
 .parrafo-header{
     opacity: 0.8;
-    margin: 2em 0;
-    width: 50%;
+    margin-left: 2rem;
+    width: 60%;
 }
 
 .banner{
-    width: 100%;
+    width: 100%;git
     height: 700px;
     display: flex;
     align-items: flex-start;
@@ -432,6 +429,7 @@ main{
 .article-producto{
     background-color: #889b65;
     margin: 1rem;
+    max-width: 70%;
 
 
 }
