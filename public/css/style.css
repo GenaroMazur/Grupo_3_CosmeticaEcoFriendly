@@ -7,14 +7,17 @@
 
 body{
     margin: 0px 0px;
+    background-color: #cdbd9d;
 }
 /*header general*/
 header{
     color: white;
     background-color: #cdbd9d;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4%;
+
 }
 
 .nav-2{
@@ -80,79 +83,6 @@ section{
   width: 75px;
   align-self: center;
 }
-
-
-
-/* footer general*/
-footer{
-    background-color: #cdbd9d;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 10px 15px 20px;
-    margin: auto;
-}
-
-.info-footer{
-    justify-content: space-around;
-    align-items: center;
-    
-}
-
-.ubicacion-icon{
-    height: 15px;
-    width: 15px;
-}
-
-.correo-icon{
-    height: 15px;
-    width: 15px;
-}
-
-.telefono-icon{
-    height: 15px;
-    width: 15px;
-}
-
-.logo-footer{
-    height: 50px;
-    width: 50px;
-    align-self: center;
-}
-
-.ig-icon{
-    height: 15px;
-    width: 15px;
-}
-
-.wpp-icon{
-    height: 15px;
-    width: 15px;
-    margin: 0px 0px 3px 0px;
-}
-
-.redes-sociales2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.redes-sociales{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.nosotros{
-    display: flex;
-    flex-direction: column;
-}
-
-.rgpd{
-    display: flex;
-    flex-direction: column;
-}
-
 .descripcion-carrito{
     flex-direction: column;
 }
@@ -173,6 +103,100 @@ footer{
 .recuadro-total{
     display: flex;
 }
+
+
+
+/* footer general*/
+footer{
+    background-color: #cdbd9d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 2rem;
+}
+
+footer a{
+    color: black;
+}
+.info-footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.info-footer p img{
+    text-align: center;
+}
+
+.iconos-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.iconos-info img{
+    width: 25px;
+    height: 25px;
+}
+
+.logo-footer{
+    height: 50px;
+    width: 50px;
+    align-self: center;
+}
+
+.ig-icon{
+    height: 25px;
+    width: 25px;
+}
+
+.wpp-icon{
+    height: 25px;
+    width: 25px;
+    margin: 0px 0px 7px 0px;
+}
+
+.redes-sociales2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redes-sociales{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.legal-footer{
+    display: flex;
+    justify-content: center;
+}
+.nosotros-footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.subtitulo-footer{
+    text-align: center;
+}
+
+.rgpd{
+    display: flex;
+    flex-direction: column;
+}
+
+
 /*  Estilo de Login y Register Genaro*/
 .container{
     display: flex;
@@ -353,7 +377,8 @@ body#index{
 }
 header#index{ 
     background-color: #cdbd9d;
-    justify-items:flex-start;
+    justify-content: space-around;
+    width: 100%;
 }
 .titulo-header{
     margin-left: 2rem;
@@ -367,8 +392,8 @@ header#index{
 .banner{
     width: 100%;
     height: 700px;
-    display: flex;
-    align-items: flex-start;
+    display: block;
+    align-items: flex-end;
     text-align: left;
     background: right fixed url(/img/fondo-header.jpg);
     background-position: right;
@@ -475,6 +500,9 @@ img.img-detalle-producto{
 
 /* -------------tablet---------------- */
 @media(min-width:481px){
+
+
+    /* Footer general */
 
     /*  Estilo de Login y Register Genaro*/
     .form{
