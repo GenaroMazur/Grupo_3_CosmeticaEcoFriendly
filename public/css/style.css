@@ -415,69 +415,72 @@ header#index{
     width: 100%;
     margin: 0px;
 }
-.titulo-header{
-    margin-left: 1rem;
+.titulo-parrafo{
+    display: flex;
+    flex-direction: column;
+    font-size: x-small;
+    width: 65%
+}
+.titulo-parrafo h1{
     text-align: center;
+    font-size: 45px;
 }
 .parrafo-header{
-    margin-left: 4rem;
+    margin-left: 10rem;
     width: 60%;
     color: #000;
     font-weight: bold;
+    font-size: 11px;
 }
 
 .banner{
     width: 100%;
-    display: block;
+    display: flex;
     align-items: flex-end;
     text-align: left;
     background: right fixed url(/img/fondo-header.jpg);
     background-repeat: no-repeat;
-    justify-content: space-between; 
-}
-.banner img{
-    opacity: 0.1;
+    background-size: cover;
+    justify-content: space-around; 
 }
 
 
 .nav-index{
     display: flex;
     width: 100%;
-    margin: auto;
+    margin-top: 1rem;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
 }
+.contenedor-nav{
+    display: flex
+}
 
 a.a-nav{
     border: 0px solid rgba(255,255,255,1);
-    padding: 0.6em 3.5em;
+    padding: 0.4em 1em;
     color: white;
-    opacity: 0.8;
-    text-decoration: underline;
+    text-decoration: none;
     border-radius: 50px;
-    font-size: 1em;
+    font-size: 0.8em;
     transition: all .25s;
     font-weight: bold;
 }
 
 .nav-2{
     align-self: flex-start;
-    margin-top: 7rem;
+    margin-top: 1rem;
     font-weight: 400;
-    font-size: 17px
+    font-size: 17px;
+    margin-right:1rem
 }
 a.a-nav:hover{
-    background: #fff;
+    background: #fce4d4;
     color:#000;
     
 }
 
-h1.titulo-header{
-    font-weight: 600rem;
-    font-size: 6em;
-    text-align: left;
-}
 
 
 
@@ -579,8 +582,13 @@ aside{
     font-size: 1em;
     transition: all .25s;
 }
+.cat a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
 .cat:hover{
-    background: #fff;
+    background: #9fb478;
     color:#000;
 }
 aside h3{
@@ -596,7 +604,21 @@ aside a{
 @media(min-width:481px){
 
 
-    /* Footer general */
+    /* index */
+    .banner{
+        background-size: 50vw 100vh;
+    }
+
+    .titulo-parrafo h1 {
+        text-align: left;
+    }
+    .titulo-parrafo{
+    align-self: flex-start;
+    margin-left: 1rem;
+    }
+    .parrafo-header{
+        margin-left: 1rem;
+    }
 
     /*  Estilo de Login y Register Genaro*/
     .form{
@@ -630,6 +652,20 @@ aside a{
     }
     .container{
         background-image: none;
+    }
+
+    /* footer general*/
+    footer{
+        flex-direction: row;
+        margin:1rem;
+        justify-content: space-between;
+    }
+    .redes-sociales2{
+        justify-content: flex-start;
+    }
+
+    .logo-footer{
+        align-self: flex-start;
     }
 
 }
