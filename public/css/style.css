@@ -598,6 +598,34 @@ aside a{
     text-align: center;
 }
 
+.card-info a img{
+    width: 10px;
+    height: 10px;
+    margin-left: 15%;
+}
+.boton-compra button{
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    background-color: #9fb478;
+    color: #f8f3f0;
+    padding: 10px;
+    width: 100%;
+    border-style: none;
+    border-radius: 0.3rem;
+}
+
+.boton-compra button:hover{
+    background-color: #000;
+   
+}
+
+.boton-compra{
+    margin:  5% 40%;
+}
+
+
+
 /* -------------- Medias ----------------- */
 
 /* -------------tablet---------------- */
@@ -629,6 +657,9 @@ aside a{
         display: block;
         visibility: visible;
     }
+}
+.bloque1 img{
+    max-width: 60%;
 }
 
 /* -------------escritorio-------------- */
@@ -667,5 +698,62 @@ aside a{
     .logo-footer{
         align-self: flex-start;
     }
+
+    /*  header index*/
+
+    .banner{
+        justify-content: space-between;
+    }
+    .nav-index{
+        width: 50%;
+        align-items: flex-start;
+        margin-left: 5%;
+
+    } 
+
+    .titulo-parrafo h1 {
+        font-size: 80px
+    }
+
+    .titulo-parrafo{
+        margin: 0px;
+    }
+    .parrafo-header{
+        width: 100%;
+        font-size: 19px;
+    }
+
+    .contenedor-nav{
+        width: 100%;
+       align-items: flex-start;
+       font-size: 23px;
+    }
+     
+    .nav-2{
+        font-size: 23px;
+    }
+    main{
+        flex-direction: row;
+    }
+    .bloque1 img{
+        max-width: 50%;
+    }
+    .informacion-producto{
+        margin: 2%;
+    }
+    summary{
+        font-weight: bolder;
+    }
+
+    .background-fondo-productos{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .card-info img{
+        max-width: 30%;
+    }
+
+
 
 }
