@@ -69,9 +69,62 @@ img{
 
 /*  Estilo de Carrito de Compras Cami*/
 .article-carrito{
-    background-color:#889b65;
+    background-color:#fff;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin: 3px auto;
 }
-.caja-carrito{
+
+.tabla-carrito{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.card-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subtitulo-carrito{
+    text-align: left;
+    padding: 2%;
+    color: #fff;
+    background-color: #9fb478;
+}
+
+.td-carrito{
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+.td-carrito img{
+    width: 40%;
+    height: 90px;
+    margin-right: 10px;
+}
+
+.total-carrito{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-carrito table{
+    border-top: 3px solid black;
+    width: 100%;
+    max-width: 480px;
+}
+
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+
+/*.caja-carrito{
     background-color: #eacc85;
 }
 section{
@@ -91,7 +144,7 @@ section{
   align-self: center;
 }
 .total-compras{
-    background-color: antiquewhite;
+    background-color: #fff;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -102,7 +155,7 @@ section{
 }
 .recuadro-total{
     display: flex;
-}
+}*/
 
 
 
@@ -274,16 +327,10 @@ form>div{
 }
 
 /*  Estilo de home Fabri*/
-body#index{
-    background-color: #889b65;
-
-}
-
 #section-index{
     background-color: #cdbd9d;
     display: flex;
     flex-direction: column;
-
 }
 .cuadro{
     width: 100%;
@@ -332,28 +379,45 @@ body#index{
 .cuadro .tarjeta a{
     font-weight: 500;
     text-decoration: none;
-    color: #889b65;
+    color: white;
+}
+.boton-carrito-index{
+    margin: 1%;
+    padding: 3%;
 }
 
-
+.ultimos-productos{
+    background-color: #fff;
+}
 .cuadro2{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-left: 1rem;
+    justify-content: center;
 }
+
 .background-fondo-productos{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
-    margin: 4rem;
+    margin: 3%;
+    padding: 3%;
+
 }
 .producto-nuevo{
     background-color: #fce4d4;
-    margin: 1rem;
+    margin: 1%;
     border: 1px solid rgba(255,255,255,1);
     border-radius: 30px;
     text-align: center;
     box-shadow: #464646;
+}
+.new-producto img{
+    padding: 10%;
+    width: 100%;
+    height: 260px;
+    border-radius: 7%;
 }
 
 .titulo-producto{
@@ -377,38 +441,40 @@ body#index{
 }
 header#index{ 
     background-color: #cdbd9d;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
+    margin: 0px;
 }
 .titulo-header{
-    margin-left: 2rem;
+    margin-left: 1rem;
+    text-align: center;
 }
 .parrafo-header{
-    opacity: 0.8;
-    margin-left: 2rem;
+    margin-left: 4rem;
     width: 60%;
+    color: #000;
+    font-weight: bold;
 }
 
 .banner{
     width: 100%;
-    height: 700px;
     display: block;
     align-items: flex-end;
     text-align: left;
     background: right fixed url(/img/fondo-header.jpg);
-    background-position: right;
     background-repeat: no-repeat;
-    justify-content: space-around;
-    
+    justify-content: space-between; 
+}
+.banner img{
+    opacity: 0.1;
 }
 
 
 .nav-index{
     display: flex;
-    width: 90%;
-    max-width: 1000px;
+    width: 100%;
     margin: auto;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
 }
@@ -449,12 +515,13 @@ h1.titulo-header{
 /* estilos detalle del producto joel*/
 main{
     display: flex;
-    margin: 4rem;
+    flex-direction: column;
+    width: 100%;
 }
 .article-producto{
     background-color: #889b65;
     margin: 1rem;
-    max-width: 70%;
+    max-width: 100vw;
 
 
 }
@@ -462,38 +529,92 @@ main{
     background-color: #fff;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
-    padding: 2rem;
+    padding: 1rem;
+
 }
 img.img-detalle-producto{
-    width: 24rem;
-    height: 20rem;
+    width: 70vw;
+    height: 40vh;
 }
 
 .precio-cantidad-tipo{
-    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0.5rem;   
+    align-self: flex-start;
+    width: 70vw;
 }
 
+.precio-detalle h3{
+    text-align: center;
+}
+
+.tipo-cabello h3{
+    text-align: left;
+}
+
+.precio-cantidad-tipo .carrito-index{
+    align-self: center;
+}
 
 .bloque2{
-    
-    background-color: #eacc85;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
 }
+
 
 .informacion-producto{
     display: flex;
+    margin: 10%;
 
 }
 
 .texto-producto{
     flex-direction: column;
 }
-.informacion-producto h3{
+.informacion-producto h5{
     padding: 2rem;
 }
 
 .texto-producto p{
     padding: 2rem;
+}
+
+aside{
+    max-width: 100vw;
+}
+
+.categorias{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10%;
+}
+.cat{
+    margin: 5%;
+    align-items: center;
+    align-self: center;
+    border: 1px solid rgba(255,255,255,1);
+    padding: 0.6em 3.5em;
+    color: white;
+    opacity: 0.8;
+    border-radius: 50px;
+    font-size: 1em;
+    transition: all .25s;
+}
+.cat:hover{
+    background: #fff;
+    color:#000;
+}
+aside h3{
+    text-align: center;
+}
+aside a{
+    text-align: center;
 }
 
 /* -------------- Medias ----------------- */
@@ -513,7 +634,6 @@ img.img-detalle-producto{
         display: block;
         visibility: visible;
     }
-
 }
 
 /* -------------escritorio-------------- */

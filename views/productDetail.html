@@ -41,13 +41,13 @@
                     <img src="./img/jabon_1.jpg" alt="imagen producto 1" class="img-detalle-producto">
                 </div>         
                 <div class="precio-cantidad-tipo">
-                    <h3>Productos 1</h3>
-                    <div>
-                        <p>precio</p>
+                    <h2>Acondicionador Sólido</h2>
+                    <div class="precio-detalle">
+                        <h3>$599.99</h3>
                         <input type="number" min="0" max="100" placeholder="cantidad">
                     </div>
                     <div class="tipo-cabello">
-                        <p>tipo</p>
+                        <h3>Tipo cabello:<h3>
                         <div class="selector">
                             <select>
                                 <option value="cabello seco">cabello seco</option>
@@ -63,22 +63,18 @@
             </div>
             <!--bloque 2-->
             <nav class="bloque2">
-                <div class="informacion-producto">
-                    <div>
-                        <h3>Descripcion</h3>
-                    </div>
-                    <div>
-                        <h3>ingredientes</h3>
-                    </div>
-                    <div>
-                        <h3>procedimiento</h3>
-                    </div>
-                </div>
-                <div class="texto-producto">
-                    <div>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt ducimus optio impedit praesentium modi omnis, excepturi, accusamus itaque expedita nemo consequuntur minus. Fugit, voluptas dicta? Assumenda quidem cupiditate ratione at!</p>
-                    </div>
-                </div>
+                <details class="informacion-producto">
+                    <summary>Descripcion</summary>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt ducimus optio impedit praesentium modi omnis, excepturi, accusamus itaque expedita </p>
+                </details>
+                <details class="informacion-producto">
+                    <summary>Ingredientes</summary>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt ducimus optio impedit praesentium modi omnis, excepturi, accusamus itaque expedita </p>
+                </details>
+                <details class="informacion-producto">
+                    <summary>Procedimientos</summary>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt ducimus optio impedit praesentium modi omnis, excepturi, accusamus itaque expedita </p>
+                </details>
             </nav>
 
             <!--bloque 3-->
@@ -142,7 +138,6 @@
                                     <p>añadir al carrito</p>
                                 </div>
                             </div>
-    
                         </div>
                         <div class="producto-nuevo">
                             <div>
@@ -161,9 +156,7 @@
                                     <p>añadir al carrito</p>
                                 </div>
                             </div>
-    
                         </div>
-    
                     </div>
                 </div>
             </div>
@@ -174,19 +167,24 @@
                 <h3>Promociones</h3>
             </div>
             <div>
-                <img src="./img/jabon_1.jpg" alt="imagenes productos carrucel">  
+                <img src="./img/promoción.jpeg" alt="promoción del dia">  
             </div> 
-                <div>
+                <div class="subtitulo-categorias">
                     <h3>Categorias</h3>
                 </div>
-                    <ul>
-                        <li>producto 1</li>
-                        <li>producto 2</li>
-                        <li>producto 3</li>
-                        <li>producto 4</li>
-                    </ul>
+                    <div class="categorias">
+                        <div class="cat">
+                            <a href="#">Jabón Sólido</a>
+                        </div>
+                        <div class="cat">
+                            <a href="#">Shampoo Sólido</a>
+                        </div>
+                        <div class="cat">
+                            <a href="#">Desodorante Sólido</a>
+                        </div>
+                    </div>
                 <div>
-                    <img src="./img/jabon_1.jpg" alt="img">  
+                    <img src="./img/LavieSinFondo.png" alt="img">  
                 </div>      
         </aside>
     </main>
