@@ -749,12 +749,39 @@ aside a{
     .background-fondo-productos{
         display: flex;
         flex-wrap: nowrap;
+        margin: 1%;
     }
 
     .card-info img{
         max-width: 30%;
     }
+    .class-info {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    }
 
+    .cuadro {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
 
+    .cuadro .tarjeta{
+        width: 23%;
+    }
 
+    .info{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3%;
+    }
+
+    .cuadro2{
+        flex-direction: column;
+    }
+
+    .cuadro2 .titulo-3{
+        text-align: center;
+    }
 }
