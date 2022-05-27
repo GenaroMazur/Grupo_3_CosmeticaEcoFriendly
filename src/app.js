@@ -1,10 +1,10 @@
 const express=require("express")
 const app=express()
 const path=require("path")
+const port=process.env.PORT || 8080
+const directory=path.join(__dirname,"./../public")
 
-const directory=path.join(__dirname,"/public")
-
-app.listen(8080,()=>{
+app.listen(port,()=>{
     console.log("funcionando")
 })
 
