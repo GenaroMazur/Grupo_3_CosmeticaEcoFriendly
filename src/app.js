@@ -5,7 +5,7 @@ const port=process.env.PORT || 8080
 const directory=path.join(__dirname,"./../public")
 
 app.listen(port,()=>{
-    console.log("funcionando")
+    console.log("funcionando en el puerto: "+port)
 })
 
 app.use(express.static(directory))
@@ -24,4 +24,10 @@ app.get("/CarritoDeCompras",(req,res)=>{
 })
 app.get("/DetalleDeProducto",(req,res)=>{
     res.sendFile(path.join(__dirname,"/views/productDetail.html"))
+})
+app.get("/contacto",(req,res)=>{
+    res.sendFile(path.join(__dirname,"/views/contacto.html"))
+})
+app.get("/nosotros",(req,res)=>{
+    res.sendFile(path.join(__dirname,"/views/nosotros.html"))
 })
