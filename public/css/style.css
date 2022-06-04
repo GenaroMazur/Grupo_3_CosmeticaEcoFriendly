@@ -40,6 +40,7 @@ img{
 .usuario-icon{
     height: 25px;
     width: 25px;
+    cursor: pointer;
 }
 
 .carrito-icon{
@@ -50,7 +51,9 @@ img{
 .burguer-icon{
     height: 25px;
     width: 25px;
-    cursor: pointer;
+}
+.nav__input{
+    display: none;
 }
 .menu-navegacion{
 position: fixed;
@@ -65,12 +68,14 @@ height: 100%;
 align-items: center;
 transition: transform .3s ease-in-out;
 box-shadow: 0 0 6px rgba(0, 0, 0, .0);
-   /* transform: translate(-110%); */ 
+transform: translate(-110%); 
 z-index: 10;
 }
-   .menu-navegacion:hover{
-    transform: translate(-110%);
-}   
+
+.nav__input:checked + .menu-navegacion{
+    transform: translate(0%);
+}
+
 .menu-navegacion a{
     color: white;
     text-decoration: none;

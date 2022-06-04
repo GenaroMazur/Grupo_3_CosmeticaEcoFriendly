@@ -12,12 +12,21 @@
     <header>
         <div class="icono-hamburguesa">
             <div class="burguer-icon">
-                <img src="./img/menu-hamburguesa.png" alt="menu hamburguesa">
+                <label for="menu"class="nav__label">
+                    <img src="./img/menu-hamburguesa.png" alt="menu hamburguesa">
+                </label>
+                <input type="checkbox" id="menu" class="nav__input">
+
                 <nav class="menu-navegacion">
                     <a href="/">inicio</a>
                     <a href="/nosotros">nosotros</a>
                     <a href="/CarritoDeCompras">carrito</a>
                     <a href="/registro">registro</a>
+                    <div class="burguer-icon">
+                        <label for="menu"class="nav__label">
+                            <img src="./img/cruzar.png" alt="menu hamburguesa">
+                        </label>
+                    <input type="checkbox" id="menu" class="nav__input">
                 </nav>
             </div>
         </div>
@@ -50,11 +59,11 @@
             <form action="" method="post">
                 <div>
                     <label for="name">Nombre de usuario</label>
-                    <input type="text" placeholder="Username" class="textArea" name="name" id="name">
+                    <input type="text" placeholder="Username" class="textArea" name="name" id="name"required>
                 </div>
                 <div>
                     <label for="pass">Contraseña</label>
-                    <input type="password" name="password" placeholder="Password" id="pass" class="textArea">
+                    <input type="password" name="password" placeholder="Password" id="pass" class="textArea"required>
                     <label><input type="checkbox">Mostrar</label>
                 </div>
                 <span><a href="" target="_blank">¿ no recuerdas tu contraseña ?</a></span>

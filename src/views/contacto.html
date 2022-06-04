@@ -12,12 +12,21 @@
     <header>
         <div class="icono-hamburguesa">
             <div class="burguer-icon">
-                <img src="./img/menu-hamburguesa.png" alt="menu hamburguesa">
+                <label for="menu"class="nav__label">
+                    <img src="./img/menu-hamburguesa.png" alt="menu hamburguesa">
+                </label>
+                <input type="checkbox" id="menu" class="nav__input">
+
                 <nav class="menu-navegacion">
                     <a href="/">inicio</a>
                     <a href="/nosotros">nosotros</a>
                     <a href="/CarritoDeCompras">carrito</a>
                     <a href="/registro">registro</a>
+                    <div class="burguer-icon">
+                        <label for="menu"class="nav__label">
+                            <img src="./img/cruzar.png" alt="menu hamburguesa">
+                        </label>
+                    <input type="checkbox" id="menu" class="nav__input">
                 </nav>
             </div>
         </div>
@@ -51,15 +60,15 @@
                 <form action="/contacto" method="post">
                     <div>
                         <label for="name"> Nombre y Apellido </label>
-                        <input type="text" name="nombre" id="name" class="contacto">
+                        <input type="text" name="nombre" id="name" class="contacto"required>
                     </div>
                     <div>
                         <label for="mail">Correo electronico</label>
-                        <input type="email" name="correo" id="mail" class="contacto">
+                        <input type="email" name="correo" id="mail" class="contacto"required>
                     </div>
                     <div>
                         <label for="mensaje">Escriba su duda aqui</label>
-                        <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="contacto"></textarea>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="contacto"required></textarea>
                     </div>
                     <div>
                         <input type="submit" value="Enviar" class="button">

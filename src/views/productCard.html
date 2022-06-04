@@ -6,18 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="img/la vie icon mod.png" type="image/x-icon" id="x-icon">
-    <title>La vie naturell</title>
+    <title>La vie naturell </title>
 </head>
 <body>
     <header>
         <div class="icono-hamburguesa">
             <div class="burguer-icon">
-                <img src="./img/menu-hamburguesa.png" alt="menu hamburguesa">
+                <label for="menu"class="nav__label">
+                    <img src="./img/menu-hamburguesa.png" alt="menu hamburguesa">
+                </label>
+                <input type="checkbox" id="menu" class="nav__input">
+
                 <nav class="menu-navegacion">
                     <a href="/">inicio</a>
                     <a href="/nosotros">nosotros</a>
                     <a href="/CarritoDeCompras">carrito</a>
                     <a href="/registro">registro</a>
+                    <div class="burguer-icon">
+                        <label for="menu"class="nav__label">
+                            <img src="./img/cruzar.png" alt="menu hamburguesa">
+                        </label>
+                    <input type="checkbox" id="menu" class="nav__input">
                 </nav>
             </div>
         </div>
