@@ -1,27 +1,20 @@
 const express=require("express")
 const app=express()
-const path=require("path")
+const path=require("path") //ponerlo en otro lado
+const routes= require("./src/routes/index.routes.js")
+const port= process.env.PORT || 8080
 
 const directory=path.join(__dirname,"/public")
 
-app.listen(8080,()=>{
-    console.log("funcionando")
+
+//server
+app.listen(port,(req,res)=>{
+    console.log('corriendo en el puerto ${port}')
 })
 
+//routes
+app.use("/", routes)
+
+//archivos estaticos
 app.use(express.static(directory))
 
-app.get("/",(req,res)=>{
-    res.sendFile(path.join(__dirname,"/views/index.html"))
-})
-app.get("/login",(req,res)=>{
-    res.sendFile(path.join(__dirname,"/views/login.html"))
-})
-app.get("/registro",(req,res)=>{
-    res.sendFile(path.join(__dirname,"/views/register.html"))
-})
-app.get("/CarritoDeCompras",(req,res)=>{
-    res.sendFile(path.join(__dirname,"/views/productCard.html"))
-})
-app.get("/DetalleDeProducto",(req,res)=>{
-    res.sendFile(path.join(__dirname,"/views/productDetail.html"))
-})
