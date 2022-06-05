@@ -1,0 +1,51 @@
+body{
+    margin: 0px;
+}
+
+.mision, .vision, .valores{
+    margin-bottom: 3rem;
+    display: flex;
+    margin: 2rem;
+    border-radius: 10%;
+    box-shadow: 6px 6px 6px #6b6a6a;
+}
+
+.titulo-nosotros{
+    position: relative;
+    right: -110px;
+    bottom: 170px;
+}
+
+.img-nosotros img{
+    opacity: 0.6;
+}
+
+.banner-nosotros{
+    background-color: #cdbd9d;
+}
+
+ #nosotros article .parrafo-nosotros p{
+    padding: 0rem;
+    margin: 1rem;
+}
+.mision{
+    display: flex;
+    background-color: antiquewhite;
+}
+
+.vision{
+    background-color: antiquewhite;
+}
+
+.valores{
+    background-color: antiquewhite;
+}
+
+#nosotros article h3{
+    text-align: center;
+}
+
+#nosotros article p{
+    text-align: justify;
+    padding: 3rem;
+}
