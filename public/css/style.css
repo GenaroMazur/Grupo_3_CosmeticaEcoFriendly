@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap'); */
 *{
-    box-sizing: border-box;
+    box-sizing: border-box; 
+ /*    font-family: 'Satisfy', cursive; */
 }
-
 
 body{
     margin: 0px 0px;
@@ -29,7 +28,7 @@ header{
     color: #fff;
 }
 img{
-    max-width: 80%;
+    max-width: 100%;
     max-height: 100%;
     object-fit:fill
 }
@@ -41,8 +40,11 @@ img{
     height: 25px;
     width: 25px;
     cursor: pointer;
+    
 }
-
+.des_icono:checked + .menu-navegacion{
+    background-color: red;
+}
 .carrito-icon{
     height: 25px;
     width: 25px;
@@ -79,11 +81,12 @@ z-index: 10;
 .menu-navegacion a{
     color: white;
     text-decoration: none;
+    padding: 10px 13px 10px 13px;
     border-radius: 30px;
 }
 .menu-navegacion a:hover{
     color: #000;
-    background-color: #f8f3f0;
+    background-color: #9fb478;
 }
 .nav{
     display: flex;
@@ -325,9 +328,11 @@ form>div{
     border: 1px;
     border-radius: 15px;
     margin: auto 1rem;
+    color: white;
 }
 .button:hover{
     background-color:#9fb478 ;
+    color: #000;
 }
 
 /*  Estilo de home Fabri*/
@@ -364,8 +369,9 @@ form>div{
 }
 
 .cuadro .tarjeta img{
-    width: 330px;
-    height: 220px;
+    width: 181px;
+    height: 185px;
+    margin-top: 70px;
 }
 
 .cuadro .tarjeta h3{
@@ -381,13 +387,7 @@ form>div{
 }
 
 .cuadro .tarjeta a{
-    font-weight: 500;
     text-decoration: none;
-    color: white;
-}
-.boton-carrito-index{
-    margin: 1%;
-    padding: 3%;
 }
 
 .ultimos-productos{
@@ -418,10 +418,10 @@ form>div{
     box-shadow: #464646;
 }
 .new-producto img{
-  /*   padding: 10%; */ 
+    padding: 10%;
     width: 280%;
     height: 300px;
-    border-radius: 7%;
+    border-radius: 20%;
 }
 
 .titulo-producto{
@@ -432,7 +432,9 @@ form>div{
 .carrito-index{
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 50px;
+    padding: 12px 30px 12px 30px;
     margin: 1rem;
+    font-size: 10px;
     color: white;
     opacity: 0.8;
     background-color: #889b65;
@@ -440,7 +442,7 @@ form>div{
 }
 
 .carrito-index:hover{
-    background: #fff;
+    background: #9fb478;;
     color:#000;
 }
 header#index{ 
@@ -474,8 +476,7 @@ header#index{
     text-align: left;
     background: right fixed url(/img/fondo-header.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    justify-content: space-around; 
+
 }
 
 
@@ -535,8 +536,8 @@ main{
     background-color: #ffebe0;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    /* justify-content: space-around; */
+     flex-wrap: wrap; 
     padding: 1rem;
     
 }
@@ -789,7 +790,9 @@ aside a{
         flex-direction: row;
     }
     .bloque1 img{
-        max-width: 0%;
+        max-width: 30%;
+        display:block;
+        margin: 10px;
     }
     .informacion-producto{
         margin: 2%;
