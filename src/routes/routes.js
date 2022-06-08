@@ -1,10 +1,15 @@
 const express=require("express")
 const routes=express.Router()
 const path=require("path")
+const mainController=require("./../controllers/mainController")
 
-routes.get("/",(req,res)=>{
-    res.sendFile(path.join(__dirname,"./../views/index.html"))
-})
+//controladores por mainController.js
+
+routes.get("/",mainController.home)
+routes.get("/nosotros",mainController.nosotros)
+routes.get("/contacto",mainController.contacto)
+
+
 routes.get("/login",(req,res)=>{
     res.sendFile(path.join(__dirname,"./../views/login.html"))
 })
@@ -16,12 +21,6 @@ routes.get("/CarritoDeCompras",(req,res)=>{
 })
 routes.get("/DetalleDeProducto",(req,res)=>{
     res.sendFile(path.join(__dirname,"./../views/productDetail.html"))
-})
-routes.get("/contacto",(req,res)=>{
-    res.sendFile(path.join(__dirname,"./../views/contacto.html"))
-})
-routes.get("/nosotros",(req,res)=>{
-    res.sendFile(path.join(__dirname,"./../views/nosotros.html"))
 })
 
 module.exports=routes
