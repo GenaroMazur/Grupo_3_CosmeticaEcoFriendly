@@ -3,24 +3,21 @@ const routes=express.Router()
 const path=require("path")
 const mainController=require("./../controllers/mainController")
 const userController=require("./../controllers/userController")
+const productController=require("./../controllers/productController")
 
 
-//controladores por mainController.js
+//controlador mainController.js
 routes.get("/",mainController.home)
 routes.get("/nosotros",mainController.nosotros)
 routes.get("/contacto",mainController.contacto)
 
 
-//controladores por userController.js
+//controlador userController.js
 routes.get("/login",userController.login)
 routes.get("/registro",userController.register)
 
-
-routes.get("/CarritoDeCompras",(req,res)=>{
-    res.sendFile(path.join(__dirname,"./../views/productCard.html"))
-})
-routes.get("/DetalleDeProducto",(req,res)=>{
-    res.sendFile(path.join(__dirname,"./../views/productDetail.html"))
-})
+//controlador productController.js
+routes.get("/CarritoDeCompras",productController.productCard)
+routes.get("/DetalleDeProducto",productController.productDetail)
 
 module.exports=routes
