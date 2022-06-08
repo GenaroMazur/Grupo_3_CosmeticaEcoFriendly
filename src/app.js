@@ -1,14 +1,17 @@
 const express=require("express")
 const app=express()
 const path=require("path")
-const routes=require("./routes/routes")
 
-const port=process.env.PORT || 8080
+//utiliza la carpeta public
 const directory=path.join(__dirname,"./../public")
+app.use(express.static(directory))
 
+//inicia el puerto de escucha
+const port=process.env.PORT || 8080
 app.listen(port,()=>{
     console.log("funcionando en el puerto: "+port)
 })
 
-app.use(express.static(directory))
+//Importa las rutas
+const routes=require("./routes/routes")
 app.use("/",routes)

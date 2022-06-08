@@ -1,6 +1,7 @@
 const express=require("express")
 const routes=express.Router()
-const path=require("path")
+
+//importa los controladores
 const mainController=require("./../controllers/mainController")
 const userController=require("./../controllers/userController")
 const productController=require("./../controllers/productController")
