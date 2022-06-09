@@ -5,6 +5,7 @@ const routes=express.Router()
 const mainController=require("./../controllers/mainController")
 const userController=require("./../controllers/userController")
 const productController=require("./../controllers/productController")
+const { route } = require("express/lib/application")
 
 
 //controlador mainController.js
@@ -20,5 +21,7 @@ routes.get("/registro",userController.register)
 //controlador productController.js
 routes.get("/CarritoDeCompras",productController.productCard)
 routes.get("/DetalleDeProducto",productController.productDetail)
+routes.get("/newProduct",productController.newProduct)
+routes.get("/editProduct",productController.editProduct)
 
 module.exports=routes
