@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
   },
   "name": "grupo_3_cosmeticaecofriendly",
   "description": "La temática del marketplace será la de un emprendimiento local del rubro de cosmética natural eco-friendly y cruelty free siendo sus productos principales los siguientes:",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "start": "nodemon app.js"
   },
