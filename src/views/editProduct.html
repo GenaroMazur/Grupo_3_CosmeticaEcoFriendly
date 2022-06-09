@@ -49,7 +49,55 @@
         </div>
     </header>
 
-    
+    <main>
+        <section>
+            <div>
+                <h2>Editar Producto</h2>
+            </div>
+            <div>
+                <form action="/product" method="get">
+                    <div>
+                        <label for="searchProduct">Buscar Producto</label>
+                        <input type="search" name="product" id="searchProduct">
+                    </div>
+                    <div class="botons" id="search">
+                        <input type="submit" value="buscar">
+                    </div>
+                </form>
+                <form action="/editProduct" method="post">
+                    <div>
+                        <label for="nameProduct">Nombre Del Producto</label>
+                        <input type="text" name="nameProduct" id="nameProduct" class="textArea">
+                    </div>
+                    <div>
+                        <label for="description">Descripcion</label>
+                        <input type="text" name="description" id="description" class="textArea">
+                    </div>
+                    <div>
+                        <label for="productImg">Insertar imagen</label>
+                        <input type="file" id="productImg" name="productImg" accept="image/png, image/jpeg">
+                    </div>
+                    <div>
+                        <label for="">Categoria</label>
+                        <select name="Category" id="Category">
+                            <option value="">Jabon Solido</option>
+                            <option value="">Desodorante Solido</option>
+                            <option value="">Shampoo Solido</option>
+                            <option value="">Acondicionador Solido</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="price">Precio</label>
+                        <input type="number" name="price" id="price" class="textArea">
+                    </div>
+                    <div class="botons">
+                        <input type="submit" value="Agregar">
+                        <input type="reset" value="Borrar">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="info-footer">

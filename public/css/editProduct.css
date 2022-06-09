@@ -197,3 +197,64 @@ footer a{
     display: flex;
     flex-direction: column;
 }
+/*Estilo main*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#fce4d4;
+    padding: 30px 10px;
+}
+section{
+    text-align: center;
+    box-shadow: 0 0 6px rgb(0 0 0 / 50%);
+    width: 80%;
+    border-radius: 25px;
+    background-color:#fdf7f5;
+}
+form>*{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 30px ;
+    align-items: center;
+}
+label{
+    margin-bottom:2px ;
+}
+.botons{
+    flex-direction: row;
+    justify-content: center;
+}
+.botons>*{
+    margin: 10px;
+    background-color: #9fb478;
+    color: #f8f3f0;
+    padding: 10px;
+    width: 40%;
+    border-style: none;
+    border-radius: 0.3rem;
+    transition: all 0.25s;
+}
+.botons> *:hover{
+    color: #454545;
+    background-color:#c0da8f ;
+}
+#search>*{
+    margin: 5px;
+    padding: 5px;
+    width: 30%;
+}
+.textArea{
+    background-color: #ffffff;
+    padding: 1% 14%;
+    margin: 1.8%;
+    text-align: center;
+    border: #fbdddd inset 1px;
+    border-radius: 5px;
+}
+#Category{
+    padding: 5px 7%;
+}
+#productImg{
+    width: 60%;
+}
