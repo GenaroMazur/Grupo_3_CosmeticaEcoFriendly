@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    box-sizing: border-box; 
+    font-family: 'Roboto', sans-serif;
+ /*    font-family: 'Satisfy', cursive; */
+}
 *{
     box-sizing: border-box; 
  /*    font-family: 'Satisfy', cursive; */
@@ -203,15 +209,14 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:#fce4d4;
     padding: 30px 10px;
 }
 section{
     text-align: center;
-    box-shadow: 0 0 6px rgb(0 0 0 / 50%);
+    box-shadow: 0 0 20px rgb(0 0 0 / 50%);
     width: 80%;
     border-radius: 25px;
-    background-color:#fdf7f5;
+    background-color:#fce4d4;
 }
 form>*{
     display: flex;
