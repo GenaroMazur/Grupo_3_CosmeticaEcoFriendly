@@ -10,6 +10,16 @@ const productController={
     //pagina del detalle del producto
     productDetail:(req,res)=>{
          return res.render("productDetail")
+    },
+
+    //pagina de nuevo producto
+    newProduct:(req,res)=>{
+        res.render("newProduct")
+    },
+
+    //pagina edicion de producto
+    editProduct:(req,res)=>{
+        res.render("editProduct")
     }
 }
 
