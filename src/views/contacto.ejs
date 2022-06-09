@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %>
+
+    <main id="contact">
+        <section id="contacto">
+            <div>
+                <h2>¿ Alguna consulta ?</h2>
+            </div>
+            <div>
+                <form action="/contacto" method="post">
+                    <div>
+                        <label for="name"> Nombre y Apellido </label>
+                        <input type="text" name="nombre" id="name" class="contacto"required>
+                    </div>
+                    <div>
+                        <label for="mail">Correo electronico</label>
+                        <input type="email" name="correo" id="mail" class="contacto"required>
+                    </div>
+                    <div>
+                        <label for="mensaje">Escriba su duda aqui</label>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="contacto"required></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Enviar" class="button">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>

@@ -4,12 +4,12 @@ const userController={
 
     //pagina de login
     login:(req,res)=>{
-        res.sendFile(path.join(__dirname,"./../views/login.html"))
+         return res.render("login")
     },
 
     //pagina de registro
     register:(req,res)=>{
-        res.sendFile(path.join(__dirname,"./../views/register.html"))
+        return res.render("register")
     }
 }
 

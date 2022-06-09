@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head') %>
+<body>
+
+    <header id="index">
+        <nav class="banner">
+            <div class="nav-index">
+                <div class="contenedor-nav">
+                    <span><a class="a-nav" href="/">Inicio</a></span>
+                    <span><a class="a-nav" href="/nosotros">Nosotros</a></span>
+                    <span><a class="a-nav" href="/DetalleDeProducto">Productos</a></span>
+                    <span><a class="a-nav" href="/contacto">Contacto</a></span>
+                </div>
+                <div class="titulo-parrafo">
+                    <h1 class="titulo-header">La Vie Naturelle</h1>
+                    <p class="parrafo-header">Cosmética natural, amigable con el medio ambiente, hecha artesanalmente con productos naturales, compostables y cruelty free🌾✨🌍</p>
+                </div>
+            </div>
+            <div class="nav-2">
+                <div>
+                    <span><a class="a-nav" href="/registro">registrate</a></span>
+                </div>
+                <div class="carrito-icon">
+                    <a href="/CarritoDeCompras"><img src="./img/carrito-de-compras.svg" alt="carrito"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="section-index">
+        <div class="info">
+            <div class="cuadro">
+                <div class="tarjeta">
+                    <div>
+                        <h3>Shampoo Sólido</h3>
+                    </div>
+                    <div>
+                        <p>Es una pastilla concentrada de aceites, infusiones, plantas, arcillas y  aceites esenciales, que dejara tu cabello suave y brillante.</p>
+                    </div>
+                    <div class="boton-carrito-index">
+                        <a href="/DetalleDeProducto" class="carrito-index">ver más</a>
+                    </div>
+                    <div class="imagenes-index">
+                        <img src="./img/jabon_1.jpg" alt="imagen shampoo">
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div>
+                        <h3>Jabones sólidos</h3>
+                    </div>
+                    <div>
+                        <p>Los jabones naturales son elaborados artesanalmente, produciendo una espuma suave que mantendra tu piel hidratada.</p>
+                    </div>
+                    <div class="boton-carrito-index">
+                        <a href="/DetalleDeProducto" class="carrito-index">ver más</a>
+                    </div>
+                    <div class="imagenes-index">
+                        <img src="./img/jabon_2.jpg" alt="imagen acondicionador">
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div>
+                        <h3>Acondicionador sólido</h3>
+                    </div>
+                    <div>
+                        <p>El acondicionador sólido nutre el cabello con ingredientes naturales dejándolo brilloso y suave. Es libre de siliconas y parabenos.</p>
+                    </div>
+                    <div class="boton-carrito-index">
+                        <a href="/DetalleDeProducto" class="carrito-index">ver más</a>
+                    </div>
+                    <div class="imagenes-index">
+                        <img src="./img/jabon_3.jpg" alt="imagen producto 3">
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div>
+                        <h3>Desodorante Sólido</h3>
+                    </div>
+                    <div>
+                        <p>Combate de forma natural la humedad y los olores de la transpiración. 
+                            Fórmula suave y cremosa, de fácil absorción.
+                        </p>
+                    </div>
+                    <div class="boton-carrito-index">
+                        <a href="/DetalleDeProducto" class="carrito-index">ver más</a>
+                    </div>
+                    <div class="imagenes-index">
+                        <img src="./img/371f4bfc3fba0349aa866fc2e7a66392.jpg" alt="imagen producto 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('./partials/ultimosProductos')%>
+    </section>
+
+    <%- include('./partials/footer') %>
+</body>
+</html>

@@ -8,7 +8,7 @@ const productController=require("./../controllers/productController")
 
 
 //controlador mainController.js
-routes.get("/",mainController.home)
+routes.get("/",mainController.index)
 routes.get("/nosotros",mainController.nosotros)
 routes.get("/contacto",mainController.contacto)
 

@@ -4,12 +4,12 @@ const productController={
 
     //pagina de carrito de compras
     productCard:(req,res)=>{
-        res.sendFile(path.join(__dirname,"./../views/productCard.html"))
+         return res.render("productCard")
     },
 
     //pagina del detalle del producto
     productDetail:(req,res)=>{
-        res.sendFile(path.join(__dirname,"./../views/productDetail.html"))
+         return res.render("productDetail")
     }
 }
 
