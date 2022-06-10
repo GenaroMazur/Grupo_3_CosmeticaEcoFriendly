@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/editProduct.css">
+    <link rel="shortcut icon" href="img/la_vie_(3).png" type="image/x-icon" width="900px">
+    <title>Editar Producto</title>
+</head>
+<body>
+    <%- include('./partials/header') %>
+    <main>
+        <section>
+            <div>
+                <h2>EDITAR PRODUCTO</h2>
+            </div>
+            <div>
+                <form action="/product" method="get">
+                    <div>
+                        <label for="searchProduct"><h4>Buscar Producto</h4></label>
+                        <input type="search" name="product" id="searchProduct">
+                    </div>
+                    <div class="botons" id="search">
+                        <input type="submit" value="buscar">
+                    </div>
+                </form>
+                <form action="/editProduct" method="post">
+                    <div>
+                        <label for="nameProduct"><h4>Nombre Del Producto</h4></label>
+                        <input type="text" name="nameProduct" id="nameProduct" class="textArea">
+                    </div>
+                    <div>
+                        <label for="description"><h4>Descripcion</h4></label>
+                        <input type="text" name="description" id="description" class="textArea">
+                    </div>
+                    <div>
+                        <label for="productImg"><h5>Insertar imagen</h5></label>
+                        <input type="file" id="productImg" name="productImg" accept="image/png, image/jpeg">
+                    </div>
+                    <div>
+                        <label for=""><h5>Insertar imagen</h5></label>
+                        <select name="Category" id="Category">
+                            <option value="">Jabon Solido</option>
+                            <option value="">Desodorante Solido</option>
+                            <option value="">Shampoo Solido</option>
+                            <option value="">Acondicionador Solido</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="price"><h5>Precio</h5></label>
+                        <input type="number" name="price" id="price" class="textArea">
+                    </div>
+                    <div class="botons">
+                        <input type="submit" value="Agregar">
+                        <input type="reset" value="Borrar">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>

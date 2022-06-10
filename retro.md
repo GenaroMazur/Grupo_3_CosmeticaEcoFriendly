@@ -24,3 +24,26 @@ Como grupo tuvimos una amena charla reunidos virtualmente por videollamada donde
 ### Stop doing
 
 - Evitar comentarios innecesarios que desmotiven al grupo y no ser empático con el otro.
+
+
+## Sprint-2-Restrospectiva
+
+Viendo los avances como grupo y consolidándonos cada vez más, mantuvimos nuevamente una nueva charla de retrospectiva con la dinámica estrella del mar donde cada uno de nosotros llegamos a las mismas conclusiones:
+
+### Start Doing
+- Comenzar a organizarse con anticipación y establecer prioridades para no atrasarnos con las tareas y que al momento de días antes de entrega no colapsemos o nos agarre un burnout.
+
+### More Of
+- Un poco más de participación en el trello, votando y hablando por allí.
+
+
+### Keep Doing
+- Seguir con las dailys de los lunes como así también las reuniones de planificación y las de ayuda.
+- La buena voluntad de seguir aprendiendo, participar. 
+
+### Less Of
+- Disminuir las explicaciones a algo claro y conciso.
+- Dejar de sobrecargar de tareas a un integrante.
+
+### Stop Doing
+- Parar de dejar a último momento las tareas.

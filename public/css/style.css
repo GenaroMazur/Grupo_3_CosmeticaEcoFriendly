@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 *{
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    font-family: 'Roboto', sans-serif;
+ /*    font-family: 'Satisfy', cursive; */
 }
-
 
 body{
     margin: 0px 0px;
@@ -40,8 +40,12 @@ img{
 .usuario-icon{
     height: 25px;
     width: 25px;
+    cursor: pointer;
+    
 }
-
+.des_icono:checked + .menu-navegacion{
+    background-color: red;
+}
 .carrito-icon{
     height: 25px;
     width: 25px;
@@ -50,7 +54,40 @@ img{
 .burguer-icon{
     height: 25px;
     width: 25px;
-    cursor: pointer;
+}
+.nav__input{
+    display: none;
+}
+.menu-navegacion{
+position: fixed;
+top: 0;
+left: 0;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+background-image: linear-gradient(to top, #9fb478 0%, #cdbd9d 100%);
+width: 30vw;
+height: 100%;
+align-items: center;
+transition: transform .3s ease-in-out;
+box-shadow: 0 0 6px rgba(0, 0, 0, .0);
+transform: translate(-110%); 
+z-index: 10;
+}
+
+.nav__input:checked + .menu-navegacion{
+    transform: translate(0%);
+}
+
+.menu-navegacion a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 13px 10px 13px;
+    border-radius: 30px;
+}
+.menu-navegacion a:hover{
+    color: #000;
+    background-color: #9fb478;
 }
 .nav{
     display: flex;
@@ -108,9 +145,9 @@ td input{
     padding: 5px;
 }
 .td-carrito img{
-    width: 40%;
-    height: 90px;
-    margin-right: 10px;
+    width: 50%;
+    height: 110px;
+    margin-right: 20px;
 }
 
 .total-carrito{
@@ -287,14 +324,16 @@ form>div{
 }
 .button{
     background-color: #889b65;
-    padding: 4px 10px;
+    padding: 8px 18px;
     margin:1.8% 0%;
     border: 1px;
     border-radius: 15px;
     margin: auto 1rem;
+    color: white;
 }
 .button:hover{
     background-color:#9fb478 ;
+    color: #000;
 }
 
 /*  Estilo de home Fabri*/
@@ -314,8 +353,8 @@ form>div{
 }
 
 .cuadro .tarjeta{
-    width: 330px;
-    height: 430px;
+    width: 250px;
+    height: 460px;
     border-radius: 8px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -331,8 +370,9 @@ form>div{
 }
 
 .cuadro .tarjeta img{
-    width: 330px;
-    height: 220px;
+    width: 181px;
+    height: 185px;
+    margin-top: 70px;
 }
 
 .cuadro .tarjeta h3{
@@ -348,13 +388,7 @@ form>div{
 }
 
 .cuadro .tarjeta a{
-    font-weight: 500;
     text-decoration: none;
-    color: white;
-}
-.boton-carrito-index{
-    margin: 1%;
-    padding: 3%;
 }
 
 .ultimos-productos{
@@ -386,9 +420,9 @@ form>div{
 }
 .new-producto img{
     padding: 10%;
-    width: 100%;
-    height: 260px;
-    border-radius: 7%;
+    width: 280%;
+    height: 300px;
+    border-radius: 20%;
 }
 
 .titulo-producto{
@@ -399,7 +433,9 @@ form>div{
 .carrito-index{
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 50px;
+    padding: 12px 30px 12px 30px;
     margin: 1rem;
+    font-size: 10px;
     color: white;
     opacity: 0.8;
     background-color: #889b65;
@@ -407,7 +443,7 @@ form>div{
 }
 
 .carrito-index:hover{
-    background: #fff;
+    background: #9fb478;;
     color:#000;
 }
 header#index{ 
@@ -441,8 +477,7 @@ header#index{
     text-align: left;
     background: right fixed url(/img/fondo-header.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    justify-content: space-around; 
+
 }
 
 
@@ -482,10 +517,6 @@ a.a-nav:hover{
     
 }
 
-
-
-
-
 /* estilos detalle del producto joel*/
 main{
     display: flex;
@@ -506,13 +537,13 @@ main{
     background-color: #ffebe0;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    /* justify-content: space-around; */
+     flex-wrap: wrap; 
     padding: 1rem;
-
+    
 }
 img.img-detalle-producto{
-    width: 70vw;
+    width: 50vw;
     height: 40vh;
 }
 
@@ -623,6 +654,29 @@ aside a{
 
 .boton-compra{
     margin:  5% 40%;
+}
+/*------------------Contacto---------------*/
+#contact{
+    justify-content: center;
+    flex-direction: row;
+}
+#contacto{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    text-align: center;
+    background-color:#fce4d4 ;
+    width: 90%;
+    padding: 10px 0px;
+    border-radius: 35px;
+}
+#contacto form>*{
+    margin-top: 25px ;
+}
+.contacto{
+    padding: 8px 15%;
+    resize: none;
 }
 
 
@@ -737,7 +791,9 @@ aside a{
         flex-direction: row;
     }
     .bloque1 img{
-        max-width: 50%;
+        max-width: 30%;
+        display:block;
+        margin: 10px;
     }
     .informacion-producto{
         margin: 2%;
@@ -753,7 +809,7 @@ aside a{
     }
 
     .card-info img{
-        max-width: 30%;
+        max-width: 10%;
     }
     .class-info {
     display: flex;
@@ -784,4 +840,5 @@ aside a{
     .cuadro2 .titulo-3{
         text-align: center;
     }
+    /*----------COntacto----------*/
 }
