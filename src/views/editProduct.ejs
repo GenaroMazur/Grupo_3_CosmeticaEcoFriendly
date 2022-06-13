@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/editProduct.css">
-    <link rel="shortcut icon" href="img/la_vie_(3).png" type="image/x-icon" width="900px">
-    <title>Editar Producto</title>
+    <link rel="shortcut icon" href="./../img/la vie icon mod.png" type="image/x-icon" id="x-icon">
+    <title>La Vie Naturelle - editar producto</title>
 </head>
 <body>
     <%- include('./partials/header') %>
@@ -28,15 +28,15 @@
                 <form action="/editProduct" method="post">
                     <div>
                         <label for="nameProduct"><h4>Nombre Del Producto</h4></label>
-                        <input type="text" name="nameProduct" id="nameProduct" class="textArea">
+                        <input type="text" name="nameProduct" id="nameProduct" class="textArea" required>
                     </div>
                     <div>
                         <label for="description"><h4>Descripcion</h4></label>
-                        <input type="text" name="description" id="description" class="textArea">
+                        <input type="text" name="description" id="description" class="textArea" required>
                     </div>
                     <div>
                         <label for="productImg"><h5>Insertar imagen</h5></label>
-                        <input type="file" id="productImg" name="productImg" accept="image/png, image/jpeg">
+                        <input type="file" id="productImg" name="productImg" accept="image/png, image/jpeg" required>
                     </div>
                     <div>
                         <label for=""><h5>Insertar imagen</h5></label>
@@ -49,7 +49,7 @@
                     </div>
                     <div>
                         <label for="price"><h5>Precio</h5></label>
-                        <input type="number" name="price" id="price" class="textArea">
+                        <input type="number" name="price" id="price" min="0" class="textArea">
                     </div>
                     <div class="botons">
                         <input type="submit" value="Agregar">
