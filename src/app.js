@@ -27,3 +27,6 @@ app.listen(port,()=>{
 //Importa las rutas
 const routes=require("./routes/index.routes")
 app.use("/",routes)
+app.use((req,res,next)=>{
+    res.status(404).render("not-found")
+})
