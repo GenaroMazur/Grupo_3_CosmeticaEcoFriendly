@@ -8,10 +8,10 @@
         <section class="form">
             <img src="/img/la_vie_icon.png" alt="logo registro">
             <h2>Regístrate</h2>
-            <form action="post">
+            <form method="post" action="/user/registro">
                 <div>    
                     <label for="name">Nombre de usuario</label>
-                    <input type="text" id="name" name="name" placeholder="Nombre de usuario"class="textArea"required>
+                    <input type="text" id="name" name="username" placeholder="Nombre de usuario"class="textArea"required>
                 </div>
                 <div>
                     <label for="pass">Contraseña</label>
@@ -20,7 +20,7 @@
                 </div>
                 <div>
                     <label for="copass">Confirmar Contraseña</label>
-                    <input type="password" name="confirmPass" id="copass" placeholder="Confirmar contraseña"class="textArea"required>
+                    <input type="password" id="copass" placeholder="Confirmar contraseña"class="textArea"required>
                     <span class="hidden"><input type="checkbox">Mostrar</span>
                 </div>
                 <div>

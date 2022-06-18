@@ -6,6 +6,10 @@ const path=require("path")
 const directory=path.join(__dirname,"./../public")
 app.use(express.static(directory))
 
+//Indicar que capture datos de forms
+app.use(express.urlencoded({extended:false}))
+app.use(express.json())
+
 //motor de plantilla utilizado
 app.set('views', __dirname + '/views')
 app.set("view engine", "ejs")
