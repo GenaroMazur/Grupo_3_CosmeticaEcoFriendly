@@ -30,7 +30,7 @@ const productController={
         let coincidence=modelsController.FnSearch(productsJson,"nameProduct",req.body.nameProduct) || false ;
 
         if ( !coincidence ) {
-
+        //Crea un producto si no esta previamente
             let newProduct=new function(){
                 this.nameProduct=req.body.newProduct
                 this.description=req.body.description || ""
@@ -43,6 +43,7 @@ const productController={
 
             res.redirect("/product/DetalleDeProducto")
         } else {
+        //no hace nada
             res.redirect("/product/newProduct")
         }
     }

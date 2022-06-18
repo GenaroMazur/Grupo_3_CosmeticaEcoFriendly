@@ -10,6 +10,10 @@ app.use(express.static(directory))
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 
+//Method Override
+const methodOverride=require("method-override")
+app.use(methodOverride("_method"))
+
 //motor de plantilla utilizado
 app.set('views', __dirname + '/views')
 app.set("view engine", "ejs")
