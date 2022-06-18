@@ -4,8 +4,11 @@ const routes=express.Router()
 //importa controlador
 const userController=require("./../controllers/userController")
 
-//controladores
+//Get
 routes.get("/login",userController.login)
 routes.get("/registro",userController.register)
+
+//Post
+routes.post("/registro",userController.create)
 
 module.exports=routes
