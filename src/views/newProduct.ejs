@@ -16,7 +16,7 @@
                 <h2>AGREGAR PRODUCTO</h2>
             </div>
             <div>
-                <form action="/editProduct" method="post">
+                <form action="/product/newProduct" method="post">
                     <div>
                         <label for="nameProduct"><h4>Nombre Del Producto</h4></label>
                         <input type="text" name="nameProduct" id="nameProduct" class="textArea" required>
@@ -32,10 +32,10 @@
                     <div>
                         <label for=""><h5>Insertar imagen</h5></label>
                         <select name="Category" id="Category">
-                            <option value="">Jabon Solido</option>
-                            <option value="">Desodorante Solido</option>
-                            <option value="">Shampoo Solido</option>
-                            <option value="">Acondicionador Solido</option>
+                            <option value="jabon_solido">Jabon Solido</option>
+                            <option value="desodorante_solido">Desodorante Solido</option>
+                            <option value="shampoo_solido">Shampoo Solido</option>
+                            <option value="acondicionador_solido">Acondicionador Solido</option>
                         </select>
                     </div>
                     <div>
