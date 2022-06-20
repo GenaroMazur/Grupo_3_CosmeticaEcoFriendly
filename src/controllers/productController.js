@@ -15,7 +15,7 @@ const productController={
 
     //pagina de nuevo producto
     newProduct:(req,res)=>{
-        res.render("newProduct")
+        res.render("newProduct",{error:false})
     },
 
     //pagina edicion de producto
@@ -27,14 +27,14 @@ const productController={
     createProduct:function(req,res) {
 
         let productsJson=modelsController.FnRead("products")
-        let coincidence=modelsController.FnSearch(productsJson,"nameProduct",req.body.nameProduct).object || false;
+        let coincidence=modelsController.FnSearch(productsJson,"nameProduct",req.body.nameProduct);
 
-        if ( coincidence ) {
+        if ( coincidence==undefined ) {
         //Crea un producto si no esta previamente
             let newProduct=new function(){
                 this.nameProduct=req.body.nameProduct
                 this.description=req.body.description
-                this.productImg=req.file.filename|| null
+                this.productImg=req.file.filename
                 this.category=req.body.category
                 this.price=req.body.price || 0
             }
@@ -44,7 +44,7 @@ const productController={
             res.redirect("/product/DetalleDeProducto")
         } else {
         //no hace nada
-            res.redirect("/product/newProduct")
+            res.render("newProduct",{error:true})
         }
     }
 }

@@ -10,7 +10,7 @@ const modelsController={
                 let found={object:element,index:index}
                 return found
             }
-        }) || {object:undefined}
+        })
     },
     
     //leer JSON

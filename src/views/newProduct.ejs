@@ -9,6 +9,11 @@
     <title>La Vie Naturelle - Agregar Producto</title>
 </head>
 <body>
+    <% if (error){ %>
+        <script>
+            alert("Ya hay un usuario con ese nombre")
+        </script>
+    <% } %> 
     <%- include('./partials/header') %>
     <main>
         <section>
