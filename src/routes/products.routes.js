@@ -13,4 +13,8 @@ routes.get("/editProduct",productController.editProduct)
 //POST
 routes.post("/newProduct",productController.createProduct)
 
+//PUT
+
+//DELETE
+
 module.exports=routes
