@@ -27,15 +27,15 @@ const productController={
     createProduct:function(req,res) {
 
         let productsJson=modelsController.FnRead("products")
-        let coincidence=modelsController.FnSearch(productsJson,"nameProduct",req.body.nameProduct) || false ;
+        let coincidence=modelsController.FnSearch(productsJson,"nameProduct",req.body.nameProduct);
 
         if ( !coincidence ) {
         //Crea un producto si no esta previamente
             let newProduct=new function(){
                 this.nameProduct=req.body.newProduct
-                this.description=req.body.description || ""
-                this.productImg=req.body.productImg || null
-                this.category=req.body.category || null
+                this.description=req.body.description
+                this.productImg=req.file.filename|| null
+                this.category=req.body.category
                 this.price=req.body.price || 0
             }
             modelsController.FnCreate(productsJson,newProduct)
