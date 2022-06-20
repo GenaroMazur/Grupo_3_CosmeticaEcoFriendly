@@ -5,9 +5,12 @@ const modelsController={
     //buscar Datos Dentro de JSON
     //ingresar Array de donde buscar, propiedad que se debe leer, elemento a buscar
     FnSearch:function( array , _properti , identifier ) {
-        return array.find(element=>{
-            return element[_properti] == identifier
-        })
+        return array.find((element,index)=>{
+            if (element[_properti] == identifier){
+                let found={object:element,index:index}
+                return found
+            }
+        }) || {object:undefined}
     },
     
     //leer JSON
@@ -24,7 +27,12 @@ const modelsController={
     },
     
     //Editar Datos dentro de un JSON
-    
+    //Ingresar nombre del archivo JSON, indice donde se encuentra el objeto a editar, el objeto editado
+    FnEdit:function(nameArchive,index,newObject){
+        let usersList=this.FnRead(nameArchive)
+        usersList[index]=newObject
+    },
+
     //Crea datos dentro de JSON
     //Ingresar Array donde crear el objeto, Ingresar objeto
     FnCreate:function( array , object ) {
