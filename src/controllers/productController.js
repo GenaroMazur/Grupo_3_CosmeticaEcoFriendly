@@ -46,6 +46,9 @@ const productController={
         //no hace nada
             res.render("newProduct",{error:true})
         }
+    },
+    usersList:function(){
+        return modelsController.FnRead("products")
     }
 }
 

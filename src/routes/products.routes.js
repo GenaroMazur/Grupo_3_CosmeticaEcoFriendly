@@ -10,7 +10,7 @@ const storage=multer.diskStorage({
         cb(null,direction)
     },
     filename:(req,file,cb)=>{
-        let filename="pruct_"+Date.now()+path.extname(file.originalname)
+        let filename="pruct_"+productController.usersList().length+path.extname(file.originalname)
         cb(null,filename)
     }
 })
