@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/editProduct.css">
-    <link rel="shortcut icon" href="img/la_vie_(3).png" type="image/x-icon" width="900px">
-    <title>Editar Producto</title>
+    <link rel="shortcut icon" href="./../img/la vie icon mod.png" type="image/x-icon" id="x-icon">
+    <title>La Vie Naturelle - editar producto</title>
 </head>
 <body>
     <%- include('./partials/header') %>
@@ -16,7 +16,7 @@
                 <h2>EDITAR PRODUCTO</h2>
             </div>
             <div>
-                <form action="/product/product" method="get">
+                <form action="/product/editProduct" method="get">
                     <div>
                         <label for="searchProduct"><h4>Buscar Producto</h4></label>
                         <input type="search" name="product" id="searchProduct">
@@ -25,36 +25,38 @@
                         <input type="submit" value="buscar">
                     </div>
                 </form>
-                <form action="/editProduct" method="post">
+                <form action="/product/editProduct/:idProduct?_method=put" method="post">
                     <div>
                         <label for="nameProduct"><h4>Nombre Del Producto</h4></label>
-                        <input type="text" name="nameProduct" id="nameProduct" class="textArea">
+                        <input type="text" name="nameProduct" id="nameProduct" class="textArea" required>
                     </div>
                     <div>
                         <label for="description"><h4>Descripcion</h4></label>
-                        <input type="text" name="description" id="description" class="textArea">
+                        <input type="text" name="description" id="description" class="textArea" required>
                     </div>
                     <div>
                         <label for="productImg"><h5>Insertar imagen</h5></label>
-                        <input type="file" id="productImg" name="productImg" accept="image/png, image/jpeg">
+                        <input type="file" id="productImg" name="productImg" accept="image/png, image/jpeg" required>
                     </div>
                     <div>
                         <label for=""><h5>Insertar imagen</h5></label>
                         <select name="Category" id="Category">
-                            <option value="">Jabon Solido</option>
-                            <option value="">Desodorante Solido</option>
-                            <option value="">Shampoo Solido</option>
-                            <option value="">Acondicionador Solido</option>
+                            <option value="jabon_solido">Jabon Solido</option>
+                            <option value="desodorante_solido">Desodorante Solido</option>
+                            <option value="shampoo_solido">Shampoo Solido</option>
+                            <option value="acondicionador_solido">Acondicionador Solido</option>
                         </select>
                     </div>
                     <div>
                         <label for="price"><h5>Precio</h5></label>
-                        <input type="number" name="price" id="price" class="textArea">
+                        <input type="number" name="price" id="price" min="0" class="textArea">
                     </div>
                     <div class="botons">
-                        <input type="submit" value="Agregar">
-                        <input type="reset" value="Borrar">
+                        <input type="submit" value="Editar">
                     </div>
+                </form>
+                <form action="/product/deleteProduct/:idProduct?_method=delete">
+                    <button type="submit">Borrar</button>
                 </form>
             </div>
         </section>

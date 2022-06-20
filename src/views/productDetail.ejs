@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('./partials/head') %>
+    <title>La Vie Naturelle - Detalle del producto</title>
+    <%- include('./partials/head') %>
 <body>
     <%- include('./partials/header') %>
     <main>      
         <article class="article-producto">
             <div class="bloque1">
                 <div>
-                    <img src="./img/jabon_1.jpg" alt="imagen producto 1" class="img-detalle-producto">
+                    <img src="./../img/jabon_1.jpg" alt="imagen producto 1" class="img-detalle-producto">
                 </div>         
                 <div class="precio-cantidad-tipo">
                     <h2>Acondicionador Sólido</h2>
                     <div class="precio-detalle">
                         <h3>$599.99</h3>
-                        <input type="number" min="0" max="100" placeholder="cantidad">
+                        <input type="number" min="0" max="100" placeholder="cantidad" id="input_product">
                     </div>
                     <div class="tipo-cabello">
                         <h3>Tipo cabello:<h3>
@@ -55,7 +56,7 @@
                 <h3>Promociones</h3>
             </div>
             <div>
-                <img src="./img/promoción.jpeg" alt="promoción del dia">  
+                <img src="./../img/promoción.jpeg" alt="promoción del dia">  
             </div> 
                 <div class="subtitulo-categorias">
                     <h3>Categorias</h3>
@@ -72,7 +73,7 @@
                         </div>
                     </div>
                 <div>
-                    <img src="./img/LavieSinFondo.png" alt="img">  
+                    <img src="./../img/LavieSinFondo.png" alt="img">  
                 </div>      
         </aside>
     </main>

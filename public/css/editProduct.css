@@ -2,11 +2,9 @@
 *{
     box-sizing: border-box; 
     font-family: 'Roboto', sans-serif;
- /*    font-family: 'Satisfy', cursive; */
 }
 *{
     box-sizing: border-box; 
- /*    font-family: 'Satisfy', cursive; */
 }
 
 body{
@@ -234,10 +232,10 @@ label{
     margin: 10px;
     background-color: #9fb478;
     color: #f8f3f0;
-    padding: 10px;
-    width: 40%;
+    padding: 10px 0px 10px 0px;
+    width: 30%;
     border-style: none;
-    border-radius: 0.3rem;
+    border-radius:30px;
     transition: all 0.25s;
 }
 .botons> *:hover{
@@ -246,8 +244,8 @@ label{
 }
 #search>*{
     margin: 5px;
-    padding: 5px;
     width: 30%;
+    border-radius: 30px;
 }
 .textArea{
     background-color: #ffffff;
@@ -255,13 +253,17 @@ label{
     margin: 1.8%;
     text-align: center;
     border: #fbdddd inset 1px;
-    border-radius: 5px;
+    border-radius: 30px;
 }
 #Category{
     padding: 5px 7%;
+    border-radius: 30px;
+
 }
+
 #productImg{
     width: 60%;
+    padding: 0px 0px 0px 110px
 }
 @media(min-width:900px){
     /* footer general*/

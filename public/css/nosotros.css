@@ -6,12 +6,13 @@ body{
     margin-bottom: 3rem;
     display: flex;
     margin: 2rem;
-    border-radius: 10%;
+    border-radius: 30px;
+
     box-shadow: 6px 6px 6px #6b6a6a;
 }
 
 .titulo-nosotros{
-    position: relative;
+
     right: -110px;
     bottom: 170px;
 }
@@ -21,7 +22,7 @@ body{
 }
 
 .banner-nosotros{
-    background-color: #cdbd9d;
+margin: 30px;
 }
 
  #nosotros article .parrafo-nosotros p{
@@ -46,6 +47,5 @@ body{
 }
 
 #nosotros article p{
-    text-align: justify;
-    padding: 3rem;
+    padding: 50px 15px 30px;
 }

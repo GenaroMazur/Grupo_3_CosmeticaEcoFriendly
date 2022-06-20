@@ -6,6 +6,14 @@ const path=require("path")
 const directory=path.join(__dirname,"./../public")
 app.use(express.static(directory))
 
+//Indicar que capture datos de forms
+app.use(express.urlencoded({extended:false}))
+app.use(express.json())
+
+//Method Override
+const methodOverride=require("method-override")
+app.use(methodOverride("_method"))
+
 //motor de plantilla utilizado
 app.set('views', __dirname + '/views')
 app.set("view engine", "ejs")
@@ -19,3 +27,6 @@ app.listen(port,()=>{
 //Importa las rutas
 const routes=require("./routes/index.routes")
 app.use("/",routes)
+app.use((req,res,next)=>{
+    res.status(404).render("not-found")
+})

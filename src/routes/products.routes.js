@@ -4,10 +4,13 @@ const routes=express.Router()
 //importa controlador
 const productController=require("./../controllers/productController")
 
-//controladores
+//GET
 routes.get("/CarritoDeCompras",productController.productCard)
 routes.get("/DetalleDeProducto",productController.productDetail)
 routes.get("/newProduct",productController.newProduct)
 routes.get("/editProduct",productController.editProduct)
+
+//POST
+routes.post("/newProduct",productController.createProduct)
 
 module.exports=routes
