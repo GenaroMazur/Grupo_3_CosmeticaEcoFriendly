@@ -28,9 +28,14 @@ const modelsController={
     
     //Editar Datos dentro de un JSON
     //Ingresar nombre del archivo JSON, indice donde se encuentra el objeto a editar, el objeto editado
-    FnEdit:function(nameArchive,index,newObject){
+    FnEdit:function(nameArchive,oldObject,newObject){
         let usersList=this.FnRead(nameArchive)
-        usersList[index]=newObject
+        usersList.map(element=>{
+            if (element == oldObject) {
+                return element=newObject
+            }
+        })
+        this.FnSave(nameArchive,usersList)
     },
 
     //Crea datos dentro de JSON
