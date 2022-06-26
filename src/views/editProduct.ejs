@@ -16,31 +16,22 @@
                 <h2>EDITAR PRODUCTO</h2>
             </div>
             <div>
-                <form action="/product/editProduct" method="get">
-                    <div>
-                        <label for="searchProduct"><h4>Buscar Producto</h4></label>
-                        <input type="search" name="product" id="searchProduct">
-                    </div>
-                    <div class="botons" id="search">
-                        <input type="submit" value="buscar">
-                    </div>
-                </form>
-                <form action="/product/editProduct/:idProduct?_method=put" method="post">
+                <form action="/product/newProduct" method="post" enctype="multipart/form-data">
                     <div>
                         <label for="nameProduct"><h4>Nombre Del Producto</h4></label>
                         <input type="text" name="nameProduct" id="nameProduct" class="textArea" required>
                     </div>
                     <div>
                         <label for="description"><h4>Descripcion</h4></label>
-                        <input type="text" name="description" id="description" class="textArea" required>
+                        <textarea name="description" id="description" cols="30" rows="10" class="textArea" required></textarea>
                     </div>
                     <div>
                         <label for="productImg"><h5>Insertar imagen</h5></label>
-                        <input type="file" id="productImg" name="productImg" accept="image/png, image/jpeg" required>
+                        <input type="file" id="image" name="productImg" accept="image/png, image/jpeg" required>
                     </div>
                     <div>
-                        <label for=""><h5>Insertar imagen</h5></label>
-                        <select name="Category" id="Category">
+                        <label for="Category"><h5>Categoria del producto</h5></label>
+                        <select name="category" id="Category">
                             <option value="jabon_solido">Jabon Solido</option>
                             <option value="desodorante_solido">Desodorante Solido</option>
                             <option value="shampoo_solido">Shampoo Solido</option>
@@ -54,9 +45,6 @@
                     <div class="botons">
                         <input type="submit" value="Editar">
                     </div>
-                </form>
-                <form action="/product/deleteProduct/:idProduct?_method=delete">
-                    <button type="submit">Borrar</button>
                 </form>
             </div>
         </section>

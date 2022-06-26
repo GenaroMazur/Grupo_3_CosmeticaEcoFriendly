@@ -260,7 +260,11 @@ label{
     border-radius: 30px;
 
 }
+#grams{
+    padding: 5px 7%;
+    border-radius: 30px;
 
+}
 #productImg{
     width: 60%;
     padding: 0px 0px 0px 110px
