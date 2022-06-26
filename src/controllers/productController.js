@@ -20,7 +20,27 @@ const productController = {
 
     //pagina edicion de producto
     editProduct: (req, res) => {
-        res.render("editProduct")
+        let productsJson = modelsController.FnRead("products")
+        let product = modelsController.FnSearch(productsJson, "id", req.params.idProduct)
+        res.render("editProduct", { product: product })
+    },
+    editProductId: (req, res) => {
+        
+        let productsJson = modelsController.FnRead("products")
+        productsJson.map(product => {
+            if (product.id == req.params.idProduct) {
+                for (let property in product) {
+                    if (property != "id" && property!="image") {
+                        if (product[property] != req.body[property]) {
+                            product[property] = req.body[property]
+                        }
+                    }
+                }
+                return product
+            }
+        })
+        modelsController.FnSave("products",productsJson)
+        res.redirect("/product/editProduct/"+req.params.idProduct)
     },
 
     //Crear un nuevo producto
@@ -29,12 +49,12 @@ const productController = {
         let productsJson = modelsController.FnRead("products")
 
         let newProduct = new function () {
-            this.id=Date.now()
+            this.id = Date.now()
             this.nameProduct = req.body.nameProduct
             this.price = req.body.price || 0
             this.description = req.body.description
-            this.grams=req.body.grams
-            this.fragance=req.body.fragance
+            this.grams = req.body.grams
+            this.fragance = req.body.fragance
             this.category = req.body.category
             this.image = req.file.filename
         }

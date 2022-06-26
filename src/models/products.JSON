@@ -87,7 +87,7 @@
     "description": "Este desodorante sólido permite la natural y necesaria transpiración y la hace inodora gracias a sus ingredientes. Apropiado para todo tipo de pieles, incluidas las pieles sensibles. Desodorante, antimicrobiano y  emoliente.",
     "grams": 70,
     "fragrance": "Lavanda",
-    "category": "Desodorantes Sólidos",
+    "category": "desodorante_solido",
     "image": "desodorante-solido-1.jpg" 
 },
 {
