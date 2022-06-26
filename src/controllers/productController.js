@@ -1,8 +1,15 @@
+const res = require("express/lib/response")
 const path = require("path")
 const modelsController = require("./../models/modelsController")
 
 const productController = {
-
+    
+    deleteProduct:function(req,res){
+        let productsJson = modelsController.FnRead("products")
+        let object=modelsController.FnSearch(productsJson,"id",req.params.idProduct)
+        let arrayFilter=modelsController.FnDelete(productsJson,object)
+        modelsController.FnSave("products",arrayFilter)
+    },
     //pagina de carrito de compras
     productCard: (req, res) => {
         return res.render("productCard")

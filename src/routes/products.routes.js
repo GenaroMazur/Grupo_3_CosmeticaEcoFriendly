@@ -32,6 +32,12 @@ routes.post("/newProduct", upload.single("image"), productController.createProdu
 
 //PUT
 routes.put("/editProduct/:idProduct", productController.editProductId)
+
 //DELETE
+// routes.delete("/deleteProduct/:idProduct",productController.deleteProduct)
+routes.delete("/deleteProduct/:idProduct",(req,res)=>{
+    productController.deleteProduct(req,res)
+    res.redirect("/user/admin")
+})
 
 module.exports = routes

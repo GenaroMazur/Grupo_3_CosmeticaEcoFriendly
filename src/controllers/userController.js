@@ -15,7 +15,9 @@ const userController={
 
     //panel de administrador
     admin: (req, res) => {
-        return res.render("admin")
+        let productsJson=modelsController.FnRead("products")
+
+        return res.render("admin",{products:productsJson})
     },
 
     //Crear usuario
