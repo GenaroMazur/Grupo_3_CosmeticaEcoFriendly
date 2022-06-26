@@ -13,6 +13,11 @@ const userController={
         return res.render("register")
     },
 
+    //panel de administrador
+    admin: (req, res) => {
+        return res.render("admin")
+    },
+
     //Crear usuario
     create:function (req,res) {
         
