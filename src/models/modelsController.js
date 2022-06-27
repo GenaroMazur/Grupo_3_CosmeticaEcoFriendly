@@ -56,7 +56,7 @@ const modelsController = {
     FnCreate: function (nameArchive, object) {
         let array = this.FnRead(nameArchive)
         array.push(object)
-        this.FnSave(nameArchive)
+        this.FnSave(nameArchive,array)
     },
 
     //Elimina datos dentro de un JSON
