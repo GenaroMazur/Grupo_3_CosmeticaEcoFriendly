@@ -3,13 +3,6 @@ const path = require("path")
 const modelsController = require("./../models/modelsController")
 
 const productController = {
-    
-    deleteProduct:function(req,res){
-        let productsJson = modelsController.FnRead("products")
-        let object=modelsController.FnSearch(productsJson,"id",req.params.idProduct)
-        let arrayFilter=modelsController.FnDelete(productsJson,object)
-        modelsController.FnSave("products",arrayFilter)
-    },
     //pagina de carrito de compras
     productCard: (req, res) => {
         return res.render("productCard")
@@ -31,29 +24,14 @@ const productController = {
         let product = modelsController.FnSearch(productsJson, "id", req.params.idProduct)
         res.render("editProduct", { product: product })
     },
+    //Editar un producto
     editProductId: (req, res) => {
-        
-        let productsJson = modelsController.FnRead("products")
-        productsJson.map(product => {
-            if (product.id == req.params.idProduct) {
-                for (let property in product) {
-                    if (property != "id" && property!="image") {
-                        if (product[property] != req.body[property]) {
-                            product[property] = req.body[property]
-                        }
-                    }
-                }
-                return product
-            }
-        })
-        modelsController.FnSave("products",productsJson)
-        res.redirect("/product/editProduct/"+req.params.idProduct)
+        modelsController.FnEdit("products", req)
+        res.redirect("/product/editProduct/" + req.params.idProduct)
     },
-
+    
     //Crear un nuevo producto
     createProduct: function (req, res) {
-
-        let productsJson = modelsController.FnRead("products")
 
         let newProduct = new function () {
             this.id = Date.now()
@@ -65,10 +43,14 @@ const productController = {
             this.category = req.body.category
             this.image = req.file.filename
         }
-        modelsController.FnCreate(productsJson, newProduct)
-        modelsController.FnSave("products", productsJson)
-
+        modelsController.FnCreate("products", newProduct)
+        
         res.redirect("/product/DetalleDeProducto")
+    },
+    //Eliminar un producto
+    deleteProduct: function (req, res) {
+        modelsController.FnDelete("products", req.params.idProduct)
+        
     },
     usersList: function () {
         return modelsController.FnRead("products")
