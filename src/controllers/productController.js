@@ -50,7 +50,7 @@ const productController = {
     //Eliminar un producto
     deleteProduct: function (req, res) {
         modelsController.FnDelete("products", req.params.idProduct)
-        
+        res.redirect("/user/admin")
     },
     usersList: function () {
         return modelsController.FnRead("products")
