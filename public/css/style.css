@@ -43,9 +43,7 @@ img{
     cursor: pointer;
     
 }
-.des_icono:checked + .menu-navegacion{
-    background-color: red;
-}
+
 .carrito-icon{
     height: 25px;
     width: 25px;
