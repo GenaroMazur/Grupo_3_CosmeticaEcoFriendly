@@ -1,55 +1,60 @@
-const path=require("path")
-const modelsController=require("./../models/modelsController")
+const res = require("express/lib/response")
+const path = require("path")
+const modelsController = require("./../models/modelsController")
 
-const productController={
-
+const productController = {
     //pagina de carrito de compras
-    productCard:(req,res)=>{
+    productCard: (req, res) => {
         return res.render("productCard")
     },
 
     //pagina del detalle del producto
-    productDetail:(req,res)=>{
+    productDetail: (req, res) => {
         return res.render("productDetail")
     },
 
     //pagina de nuevo producto
-    newProduct:(req,res)=>{
-        res.render("newProduct",{error:false})
+    newProduct: (req, res) => {
+        res.render("newProduct")
     },
 
     //pagina edicion de producto
-    editProduct:(req,res)=>{
-        res.render("editProduct")
+    editProduct: (req, res) => {
+        let productsJson = modelsController.FnRead("products")
+        let product = modelsController.FnSearch(productsJson, "id", req.params.idProduct)
+        res.render("editProduct", { product: product })
     },
-
+    //Editar un producto
+    editProductId: (req, res) => {
+        modelsController.FnEdit("products", req)
+        res.redirect("/product/editProduct/" + req.params.idProduct)
+    },
+    
     //Crear un nuevo producto
-    createProduct:function(req,res) {
+    createProduct: function (req, res) {
 
-        let productsJson=modelsController.FnRead("products")
-        let coincidence=modelsController.FnSearch(productsJson,"nameProduct",req.body.nameProduct);
-
-        if ( coincidence==undefined ) {
-        //Crea un producto si no esta previamente
-            let newProduct=new function(){
-                this.nameProduct=req.body.nameProduct
-                this.description=req.body.description
-                this.productImg=req.file.filename
-                this.category=req.body.category
-                this.price=req.body.price || 0
-            }
-            modelsController.FnCreate(productsJson,newProduct)
-            modelsController.FnSave("products",productsJson)
-
-            res.redirect("/product/DetalleDeProducto")
-        } else {
-        //no hace nada
-            res.render("newProduct",{error:true})
+        let newProduct = new function () {
+            this.id = Date.now()
+            this.nameProduct = req.body.nameProduct
+            this.price = req.body.price || 0
+            this.description = req.body.description
+            this.grams = req.body.grams
+            this.fragance = req.body.fragance
+            this.category = req.body.category
+            this.image = req.file.filename
         }
+        modelsController.FnCreate("products", newProduct)
+        
+        res.redirect("/product/DetalleDeProducto")
     },
-    usersList:function(){
+    //Eliminar un producto
+    deleteProduct: function (req, res) {
+        modelsController.FnDelete("products", req.params.idProduct)
+        res.redirect("/user/admin")
+    },
+    usersList: function () {
         return modelsController.FnRead("products")
     }
 }
 
-module.exports=productController
+module.exports = productController

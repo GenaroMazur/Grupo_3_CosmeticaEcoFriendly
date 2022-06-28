@@ -16,47 +16,76 @@
                 <h2>EDITAR PRODUCTO</h2>
             </div>
             <div>
-                <form action="/product/editProduct" method="get">
-                    <div>
-                        <label for="searchProduct"><h4>Buscar Producto</h4></label>
-                        <input type="search" name="product" id="searchProduct">
-                    </div>
-                    <div class="botons" id="search">
-                        <input type="submit" value="buscar">
-                    </div>
-                </form>
-                <form action="/product/editProduct/:idProduct?_method=put" method="post">
+                <form action="/product/editProduct/<%= product.id %>?_method=put" method="post">
                     <div>
                         <label for="nameProduct"><h4>Nombre Del Producto</h4></label>
-                        <input type="text" name="nameProduct" id="nameProduct" class="textArea" required>
+                        <input type="text" name="nameProduct" id="nameProduct" class="textArea" value="<%= product.nameProduct%>" required>
                     </div>
                     <div>
                         <label for="description"><h4>Descripcion</h4></label>
-                        <input type="text" name="description" id="description" class="textArea" required>
+                        <textarea name="description" id="description" cols="30" rows="10" class="textArea"required><%= product.description%></textarea>
                     </div>
                     <div>
-                        <label for="productImg"><h5>Insertar imagen</h5></label>
-                        <input type="file" id="productImg" name="productImg" accept="image/png, image/jpeg" required>
+                        <label for="Category"><h5>Categoria del producto</h5></label>
+                        <select name="category" id="Category" >
+                            <option value="jabon_solido" <% if (product.category=="jabon_solido") { %>
+                            selected
+                            <% } %>>
+                                Jabon Solido
+                            </option>
+                            <option value="desodorante_solido" <% if (product.category=="desodorante_solido") { %>
+                            selected
+                            <% } %>>
+                                Desodorante Solido
+                            </option>
+                            <option value="shampoo_solido" <% if (product.category=="shampoo_solido") { %>
+                            selected
+                            <% } %>>
+                                Shampoo Solido
+                            </option>
+                            <option value="acondicionador_solido" <% if (product.category=="acondicionador_solido") { %>
+                            selected
+                            <% } %>>
+                                Acondicionador Solido
+                            </option>
+                        </select> 
                     </div>
                     <div>
-                        <label for=""><h5>Insertar imagen</h5></label>
-                        <select name="Category" id="Category">
-                            <option value="jabon_solido">Jabon Solido</option>
-                            <option value="desodorante_solido">Desodorante Solido</option>
-                            <option value="shampoo_solido">Shampoo Solido</option>
-                            <option value="acondicionador_solido">Acondicionador Solido</option>
+                        <label for="fragance">Fragancia</label>
+                        <input type="text" name="fragrance" id="fragance" class="textArea" value="<%= product.fragrance%>">
+                    </div>
+                    <div>
+                        <label for="grams">Cantidad</label>
+                        <select name="grams" id="grams" class="textArea">
+                            <option value=70 <% if (product.grams==70) { %>
+                                selected
+                            <% } %>>
+                                70 gramos
+                            </option>
+                            <option value=100 <% if (product.grams==100) { %>
+                                selected
+                            <% } %>>
+                                100 gramos
+                            </option>
+                            <option value=150 <% if (product.grams==150) { %>
+                                selected
+                            <% } %>>
+                                150 gramos
+                            </option>
+                            <option value=250 <% if (product.grams==250) { %>
+                                selected
+                            <% } %>>
+                                250 gramos
+                            </option>
                         </select>
                     </div>
                     <div>
                         <label for="price"><h5>Precio</h5></label>
-                        <input type="number" name="price" id="price" min="0" class="textArea">
+                        <input type="number" name="price" id="price" min="0" class="textArea" value=<%= product.price %> step=".01">
                     </div>
                     <div class="botons">
                         <input type="submit" value="Editar">
                     </div>
-                </form>
-                <form action="/product/deleteProduct/:idProduct?_method=delete">
-                    <button type="submit">Borrar</button>
                 </form>
             </div>
         </section>

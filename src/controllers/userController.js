@@ -13,43 +13,34 @@ const userController={
         return res.render("register")
     },
 
+    //panel de administrador
+    admin: (req, res) => {
+        let productsJson=modelsController.FnRead("products")
+
+        return res.render("admin",{products:productsJson})
+    },
+
     //Crear usuario
     create:function (req,res) {
-        
-        let usersJson=modelsController.FnRead("users")
 
-        let coincidence=modelsController.FnSearch(usersJson,"username",req.body.username) || false;
-
-        if (!coincidence){
-            
             let newUser=new function(username , password , email){
+                this.id=Date.now()
                 this.username=req.body.username
                 this.password=req.body.password
                 this.email=req.body.email
             }
 
-            modelsController.FnCreate(usersJson,newUser)
-            modelsController.FnSave("users",usersJson)
+            modelsController.FnCreate("users",newUser)
 
             res.redirect("/")
-        } else {
-            res.redirect("/user/registro")
-        }
     },
 
     //Eliminar usuario
     delete:function(req,res) {
-        let usersJson=modelsController.FnRead("users")
-        let coincidence=modelsController.FnSearch(usersJson,"username",req.body.username)
 
-        if (coincidence) {
-            //se encontro usuario
-            let filtered=modelsController.FnDelete(usersJson,req.body)
-            modelsController.FnSave("users",filtered)
+            modelsController.FnDelete("users",req.params.userId)
             res.redirect("/")
-        }else{
-            //No se encontro usuario
-        }
+
     }
 }
 
