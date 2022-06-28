@@ -12,22 +12,22 @@
                 <div>    
                     <label for="name">Nombre de usuario</label>
                     <input type="text" id="name" name="username" placeholder="Nombre de usuario"class="textArea"
-                    <% if (old.username) { %>
+                    <% if (locals.errors && errors.username) { %>
                         value=<%= old.username %> 
                     <% } %>
                     required>
-                    <% if (errors.username) { %>
+                    <% if (locals.errors && errors.username) { %>
                     <p><%= errors.username.msg %> </p>
                     <% } %>
                 </div>
                 <div>
                     <label for="pass">Contraseña</label>
                     <input type="password" name="password" id="pass" placeholder="Nueva contraseña"class="textArea"
-                    <% if (old.password) { %>
+                    <% if (locals.errors && old.password) { %>
                         value=<%= old.password %> 
                     <% } %>
                     required>
-                    <% if (errors.password) { %>
+                    <% if (locals.errors && errors.password) { %>
                         <p><%= errors.password.msg %> </p>
                         <% } %>
                     <span class="hidden"><input type="checkbox">Mostrar</span>
@@ -35,11 +35,11 @@
                 <div>
                     <label for="copass">Confirmar Contraseña</label>
                     <input type="password" name="coPass"id="copass" placeholder="Confirmar contraseña"class="textArea"
-                    <% if (old.coPass) { %>
+                    <% if (locals.errors && old.coPass) { %>
                         value=<%= old.coPass %> 
                     <% } %>
                     required>
-                    <% if (errors.coPass) { %>
+                    <% if (locals.errors && errors.coPass) { %>
                         <p><%= errors.coPass.msg %> </p>
                         <% } %>
                     <span class="hidden"><input type="checkbox">Mostrar</span>
@@ -47,11 +47,11 @@
                 <div>
                     <label for="email">Correo</label>
                     <input type="email" name="email" id="email" placeholder="Email"class="textArea"
-                    <% if (old.email) { %>
+                    <% if (locals.errors && old.email) { %>
                         value=<%= old.email %> 
                     <% } %>
                     required>
-                    <% if (errors.email) { %>
+                    <% if ( locals.errors && errors.email) { %>
                         <p><%= errors.email.msg %> </p>
                         <% } %>
                 </div>
