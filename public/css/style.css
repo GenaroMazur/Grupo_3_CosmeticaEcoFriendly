@@ -263,7 +263,7 @@ footer a{
     display: flex;
     flex-wrap: nowrap;
     background: #fce4d4;
-    background-image: url(/img/jabon_1.jpg);
+    background-image: url(/img/products_images/jabon_1.jpg);
     background-repeat:round;
 }
 .container a{
@@ -476,7 +476,7 @@ header#index{
     display: flex;
     align-items: flex-end;
     text-align: left;
-    background: right fixed url(/img/fondo-header.jpg);
+    background: right fixed url(/img/banners_fondos_images/fondo-header.jpg);
     background-repeat: no-repeat;
 
 }
