@@ -39,8 +39,8 @@ img{
     object-fit:fill
 }
 .img-icon{
-    height: 100px;
-    width: 144px;
+    height: 180px;
+    width: 180px;
 }
 .usuario-icon{
     height: 25px;
@@ -131,11 +131,11 @@ z-index: 10;
 }
 
 .admin-main{
-    background-color: #fff;
+    background-color: #ffebe0;
 }
 
 .product-list{
-    background-color:#fff;
+    background-color:#ffebe0;
 }
 .product-list article{
     background-color:#cdbd9d;
@@ -187,13 +187,21 @@ article a {
 }
 article .button-delete {
     background-color: #ae2510;
+<<<<<<< HEAD
+    border: 2px solid rgba(0, 0, 0, 0.2);
+=======
      border: 2px solid rgba(0, 0, 0, 0.2);
+>>>>>>> 53e4f4649a7ce1e6396beb80b780635089e1d9b0
     border-radius: 50px;
     padding: 12px 30px 12px 30px;
     margin: 1rem;
     font-size: 10px;
     color: white;
     opacity: 0.8;
+<<<<<<< HEAD
+    transition: all .25s;
+=======
+>>>>>>> 53e4f4649a7ce1e6396beb80b780635089e1d9b0
 }
 
 
