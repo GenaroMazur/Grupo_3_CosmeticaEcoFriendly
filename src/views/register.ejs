@@ -11,21 +11,49 @@
             <form method="post" action="/user/registro">
                 <div>    
                     <label for="name">Nombre de usuario</label>
-                    <input type="text" id="name" name="username" placeholder="Nombre de usuario"class="textArea"required>
+                    <input type="text" id="name" name="username" placeholder="Nombre de usuario"class="textArea"
+                    <% if (old.username) { %>
+                        value=<%= old.username %> 
+                    <% } %>
+                    required>
+                    <% if (errors.username) { %>
+                    <p><%= errors.username.msg %> </p>
+                    <% } %>
                 </div>
                 <div>
                     <label for="pass">Contraseña</label>
-                    <input type="password" name="password" id="pass" placeholder="Nueva contraseña"class="textArea"required>
+                    <input type="password" name="password" id="pass" placeholder="Nueva contraseña"class="textArea"
+                    <% if (old.password) { %>
+                        value=<%= old.password %> 
+                    <% } %>
+                    required>
+                    <% if (errors.password) { %>
+                        <p><%= errors.password.msg %> </p>
+                        <% } %>
                     <span class="hidden"><input type="checkbox">Mostrar</span>
                 </div>
                 <div>
                     <label for="copass">Confirmar Contraseña</label>
-                    <input type="password" name="coPass"id="copass" placeholder="Confirmar contraseña"class="textArea"required>
+                    <input type="password" name="coPass"id="copass" placeholder="Confirmar contraseña"class="textArea"
+                    <% if (old.coPass) { %>
+                        value=<%= old.coPass %> 
+                    <% } %>
+                    required>
+                    <% if (errors.coPass) { %>
+                        <p><%= errors.coPass.msg %> </p>
+                        <% } %>
                     <span class="hidden"><input type="checkbox">Mostrar</span>
                 </div>
                 <div>
                     <label for="email">Correo</label>
-                    <input type="email" name="email" id="email" placeholder="Email"class="textArea" required>
+                    <input type="email" name="email" id="email" placeholder="Email"class="textArea"
+                    <% if (old.email) { %>
+                        value=<%= old.email %> 
+                    <% } %>
+                    required>
+                    <% if (errors.email) { %>
+                        <p><%= errors.email.msg %> </p>
+                        <% } %>
                 </div>
                 <input type="submit" value="Registrarse"class="button">
             </form>

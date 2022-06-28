@@ -19,16 +19,16 @@ const userMiddlewares={
         let userList=modelsController.FnRead("users")
         let coincidences=userList.some(user=>user.username==req.body.username)
         let confirmation=req.body.password==req.body.coPass
-        let validaciones=validationResult(req).errors
+        let validaciones=validationResult(req)
         if (coincidences){
-            validaciones.push({
+            validaciones.errors.push({
                 "value":req.body.username,
                 "msg":"Nombre de usuario ya existente",
                 "param":"username",
                 "location":"body"
             })
         } else if (!confirmation){
-            validaciones.push({
+            validaciones.errors.push({
                 "value":req.body.coPass,
                 "msg":"La contraseña no coincide",
                 "param":"coPass",
@@ -41,8 +41,8 @@ const userMiddlewares={
     register:function(req,res,next){
         let validaciones=userMiddlewares.coincidences(req,res)
 
-        if (validaciones.length){
-            res.redirect("/user/registro")
+        if (!validaciones.isEmpty()){
+            res.render("register",{errors:validaciones.mapped(),old:req.body})
         }else{
             next()
         }
