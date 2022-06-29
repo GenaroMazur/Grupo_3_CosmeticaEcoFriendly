@@ -10,7 +10,8 @@ const productController = {
 
     //pagina del detalle del producto
     productDetail: (req, res) => {
-        return res.render("productDetail")
+        let products=modelsController.FnRead("products")
+        return res.render("productDetail",{products:products})
     },
 
     //pagina de nuevo producto
