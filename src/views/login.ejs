@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <title>La Vie Naturelle - login</title>
+<title>La Vie Naturelle - login</title>
 <%- include('./partials/head') %>
-<body>
-    <%- include('./partials/header') %>
-    <article class="container" id="login">
-        <img src="/img/products_images/jabon_1.jpg" alt="Imagen login" class="img">
-        <section class="form">
-            <img src="/img/lavie_images/la_vie_icon.png" alt="Logo login">
-            <h2>Login</h2>
-            <p>Bienvenido de vuelta! Por favor ingresa tu cuenta para acceder a la página</p>
-            <form action="" method="post">
-                <div>
-                    <label for="name">Nombre de usuario</label>
-                    <input type="text" placeholder="Username" class="textArea" name="name" id="name"required>
-                </div>
-                <div>
-                    <label for="pass">Contraseña</label>
-                    <input type="password" name="password" placeholder="Password" id="pass" class="textArea"required>
-                    <label><input type="checkbox">Mostrar</label>
-                </div>
-                <span><a href="" target="_blank">¿ no recuerdas tu contraseña ?</a></span>
-                <input type="submit" value="Login" class="button">
-            </form>
-            <p1>¿ No tienes una cuenta ? Create una!<a href="/user/registro"><button class="button">Sign up</button></a></p1>
-        </section>
-    </article>
-    <%- include('./partials/footer') %>
-</body>
+
+    <body>
+        <%- include('./partials/header') %>
+            <article class="container" id="login">
+                <img src="/img/products_images/jabon_1.jpg" alt="Imagen login" class="img">
+                <section class="form">
+                    <img src="/img/lavie_images/la_vie_icon.png" alt="Logo login">
+                    <h2>Login</h2>
+                    <p>Bienvenido de vuelta! Por favor ingresa tu cuenta para acceder a la página</p>
+                    <form action="" method="post">
+                        <div>
+                            <label for="name">Nombre de usuario</label>
+                            <input type="text" placeholder="Username" class="textArea" name="name" id="name" required>
+                        </div>
+                        <div>
+                            <label for="pass">Contraseña</label>
+                            <input type="password" name="password" placeholder="Password" id="pass" class="textArea"
+                                required>
+                            <label><input type="checkbox">Mostrar</label>
+                        </div>
+                        <span><a href="" target="_blank">¿ no recuerdas tu contraseña ?</a></span>
+                        <input type="submit" value="Login" class="button">
+                    </form>
+                    <p1>¿ No tienes una cuenta ? Create una!<a href="/user/registro"><button class="button">Sign
+                                up</button></a></p1>
+                </section>
+            </article>
+            <%- include('./partials/footer') %>
+    </body>
+
 </html>

@@ -1,47 +1,47 @@
-const path=require("path")
-const modelsController=require("./../models/modelsController")
+const path = require("path")
+const modelsController = require("./../models/modelsController")
 
-const userController={
+const userController = {
 
     //pagina de login
-    login: (req,res) =>{
+    login: (req, res) => {
         return res.render("login")
     },
 
     //pagina de registro
-    register: (req,res) =>{
+    register: (req, res) => {
         return res.render("register")
     },
 
     //panel de administrador
     admin: (req, res) => {
-        let productsJson=modelsController.FnRead("products")
+        let productsJson = modelsController.FnRead("products")
 
-        return res.render("admin",{products:productsJson})
+        return res.render("admin", { products: productsJson })
     },
 
     //Crear usuario
-    create:function (req,res) {
+    create: function (req, res) {
 
-            let newUser=new function(username , password , email){
-                this.id=Date.now()
-                this.username=req.body.username
-                this.password=req.body.password
-                this.email=req.body.email
-            }
+        let newUser = new function (username, password, email) {
+            this.id = Date.now()
+            this.username = req.body.username
+            this.password = req.body.password
+            this.email = req.body.email
+        }
 
-            modelsController.FnCreate("users",newUser)
+        modelsController.FnCreate("users", newUser)
 
-            res.redirect("/")
+        res.redirect("/")
     },
 
     //Eliminar usuario
-    delete:function(req,res) {
+    delete: function (req, res) {
 
-            modelsController.FnDelete("users",req.params.userId)
-            res.redirect("/")
+        modelsController.FnDelete("users", req.params.userId)
+        res.redirect("/")
 
     }
 }
 
-module.exports=userController
+module.exports = userController

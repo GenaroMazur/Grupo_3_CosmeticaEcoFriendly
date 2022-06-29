@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-*{
-    box-sizing: border-box; 
+
+* {
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-*{
-    box-sizing: border-box; 
+
+* {
+    box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0px 0px;
     background-color: #cdbd9d;
 }
+
 /*header general*/
-header{
+header {
     color: white;
     background-color: #cdbd9d;
     display: flex;
@@ -22,90 +25,99 @@ header{
 
 }
 
-.nav-2{
+.nav-2 {
     display: flex;
 }
 
-.titulo a{
+.titulo a {
     text-decoration: none;
     color: #fff;
 }
-img{
+
+img {
     max-width: 100%;
     max-height: 100%;
-    object-fit:fill
+    object-fit: fill
 }
-.img-icon{
+
+.img-icon {
     height: 100px;
     width: 70px;
 }
-.usuario-icon{
+
+.usuario-icon {
     height: 25px;
     width: 25px;
     cursor: pointer;
-    
+
 }
-.des_icono:checked + .menu-navegacion{
+
+.des_icono:checked+.menu-navegacion {
     background-color: red;
 }
-.carrito-icon{
+
+.carrito-icon {
     height: 25px;
     width: 25px;
 }
 
-.burguer-icon{
+.burguer-icon {
     height: 25px;
     width: 25px;
 }
-.nav__input{
+
+.nav__input {
     display: none;
 }
-.menu-navegacion{
-position: fixed;
-top: 0;
-left: 0;
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-background-image: linear-gradient(to top, #9fb478 0%, #cdbd9d 100%);
-width: 30vw;
-height: 100%;
-align-items: center;
-transition: transform .3s ease-in-out;
-box-shadow: 0 0 6px rgba(0, 0, 0, .0);
-transform: translate(-110%); 
-z-index: 10;
+
+.menu-navegacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to top, #9fb478 0%, #cdbd9d 100%);
+    width: 30vw;
+    height: 100%;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .0);
+    transform: translate(-110%);
+    z-index: 10;
 }
 
-.nav__input:checked + .menu-navegacion{
+.nav__input:checked+.menu-navegacion {
     transform: translate(0%);
 }
 
-.menu-navegacion a{
+.menu-navegacion a {
     color: white;
     text-decoration: none;
     padding: 10px 13px 10px 13px;
     border-radius: 30px;
 }
-.menu-navegacion a:hover{
+
+.menu-navegacion a:hover {
     color: #000;
     background-color: #9fb478;
 }
-.nav{
+
+.nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
+
 }
 
-.titulo{
+.titulo {
     display: flex;
     align-items: center;
 
 
 }
 
-.icono-hamburguesa{
+.icono-hamburguesa {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,7 +125,7 @@ z-index: 10;
 
 
 /*----------Footer-------------*/
-footer{
+footer {
     background-color: #cdbd9d;
     display: flex;
     flex-direction: column;
@@ -123,131 +135,146 @@ footer{
     margin: 2rem;
 }
 
-footer a{
+footer a {
     color: black;
 }
-.info-footer{
+
+.info-footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.info-footer p img{
+
+.info-footer p img {
     text-align: center;
 }
 
-.iconos-info{
+.iconos-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.iconos-info img{
+
+.iconos-info img {
     width: 25px;
     height: 25px;
 }
 
-.logo-footer{
+.logo-footer {
     height: 50px;
     width: 50px;
     align-self: center;
 }
 
-.ig-icon{
+.ig-icon {
     height: 25px;
     width: 25px;
 }
 
-.wpp-icon{
+.wpp-icon {
     height: 25px;
     width: 25px;
     margin: 0px 0px 7px 0px;
 }
 
-.redes-sociales2{
+.redes-sociales2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.redes-sociales{
+.redes-sociales {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.legal-footer{
+.legal-footer {
     display: flex;
     justify-content: center;
 }
-.nosotros-footer{
+
+.nosotros-footer {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.nosotros{
+
+.nosotros {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-}
-.subtitulo-footer{
     text-align: center;
 }
 
-.rgpd{
+.subtitulo-footer {
+    text-align: center;
+}
+
+.rgpd {
     display: flex;
     flex-direction: column;
 }
+
 /*Estilo main*/
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px 10px;
 }
-section{
+
+section {
     text-align: center;
     box-shadow: 0 0 20px rgb(0 0 0 / 50%);
     width: 80%;
     border-radius: 25px;
-    background-color:#fce4d4;
+    background-color: #fce4d4;
 }
-form>*{
+
+form>* {
     display: flex;
     flex-direction: column;
-    margin: 15px 30px ;
+    margin: 15px 30px;
     align-items: center;
 }
-label{
-    margin-bottom:2px ;
+
+label {
+    margin-bottom: 2px;
 }
-.botons{
+
+.botons {
     flex-direction: row;
     justify-content: center;
 }
-.botons>*{
+
+.botons>* {
     margin: 10px;
     background-color: #9fb478;
     color: #f8f3f0;
     padding: 10px 0px 10px 0px;
     width: 30%;
     border-style: none;
-    border-radius:30px;
+    border-radius: 30px;
     transition: all 0.25s;
 }
-.botons> *:hover{
+
+.botons>*:hover {
     color: #454545;
-    background-color:#c0da8f ;
+    background-color: #c0da8f;
 }
-#search>*{
+
+#search>* {
     margin: 5px;
     width: 30%;
     border-radius: 30px;
 }
-.textArea{
+
+.textArea {
     background-color: #ffffff;
     padding: 1% 14%;
     margin: 1.8%;
@@ -255,24 +282,28 @@ label{
     border: #fbdddd inset 1px;
     border-radius: 30px;
 }
-#Category{
+
+#Category {
     padding: 5px 7%;
     border-radius: 30px;
 
 }
 
-#productImg{
+#productImg {
     width: 60%;
     padding: 0px 0px 0px 216px
 }
-@media(min-width:900px){
+
+@media(min-width:900px) {
+
     /* footer general*/
-    footer{
+    footer {
         flex-direction: row;
-        margin:1rem;
+        margin: 1rem;
         justify-content: space-between;
     }
-    .redes-sociales2{
+
+    .redes-sociales2 {
         justify-content: flex-start;
     }
 }

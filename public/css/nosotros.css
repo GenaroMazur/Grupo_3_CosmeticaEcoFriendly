@@ -1,8 +1,10 @@
-body{
+body {
     margin: 0px;
 }
 
-.mision, .vision, .valores{
+.mision,
+.vision,
+.valores {
     margin-bottom: 3rem;
     display: flex;
     margin: 2rem;
@@ -11,41 +13,42 @@ body{
     box-shadow: 6px 6px 6px #6b6a6a;
 }
 
-.titulo-nosotros{
+.titulo-nosotros {
 
     right: -110px;
     bottom: 170px;
 }
 
-.img-nosotros img{
+.img-nosotros img {
     opacity: 0.6;
 }
 
-.banner-nosotros{
-margin: 30px;
+.banner-nosotros {
+    margin: 30px;
 }
 
- #nosotros article .parrafo-nosotros p{
+#nosotros article .parrafo-nosotros p {
     padding: 0rem;
     margin: 1rem;
 }
-.mision{
+
+.mision {
     display: flex;
     background-color: antiquewhite;
 }
 
-.vision{
+.vision {
     background-color: antiquewhite;
 }
 
-.valores{
+.valores {
     background-color: antiquewhite;
 }
 
-#nosotros article h3{
+#nosotros article h3 {
     text-align: center;
 }
 
-#nosotros article p{
+#nosotros article p {
     padding: 50px 15px 30px;
 }

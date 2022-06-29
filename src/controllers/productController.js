@@ -10,8 +10,8 @@ const productController = {
 
     //pagina del detalle del producto
     productDetail: (req, res) => {
-        let products=modelsController.FnRead("products")
-        return res.render("productDetail",{products:products})
+        let products = modelsController.FnRead("products")
+        return res.render("productDetail", { products: products })
     },
 
     //pagina de nuevo producto
@@ -30,7 +30,7 @@ const productController = {
         modelsController.FnEdit("products", req)
         res.redirect("/product/editProduct/" + req.params.idProduct)
     },
-    
+
     //Crear un nuevo producto
     createProduct: function (req, res) {
 
@@ -45,7 +45,7 @@ const productController = {
             this.image = req.file.filename
         }
         modelsController.FnCreate("products", newProduct)
-        
+
         res.redirect("/product/DetalleDeProducto")
     },
     //Eliminar un producto

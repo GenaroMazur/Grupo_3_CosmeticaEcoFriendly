@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
     },
     filename: (req, file, cb) => {
         console.log(req.body);
-        let filename = req.body.category+"_"+ Date.now() + path.extname(file.originalname)
+        let filename = req.body.category + "_" + Date.now() + path.extname(file.originalname)
         cb(null, filename)
     }
 })
@@ -35,6 +35,6 @@ routes.put("/editProduct/:idProduct", productController.editProductId)
 
 //DELETE
 // routes.delete("/deleteProduct/:idProduct",productController.deleteProduct)
-routes.delete("/deleteProduct/:idProduct",productController.deleteProduct)
+routes.delete("/deleteProduct/:idProduct", productController.deleteProduct)
 
 module.exports = routes

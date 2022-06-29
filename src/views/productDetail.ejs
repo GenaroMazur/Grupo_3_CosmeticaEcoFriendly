@@ -1,69 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-    <title>La Vie Naturelle - Detalle del producto</title>
-    <%- include('./partials/head') %>
-<body>
-    <%- include('./partials/header') %>
-    <main>      
-        <article class="article-producto">
-            <div class="bloque1">
-                <div>
-                    <img src="./../img/products_images/jabon_1.jpg" alt="imagen producto 1" class="img-detalle-producto">
-                </div>         
-                <div class="precio-cantidad-tipo">
-                    <h2>Acondicionador Sólido</h2>
-                    <div class="precio-detalle">
-                        <h3>$599.99</h3>
-                        <input type="number" min="0" max="100" placeholder="cantidad" id="input_product">
-                    </div>
-                    <div class="tipo-cabello">
-                        <h3>Tipo cabello:<h3>
-                        <div class="selector">
-                            <select>
-                                <option value="cabello seco">cabello seco</option>
-                                <option value="cabello rizado">cabello graso</option>
-                                <option value="cabello liso">cabello normal</option>
-                            </select>
+<title>La Vie Naturelle - Detalle del producto</title>
+<%- include('./partials/head') %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <article class="article-producto">
+                    <div class="bloque1">
+                        <div>
+                            <img src="./../img/products_images/jabon_1.jpg" alt="imagen producto 1"
+                                class="img-detalle-producto">
+                        </div>
+                        <div class="precio-cantidad-tipo">
+                            <h2>Acondicionador Sólido</h2>
+                            <div class="precio-detalle">
+                                <h3>$599.99</h3>
+                                <input type="number" min="0" max="100" placeholder="cantidad" id="input_product">
+                            </div>
+                            <div class="tipo-cabello">
+                                <h3>Tipo cabello:<h3>
+                                        <div class="selector">
+                                            <select>
+                                                <option value="cabello seco">cabello seco</option>
+                                                <option value="cabello rizado">cabello graso</option>
+                                                <option value="cabello liso">cabello normal</option>
+                                            </select>
+                                        </div>
+                            </div>
+                            <div class="carrito-index">
+                                <p>añadir al carrito</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="carrito-index">
-                        <p>añadir al carrito</p>
+                    <!--bloque 2-->
+                    <nav class="bloque2">
+                        <details class="informacion-producto">
+                            <summary>Descripcion</summary>
+                            <p>Acondicionador capilar sólido nutritivo para largos y puntas. Suaviza, humecta e hidrata
+                                la fibra capilar. Brinda luminosidad. Fortalece el cabello maltratado. pH adecuado.
+                                Producto natural vegano. Libre de parabenos, siliconas, petrolatos, sulfatos, colorantes
+                                y aromas artificiales. No testeado en animales
+                            </p>
+                        </details>
+                        <details class="informacion-producto">
+                            <summary>Ingredientes</summary>
+                            <p>Aceite de primera presión en frío de palta, almendra, coco, ricino, proteína de seda de
+                                origen natural, tensioactivo BTMS (Emulsionante de origen vegetal), manteca de Karité,
+                                glicerina vegetal, aceite esencial de pomelo y verbena. Vitamina E y B5
+                            </p>
+                        </details>
+                        <details class="informacion-producto">
+                            <summary>Modo de Uso</summary>
+                            <p>Después de aplicar el shampoo frotar la pastilla en las manos para que se deshagan y
+                                emulsionen sus aceites y aplicar sobre el cabello mojado (de medios a puntas, o sólo
+                                puntas en caso de cabello fino y/o graso) extendiéndolo con las manos o con un peine.
+                                Dejar actuar unos minutos y aclarar con agua para retirar el posible exceso. </p>
+                        </details>
+                    </nav>
+
+                    <!--bloque 3-->
+                    <%- include('./partials/ultimosProductos')%>
+                </article>
+
+                <aside>
+                    <div>
+                        <h3>Promociones</h3>
                     </div>
-                </div>
-            </div>
-            <!--bloque 2-->
-            <nav class="bloque2">
-                <details class="informacion-producto">
-                    <summary>Descripcion</summary>
-                    <p>Acondicionador capilar sólido nutritivo para largos y puntas. Suaviza, humecta e hidrata la fibra capilar. Brinda luminosidad. Fortalece el cabello maltratado. pH adecuado.
-                        Producto natural vegano. Libre de parabenos, siliconas, petrolatos, sulfatos, colorantes y aromas artificiales. No testeado en animales
-                         </p>
-                </details>
-                <details class="informacion-producto">
-                    <summary>Ingredientes</summary>
-                    <p>Aceite de primera presión en frío de palta, almendra, coco, ricino, proteína de seda de origen natural, tensioactivo BTMS (Emulsionante de origen vegetal), manteca de Karité, glicerina vegetal, aceite esencial de pomelo y verbena. Vitamina E y B5
-                         </p>
-                </details>
-                <details class="informacion-producto">
-                    <summary>Modo de Uso</summary>
-                    <p>Después de aplicar el shampoo frotar la pastilla en las manos para que se deshagan y emulsionen sus aceites y aplicar sobre el cabello mojado (de medios a puntas, o sólo puntas en caso de cabello fino y/o graso) extendiéndolo con las manos o con un peine. Dejar actuar unos minutos y aclarar con agua para retirar el posible exceso. </p>
-                </details>
-            </nav>
-
-            <!--bloque 3--> 
-            <%- include('./partials/ultimosProductos')%> 
-        </article>
-
-        <aside>
-            <div>
-                <h3>Promociones</h3>
-            </div>
-            <div>
-                <img src="./../img/promos_images/promoción.jpeg" alt="promoción del dia">  
-            </div> 
-                <div class="subtitulo-categorias">
-                    <h3>Categorias</h3>
-                </div>
+                    <div>
+                        <img src="./../img/promos_images/promoción.jpeg" alt="promoción del dia">
+                    </div>
+                    <div class="subtitulo-categorias">
+                        <h3>Categorias</h3>
+                    </div>
                     <div class="categorias">
                         <div class="cat">
                             <a href="#">Jabón Sólido</a>
@@ -75,11 +84,12 @@
                             <a href="#">Desodorante Sólido</a>
                         </div>
                     </div>
-                <div>
-                    <img src="./../img/lavie_images/LavieSinFondo.png" alt="img">  
-                </div>      
-        </aside>
-    </main>
-    <%- include('./partials/footer') %>
-</body>
+                    <div>
+                        <img src="./../img/lavie_images/LavieSinFondo.png" alt="img">
+                    </div>
+                </aside>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
+
 </html>

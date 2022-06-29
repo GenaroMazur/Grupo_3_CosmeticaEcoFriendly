@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,53 +9,51 @@
     <link rel="shortcut icon" href="./../img/lavie_images/la vie icon mod.png" type="image/x-icon" id="x-icon">
     <link rel="stylesheet" href="/css/admin.css">
 </head>
+
 <body>
     <header class="header-admin">
-        <a href="/"><img src="./../img/lavie_images/La vie (5).png" alt=""class="img-icon"></a>
-
+        <a href="/"><img src="./../img/lavie_images/La vie (5).png" alt="" class="img-icon"></a>
         <div class="icono-hamburguesa">
             <div class="burguer-icon">
-                <label for="menu"class="nav__label">
+                <label for="menu" class="nav__label">
                     <img src="./../img/icons_images/menu-hamburguesa.png" alt="menu hamburguesa">
                 </label>
                 <input type="checkbox" id="menu" class="nav__input">
-    
                 <nav class="menu-navegacion">
                     <a href="/">inicio</a>
                     <a href="/nosotros">nosotros</a>
                     <a href="/product/CarritoDeCompras">carrito</a>
                     <a href="/user/registro">registro</a>
                     <a href="#">product</a>
-                   <a href="/product/newProduct"> Agregar Producto</a>
-                   <div class="burguer-icon">
-                       <label for="menu"class="nav__label">
+                    <a href="/product/newProduct"> Agregar Producto</a>
+                    <div class="burguer-icon">
+                        <label for="menu" class="nav__label">
                             <img src="./../img/icons_images/cruzar.png" alt="menu hamburguesa">
                         </label>
-                    <input type="checkbox" id="menu" class="nav__input">
+                        <input type="checkbox" id="menu" class="nav__input">
                 </nav>
             </div>
         </div>
     </header>
     <main class="admin-main">
         <aside>
-        </ul>
-              <li>
-                 <a href="/nosotros">nosotros</a>
-             </li>
-             <li>
-                 <a href="/product/CarritoDeCompras">carrito</a>
+            </ul>
+            <li>
+                <a href="/nosotros">nosotros</a>
             </li>
             <li>
-                  <a href="/user/registro">registro</a>
+                <a href="/product/CarritoDeCompras">carrito</a>
             </li>
-             <li>
-                   <a href="#">product</a>
+            <li>
+                <a href="/user/registro">registro</a>
             </li>
-             <li>
-                  <a href="/product/newProduct"> Agregar Producto</a>
+            <li>
+                <a href="#">product</a>
             </li>
-          <ul>
-                
+            <li>
+                <a href="/product/newProduct"> Agregar Producto</a>
+            </li>
+            <ul>
         </aside>
         <div class="info-admin">
             <h2>Lista de Productos</h2>
@@ -81,9 +80,13 @@
                 <article>
                     <div class="info-producto">
                         <img src="/img/products_images/<%= product.image %>" alt="imagen">
-                        <p><%= product.nameProduct %></p>
                         <p>
-                            <span> <%= product.price %> </span>
+                            <%= product.nameProduct %>
+                        </p>
+                        <p>
+                            <span>
+                                <%= product.price %>
+                            </span>
                         </p>
                         <p>10</p>
                     </div>
@@ -94,10 +97,8 @@
                         </form>
                     </div>
                 </article>
-            <% }) %>  
-            
+            <% }) %>
         </div>
-       
     </main>
 </body>
 </html>

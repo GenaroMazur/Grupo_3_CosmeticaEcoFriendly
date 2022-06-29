@@ -13,7 +13,7 @@ const modelsController = {
     FnSearch: function (array, _properti, identifier) {
         return array.find(element => {
             if (element[_properti] == identifier) {
-                let found =element
+                let found = element
                 return found
             }
         })
@@ -56,17 +56,17 @@ const modelsController = {
     FnCreate: function (nameArchive, object) {
         let array = this.FnRead(nameArchive)
         array.push(object)
-        this.FnSave(nameArchive,array)
+        this.FnSave(nameArchive, array)
     },
 
     //Elimina datos dentro de un JSON
     //Ingresar Array donde eliminar el objeto, ingresar pedido(request)
     FnDelete: function (nameArchive, id) {
-        let array= this.FnRead(nameArchive)
-        newArray= array.filter(element => {
+        let array = this.FnRead(nameArchive)
+        newArray = array.filter(element => {
             return element.id != id
         })
-        modelsController.FnSave(nameArchive,newArray)
+        modelsController.FnSave(nameArchive, newArray)
     },
 
 }
