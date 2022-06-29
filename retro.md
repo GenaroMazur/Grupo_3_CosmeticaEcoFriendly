@@ -47,3 +47,28 @@ Viendo los avances como grupo y consolidándonos cada vez más, mantuvimos nueva
 
 ### Stop Doing
 - Parar de dejar a último momento las tareas.
+
+
+## Sprint-3-Restrospectiva
+
+### Start Doing: 
+- Buscar cosas a mejorar en el proyecto, cuestiones estéticas y funcionales y agregarlo al trello. 
+- A su vez, investigar más sobre experiencia de usuario.
+
+### More of:
+- Usar más el trello de lo que venimos trabajando. 
+- Más positivismo individual y más práctica. 
+- Más calma en el grupo ante situaciones de estrés y salir en grupo para ayudar en este proceso y así también fortalecer las relaciones de compañerismo. 
+- Comunicar mejor las tareas de cada uno.
+
+### Keep Doing: 
+- Mantener las dailys, seguir ayudandonos mutuamente entre todos y seguir participando. 
+- Seguir con la iniciativa que se viene trabajando en el grupo.
+
+### Less of: 
+- Dejar de atrasar tareas pendientes y dejar de faltar a las reuniones de grupo.  
+- Dejar de mergear a último momento y hacerlo con más horas de anticipación. 
+
+### Stop Doing:  
+- Dormir en días de reunión faltando  a momentos fundamentales como dailys, día de planificación y reunión de retro. 
+
