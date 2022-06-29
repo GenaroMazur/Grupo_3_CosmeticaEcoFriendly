@@ -121,3 +121,35 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 
 #### Soluciones propuestas
 - Modificar el estilo de contacto.
+
+
+## Daily día 20/06
+
+### Fabricio Saucedo: 
+- La primera semana del sprint, no hice mucho. Trabajé con el json del producto con Camila y estableciendo las propiedades de cada producto. Todo esto se debió por la epoca de finales de la facultad y teniendo poco tiempo para estar a disposicion del grupo. Lo que haré para solucionare este inconveniente será encargarme de terminar mis tareas primordiales y así no atrasar al grupo.
+
+### Genaro Mazur:  
+- Trabajé implementando el multer, el express validator y mejoré los formularios. Creé el json de users e implementé la pagina error 404. No tuve ningún inconveniente de momento pero voy a seguir trabajando con los middlewares y el CRUD de productos.
+
+### Camila: 
+- Dadas las tareas que me dieron, cambié los textos y los rellenos de la página y por el tiempo corto que tuve dado por la facultad no le pude dedicar más tiempo y para enmendar ésto, me dedicaré a ordenar la carpeta images y las rutas de las imágenes.
+
+### Joel: 
+- Pude arreglar algunos botones, rutas de images en detalle del producto y bordes en todos los inputs así como también en  titulos y textos. De inconvenientes fueron casi nulos y seguiré investigando para aportar más al grupo.
+
+
+## Daily día 27/06
+
+### Fabricio Saucedo: 
+-  Esta semana pude trabajar e implementar un panel de administrador, su estructura y su estilo básico junto con la solución de errores en el proyecto. Por parte de las dificultades fueron las mismas que la semana pasada pero en menor medida pudiendo establecer un poco más de prioridad en la organización del proyecto, ayudando a mis compañeros. Lo que voy a hacer a partir de ahora, será encagarme de arreglar las vistas, haciéndolas responsivas ya que andamos flojos en eso. 
+
+
+### Genaro Mazur:  
+-  Mejore el código del controlador de productos; implementé un user middleware,  edité el código de NewProduct, EditProduct, register y admin. Tuve inconvenientes con el tiempo, problemas con el multer con el tema de validaciones y middlewares aun no resueltas. A partir de ahora me encargaré de investigar para solucionar el tema de validaciones y middlewares.
+
+
+### Camila: 
+- Ayudé con el crud de productos en el apartado de armado de la lista de productos y arreglé las carpetas de imágenes. Tuve problemas con el multer y con las rutas de imágenes pero ya solucionadas y dificultades de tiempo por estar ocupada con la facultad. Entonces lo que haré será añadir productos y ver el funcionamiento del CRUD de productos.
+
+### Joel: 
+- Lo que yo hice fue ayudar a Fabri con la página de panel de administración en la parte header, botón de hamburguesa con la sección de administración. En las dificultades tuve problemas al dormir poco y quedarme desactualizado de los temas dados en DH por tener la moral baja afectando al equipo entonces lo que haré será investigar sobre la experiencia de usuario y sobre los estilos que se podrían implementar en el proyecto. 
