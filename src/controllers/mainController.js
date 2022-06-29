@@ -1,8 +1,10 @@
+const modelsController=require("./../models/modelsController")
 const mainController={
 
     //pagina de inicio
      index:(req,res)=>{
-     return res.render('index')
+          let products=modelsController.FnRead("products")
+     return res.render('index',{products:products})
      },
 
     //pagina de nosotros

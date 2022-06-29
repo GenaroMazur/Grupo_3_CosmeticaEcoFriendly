@@ -4,82 +4,29 @@
             <h3>Últimos Productos</h3>
         </div>
         <div class="background-fondo-productos">
-            <div class="producto-nuevo">
-                <div class="new-producto">
-                    <img src="./../img/products_images/jabon_1.jpg" alt="producto-new1">
-                </div>
-                <div>
-                    <div class="titulo-producto">
-                        <p> Producto nuevo 1</p>
+            <% if (products.length>0) { %>
+                
+                <% for( let i = 0; i < 4; i++ ) { %>
+                    <div class="producto-nuevo">
+                        <div class="new-producto">
+                            <img src="./../img/products_images/<%= products[i].image %>" alt="producto-new1">
+                        </div>
+                        <div>
+                            <div class="titulo-producto">
+                                <p><%= products[i].nameProduct %></p>
+                            </div>
+                            <div class="precio-index">
+                                <p><%= products[i].price %></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="carrito-index">
+                                <p>añadir al carrito</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="precio-index">
-                        <p>precio</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="carrito-index">
-                        <p>añadir al carrito</p>
-                    </div>
-                </div>
-            </div>
-            <div class="producto-nuevo">
-                <div class="new-producto">
-                    <img src="./../img/products_images/jabon_1.jpg" alt="producto-new2">
-                </div>
-                <div>
-                    <div class="titulo-producto">
-                        <p>Producto nuevo 2</p>
-                    </div>
-                    <div>
-                        <p>Precio</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="carrito-index">
-                        <p>añadir al carrito</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="producto-nuevo">
-                <div class="new-producto">
-                    <img src="../../img/products_images/jabon_1.jpg" alt="producto-new3">
-                </div>
-                <div>
-                    <div class="titulo-producto">
-                        <p>Producto nuevo 3</p>
-                    </div>
-                    <div>
-                        <p>Precio</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="carrito-index">
-                        <p>añadir al carrito</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="producto-nuevo">
-                <div class="new-producto">
-                    <img src="./../img/products_images/jabon_1.jpg" alt="producto-new4">
-                </div>
-                <div>
-                    <div class="titulo-producto">
-                        <p>Producto nuevo 4</p>
-                    </div>
-                    <div>
-                        <p>precio</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="carrito-index">
-                        <p>añadir al carrito</p>
-                    </div>
-                </div>
-
-            </div>
-
+                <% } %>
+            <% } %>
         </div>
     </div>
 </div>
