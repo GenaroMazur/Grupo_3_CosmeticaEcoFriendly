@@ -5,12 +5,13 @@ const modelsController = require("./../models/modelsController")
 const productController = {
     //pagina de carrito de compras
     productCard: (req, res) => {
-        return res.render("productCard")
+        return res.render("productCard",{title:"productCart"})
     },
 
     //pagina del detalle del producto
     productDetail: (req, res) => {
-        return res.render("productDetail")
+        let products = modelsController.FnRead("products")
+        return res.render("productDetail", { title:"detalle de producto",products: products })
     },
 
     //pagina de nuevo producto
@@ -22,14 +23,14 @@ const productController = {
     editProduct: (req, res) => {
         let productsJson = modelsController.FnRead("products")
         let product = modelsController.FnSearch(productsJson, "id", req.params.idProduct)
-        res.render("editProduct", { product: product })
+        res.render("editProduct", {title:"productCart", product: product })
     },
     //Editar un producto
     editProductId: (req, res) => {
         modelsController.FnEdit("products", req)
         res.redirect("/product/editProduct/" + req.params.idProduct)
     },
-    
+
     //Crear un nuevo producto
     createProduct: function (req, res) {
 
@@ -44,7 +45,7 @@ const productController = {
             this.image = req.file.filename
         }
         modelsController.FnCreate("products", newProduct)
-        
+
         res.redirect("/product/DetalleDeProducto")
     },
     //Eliminar un producto

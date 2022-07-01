@@ -1,68 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/newProduct.css">
-    <link rel="shortcut icon" href="./../img/lavie_images/la vie icon mod.png" type="image/x-icon" id="x-icon">
-    <title>La Vie Naturelle - Agregar Producto</title>
-</head>
+
+    <%- include('./partials/head') %>
+
 <body>
     <%- include('./partials/header') %>
-    <main>
-        <section>
-            <div>
-                <h2>AGREGAR PRODUCTO</h2>
-            </div>
-            <div>
-                <form action="/product/newProduct" method="post" enctype="multipart/form-data">
-                    <div>
-                        <label for="nameProduct"><h4>Nombre Del Producto</h4></label>
-                        <input type="text" name="nameProduct" id="nameProduct" class="textArea" required>
-                    </div>
-                    <div>
-                        <label for="description"><h4>Descripcion</h4></label>
-                        <textarea name="description" id="description" cols="30" rows="10" class="textArea" required></textarea>
-                    </div>
-                    <div>
-                        <label for="Category"><h5>Categoria del producto</h5></label>
-                        <select name="category" id="Category">
-                            <option value="jabon_solido">Jabon Solido</option>
-                            <option value="desodorante_solido">Desodorante Solido</option>
-                            <option value="shampoo_solido">Shampoo Solido</option>
-                            <option value="acondicionador_solido">Acondicionador Solido</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="productImg"><h5>Insertar imagen</h5></label>
-                        <input type="file" id="image" name="image" accept="image/png, image/jpeg" required>
-                    </div>
-                    <div>
-                        <label for="fragance">Fragancia</label>
-                        <input type="text" name="fragrance" id="fragrance" class="textArea">
-                    </div>
-                    <div>
-                        <label for="grams">Cantidad</label>
-                        <select name="grams" id="grams" class="textArea">
-                            <option value="70">70 gramos</option>
-                            <option value="100" selected>100 gramos</option>
-                            <option value="150">150 gramos</option>
-                            <option value="250">250 gramos</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="price"><h5>Precio</h5></label>
-                        <input type="number" name="price" id="price" min="0" class="textArea">
-                    </div>
-                    <div class="botons">
-                        <input type="submit" value="Agregar">
-                        <input type="reset" value="Borrar">
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
-    <%- include('./partials/footer') %>
+        <main>
+            <section>
+                <div>
+                    <h2>AGREGAR PRODUCTO</h2>
+                </div>
+                <div>
+                    <form action="/product/newProduct" method="post" enctype="multipart/form-data">
+                        <div>
+                            <label for="nameProduct">
+                                <h4>Nombre Del Producto</h4>
+                            </label>
+                            <input type="text" name="nameProduct" id="nameProduct" class="textArea" required>
+                        </div>
+                        <div>
+                            <label for="description">
+                                <h4>Descripcion</h4>
+                            </label>
+                            <textarea name="description" id="description" cols="30" rows="10" class="textArea"
+                                required></textarea>
+                        </div>
+                        <div>
+                            <label for="Category">
+                                <h5>Categoria del producto</h5>
+                            </label>
+                            <select name="category" id="Category">
+                                <option value="jabon_solido">Jabon Solido</option>
+                                <option value="desodorante_solido">Desodorante Solido</option>
+                                <option value="shampoo_solido">Shampoo Solido</option>
+                                <option value="acondicionador_solido">Acondicionador Solido</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="productImg">
+                                <h5>Insertar imagen</h5>
+                            </label>
+                            <input type="file" id="image" name="image" accept="image/png, image/jpeg" required>
+                        </div>
+                        <div>
+                            <label for="fragance">Fragancia</label>
+                            <input type="text" name="fragrance" id="fragrance" class="textArea">
+                        </div>
+                        <div>
+                            <label for="grams">Cantidad</label>
+                            <select name="grams" id="grams" class="textArea">
+                                <option value="70">70 gramos</option>
+                                <option value="100" selected>100 gramos</option>
+                                <option value="150">150 gramos</option>
+                                <option value="250">250 gramos</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="price">
+                                <h5>Precio</h5>
+                            </label>
+                            <input type="number" name="price" id="price" min="0" class="textArea">
+                        </div>
+                        <div class="botons">
+                            <input type="submit" value="Agregar">
+                            <input type="reset" value="Borrar">
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <%- include('./partials/footer') %>
 </body>
+
 </html>

@@ -1,83 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-      <title>La Vie Naturelle - carrito</title>
+<title>La Vie Naturelle - carrito</title>
 <%- include('./partials/head') %>
-<body>
-    <%- include('./partials/header') %>
-    <main class="main-carrito">
-        <article class="article-carrito">
-            <table class="tabla-carrito">
-                <tr>
-                    <th class="subtitulo-carrito">Producto</th>
-                    <th class="subtitulo-carrito">cantidad</th>
-                    <th class="subtitulo-carrito">precio</th>
-                </tr>
-                <tr>
-                    <td class="td-carrito">
-                        <div class="card-info">
-                            <img src="./../img/products_images/jabon_1.jpg" alt="imagen jabon solido">
-                            <div>
-                                <p>Jabón sólido</p>
-                                <small>Precio: $599.99</small>
-                                <a href="#"><img src="./../img/icons_images/cruzar.png" alt="eliminar producto"></a>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="td-carrito"><input type="number" value="1" id="input-carrito"></td>
-                    <td class="td-carrito">$599.99</td>
-                </tr>
-                <tr>
-                    <td class="td-carrito">
-                        <div class="card-info">
-                            <img src="./../img/products_images/jabon_1.jpg" alt="imagen jabon solido">
-                            <div>
-                                <p>Shampoo sólido</p>
-                                <small>Precio: $599.99</small>
-                                <a href="#"><img src="./../img/icons_images/cruzar.png" alt="eliminar producto"></a>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="td-carrito"><input type="number" value="1" id="input-carrito"></td>
-                    <td class="td-carrito">$599.99</td>
-                </tr>
-                <tr>
-                    <td class="td-carrito">
-                        <div class="card-info">
-                            <img src="./../img/products_images/jabon_1.jpg" alt="imagen jabon solido">
-                            <div>
-                                <p>Desodorante sólido</p>
-                                <small>Precio: $599.99</small>
-                                <a href="#"><img src="./../img/icons_images/cruzar.png" alt="eliminar producto"></a>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="td-carrito"><input type="number" value="1" id="input-carrito"></td>
-                    <td class="td-carrito">$599.99</td>
-                </tr>
-            </table>
-    
-            <div class="total-carrito">
-                <table>
-                    <tr>
-                        <td>subtotal</td>
-                        <td>$599.99</td>
-                    </tr>
-                    <tr>
-                        <td>Envío</td>
-                        <td>$500</td>
-                    </tr>
-                    <tr>
-                        <td>Total</td>
-                        <td>$1099.99</td>
-                    </tr>
-                </table>
-                
-            </div>
-            <div class="boton-compra">
-                <button type="button">Proceder al pago</button>
-            </div>
-        </article>
-    </main>
-    <%- include('./partials/footer') %>
-</body>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main class="main-carrito">
+                <article class="article-carrito">
+                    <table class="tabla-carrito">
+                        <tr>
+                            <th class="subtitulo-carrito">Producto</th>
+                            <th class="subtitulo-carrito">cantidad</th>
+                            <th class="subtitulo-carrito">precio</th>
+                        </tr>
+                        <tr>
+                            <td class="td-carrito">
+                                <div class="card-info">
+                                    <img src="./../img/products_images/jabon_1.jpg" alt="imagen jabon solido">
+                                    <div>
+                                        <p>Jabón sólido</p>
+                                        <small>Precio: $599.99</small>
+                                        <a href="#"><img src="./../img/icons_images/cruzar.png"
+                                                alt="eliminar producto"></a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="td-carrito"><input type="number" value="1" id="input-carrito"></td>
+                            <td class="td-carrito">$599.99</td>
+                        </tr>
+                        <tr>
+                            <td class="td-carrito">
+                                <div class="card-info">
+                                    <img src="./../img/products_images/jabon_1.jpg" alt="imagen jabon solido">
+                                    <div>
+                                        <p>Shampoo sólido</p>
+                                        <small>Precio: $599.99</small>
+                                        <a href="#"><img src="./../img/icons_images/cruzar.png"
+                                                alt="eliminar producto"></a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="td-carrito"><input type="number" value="1" id="input-carrito"></td>
+                            <td class="td-carrito">$599.99</td>
+                        </tr>
+                        <tr>
+                            <td class="td-carrito">
+                                <div class="card-info">
+                                    <img src="./../img/products_images/jabon_1.jpg" alt="imagen jabon solido">
+                                    <div>
+                                        <p>Desodorante sólido</p>
+                                        <small>Precio: $599.99</small>
+                                        <a href="#"><img src="./../img/icons_images/cruzar.png"
+                                                alt="eliminar producto"></a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="td-carrito"><input type="number" value="1" id="input-carrito"></td>
+                            <td class="td-carrito">$599.99</td>
+                        </tr>
+                    </table>
+
+                    <div class="total-carrito">
+                        <table>
+                            <tr>
+                                <td>subtotal</td>
+                                <td>$599.99</td>
+                            </tr>
+                            <tr>
+                                <td>Envío</td>
+                                <td>$500</td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td>$1099.99</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="boton-compra">
+                        <button type="button">Proceder al pago</button>
+                    </div>
+                </article>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
+
 </html>
