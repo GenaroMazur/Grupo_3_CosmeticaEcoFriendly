@@ -1,0 +1,26 @@
+#contact {
+    justify-content: center;
+    flex-direction: row;
+}
+
+#contacto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    text-align: center;
+    background-color: #fce4d4;
+    width: 90%;
+    padding: 10px 0px;
+    border-radius: 35px;
+}
+
+#contacto form>* {
+    margin-top: 25px;
+}
+
+.contacto {
+    padding: 8px 15%;
+    resize: none;
+    border-radius: 30px;
+}

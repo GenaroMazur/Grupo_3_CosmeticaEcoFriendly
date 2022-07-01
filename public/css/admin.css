@@ -224,3 +224,10 @@ article .button-delete {
 aside {
     visibility: hidden;
 }
+@media(min-width:481px) {
+
+
+}
+@media(min-width:900px) {
+    
+}
