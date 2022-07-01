@@ -17,7 +17,7 @@ const userController = {
     admin: (req, res) => {
         let productsJson = modelsController.FnRead("products")
 
-        return res.render("admin", { title:"productCart",products: productsJson })
+        return res.render("admin", { title:"admin",products: productsJson })
     },
 
     //Crear usuario

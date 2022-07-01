@@ -52,3 +52,15 @@ body {
 #nosotros article p {
     padding: 50px 15px 30px;
 }
+.nosotros-footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
