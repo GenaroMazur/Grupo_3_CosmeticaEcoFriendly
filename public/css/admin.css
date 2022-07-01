@@ -124,6 +124,7 @@ z-index: 10;
     text-decoration: none;
     font-size: small; 
     font-weight: bold;
+    color: #000;
 }
 .info-admin ul{
     display: flex;
