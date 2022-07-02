@@ -1,9 +1,11 @@
 .article-carrito {
     background-color: #ffebe0;
-    width: 100vw;
+    width: 97vw;
+    height: 34vw;
     display: flex;
+    border-radius: 20px;
     flex-direction: column;
-    margin: 3px auto;
+    margin: 185px auto;
 }
 
 .tabla-carrito {
@@ -27,6 +29,14 @@
     padding: 10px 5px;
 }
 
+.boton-compra {
+    align-self: center;
+}
+
+.veremos {
+    height: 21px;
+}
+
 td input {
     width: 40px;
     height: 30px;
@@ -34,8 +44,9 @@ td input {
 }
 
 .td-carrito img {
-    width: 50%;
-    height: 110px;
+    width: 15%;
+    border-radius: 20px;
+    height: 100px;
     margin-right: 20px;
 }
 
@@ -56,5 +67,20 @@ td:last-child {
 
 th:last-child {
     text-align: right;
+}
+
+.boton{
+    background-color: #889b65;
+    padding: 8px 18px;
+    margin: 1.8% 0%;
+    border: 1px;
+    border-radius: 15px;
+    margin: auto 1rem;
+    color: white;
+}
+
+.boton:hover {
+    background-color: #9fb478;
+    color: #000;
 }
 

@@ -125,8 +125,8 @@ img {
 footer {
     background-color: #cdbd9d;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    justify-content: space-around;
     padding-left: 25px;
     padding-right: 25px;
     margin: 2rem;
@@ -207,33 +207,3 @@ footer a {
 }
 
 
-/* -------------- Medias ----------------- */
-
-/* -------------tablet---------------- */
-
-
-.bloque1 img {
-    max-width: 60%;
-}
-
-/* -------------escritorio-------------- */
-@media(min-width:900px) {
-
-    
-
-    /* footer general*/
-    footer {
-        flex-direction: row;
-        margin: 1rem;
-        justify-content: space-between;
-    }
-
-    .redes-sociales2 {
-        justify-content: flex-start;
-    }
-
-    .logo-footer {
-        align-self: flex-start;
-    }
-
-}

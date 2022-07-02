@@ -1,7 +1,9 @@
 body {
     margin: 0px;
 }
-
+main#nosotros {
+    display: flex;
+}
 .mision,
 .vision,
 .valores {
@@ -52,15 +54,33 @@ body {
 #nosotros article p {
     padding: 50px 15px 30px;
 }
-.nosotros-footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+/* -------------- Medias ----------------- */
+
+/* -------------tablet---------------- */
+
+
+.bloque1 img {
+    max-width: 60%;
 }
 
-.nosotros {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+/* -------------escritorio-------------- */
+@media(min-width:900px) {
+
+    
+
+    /* footer general*/
+    footer {
+        flex-direction: row;
+        margin: 1rem;
+        justify-content: space-between;
+    }
+
+    .redes-sociales2 {
+        justify-content: flex-start;
+    }
+
+    .logo-footer {
+        align-self: flex-start;
+    }
+
 }

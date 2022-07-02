@@ -1,7 +1,5 @@
-/* estilos detalle del producto joel*/
 main {
     display: flex;
-    flex-direction: column;
     width: 100%;
 }
 
@@ -38,7 +36,10 @@ img.img-detalle-producto {
     align-self: flex-start;
     width: 70vw;
 }
-
+.img {
+    width: 298px;
+    height: 341px;
+}
 .precio-detalle h3 {
     text-align: center;
 }
@@ -60,7 +61,7 @@ img.img-detalle-producto {
 
 .informacion-producto {
     display: flex;
-    margin: 10%;
+    margin: 2%;
 
 }
 
@@ -146,4 +147,66 @@ aside a {
 
 .boton-compra {
     margin: 5% 40%;
+}
+.molesto {
+    padding: 0px 14px 0px 0px;
+}
+.ultimos-productos {
+    background-color: #cdbd9d;
+}
+
+.cuadro2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.background-fondo-productos {
+    display: flex;
+
+    justify-content: center;
+
+    border-radius: 10px;
+    margin: 3%;
+    padding: 3%;
+
+}
+
+.producto-nuevo {
+    background-color: #fce4d4;
+    margin: 1%;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: #464646;
+}
+
+.new-producto img {
+    padding: 10%;
+    width: 280%;
+    height: 300px;
+    border-radius: 20%;
+}
+
+.titulo-producto {
+    font-weight: bold;
+}
+
+
+.carrito-index {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    padding: 12px 30px 12px 30px;
+    margin: 1rem;
+    font-size: 10px;
+    color: white;
+    opacity: 0.8;
+    background-color: #889b65;
+    transition: all .25s;
+}
+
+.carrito-index:hover {
+    background: #9fb478;
+    ;
+    color: #000;
 }
