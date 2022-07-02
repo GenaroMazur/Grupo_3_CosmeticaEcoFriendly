@@ -20,6 +20,14 @@
                     <% } %>
                 </div>
                 <div>
+                    <label for="lastname">apellido del usuario</label>
+                    <input type="text" id="name" name="lastname" placeholder="apellido de usuario"class="textArea">
+                </div>
+                <div>
+                    <label for="addarch">añada su foto de perfil</label>
+                    <input type="file" name="imageperfil" id="image">
+                </div>
+                <div>
                     <label for="pass">Contraseña</label>
                     <input type="password" name="password" id="pass" placeholder="Nueva contraseña"class="textArea"
                     <% if (locals.errors && old.password) { %>
@@ -29,11 +37,11 @@
                     <% if (locals.errors && errors.password) { %>
                         <p><%= errors.password.msg %> </p>
                         <% } %>
-                    <span class="hidden"><input type="checkbox">Mostrar</span>
+                    <span class="hidden"><input type="checkbox"><ion-icon name="eye-outline"></ion-icon></span>
                 </div>
                 <div>
                     <label for="copass">Confirmar Contraseña</label>
-                    <input type="password" name="coPass"id="copass" placeholder="Confirmar contraseña"class="textArea"
+                    <input type="password" name="coPass"id="copass" placeholder="Confirmar contraseña "class="textArea"
                     <% if (locals.errors && old.coPass) { %>
                         value=<%= old.coPass %> 
                     <% } %>
@@ -41,7 +49,7 @@
                     <% if (locals.errors && errors.coPass) { %>
                         <p><%= errors.coPass.msg %> </p>
                         <% } %>
-                    <span class="hidden"><input type="checkbox">Mostrar</span>
+                    <span class="hidden"><input type="checkbox"><ion-icon name="eye-outline"></ion-icon></span>
                 </div>
                 <div>
                     <label for="email">Correo</label>

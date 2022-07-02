@@ -34,7 +34,7 @@
 }
 
 form>* {
-    margin: 10px 0px;
+    margin: 13px 0px;
 }
 
 form>span {
@@ -46,6 +46,7 @@ form>div {
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
+    width: 236px;
 }
 
 .textArea {
