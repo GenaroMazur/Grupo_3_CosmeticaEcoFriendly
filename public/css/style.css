@@ -125,10 +125,8 @@ img {
 footer {
     background-color: #cdbd9d;
     display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    padding-left: 25px;
-    padding-right: 25px;
+
+    justify-content: space-between;
     margin: 2rem;
 }
 
