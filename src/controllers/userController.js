@@ -5,19 +5,19 @@ const userController = {
 
     //pagina de login
     login: (req, res) => {
-        return res.render("login",{title:"registro"})
+        return res.render("login")
     },
 
     //pagina de registro
     register: (req, res) => {
-        return res.render("register",{title:"registro"})
+        return res.render("register")
     },
 
     //panel de administrador
     admin: (req, res) => {
         let productsJson = modelsController.FnRead("products")
 
-        return res.render("admin", { title:"admin",products: productsJson })
+        return res.render("admin", { products: productsJson })
     },
 
     //Crear usuario
