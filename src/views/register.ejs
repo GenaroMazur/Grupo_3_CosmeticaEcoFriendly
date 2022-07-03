@@ -31,7 +31,7 @@
                         <p><%= errors.lastname.msg %> </p>
                     <% } %>
                 </div>
-                <div>
+                <div class="wrapp-input">
                     <label for="pass">Contraseña</label>
                     <input type="password" name="password" id="pass" placeholder="contraseña"class="textArea"
                     <% if (locals.errors && old.password) { %>
@@ -40,11 +40,16 @@
                     required>
                     <% if (locals.errors && errors.password) { %>
                         <p><%= errors.password.msg %> </p>
-                        <% } %>
-                    <span class="hidden"><input type="checkbox"><ion-icon name="eye-outline"></ion-icon></span>
+                    <% } %>
+                    <div class="eye">
+                        <span class="hidden"><input type="checkbox"><ion-icon name="eye-outline"></ion-icon></span>
+                    </div>
                 </div>
-                <div>
+                <div class="wrapp-input">
                     <label for="copass">Confirmar Contraseña</label>
+                    <div class="eye">
+                        <span class="hidden"><input type="checkbox"><ion-icon name="eye-outline"></ion-icon></span>
+                    </div>
                     <input type="password" name="coPass"id="copass" placeholder="Confirmar contraseña "class="textArea"
                     <% if (locals.errors && old.coPass) { %>
                         value=<%= old.coPass %> 
@@ -53,7 +58,6 @@
                     <% if (locals.errors && errors.coPass) { %>
                         <p><%= errors.coPass.msg %> </p>
                         <% } %>
-                    <span class="hidden"><input type="checkbox"><ion-icon name="eye-outline"></ion-icon></span>
                 </div>
                 <div>
                     <label for="email">Correo</label>

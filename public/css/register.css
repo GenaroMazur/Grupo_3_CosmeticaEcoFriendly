@@ -10,6 +10,17 @@
     text-decoration: none;
     color: #464646;
 }
+.wrapp-input{
+ position: relative;
+}
+.eye{
+    position: absolute;
+    top: 48%;
+    right: -10%;
+}
+input[type="checkbox"]{
+    display: none;
+}
 
 .form {
     display: flex;
