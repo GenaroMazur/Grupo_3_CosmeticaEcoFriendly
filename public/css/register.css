@@ -10,6 +10,17 @@
     text-decoration: none;
     color: #464646;
 }
+.wrapp-input{
+ position: relative;
+}
+.eye{
+    position: absolute;
+    top: 48%;
+    right: -10%;
+}
+input[type="checkbox"]{
+    display: none;
+}
 
 .form {
     display: flex;
@@ -34,7 +45,7 @@
 }
 
 form>* {
-    margin: 10px 0px;
+    margin: 13px 0px;
 }
 
 form>span {
@@ -46,6 +57,7 @@ form>div {
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
+    width: 236px;
 }
 
 .textArea {
