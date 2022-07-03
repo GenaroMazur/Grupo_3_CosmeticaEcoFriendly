@@ -132,6 +132,7 @@ footer {
 
 footer a {
     color: black;
+    display: table-row;
 }
 
 .info-footer {
