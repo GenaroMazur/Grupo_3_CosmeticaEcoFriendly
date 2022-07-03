@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 body {
     margin: 0px;
 }
 main#nosotros {
     display: flex;
+    flex-direction: column;
 }
 .mision,
 .vision,
@@ -16,34 +18,28 @@ main#nosotros {
 }
 
 .titulo-nosotros {
-
-    right: -110px;
-    bottom: 170px;
+    position: absolute;
+    top: 25%;
+    left: 36%;
 }
 
-.img-nosotros img {
-    opacity: 0.6;
+img {
+    opacity: 0.5;
 }
 
 .banner-nosotros {
-    margin: 30px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
 
 #nosotros article .parrafo-nosotros p {
     padding: 0rem;
     margin: 1rem;
+    text-align: justify;
 }
 
-.mision {
-    display: flex;
-    background-color: antiquewhite;
-}
-
-.vision {
-    background-color: antiquewhite;
-}
-
-.valores {
+.mision, .vision, .valores {
     background-color: antiquewhite;
 }
 
@@ -52,22 +48,47 @@ main#nosotros {
 }
 
 #nosotros article p {
-    padding: 50px 15px 30px;
+    padding: 20px 15px 20px;
+    text-align: center;
+}
+
+.card {
+    max-width: 100%;
 }
 /* -------------- Medias ----------------- */
 
 /* -------------tablet---------------- */
+@media(min-width:481px){
 
-
-.bloque1 img {
-    max-width: 60%;
+    .mision, .vision, .valores {
+        max-width: 300px;
+    }
+    #nosotros {
+        align-items: center;
+    }
+    .parrafo-nosotros{
+        margin: 5px;
+        position: absolute;
+        top: 25%;
+    }
+    .titulo-nosotros {
+        position: absolute;
+        top: 5%;
+        left: 40%;
+        text-align: justify;
+        margin: auto;
+    }
 }
+
+
 
 /* -------------escritorio-------------- */
 @media(min-width:900px) {
 
-    
-
+    .mision, .vision, .valores {
+     display: flex;
+     flex-wrap: nowrap;
+    }
     /* footer general*/
     footer {
         flex-direction: row;

@@ -16,7 +16,7 @@ const productController = {
 
     //pagina de nuevo producto
     newProduct: (req, res) => {
-        res.render("newProduct")
+        res.render("newProduct",{title:"newProduct"})
     },
 
     //pagina edicion de producto
