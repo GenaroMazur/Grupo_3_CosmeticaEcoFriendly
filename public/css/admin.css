@@ -260,7 +260,6 @@ aside {
 .product-list{
     background-color: #ffebe0;
     display: flex;
-    padding: 30px 0px 30px 195px;
 }
 .info-producto{
     display: flex;
