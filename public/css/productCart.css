@@ -83,4 +83,26 @@ th:last-child {
     background-color: #9fb478;
     color: #000;
 }
+@media(min-width:480px) {
+    .article-carrito {
+        background-color: #ffebe0;
+        width: 97vw;
+        height: 112vw;
+        display: flex;
+        border-radius: 20px;
+        flex-direction: column;
+        margin: 20px auto;
+    }
+}
 
+@media(min-width:900px) {
+    .article-carrito {
+        background-color: #ffebe0;
+        width: 97vw;
+        height: 37vw;
+        display: flex;
+        border-radius: 20px;
+        flex-direction: column;
+        margin: 185px auto;
+    }
+}

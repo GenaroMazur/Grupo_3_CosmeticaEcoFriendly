@@ -22,12 +22,15 @@ const userController = {
 
     //Crear usuario
     create: function (req, res) {
-
-        let newUser = new function (username, password, email) {
-            this.id = Date.now()
-            this.username = req.body.username
-            this.password = req.body.password
-            this.email = req.body.email
+        let dateCreation=new Date()
+        dateCreation=[dateCreation.getFullYear(),dateCreation.getMonth()+1,dateCreation.getDate()]
+        let newUser = {
+            id : Date.now(),
+            dateCreation:dateCreation,
+            username : req.body.username,
+            lastname: req.body.lastname,
+            password : req.body.password,
+            email : req.body.email
         }
 
         modelsController.FnCreate("users", newUser)

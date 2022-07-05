@@ -4,7 +4,9 @@ const modelsController = require("./../models/modelsController")
 const userMiddlewares = {
     validations: [
         body("username")
-            .notEmpty().withMessage("Debe ingresar un nombre de usuario").bail(),
+            .notEmpty().withMessage("Debe ingresar un nombre de usuario"),
+        body("lastname")
+            .notEmpty().withMessage("Debe ingresar un apellido"),
         body("password")
             .notEmpty().withMessage("Debe ingresar una contraseña").bail()
             .isLength({ min: 6 }).withMessage("La contraseña debe tener al menos 6 caracteres"),
@@ -17,14 +19,14 @@ const userMiddlewares = {
 
     coincidences: function (req, res) {
         let userList = modelsController.FnRead("users")
-        let coincidences = userList.some(user => user.username == req.body.username)
+        let coincidences = userList.some(user => user.email == req.body.email)
         let confirmation = req.body.password == req.body.coPass
         let validaciones = validationResult(req)
         if (coincidences) {
             validaciones.errors.push({
-                "value": req.body.username,
-                "msg": "Nombre de usuario ya existente",
-                "param": "username",
+                "value": req.body.email,
+                "msg": "Este Correo ya existe",
+                "param": "email",
                 "location": "body"
             })
         } else if (!confirmation) {

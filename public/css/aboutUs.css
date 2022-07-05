@@ -89,19 +89,6 @@ img {
      display: flex;
      flex-wrap: nowrap;
     }
-    /* footer general*/
-    footer {
-        flex-direction: row;
-        margin: 1rem;
-        justify-content: space-between;
-    }
-
-    .redes-sociales2 {
-        justify-content: flex-start;
-    }
-
-    .logo-footer {
-        align-self: flex-start;
-    }
+    
 
 }
