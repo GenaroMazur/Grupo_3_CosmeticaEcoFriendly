@@ -11,9 +11,14 @@
                     <img src="/img/lavie_images/la_vie_icon.png" alt="Logo login">
                     <h2>Login</h2>
                     <p>Bienvenido de vuelta! Por favor ingresa tu cuenta para acceder a la página</p>
-                    <form action="" method="post">
+                    <form action="/user/login" method="post">
                         <div>
-                            <label for="name">Usuario o Correo electronico</label>
+                            <% if (locals.errors) { %>
+                                <p><%= errors.password.msg %></p>
+                            <% } %>
+                        </div>
+                        <div>
+                            <label for="name">Correo electronico</label>
                             <input type="text" class="textArea" name="userEmail" id="name" required>
                         </div>
                         <div>

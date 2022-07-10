@@ -10,7 +10,8 @@ const modelsController = {
     },
     //buscar Datos Dentro de JSON
     //ingresar Array de donde buscar, propiedad que se debe leer, elemento a buscar
-    FnSearch: function (array, _properti, identifier) {
+    FnSearch: function (nameArchive, _properti, identifier) {
+        let array = this.FnRead(nameArchive)
         return array.find(element => {
             if (element[_properti] == identifier) {
                 let found = element
