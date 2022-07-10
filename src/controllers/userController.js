@@ -30,7 +30,8 @@ const userController = {
             username : req.body.username,
             lastname: req.body.lastname,
             password : bcrypt.hashSync(req.body.password,10),
-            email : req.body.email
+            email : req.body.email,
+            userImage : req.file? req.file.filename : "default.jpg"
         }
 
         modelsController.FnCreate("users", newUser)

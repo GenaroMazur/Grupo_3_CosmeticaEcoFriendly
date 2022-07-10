@@ -1,5 +1,7 @@
 const { body, validationResult } = require("express-validator")
 const modelsController = require("./../models/modelsController")
+const path = require("path")
+const fs = require ("fs")
 
 const userMiddlewares = {
     validations: [
@@ -36,6 +38,20 @@ const userMiddlewares = {
                 "param": "coPass",
                 "location": "body"
             })
+        }
+        if (req.file && !(path.extname(req.file.filename) == ".jpg" || path.extname(req.file.filename) == ".png")) {
+            let temporals = path.join(__dirname,"./../../public/img/%temp%",req.file.filename)
+            validaciones.errors.push({
+                "value": req.body.userImage,
+                "msg": "Solo se aceptan formatos JPG o PNG",
+                "param": "userImage",
+                "location": "body"
+            })
+            fs.rmSync(temporals)
+        } else if (req.file){
+            let temporals = path.join(__dirname,"./../../public/img/%temp%",req.file.filename)
+            let users_images = path.join(__dirname,"./../../public/img/users_images",req.file.filename)
+            fs.renameSync(temporals,users_images)
         }
         return validaciones
     },
