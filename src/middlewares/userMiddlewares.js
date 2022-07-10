@@ -54,7 +54,7 @@ const userMiddlewares = {
 
         if (req.file && !(path.extname(req.file.filename) == ".jpg" || path.extname(req.file.filename) == ".png")) {
 
-            let temporals = path.join(__dirname, "./../../public/img/%temp%", req.file.filename)
+
 
             validaciones.errors.push({
                 "value": req.body.userImage,
@@ -63,26 +63,35 @@ const userMiddlewares = {
                 "location": "body"
             })
 
-            fs.rmSync(temporals)
 
-        } else if (req.file) {
-
-            let temporals = path.join(__dirname, "./../../public/img/%temp%", req.file.filename)
-            let users_images = path.join(__dirname, "./../../public/img/users_images", req.file.filename)
-
-            fs.renameSync(temporals, users_images)
 
         }
         return validaciones
     },
 
-    //comprueba que paso todas las validaciones
+    //comprueba que paso todas las validaciones y controla carpeta %temp%
     register: function (req, res, next) {
         let validaciones = userMiddlewares.coincidences(req, res)
 
+
         if (!validaciones.isEmpty()) {
+            if (req.file) {
+                let temporals = path.join(__dirname, "./../../public/img/%temp%", req.file.filename)
+                fs.rmSync(temporals)
+            }
+
             res.render("register", { errors: validaciones.mapped(), old: req.body })
+
         } else {
+
+            if (req.file) {
+
+                let temporals = path.join(__dirname, "./../../public/img/%temp%", req.file.filename)
+                let users_images = path.join(__dirname, "./../../public/img/users_images", req.file.filename)
+
+                fs.renameSync(temporals, users_images)
+            }
+
             next()
         }
     }
