@@ -1,6 +1,6 @@
 const path = require("path")
 const modelsController = require("./../models/modelsController")
-
+const bcrypt = require ("bcrypt")
 const userController = {
 
     //pagina de login
@@ -29,7 +29,7 @@ const userController = {
             dateCreation:dateCreation,
             username : req.body.username,
             lastname: req.body.lastname,
-            password : req.body.password,
+            password : bcrypt.hashSync(req.body.password,10),
             email : req.body.email
         }
 

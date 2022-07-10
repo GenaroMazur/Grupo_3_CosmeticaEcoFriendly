@@ -1,32 +1,14 @@
 [
     {
-        "id": 1,
+        "id": 1657471107727,
+        "dateCreation": [
+            2022,
+            7,
+            10
+        ],
         "username": "Genaro",
-        "password": "admin",
-        "email": "genaromazur03@gmail.com"
-    },
-    {
-        "id": 2,
-        "username": "Fabricio",
-        "password": "admin",
-        "email": ""
-    },
-    {
-        "id": 3,
-        "username": "Leonel",
-        "password": "admin",
-        "email": ""
-    },
-    {
-        "id": 4,
-        "username": "Camila",
-        "password": "admin",
-        "email": ""
-    },
-    {
-        "id": 5,
-        "username": "anabanana",
-        "password": "12345",
+        "lastname": "Mazur",
+        "password": "$2b$10$VWEq4losmuWAV/gEQD9c5.0UmG8ORRqtaAptkJO3u81C0qsNHo7eK",
         "email": "genaromazur03@gmail.com"
     }
 ]
