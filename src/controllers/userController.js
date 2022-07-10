@@ -1,6 +1,8 @@
-const path = require("path")
+//importa el controlador de modelos
 const modelsController = require("./../models/modelsController")
+//importa el modulo bcrypt
 const bcrypt = require ("bcrypt")
+
 const userController = {
 
     //pagina de login

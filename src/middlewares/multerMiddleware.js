@@ -1,7 +1,11 @@
+//importa el multer
 const multer= require ("multer")
+//importa el path
 const path=require ("path")
 
 multerMiddleware = {
+    
+    //Guardado de archivos para los USUARIOS
     usersImage:function(){
         const config = multer.diskStorage({
             destination:(req,file,cb)=>{
@@ -16,6 +20,7 @@ multerMiddleware = {
         const upload = multer({storage:config})
         return upload
     }
+
 }
 
 module.exports=multerMiddleware
