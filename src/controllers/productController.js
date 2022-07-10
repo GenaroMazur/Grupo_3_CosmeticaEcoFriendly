@@ -34,15 +34,15 @@ const productController = {
     //Crear un nuevo producto
     createProduct: function (req, res) {
 
-        let newProduct = new function () {
-            this.id = Date.now()
-            this.nameProduct = req.body.nameProduct
-            this.price = req.body.price || 0
-            this.description = req.body.description
-            this.grams = req.body.grams
-            this.fragance = req.body.fragance
-            this.category = req.body.category
-            this.image = req.file.filename
+        let newProduct ={
+            id : Date.now(),
+            nameProduct : req.body.nameProduct,
+            price : req.body.price || 0,
+            description : req.body.description,
+            grams : req.body.grams,
+            fragance : req.body.fragance,
+            category : req.body.category,
+            image : req.file.filename
         }
         modelsController.FnCreate("products", newProduct)
 

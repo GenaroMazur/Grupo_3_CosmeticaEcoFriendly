@@ -1,6 +1,6 @@
 [
     {
-        "id": 1657471107727,
+        "id": 1657474217650,
         "dateCreation": [
             2022,
             7,
@@ -8,7 +8,8 @@
         ],
         "username": "Genaro",
         "lastname": "Mazur",
-        "password": "$2b$10$VWEq4losmuWAV/gEQD9c5.0UmG8ORRqtaAptkJO3u81C0qsNHo7eK",
-        "email": "genaromazur03@gmail.com"
+        "password": "$2b$10$.q.1Qe3EAT3nF4CiYgjeA.g/YGF3Sun47DozWi6s5jNil/khC7R9G",
+        "email": "genaromazur03@gmail.com",
+        "userImage": "default.jpg"
     }
 ]
