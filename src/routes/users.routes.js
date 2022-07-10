@@ -16,9 +16,13 @@ routes.get("/admin", userController.admin)
 //POST
 routes.post("/registro",
     multerMiddleware.usersImage().single("userImage"),
-    userMiddlewares.validations,
+    userMiddlewares.validationsCreate,
     userMiddlewares.register,
     userController.create)
+routes.post("/login",
+    userMiddlewares.validationsLogin,
+    userMiddlewares.login,
+    userController.loginUser)
 
 //PUT
 

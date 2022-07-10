@@ -6,10 +6,12 @@ const modelsController = require("./../models/modelsController")
 const path = require("path")
 //importa FS
 const fs = require("fs")
+//
+const bcrypt = require ("bcrypt")
 
 const userMiddlewares = {
-    //Validaciones BASICAS
-    validations: [
+    //Validaciones BASICAS de creacion
+    validationsCreate: [
         body("username")
             .notEmpty().withMessage("Debe ingresar un nombre de usuario"),
         body("lastname")
@@ -24,7 +26,7 @@ const userMiddlewares = {
             .isEmail().withMessage("El correo electronico debe tener un formato valido")
     ],
 
-    //Validaciones Complejas y control de carpeta %temp%
+    //Validaciones Complejas de creacion
     coincidences: function (req, res) {
 
         let userList = modelsController.FnRead("users")
@@ -88,6 +90,35 @@ const userMiddlewares = {
                 fs.renameSync(temporals, users_images)
             }
 
+            next()
+        }
+    },
+    //Validaciones basicas de login
+    validationsLogin:[
+        body("userEmail")
+            .notEmpty().withMessage("Debe completar este campo").bail()
+            .isEmail().withMessage("Debe ser un correo electronico"),
+        body("password")
+            .notEmpty().withMessage("Debe completar este campo").bail()
+            .custom((value, { req }) => {
+                let user = modelsController.FnSearch("users","email",req.body.userEmail)
+                if (req.body.userEmail == user.email) {
+                    if (!bcrypt.compareSync(value,user.password)) {
+                        throw new Error("Contraseña invalida")
+                    } else {
+                        req.session.user = user.username
+                    }
+                } else {
+                    throw new Error ("Correo inexistente")
+                }
+                return true
+            })
+    ],
+    login:function (req, res, next) {
+        let validaciones = validationResult(req)
+        if ( !validaciones.isEmpty() ) {
+            res.render ("login", {errors : validaciones.mapped(), old : req.body})
+        } else {
             next()
         }
     }

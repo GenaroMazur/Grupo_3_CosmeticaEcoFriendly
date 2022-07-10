@@ -47,6 +47,10 @@ const userController = {
         modelsController.FnDelete("users", req.params.userId)
         res.redirect("/")
 
+    },
+
+    loginUser: function (req,res) {
+        res.redirect("/")
     }
 }
 
