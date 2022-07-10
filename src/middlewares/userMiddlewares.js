@@ -54,16 +54,12 @@ const userMiddlewares = {
 
         if (req.file && !(path.extname(req.file.filename) == ".jpg" || path.extname(req.file.filename) == ".png")) {
 
-
-
             validaciones.errors.push({
                 "value": req.body.userImage,
                 "msg": "Solo se aceptan formatos JPG o PNG",
                 "param": "userImage",
                 "location": "body"
             })
-
-
 
         }
         return validaciones
