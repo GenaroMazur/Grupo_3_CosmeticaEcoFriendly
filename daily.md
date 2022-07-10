@@ -153,3 +153,19 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 
 ### Joel: 
 - Lo que yo hice fue ayudar a Fabri con la página de panel de administración en la parte header, botón de hamburguesa con la sección de administración. En las dificultades tuve problemas al dormir poco y quedarme desactualizado de los temas dados en DH por tener la moral baja afectando al equipo entonces lo que haré será investigar sobre la experiencia de usuario y sobre los estilos que se podrían implementar en el proyecto. 
+
+
+## Daily día 04/07
+
+### Fabricio Saucedo: 
+- De lo que me encargué primeramente fue arreglar la vista Nosotros, haciéndola responsiva, aplicando las medias queries pertinentes y también el footer de la página, arreglando sus estilos y su diseño responsive. Como inconveniente, tuve poco tiempo para arreglar el diseño de otras vistas y como siguiente tarea, voy a dedicarme a terminar editProduct.ejs y newProduct.ejs.
+
+
+### Genaro Mazur:  
+- Arreglé los estilos separando los mismos por cada vista, completé el campo de los usuarios para que el registro sea más completo. Como inconvenientes sigue siendo el tiempo y esta semana me dedicaré a investigar para aplicar al proyecto. 
+
+### Camila: 
+- Me dediqué a implementar las medias queries de la vista Contacto y al del Carrito de Compras. Como inconvenientes sigue siendo el tiempo pero feliz de que no haya tenido problemas con el vscode. Para la siguiente reunión voy a cambiar y subir las imágenes de los productos del carrito de compras y cambiaré el detalle del producto, encargándome de esas vistas.
+
+### Joel: 
+- Fixeé todas las páginas que se habian roto a causa de separar el style.css. Luego, agregué en el registro los inputs faltantes e implementé el ícono del ojo para ocultar la contraseña e hice responsive de la vista del administrador. Como inconvenientes que tuve fue unos problemas del git por meras confusiones propias y lo que voy a hacer será implementar un poco más de UX al proyecto, darle estructura y estilo a la vista del error 404.  
