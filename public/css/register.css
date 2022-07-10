@@ -21,7 +21,9 @@
 input[type="checkbox"]{
     display: none;
 }
-
+#recordar{
+    display: block;
+}
 .form {
     display: flex;
     flex-wrap: wrap;
