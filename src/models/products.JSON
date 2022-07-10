@@ -38,14 +38,5 @@
         "fragrance": "Coco",
         "category": "Acondicionador sólido",
         "image": "jabon_solido_1656284416652.jpeg"
-    },
-    {
-        "id": 1657494681573,
-        "nameProduct": "123123",
-        "price": "123123",
-        "description": "123123",
-        "grams": "100",
-        "category": "desodorante_solido",
-        "image": "desodorante_solido_1657494681559.jpg"
     }
 ]

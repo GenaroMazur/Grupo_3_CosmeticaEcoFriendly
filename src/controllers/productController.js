@@ -49,10 +49,9 @@ const productController = {
     },
     //Eliminar un producto
     deleteProduct: function (req, res) {
-        let imagen = modelsController.FnSearch("users","id",req.params.idProduct)
-        console.log(imagen)
-        fs.rmSync(__dirname+"./../../public/img/products_images/"+imagen)
-        modelsController.FnDelete("products", req.params.idProduct)
+        // let imagen = modelsController.FnSearch("users","id",req.params.idProduct)
+        // fs.rmSync(__dirname+"./../../public/img/products_images/"+imagen)
+        // modelsController.FnDelete("products", req.params.idProduct)
         res.redirect("/user/admin")
     },
     usersList: function () {
