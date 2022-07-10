@@ -1,1 +1,51 @@
-[{"id":1,"nameProduct":"Shampoo para cabello normal","price":599.99,"description":"Ideal para pelo normal. La arcilla roja desintoxica la piel del cuero cabelludo, manteniendo el pelo fuerte y sano, además absorbe parte de la grasa capilar ayudando a que el pelo se vea más limpio y ligero. El aceite de ricino mejora la circulación en el cuero cabelludo, estimula el crecimiento y junto con el aceite de rosa mosqueta ayudan a mantener el cabello sedoso, brilloso y sin frizz. Además contiene agua de rosas que es calmante y antiinflamatoria. Producto natural vegano. Libre de parabenos, siliconas, petrolatos, sulfatos, colorantes y aromas artificiales. No testado en animales.","grams":100,"fragrance":"Pomelo-Maracuyá","category":"Shampoo sólido","image":"jabon_1.jpg"},{"id":2,"nameProduct":"Shampoo para cabello graso","price":599.99,"description":"El aceite de jojoba es ideal para pelo graso, elimina el sebo que queda en los folículos pilosos, además hidrata el pelo penetrando en el cuero cabelludo. El efecto se complementa con la arcilla verde y aceite esencial de limón, con poderosas propiedades astringentes, ayuda a eliminar todo tipo de suciedad, la caspa y sobre todo la grasa del cabello. Producto natural vegano. Libre de parabenos, siliconas, petrolatos, sulfatos, colorantes y aromas artificiales. No testeado en animales.","grams":100,"fragrance":"Menta-Limón","category":"Shampoo sólido","image":"jabon_2.jpg"},{"id":3,"nameProduct":"Shampoo para cabello seco","price":599.99,"description":"Este shampoo para cabellos secos ofrece una combinación de aceites hidrata el cabello, lo fortalecen y reducen la caída. Ideal para cabellos encrespados y secos, sus aceites ayudan a retener el agua y a sellar la cutícula devolviendo el brillo, cerrando las puntas y facilitando el crecimiento. El aceite de romero rico en antioxidantes, es una buena opción para combatir la caída, el aceite de palta repara el cabello dañado y lo nutre en profundidad y el aceite de coco aporta brillo y suavidad. Las flores de hibiscus previenen la caída y las puntas quebradizas. Producto natural vegano. Libre de parabenos, siliconas, petrolatos, sulfatos, colorantes y aromas artificiales. No testeado en animales.","grams":100,"fragrance":"Lavanda","category":"Shampoo sólido","image":"jabon_3.jpg"},{"id": 4,"nameProduct": "Acondicionador para cabello normal","price": 599.99,"description": "Acondicionador capilar sólido nutritivo para largos y puntas. Suaviza, humecta e hidrata la fibra capilar. Brinda luminosidad. Fortalece el cabello normal ya que el aceite de coco aporta brillo y suavidad sin engrasar. pH adecuado. Producto natural vegano. Libre de parabenos, siliconas, petrolatos, sulfatos, colorantes y aromas artificiales. No testeado en animales","grams": 100,"fragrance": "Coco","category": "Acondicionador sólido","image": "jabon_solido_1656284416652.jpeg"}]
+[
+    {
+        "id": 1,
+        "nameProduct": "Shampoo para cabello normal",
+        "price": 599.99,
+        "description": "Ideal para pelo normal. La arcilla roja desintoxica la piel del cuero cabelludo, manteniendo el pelo fuerte y sano, además absorbe parte de la grasa capilar ayudando a que el pelo se vea más limpio y ligero. El aceite de ricino mejora la circulación en el cuero cabelludo, estimula el crecimiento y junto con el aceite de rosa mosqueta ayudan a mantener el cabello sedoso, brilloso y sin frizz. Además contiene agua de rosas que es calmante y antiinflamatoria. Producto natural vegano. Libre de parabenos, siliconas, petrolatos, sulfatos, colorantes y aromas artificiales. No testado en animales.",
+        "grams": 100,
+        "fragrance": "Pomelo-Maracuyá",
+        "category": "Shampoo sólido",
+        "image": "jabon_1.jpg"
+    },
+    {
+        "id": 2,
+        "nameProduct": "Shampoo para cabello graso",
+        "price": 599.99,
+        "description": "El aceite de jojoba es ideal para pelo graso, elimina el sebo que queda en los folículos pilosos, además hidrata el pelo penetrando en el cuero cabelludo. El efecto se complementa con la arcilla verde y aceite esencial de limón, con poderosas propiedades astringentes, ayuda a eliminar todo tipo de suciedad, la caspa y sobre todo la grasa del cabello. Producto natural vegano. Libre de parabenos, siliconas, petrolatos, sulfatos, colorantes y aromas artificiales. No testeado en animales.",
+        "grams": 100,
+        "fragrance": "Menta-Limón",
+        "category": "Shampoo sólido",
+        "image": "jabon_2.jpg"
+    },
+    {
+        "id": 3,
+        "nameProduct": "Shampoo para cabello seco",
+        "price": 599.99,
+        "description": "Este shampoo para cabellos secos ofrece una combinación de aceites hidrata el cabello, lo fortalecen y reducen la caída. Ideal para cabellos encrespados y secos, sus aceites ayudan a retener el agua y a sellar la cutícula devolviendo el brillo, cerrando las puntas y facilitando el crecimiento. El aceite de romero rico en antioxidantes, es una buena opción para combatir la caída, el aceite de palta repara el cabello dañado y lo nutre en profundidad y el aceite de coco aporta brillo y suavidad. Las flores de hibiscus previenen la caída y las puntas quebradizas. Producto natural vegano. Libre de parabenos, siliconas, petrolatos, sulfatos, colorantes y aromas artificiales. No testeado en animales.",
+        "grams": 100,
+        "fragrance": "Lavanda",
+        "category": "Shampoo sólido",
+        "image": "jabon_3.jpg"
+    },
+    {
+        "id": 4,
+        "nameProduct": "Acondicionador para cabello normal",
+        "price": 599.99,
+        "description": "Acondicionador capilar sólido nutritivo para largos y puntas. Suaviza, humecta e hidrata la fibra capilar. Brinda luminosidad. Fortalece el cabello normal ya que el aceite de coco aporta brillo y suavidad sin engrasar. pH adecuado. Producto natural vegano. Libre de parabenos, siliconas, petrolatos, sulfatos, colorantes y aromas artificiales. No testeado en animales",
+        "grams": 100,
+        "fragrance": "Coco",
+        "category": "Acondicionador sólido",
+        "image": "jabon_solido_1656284416652.jpeg"
+    },
+    {
+        "id": 1657494681573,
+        "nameProduct": "123123",
+        "price": "123123",
+        "description": "123123",
+        "grams": "100",
+        "category": "desodorante_solido",
+        "image": "desodorante_solido_1657494681559.jpg"
+    }
+]
