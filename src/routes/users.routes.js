@@ -10,6 +10,7 @@ const multerMiddleware = require("./../middlewares/multerMiddleware")
 
 //GET
 routes.get("/login", userController.login)
+routes.get("/un-login",userController.unlogin)
 routes.get("/registro", userController.register)
 routes.get("/admin", userController.admin)
 
