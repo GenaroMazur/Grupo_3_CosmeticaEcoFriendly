@@ -106,7 +106,10 @@ const userMiddlewares = {
                     if (!bcrypt.compareSync(value,user.password)) {
                         throw new Error("Contraseña invalida")
                     } else {
-                        req.session.user = user.username
+                        req.session.user ={
+                            username:user.username,
+                            status:user.status
+                        } 
                     }
                 } else {
                     throw new Error ("Correo inexistente")
