@@ -18,8 +18,12 @@ const userController = {
     //panel de administrador
     admin: (req, res) => {
         let productsJson = modelsController.FnRead("products")
-        return res.render("admin", { products: productsJson })
-    },
+        if (req.session.user && req.session.user.status == "admin") {
+            return res.render("admin", { products: productsJson })
+        }
+        return res.redirect("/user/login")
+        }
+    ,
 
     //Crear usuario
     create: function (req, res) {

@@ -11,6 +11,20 @@
         "password": "$2b$10$YnFDZL5Gh6OGqY8a47mFbuwgAvdgjnpL96wV4a0iz/HU12qXodkoC",
         "email": "genaromazur03@gmail.com",
         "userImage": "default.jpg",
-        "status":"admin"
+        "status": "admin"
+    },
+    {
+        "id": 1657552911289,
+        "dateCreation": [
+            2022,
+            7,
+            11
+        ],
+        "username": "Raul",
+        "lastname": "Patricio",
+        "password": "$2b$10$SJKua4QfRZ35S.nujnp5geElxEMTpU6EmoOGz9GnbovtFaklsrivG",
+        "email": "raulpatricio2022@hotmail.com",
+        "userImage": "default.jpg",
+        "status": "user"
     }
 ]
