@@ -20,6 +20,8 @@ multerMiddleware = {
         const upload = multer({storage:config})
         return upload
     },
+    
+    //Guardado de archivos para los PRODUCTOS
     productsImage:function(){
         const config = multer.diskStorage({
             destination:(req,file,cb)=>{
