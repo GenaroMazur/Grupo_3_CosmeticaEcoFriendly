@@ -20,8 +20,7 @@ const productController = {
 
     //pagina edicion de producto
     editProduct: (req, res) => {
-        let productsJson = modelsController.FnRead("products")
-        let product = modelsController.FnSearch(productsJson, "id", req.params.idProduct)
+        let product = modelsController.FnSearch("products", "id", req.params.idProduct)
         res.render("editProduct", { product: product})
     },
     //Editar un producto
