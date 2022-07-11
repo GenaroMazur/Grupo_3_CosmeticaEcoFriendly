@@ -10,6 +10,7 @@
         "lastname": "Mazur",
         "password": "$2b$10$YnFDZL5Gh6OGqY8a47mFbuwgAvdgjnpL96wV4a0iz/HU12qXodkoC",
         "email": "genaromazur03@gmail.com",
-        "userImage": "default.jpg"
+        "userImage": "default.jpg",
+        "status":"admin"
     }
 ]

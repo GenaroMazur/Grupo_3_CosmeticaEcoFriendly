@@ -18,7 +18,6 @@ const userController = {
     //panel de administrador
     admin: (req, res) => {
         let productsJson = modelsController.FnRead("products")
-
         return res.render("admin", { products: productsJson })
     },
 
@@ -33,7 +32,8 @@ const userController = {
             lastname: req.body.lastname,
             password : bcrypt.hashSync(req.body.password,10),
             email : req.body.email,
-            userImage : req.file? req.file.filename : "default.jpg"
+            userImage : req.file? req.file.filename : "default.jpg",
+            status: "user"
         }
 
         modelsController.FnCreate("users", newUser)
