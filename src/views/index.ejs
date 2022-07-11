@@ -4,7 +4,6 @@
 <%- include('./partials/head') %>
 <link rel="stylesheet" href="/css/home.css">
     <body>
-
         <header id="index">
             <nav class="banner">
                 <div class="nav-index">
@@ -21,9 +20,28 @@
                     </div>
                 </div>
                 <div class="nav-2">
-                    <div>
-                        <span><a class="a-nav" href="user/registro">registrate</a></span>
-                    </div>
+                    <% if (status == "guest") { %>
+                        <div>
+                            <span><a class="a-nav" href="user/registro">registrate</a></span>
+                        </div>
+                        <div>
+                            <span><a class="a-nav" href="user/login">login</a></span>
+                        </div>
+                    <% } else if (status == "admin") {%>
+                        <div>
+                            <span><a class="a-nav" href="user/admin">Admin Panel</a></span>
+                        </div>
+                        <div>
+                            <span><a class="a-nav" href="user/un-login">Un-login</a></span>
+                        </div>
+                    <% } else {%>
+                        <div>
+                            <span><a class="a-nav" href="#">Mi Cuenta</a></span>
+                        </div>
+                        <div>
+                            <span><a class="a-nav" href="user/un-login">Un-login</a></span>
+                        </div>
+                    <% } %> 
                     <div class="carrito-icon">
                         <a href="/product/CarritoDeCompras"><img src="./img/icons_images/carrito-de-compras.svg"
                                 alt="carrito"></a>

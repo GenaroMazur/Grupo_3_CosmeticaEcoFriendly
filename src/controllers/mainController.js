@@ -4,17 +4,17 @@ const mainController = {
      //pagina de inicio
      index: (req, res) => {
           let products = modelsController.FnRead("products")
-          return res.render('index', {products: products })
+          return res.render('index', {products: products , status :req.session.user.status})
      },
 
      //pagina de nosotros
      nosotros: (req, res) => {
-          return res.render('nosotros')
+          return res.render('nosotros',{status :req.session.user})
      },
 
      //pagina de contacto
      contacto: (req, res) => {
-          return res.render('contacto')
+          return res.render('contacto',{status :req.session.user})
      }
 }
 

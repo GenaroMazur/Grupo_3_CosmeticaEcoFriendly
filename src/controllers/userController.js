@@ -9,6 +9,12 @@ const userController = {
     login: (req, res) => {
         return res.render("login")
     },
+    unlogin: (req, res) => {
+        req.session.user.status="guest"
+        req.cookies.remember = undefined
+        return res.redirect("/")
+    }
+    ,
 
     //pagina de registro
     register: (req, res) => {

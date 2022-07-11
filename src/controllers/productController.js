@@ -4,25 +4,25 @@ const modelsController = require("./../models/modelsController")
 const productController = {
     //pagina de carrito de compras
     productCard: (req, res) => {
-        return res.render("productCard")
+        return res.render("productCard",{status :req.session.user})
     },
 
     //pagina del detalle del producto
     productDetail: (req, res) => {
         let products = modelsController.FnRead("products")
-        return res.render("productDetail", { products: products })
+        return res.render("productDetail", { products: products, status :req.session.user })
     },
 
     //pagina de nuevo producto
     newProduct: (req, res) => {
-        res.render("newProduct",{title:"newProduct"})
+        res.render("newProduct")
     },
 
     //pagina edicion de producto
     editProduct: (req, res) => {
         let productsJson = modelsController.FnRead("products")
         let product = modelsController.FnSearch(productsJson, "id", req.params.idProduct)
-        res.render("editProduct", { product: product })
+        res.render("editProduct", { product: product})
     },
     //Editar un producto
     editProductId: (req, res) => {
