@@ -231,7 +231,7 @@ main {
 section {
     text-align: center;
     box-shadow: 0 0 20px rgb(0 0 0 / 50%);
-    width: 80%;
+    width: 100vw;
     border-radius: 25px;
     background-color: #fce4d4;
 }
@@ -240,7 +240,6 @@ form>* {
     display: flex;
     flex-direction: column;
     margin: 15px 30px;
-    align-items: center;
 }
 
 label {
@@ -250,14 +249,25 @@ label {
 .botons {
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+}
+.botons .volver {
+    background-color: antiquewhite;
+    color: #000;
+}
+.botons .volver:hover{
+    background-color: #c0da8f;
+    color: antiquewhite;
 }
 
 .botons>* {
-    margin: 10px;
+    text-align: center;
+    margin: 4px 2px;
     background-color: #9fb478;
     color: #f8f3f0;
-    padding: 10px 0px 10px 0px;
-    width: 30%;
+    padding: 18px 32px;
+    width: 100vw;
+    cursor: pointer;
     border-style: none;
     border-radius: 30px;
     transition: all 0.25s;
@@ -286,12 +296,21 @@ label {
 #Category {
     padding: 5px 7%;
     border-radius: 30px;
+    text-align: center;
 
 }
 
 #productImg {
     width: 60%;
     padding: 0px 0px 0px 216px
+}
+
+@media(min-width:481px){
+    .botons {
+        width: 30vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media(min-width:900px) {
@@ -305,5 +324,19 @@ label {
 
     .redes-sociales2 {
         justify-content: flex-start;
+    }
+    section {
+        width: 70vw;
+    }
+
+    input, select, textArea {
+        width: 40vw;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

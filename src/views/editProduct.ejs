@@ -21,7 +21,7 @@
                         <textarea name="description" id="description" cols="30" rows="10" class="textArea"required><%= product.description%></textarea>
                     </div>
                     <div>
-                        <label for="Category"><h5>Categoria del producto</h5></label>
+                        <label for="Category"><h4>Categoria del producto</h4></label>
                         <select name="category" id="Category" >
                             <option value="jabon_solido" <% if (product.category=="jabon_solido") { %>
                             selected
@@ -46,11 +46,11 @@
                         </select> 
                     </div>
                     <div>
-                        <label for="fragance">Fragancia</label>
+                        <label for="fragance"><h4>Fragancia</h4></label>
                         <input type="text" name="fragrance" id="fragance" class="textArea" value="<%= product.fragrance%>">
                     </div>
                     <div>
-                        <label for="grams">Cantidad</label>
+                        <label for="grams"><h4>Cantidad</h4></label>
                         <select name="grams" id="grams" class="textArea">
                             <option value=70 <% if (product.grams==70) { %>
                                 selected
@@ -75,11 +75,12 @@
                         </select>
                     </div>
                     <div>
-                        <label for="price"><h5>Precio</h5></label>
+                        <label for="price"><h4>Precio</h4></label>
                         <input type="number" name="price" id="price" min="0" class="textArea" value=<%= product.price %> step=".01">
                     </div>
                     <div class="botons">
                         <input type="submit" value="Editar">
+                        <input type="button" value="Volver" class="volver">
                     </div>
                 </form>
             </div>
