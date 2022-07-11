@@ -26,5 +26,19 @@
         "email": "raulpatricio2022@hotmail.com",
         "userImage": "default.jpg",
         "status": "user"
+    },
+    {
+        "id": 1657565794313,
+        "dateCreation": [
+            2022,
+            7,
+            11
+        ],
+        "username": "Fabricio",
+        "lastname": "Saucedo",
+        "password": "$2b$10$IohCvSHDDrj3DAAUeJXBiOAQt1QGheJGehMeIfIe9bPh/ggh5Ph2C",
+        "email": "fabriciosaucedo.fs@gmail.com",
+        "userImage": "FabricioSaucedo1657565794306.jpg",
+        "status": "admin"
     }
 ]
