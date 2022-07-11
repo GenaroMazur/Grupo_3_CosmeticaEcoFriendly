@@ -50,6 +50,9 @@ const userController = {
     },
 
     loginUser: function (req,res) {
+        if (req.body.remember) {
+            res.cookie("remember",req.session.user,{maxAge : 120000})
+        }
         res.redirect("/")
     }
 }

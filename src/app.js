@@ -26,6 +26,15 @@ app.use(session({
     resave:false,
     saveUninitialized:false
 }))
+app.use((req, res, next)=> {
+    if (req.cookies && req.session.user == undefined) {
+        req.session.user = req.cookies.remember
+    }
+    next()
+})
+
+//Cookie Parser
+app.use(cookie())
 
 //inicia el puerto de escucha
 const port = process.env.PORT || 8080
@@ -35,6 +44,7 @@ app.listen(port, () => {
 
 //Importa las rutas
 const routes = require("./routes/index.routes")
+const cookieParser = require("cookie-parser")
 app.use("/", routes)
 app.use((req, res, next) => {
     res.status(404).render("not-found")
