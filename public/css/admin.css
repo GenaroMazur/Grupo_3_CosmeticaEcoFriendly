@@ -233,30 +233,33 @@ aside {
     .icono-hamburguesa{
         visibility: hidden;
     }
+
  aside{
-        visibility: visible;
-        display: flex;
-        background: #cdbd9d;
-        align-self: end;
-        flex-direction: column;
-        position: fixed;
-        justify-content: space-evenly;
-        text-align: center;
-        height: 400px;
-        padding: 32px 92px 0px 104px;
-        border-radius: 5px;
- }
- .admin-main{
+    visibility: visible;
+    display: flex;
+    background: #cdbd9d;
+    align-self: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 481px;
+    padding: 60px 203px 0px 117px;
+    border-radius: 5px;
+}
+
+.admin-main {
     background-color: #ffebe0;
     display: flex;
-    flex-direction: column;
- }
- .info-admin{
-    display: flex;
-    margin: 1rem;
-    padding-left: 0px;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
+
+ .info-admin {
+        display: flex;
+        margin: 20px;
+        justify-content: space-between;
+ }
+
 .product-list{
     background-color: #ffebe0;
     display: flex;
@@ -269,20 +272,22 @@ aside {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    list-style-type: none;
+    list-style: none;
     text-decoration: none;
     font-size: small;
     font-weight: bold;
     color: #000;
+    white-space: pre-wrap;
 }
 .info-producto img {
     width: 11rem;
     margin-top: 1rem;
     border-radius: 30px;
 }
+
 .product-list article {
-    background-color: #cdbd9d;
-    margin: 1rem;
-    border-radius: 10px;
+        background-color: #cdbd9d;
+        margin: 1rem;
+        border-radius: 10px;
 }
 }
