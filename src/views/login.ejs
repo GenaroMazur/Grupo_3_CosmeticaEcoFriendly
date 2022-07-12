@@ -13,13 +13,8 @@
                     <p>Bienvenido de vuelta! Por favor ingresa tu cuenta para acceder a la página</p>
                     <form action="/user/login" method="post">
                         <div>
-                            <% if (locals.errors) { %>
-                                <p class="alerta"><%= errors.password.msg %></p>
-                            <% } %>
-                        </div>
-                        <div>
                             <label for="name">Correo electronico</label>
-                            <input type="text" class="textArea" name="userEmail" id="name"  required
+                            <input type="text" class="textArea" name="userEmail" id="name"
                             <% if (locals.old && old.userEmail) { %>
                                 value=<%= old.userEmail %> 
                             <% } %>>
@@ -30,6 +25,11 @@
                             <% if (locals.old && old.password) { %>
                                 value=<%= old.password%> 
                             <% } %>>
+                            <div>
+                                <% if (locals.errors) { %>
+                                    <p class="alerta"><%= errors.password.msg %></p>
+                                <% } %>
+                            </div>
                             <input type="checkbox" name="remember" id="recordar">recordar contraseña
                         </div>
                         <span><a href="" target="_blank">¿ no recuerdas tu contraseña ?</a></span>
