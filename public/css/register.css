@@ -15,8 +15,8 @@
 }
 .eye{
     position: absolute;
-    top: 48%;
-    right: -10%;
+    top: 45%;
+    right: -8%;
 }
 input[type="checkbox"]{
     display: none;
@@ -64,7 +64,8 @@ form>div {
 
 .textArea {
     background-color: #f8f3f0;
-    padding: 3% 30%;
+    height: 40px;
+    width: 330px;
     margin: 1.8%;
     text-align: center;
     border-radius: 30px;
