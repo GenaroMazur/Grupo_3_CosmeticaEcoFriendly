@@ -47,6 +47,10 @@ input[type="checkbox"]{
 }
 .alerta{
     color: red;
+    border: solid;
+    border-radius: 30px;
+    background: rgb(232, 232, 232);
+    font: -webkit-control;
 }
 form>* {
     margin: 13px 0px;

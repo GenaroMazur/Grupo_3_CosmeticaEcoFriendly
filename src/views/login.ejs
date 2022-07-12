@@ -19,14 +19,14 @@
                         </div>
                         <div>
                             <label for="name">Correo electronico</label>
-                            <input type="text" class="textArea" name="userEmail" id="name" required
+                            <input type="text" class="textArea" name="userEmail" id="name"  required
                             <% if (locals.old && old.userEmail) { %>
                                 value=<%= old.userEmail %> 
                             <% } %>>
                         </div>
                         <div>
                             <label for="pass">Contraseña</label>
-                            <input type="password" name="password" id="pass" class="textArea"required 
+                            <input type="password" name="password" id="pass" class="textArea" 
                             <% if (locals.old && old.password) { %>
                                 value=<%= old.password%> 
                             <% } %>>
