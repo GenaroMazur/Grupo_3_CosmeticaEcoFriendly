@@ -14,7 +14,7 @@
                     <form action="/user/login" method="post">
                         <div>
                             <% if (locals.errors) { %>
-                                <p><%= errors.password.msg %></p>
+                                <p class="alerta"><%= errors.password.msg %></p>
                             <% } %>
                         </div>
                         <div>

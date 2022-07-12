@@ -45,7 +45,9 @@ input[type="checkbox"]{
     align-content: center;
     padding: 1%;
 }
-
+.alerta{
+    color: red;
+}
 form>* {
     margin: 13px 0px;
 }
