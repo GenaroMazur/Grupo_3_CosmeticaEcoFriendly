@@ -40,5 +40,19 @@
         "email": "fabriciosaucedo.fs@gmail.com",
         "userImage": "FabricioSaucedo1657565794306.jpg",
         "status": "admin"
+    },
+    {
+        "id": 1657584228080,
+        "dateCreation": [
+            2022,
+            7,
+            11
+        ],
+        "username": "leandro",
+        "lastname": "ramos",
+        "password": "$2b$10$ITPG.GPaZh6/QGiKmCBg0.NsoA2xTnt8gj0NVy4PKKEI4CQ.PCj2a",
+        "email": "leo-rammos@hotmail.com",
+        "userImage": "leandroramos1657584227715.jpg",
+        "status": "admin"
     }
 ]
