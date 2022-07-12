@@ -33,7 +33,10 @@ const userController = {
         }
         }
     ,
-
+     //panel de usuario
+     paneluser: (req, res) => {
+        return res.render("paneluser")
+    },
     //Crear usuario
     create: function (req, res) {
         let dateCreation=new Date()
