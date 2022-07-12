@@ -54,5 +54,19 @@
         "email": "leo-rammos@hotmail.com",
         "userImage": "leandroramos1657584227715.jpg",
         "status": "admin"
+    },
+    {
+        "id": 1657651228413,
+        "dateCreation": [
+            2022,
+            7,
+            12
+        ],
+        "username": "Camila",
+        "lastname": "Morand",
+        "password": "$2b$10$uG.1zCfS8stlsgVRZhoEduiy91OoDqFm6aRArW.5DdUvwmUOYVUNC",
+        "email": "magalicamila251@gmail.com",
+        "userImage": "default.jpg",
+        "status": "admin"
     }
 ]

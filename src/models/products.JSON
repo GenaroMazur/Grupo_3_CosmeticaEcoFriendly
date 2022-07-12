@@ -30,13 +30,12 @@
         "image": "jabon_3.jpg"
     },
     {
-        "id": 4,
-        "nameProduct": "Acondicionador para cabello normal",
-        "price": 599.99,
+        "id": 1657652097030,
+        "nameProduct": "Acondicionador solido cabello seco",
+        "price": "599.99",
         "description": "Acondicionador capilar sólido nutritivo para largos y puntas. Suaviza, humecta e hidrata la fibra capilar. Brinda luminosidad. Fortalece el cabello normal ya que el aceite de coco aporta brillo y suavidad sin engrasar. pH adecuado. Producto natural vegano. Libre de parabenos, siliconas, petrolatos, sulfatos, colorantes y aromas artificiales. No testeado en animales",
-        "grams": 100,
-        "fragrance": "Coco",
-        "category": "Acondicionador sólido",
-        "image": "jabon_solido_1656284416652.jpeg"
+        "grams": "100",
+        "category": "acondicionador_solido",
+        "image": "acondicionador solido 7.jpeg"
     }
 ]
