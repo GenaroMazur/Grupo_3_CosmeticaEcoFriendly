@@ -44,10 +44,10 @@ td input {
 }
 
 .td-carrito img {
-    width: 15%;
+    width: 12%;
     border-radius: 20px;
-    height: 100px;
-    margin-right: 20px;
+    height: 130px;
+    margin-right: 27px;
 }
 
 .total-carrito {
@@ -98,8 +98,8 @@ th:last-child {
 @media(min-width:900px) {
     .article-carrito {
         background-color: #ffebe0;
-        width: 97vw;
-        height: 37vw;
+        width: 98vw;
+        height: 46vw;
         display: flex;
         border-radius: 20px;
         flex-direction: column;
