@@ -41,9 +41,9 @@ img {
     object-fit: fill
 }
 
-.img-icon {
+.img-icon img{
     height: 100px;
-    width: 70px;
+    width: 120px;
 }
 
 .usuario-icon {
