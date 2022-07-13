@@ -130,6 +130,7 @@ img {
 
 /*    Estilos main admin */
 
+
 .info-admin ul,
 li,
 a {
@@ -243,8 +244,9 @@ aside {
     justify-content: space-evenly;
     text-align: center;
     height: 481px;
-    padding: 60px 100px 0px 100px;
+    padding: 60px 0px 6px 0px;
     border-radius: 5px;
+    flex: auto;
 }
 
 .admin-main {
@@ -277,14 +279,24 @@ aside {
     font-size: small;
     font-weight: bold;
     color: #000;
-    white-space: pre-wrap;
+    flex: auto;
 }
 .info-producto img {
     width: 11rem;
     margin-top: 1rem;
     border-radius: 30px;
 }
-
+ul.aside {
+    display: flex;
+    flex-direction: column;
+    display: contents;
+}
+ul.productos {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    white-space: pre;
+}
 .product-list article {
         background-color: #cdbd9d;
         margin: 1rem;
