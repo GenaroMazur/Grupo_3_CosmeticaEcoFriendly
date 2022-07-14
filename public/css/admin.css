@@ -257,10 +257,12 @@ aside {
 }
 
  .info-admin {
-        display: flex;
-        margin: 20px;
-        justify-content: space-between;
- }
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
 .product-list{
     background-color: #ffebe0;
@@ -279,7 +281,6 @@ aside {
     font-size: small;
     font-weight: bold;
     color: #000;
-    flex: auto;
 }
 .info-producto img {
     width: 11rem;
