@@ -25,7 +25,11 @@ const userController = {
     admin: (req, res) => {
         let productsJson = modelsController.FnRead("products")
         if (req.session.user.status == "admin") {
-            return res.render("admin", { products: productsJson })
+            let admin = modelsController.FnSearch("users","username",req.session.user.username)
+            admin.password=undefined
+            admin.id=undefined
+            admin.dateCreation=undefined
+            return res.render("admin", { products: productsJson , admin : admin})
         } else if (req.session.user.status == "guest"){
             return res.redirect("/user/login")
         } else {
@@ -34,7 +38,7 @@ const userController = {
         }
     ,
      //panel de usuario
-     paneluser: (req, res) => {
+    paneluser: (req, res) => {
         return res.render("paneluser")
     },
     //Crear usuario
