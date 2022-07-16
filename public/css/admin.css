@@ -133,8 +133,21 @@ img {
 
 /*Estilos banner-admin*/
 .banner-admin {
+    display: flex;
     width: 100vw;
-    background-color: #ae2510;
+    background-color: #744841;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-admin .welcome-text {
+    margin-left: 2rem;
+}
+
+.banner-admin .photo-admin{
+    margin-right: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .banner-admin h1, p {
@@ -143,6 +156,13 @@ img {
 
 .banner-admin h1{
     font-size: 16px;
+}
+
+.banner-admin img{
+    width: 100px;
+    height: 100px;
+    border-radius: 160px;
+    border: 2px solid #666;
 }
 
 
