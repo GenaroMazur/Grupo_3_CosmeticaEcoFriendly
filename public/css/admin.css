@@ -270,6 +270,17 @@ aside {
 
 }
 @media(min-width:900px) {
+
+    /* Estilos Banner*/
+    .banner-admin h1{
+        font-size: 2rem;
+    }
+
+    .banner-admin p{
+        font-size: 1rem;
+    }
+
+    /* Estilos header*/
     .icono-hamburguesa{
         visibility: hidden;
     }
