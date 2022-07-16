@@ -157,6 +157,9 @@ img {
 .banner-admin h1{
     font-size: 16px;
 }
+.banner-admin p{
+    font-size: 12px;
+}
 
 .banner-admin img{
     width: 100px;
