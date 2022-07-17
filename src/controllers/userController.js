@@ -41,6 +41,12 @@ const userController = {
     paneluser: (req, res) => {
         return res.render("paneluser")
     },
+
+    //Vista Mi cuenta
+    miCuenta: function (req,res) {
+        res.render("miCuenta")
+    },
+
     //Crear usuario
     create: function (req, res) {
         let dateCreation=new Date()
@@ -75,6 +81,7 @@ const userController = {
         }
         res.redirect("/")
     }
+    
 }
 
 module.exports = userController
