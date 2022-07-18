@@ -14,10 +14,10 @@
 
 /*Contenedor foto y nombre de usuario*/
 .container-perfil{
-    
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    justify-content: space-around;
 }
 
 .container-perfil img,h2{
@@ -25,15 +25,17 @@
     margin: 1rem;
 }
 
-.container-perfil img{
+.container-perfil .info-user img{
     width: 100px;
     height: 90px;
-    align-self: center;
     padding: 4px;
     margin: 2px;
     margin-top: 6px;
     border-radius: 160px;
-    border: 1px solid rgb(0, 0, 0)
+    border: 1px solid rgb(0, 0, 0);
+}
+.image-user{
+    text-align: center;
 }
 
 /*Contenedor datos de usuario*/
@@ -93,9 +95,16 @@
 
     .main-cuenta{
         display: flex;
+        justify-content: space-around;
     }
 
     .container-perfil{
         align-self: flex-start;
+        flex-direction: column;
+    }
+
+    .user-buttonEliminar {
+        display: flex;
+        justify-content: flex-end;
     }
 }

@@ -7,8 +7,21 @@
     <%- include('./partials/header') %>
     <main class="main-cuenta">
         <div class="container-perfil">
-            <img src="./../img/users_images/default.jpg" alt="Foto de perfil de usuario">
-            <h2>Nombre de Usuario</h2>
+            <div class="info-user">
+                <div class="image-user">
+                    <img src="./../img/users_images/default.jpg" alt="Foto de perfil de usuario">
+                </div>
+                <h2>Nombre de Usuario</h2>
+            </div>
+            <div class="buttons-users">
+                <div class="user-button">
+                    <input type="button" value="Editar información">
+                </div>
+                <div class="user-button">
+                    <input type="button" value="Cerrar sesión">
+                </div>
+            </div>
+            
         </div>
         <div class="mis-datos">
             <h3>Mis Datos</h3>
@@ -45,12 +58,7 @@
                 <p>VISA</p>
                 <p>Numero de tarjeta</p>
             </div>
-            <div class="user-button">
-                <input type="button" value="Editar información">
-            </div>
-            <div class="user-button">
-                <input type="button" value="Cerrar sesión">
-            </div>
+
             <div class="user-buttonEliminar">
                 <input type="button" value="Eliminar cuenta">
             </div>
