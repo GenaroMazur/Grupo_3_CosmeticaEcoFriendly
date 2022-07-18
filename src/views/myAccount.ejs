@@ -6,53 +6,14 @@
 <body>
     <%- include('./partials/header') %>
     <main>
+
+        <!--Tarjeta de informacion de usuario-->
         <%- include('./partials/main-cuenta') %>
 
-        <form action="" method="post" class="form">
-            <h2 class="form-title">Edita tu información</h2>
-            <div class="form-container">
-                <div class="form-group">
-                    <input type="file" name="" id="userImage" class="form-input" placeholder="">
-                    <label for="userImage" class="form-label">Foto de usuario</label>
-                    <span class="form-line"></span>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="" id="email" class="form-input" placeholder="">
-                    <label for="email" class="form-label">Correo Electronico</label>
-                    <span class="form-line"></span>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="" id="name" class="form-input" placeholder="">
-                    <label for="name" class="form-label">Nombre y Apellido</label>
-                    <span class="form-line"></span>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="" id="telephone" class="form-input" placeholder="">
-                    <label for="telephone" class="form-label">Celular</label>
-                    <span class="form-line"></span>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="" id="postalCode" class="form-input" placeholder="">
-                    <label for="postalCode" class="form-label">Código Postal</label>
-                    <span class="form-line"></span>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="" id="direction" class="form-input" placeholder="">
-                    <label for="direction" class="form-label">Dirección</label>
-                    <span class="form-line"></span>
-                </div>
-                <div class="form-group">
-                    <h3>Asociar Tarjeta</h3>
-                    <input type="text" name="" id="cards" class="form-input" placeholder="">
-                    <label for="cards" class="form-label">Tarjeta de Crédito/Débito</label>
-                    <input type="text" name="" id="cards" class="form-input" placeholder="">
-                    <label for="cards" class="form-label">Número de Tarjeta</label>
-                    <span class="form-line"></span>
-                </div>
-                <input type="submit" value="Guardar" class="form-submit">
-            </div>
+        <!--formulario de editar usuario-->
+        <%- include('./partials/userEdit') %>
 
-        </form>
+        
     </main>
     
 

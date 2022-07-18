@@ -1,23 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap');
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
 /* estilos del formulario*/
 .form{
-    background: #fff;
+    background: antiquewhite;
     margin: auto;
     width: 90%;
-    max-width: 400px;
+    max-width: 430px;
     padding: 4.5em 3em;
     border-radius: 10px;
     box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+    text-align: center;
 }
 
 .form-title{
     font-size: 2rem;
-    margin-bottom: 5em;
 }
 
 .form-container{
@@ -48,10 +50,11 @@
     color: #4d4646;
 }
 
-.form-imput:focus + .form-label, .form-input:not(:placeholder-shown) + .form-label{
+.form-imput:focus + .form-label, 
+.form-input:not(:placeholder-shown) + .form-label{
     transform: translateY(-12px) scale(.7);
     transform-origin: left top;
-    color: #20df50; 
+    color: black; 
 }
 
 .form-label{
@@ -87,7 +90,8 @@
     transition: transform .4s;
 }
 
-.form-imput:focus ~ .form-line, .form-input:not(:placeholder-shown) ~ .form-label{
+.form-imput:focus ~ .form-line, 
+.form-input:not(:placeholder-shown) ~ .form-line{
     transform: scale(1);
 }
 
