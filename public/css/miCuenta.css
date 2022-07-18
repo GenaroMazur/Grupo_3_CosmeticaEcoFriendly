@@ -57,6 +57,12 @@
 
 
 /*user button*/
+
+.buttons-users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .user-button input{
     background-color: rgb(109, 146, 72);
     border: 2px solid rgba(0, 0, 0, 0.2);
