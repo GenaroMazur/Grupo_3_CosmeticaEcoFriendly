@@ -107,6 +107,7 @@ const userMiddlewares = {
                         throw new Error("Contraseña invalida")
                     } else {
                         req.session.user ={
+                            id:user.id,
                             username:user.username,
                             status:user.status
                         } 
@@ -124,6 +125,16 @@ const userMiddlewares = {
         } else {
             next()
         }
+    },
+    account : function (req, res, next) {
+        let idUser = req.params.idUser
+        let foundUser = modelsController.FnSearch("users","id",req.params.idUser)
+        if (idUser) {
+            if (foundUser) {
+                return next()
+            }
+        }
+        return res.redirect("/")
     }
 }
 

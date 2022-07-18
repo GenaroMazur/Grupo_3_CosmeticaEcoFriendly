@@ -38,13 +38,16 @@ const userController = {
         }
     ,
      //panel de usuario
-    paneluser: (req, res) => {
-        return res.render("paneluser")
+    userPanel: (req, res) => {
+        return res.render("userPanel")
     },
 
     //Vista Mi cuenta
-    miCuenta: function (req,res) {
-        res.render("miCuenta")
+    myAccount: function (req,res) {
+        let user = modelsController.FnSearch("users","id",req.params.idUser)
+        user.dateCreation=undefined
+        user.password=undefined
+        res.render("myAccount",{user : user})
     },
 
     //Crear usuario
@@ -69,10 +72,8 @@ const userController = {
 
     //Eliminar usuario
     delete: function (req, res) {
-
         modelsController.FnDelete("users", req.params.userId)
         res.redirect("/")
-
     },
 
     loginUser: function (req,res) {
@@ -81,7 +82,6 @@ const userController = {
         }
         res.redirect("/")
     }
-    
 }
 
 module.exports = userController

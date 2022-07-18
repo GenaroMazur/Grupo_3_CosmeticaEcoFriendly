@@ -11,7 +11,16 @@
         "password": "$2b$10$YnFDZL5Gh6OGqY8a47mFbuwgAvdgjnpL96wV4a0iz/HU12qXodkoC",
         "email": "genaromazur03@gmail.com",
         "userImage": "default.jpg",
-        "status": "admin"
+        "status": "admin",
+        "telephone": "+54 937 6456 0397",
+        "postalCode":3300,
+        "direction": "Calle falsa 123",
+        "cards":[
+            {
+                "type":"VISA",
+                "number":"xxxx-xxxx-xxxx"
+            }
+        ]
     },
     {
         "id": 1657552911289,
