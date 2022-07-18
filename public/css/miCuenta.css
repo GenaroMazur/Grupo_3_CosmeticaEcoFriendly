@@ -38,13 +38,21 @@
 
 /*Contenedor datos de usuario*/
 
-.mis-datos h4, p{
+.mis-datos h4, p, h3{
     margin-left: 1rem;
     margin-bottom: 0;
 }
+
+.mis-datos h3{
+    color: rgb(96, 96, 100);
+    font-weight: 2000;
+    font-size: 20px;
+}
+
 .mis-datos p{
     margin-top: 0;
 }
+
 
 /*user button*/
 .user-button input{
@@ -69,4 +77,25 @@
     color: white;
     opacity: 0.8;
     cursor: pointer;
+}
+
+@media(min-width:900px) {
+    .user-email, .user-nombre, .user-telefono,
+    .user-postal, .user-direccion, .user-tarjetas {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mis-datos p{
+        align-items: center;
+        align-self: flex-end;
+    }
+
+    .main-cuenta{
+        display: flex;
+    }
+
+    .container-perfil{
+        align-self: flex-start;
+    }
 }
