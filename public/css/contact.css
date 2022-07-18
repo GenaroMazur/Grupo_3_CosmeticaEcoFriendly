@@ -14,7 +14,6 @@
     width: 99%;
     padding: 10px 10px 10px 10px;
     border-radius: 35px;
-    margin: 8px;
 }
 
 #contacto form>* {
@@ -23,7 +22,6 @@
 
 .contacto {
     padding: 1px 12%;
-    font-size: xx-large;
     border-radius: 30px;
 
 }
@@ -42,4 +40,24 @@
     background-color: #9fb478;
     color: #000;
  }
+ @media(min-width:480px) {
+    .contacto {
+        padding: 1px 12%;
+        border-radius: 30px;
+        margin: 6px;
+    }
+        #contact {
+            justify-content: center;
+            flex-direction: row;
+            margin: 10px;
+        }
+}
 
+@media(min-width:900px) {
+    .contacto {
+    padding: 1px 12%;
+    font-size: xx-large;
+    border-radius: 30px;
+    margin: 8px;
+}
+}

@@ -2,15 +2,18 @@ const path = require("path")
 const fs = require("fs")
 
 const modelsController = {
+    
     //Guardar JSON
     //Ingresar como parametro el nombre del archivo JSON sin extencion y el array a guardar
     FnSave: function (nameArchive, array) {
         let _string = JSON.stringify(array)
         fs.writeFileSync(path.join(__dirname, nameArchive + ".JSON"), _string, "utf-8")
     },
+
     //buscar Datos Dentro de JSON
-    //ingresar Array de donde buscar, propiedad que se debe leer, elemento a buscar
-    FnSearch: function (array, _properti, identifier) {
+    //ingresar nombre de archivo JSON de donde buscar, propiedad que se debe leer, elemento a buscar
+    FnSearch: function (nameArchive, _properti, identifier) {
+        let array = this.FnRead(nameArchive)
         return array.find(element => {
             if (element[_properti] == identifier) {
                 let found = element

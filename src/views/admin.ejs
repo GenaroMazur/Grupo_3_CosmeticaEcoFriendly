@@ -16,9 +16,9 @@
                     <a href="/">inicio</a>
                     <a href="/nosotros">nosotros</a>
                     <a href="/product/CarritoDeCompras">carrito</a>
-                    <a href="/user/registro">registro</a>
                     <a href="#">product</a>
                     <a href="/product/newProduct"> Agregar Producto</a>
+                    <a href="/user/panel-usuario"> panel de usuario</a>
                     <div class="burguer-icon">
                         <label for="menu" class="nav__label">
                             <ion-icon name="close-outline"></ion-icon>
@@ -29,28 +29,18 @@
         </div>
     </header>
     <main class="admin-main">
-        <aside>
-            </ul>
-            <li>
-                <a href="/nosotros">nosotros</a>
-            </li>
-            <li>
-                <a href="/product/CarritoDeCompras">carrito</a>
-            </li>
-            <li>
-                <a href="/user/registro">registro</a>
-            </li>
-            <li>
-                <a href="#">product</a>
-            </li>
-            <li>
-                <a href="/product/newProduct"> Agregar Producto</a>
-            </li>
-            <ul>
-        </aside>
+        <div class="banner-admin">
+            <div class="welcome-text">
+                <h1>Hola! <%= admin.username+" "+admin.lastname %></h1>
+                <p>Bienvenido al panel de administrador de La Vie Naturelle</p>
+            </div>
+            <div class="photo-admin">
+                <img src="./../img/users_images/<%=admin.userImage%>" alt="">
+            </div>
+        </div>
         <div class="info-admin">
             <h2>Lista de Productos</h2>
-            <ul>
+            <ul class="productos">
                 <li>
                     <a href="">Todos los productos</a>
                 </li>
@@ -92,6 +82,25 @@
                 </article>
             <% }) %>
         </div>
+        <aside>
+        <ul class="aside">
+            <li>
+                <a href="/nosotros">nosotros</a>
+            </li>
+            <li>
+                <a href="/product/CarritoDeCompras">carrito</a>
+            </li>
+            <li>
+                <a href="#">product</a>
+            </li>
+            <li>
+                <a href="/product/newProduct"> Agregar Producto</a>
+            </li>
+            <li>
+                <a href="/user/panel-usuario">panel de usuario</a>
+            </li>
+        </ul>
+    </aside>
     </main>
 </body>
 </html>

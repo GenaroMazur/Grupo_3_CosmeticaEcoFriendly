@@ -1,38 +1,35 @@
-<header>
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<link rel="stylesheet" href="/css/panel-user.css">
+<title>La Vie Naturelle - panel-user</title>
+<body>
+<header class="panel-user">
+    <a href="/"><img src="./../img/lavie_images/La vie (5).png" alt="" class="img-icon"></a>
     <div class="icono-hamburguesa">
         <div class="burguer-icon">
             <label for="menu" class="nav__label">
-                <ion-icon name="menu"></ion-icon>
+                <ion-icon name="menu-outline"></ion-icon>
             </label>
             <input type="checkbox" id="menu" class="nav__input">
-
             <nav class="menu-navegacion">
                 <a href="/">inicio</a>
                 <a href="/nosotros">nosotros</a>
                 <a href="/product/CarritoDeCompras">carrito</a>
                 <a href="/user/registro">registro</a>
-                <a href="/user/admin">administracion</a>
+                <a href="#">product</a>
+                <a href="/product/newProduct"> Agregar Producto</a>
+                <a href="/user/panel-usuario"> panel de usuario</a>
                 <div class="burguer-icon">
                     <label for="menu" class="nav__label">
-                        <ion-icon name="close"></ion-icon>
+                        <ion-icon name="close-outline"></ion-icon>
                     </label>
                     <input type="checkbox" id="menu" class="nav__input">
             </nav>
         </div>
     </div>
-        <div class="img-icon">
-            <a href="/"><img src="./../../img/lavie_images/LavieSinFondo.png" alt="logo"></a>
-        </div>
-    
-    <div class="nav">
-        <div class="carrito-icon">
-            <a href="/product/CarritoDeCompras"><ion-icon name="cart"></ion-icon></a>
-        </div>
-    </div>
-    <div class="nav">
-        <div class="usuario-icon">
-            <a href="/user/miCuenta"><ion-icon name="person"></ion-icon></a>
-        </div>
-
-    </div>
 </header>
+<body>
+
+</body>
+</html>

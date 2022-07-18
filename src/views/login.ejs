@@ -11,19 +11,29 @@
                     <img src="/img/lavie_images/la_vie_icon.png" alt="Logo login">
                     <h2>Login</h2>
                     <p>Bienvenido de vuelta! Por favor ingresa tu cuenta para acceder a la página</p>
-                    <form action="" method="post">
+                    <form action="/user/login" method="post">
                         <div>
-                            <label for="name">Usuario o Correo electronico</label>
-                            <input type="text" class="textArea" name="userEmail" id="name" required>
+                            <label for="name">Correo electronico</label>
+                            <input type="text" class="textArea" name="userEmail" id="name"
+                            <% if (locals.old && old.userEmail) { %>
+                                value=<%= old.userEmail %> 
+                            <% } %>>
                         </div>
                         <div>
                             <label for="pass">Contraseña</label>
-                            <input type="password" name="password" id="pass" class="textArea"
-                                required>
-                            <label><input type="checkbox">Mostrar</label>
+                            <input type="password" name="password" id="pass" class="textArea" 
+                            <% if (locals.old && old.password) { %>
+                                value=<%= old.password%> 
+                            <% } %>>
+                            <div>
+                                <% if (locals.errors) { %>
+                                    <p class="alerta"><%= errors.password.msg %></p>
+                                <% } %>
+                            </div>
+                            <input type="checkbox" name="remember" id="recordar">recordar contraseña
                         </div>
                         <span><a href="" target="_blank">¿ no recuerdas tu contraseña ?</a></span>
-                        <input type="submit" value="Login" class="button">
+                        <input type="submit" value="Login" class="button" >
                     </form>
                     <p1>¿ No tienes una cuenta ? Create una!<a href="/user/registro"><button class="button">Signup</button></a></p1>
                 </section>

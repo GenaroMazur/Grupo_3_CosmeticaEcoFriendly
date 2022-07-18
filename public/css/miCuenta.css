@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-cuenta{
+    background-color: antiquewhite;
+    margin: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding-bottom: 0.5rem;
+}
+
+/*Contenedor foto y nombre de usuario*/
+.container-perfil{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.container-perfil img,h2{
+    text-align: center;
+    margin: 1rem;
+}
+
+.container-perfil .info-user img{
+    width: 100px;
+    height: 90px;
+    padding: 4px;
+    margin: 2px;
+    margin-top: 6px;
+    border-radius: 160px;
+    border: 1px solid rgb(0, 0, 0);
+}
+.image-user{
+    text-align: center;
+}
+
+/*Contenedor datos de usuario*/
+
+.mis-datos h4, p, h3{
+    margin-left: 1rem;
+    margin-bottom: 0;
+}
+
+.mis-datos h3{
+    color: rgb(96, 96, 100);
+    font-weight: 2000;
+    font-size: 20px;
+}
+
+.mis-datos p{
+    margin-top: 0;
+}
+
+
+/*user button*/
+
+.buttons-users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.user-button input{
+    background-color: rgb(109, 146, 72);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 12px 30px 12px 30px;
+    margin: 1rem;
+    font-size: 10px;
+    color: white;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.user-buttonEliminar input{
+    background-color: rgb(216, 71, 49);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 12px 30px 12px 30px;
+    margin: 1rem;
+    font-size: 10px;
+    color: white;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+@media(min-width:900px) {
+    .user-email, .user-nombre, .user-telefono,
+    .user-postal, .user-direccion, .user-tarjetas {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mis-datos p{
+        align-items: center;
+        align-self: flex-end;
+    }
+
+    .main-cuenta{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .container-perfil{
+        align-self: flex-start;
+        flex-direction: column;
+    }
+
+    .user-buttonEliminar {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

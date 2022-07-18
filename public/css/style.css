@@ -41,9 +41,9 @@ img {
     object-fit: fill
 }
 
-.img-icon {
-    height: 100px;
-    width: 70px;
+.img-icon img{
+    height: 150px;
+    width: 150px;
 }
 
 .usuario-icon {
@@ -125,7 +125,7 @@ img {
 footer {
     background-color: #cdbd9d;
     display: flex;
-
+    flex-direction: column;
     justify-content: space-between;
     margin: 2rem;
 }
@@ -205,4 +205,35 @@ footer a {
     flex-direction: column;
 }
 
+.rgpd a{
+    text-decoration: none;
+    text-align: center;
+}
+.nosotros-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.nosotros-footer a {
+    text-decoration: none;
+}
 
+@media(min-width:900px) {
+
+    /* footer general*/
+    footer {
+        flex-direction: row;
+        margin: 1rem;
+        justify-content: space-between;
+    }
+
+    .redes-sociales2 {
+        justify-content: flex-start;
+    }
+
+    .logo-footer {
+        align-self: flex-start;
+    }
+
+}

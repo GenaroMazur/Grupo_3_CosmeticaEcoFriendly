@@ -17,7 +17,7 @@
         "grams": 100,
         "fragrance": "Menta-Limón",
         "category": "Shampoo sólido",
-        "image": "jabon_2.jpg"
+        "image": "shampoo solido graso.jpeg"
     },
     {
         "id": 3,
@@ -27,16 +27,15 @@
         "grams": 100,
         "fragrance": "Lavanda",
         "category": "Shampoo sólido",
-        "image": "jabon_3.jpg"
+        "image": "shampoo solido (2).jpeg"
     },
     {
-        "id": 4,
-        "nameProduct": "Acondicionador para cabello normal",
-        "price": 599.99,
+        "id": 1657652097030,
+        "nameProduct": "Acondicionador solido cabello seco",
+        "price": "599.99",
         "description": "Acondicionador capilar sólido nutritivo para largos y puntas. Suaviza, humecta e hidrata la fibra capilar. Brinda luminosidad. Fortalece el cabello normal ya que el aceite de coco aporta brillo y suavidad sin engrasar. pH adecuado. Producto natural vegano. Libre de parabenos, siliconas, petrolatos, sulfatos, colorantes y aromas artificiales. No testeado en animales",
-        "grams": 100,
-        "fragrance": "Coco",
-        "category": "Acondicionador sólido",
-        "image": "jabon_solido_1656284416652.jpeg"
+        "grams": "100",
+        "category": "acondicionador_solido",
+        "image": "acondicionador solido 7.jpeg"
     }
 ]

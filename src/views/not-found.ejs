@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+    <title>la vie naturelle - ERROR 404</title>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/notFound.css">
+    <%- include('./partials/header') %>
+<body> 
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERROR</title>
-</head>
 
-<body>
-    <h1>Error 404</h1>
-    <p>La URL que intenta acceder no se encuentra disponible o es inexistente</p>
+    <div class=contenedor>
+        <div>
+            <h1>error</h1>
+        </div> 
+        <div class="imagen">
+            <img src="./../../../../img/banners_fondos_images/404.png" class="img" alt="404">
+        </div>
+        <div>
+            <p>oopss! lo lamentamos pero la página que solicita no existe o no esta disponible</p>
+        </div>
+        <div class="boton">
+            <a class="button" href="/">regresar a home</a>
+        </div>
+    </div>
 </body>
 
 </html>

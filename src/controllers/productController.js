@@ -1,17 +1,16 @@
-const res = require("express/lib/response")
-const path = require("path")
+const fs = require ("fs")
 const modelsController = require("./../models/modelsController")
 
 const productController = {
     //pagina de carrito de compras
     productCard: (req, res) => {
-        return res.render("productCard")
+        return res.render("productCard",{status :req.session.user})
     },
 
     //pagina del detalle del producto
     productDetail: (req, res) => {
         let products = modelsController.FnRead("products")
-        return res.render("productDetail", { products: products })
+        return res.render("productDetail", { products: products, status :req.session.user })
     },
 
     //pagina de nuevo producto
@@ -21,9 +20,8 @@ const productController = {
 
     //pagina edicion de producto
     editProduct: (req, res) => {
-        let productsJson = modelsController.FnRead("products")
-        let product = modelsController.FnSearch(productsJson, "id", req.params.idProduct)
-        res.render("editProduct", { product: product })
+        let product = modelsController.FnSearch("products", "id", req.params.idProduct)
+        res.render("editProduct", { product: product})
     },
     //Editar un producto
     editProductId: (req, res) => {
@@ -34,15 +32,15 @@ const productController = {
     //Crear un nuevo producto
     createProduct: function (req, res) {
 
-        let newProduct = new function () {
-            this.id = Date.now()
-            this.nameProduct = req.body.nameProduct
-            this.price = req.body.price || 0
-            this.description = req.body.description
-            this.grams = req.body.grams
-            this.fragance = req.body.fragance
-            this.category = req.body.category
-            this.image = req.file.filename
+        let newProduct ={
+            id : Date.now(),
+            nameProduct : req.body.nameProduct,
+            price : req.body.price || 0,
+            description : req.body.description,
+            grams : req.body.grams,
+            fragance : req.body.fragance,
+            category : req.body.category,
+            image : req.file.filename
         }
         modelsController.FnCreate("products", newProduct)
 
@@ -50,6 +48,8 @@ const productController = {
     },
     //Eliminar un producto
     deleteProduct: function (req, res) {
+        let imagen = (modelsController.FnSearch("products","id",req.params.idProduct)).image
+        fs.rmSync(__dirname+"./../../public/img/products_images/"+imagen)
         modelsController.FnDelete("products", req.params.idProduct)
         res.redirect("/user/admin")
     },

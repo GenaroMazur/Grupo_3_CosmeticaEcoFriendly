@@ -1,0 +1,32 @@
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: antiquewhite;
+    margin: 30px;
+    border-radius: 5px;
+
+}
+.boton {
+    margin: 40px;
+}
+a.button {
+    background-color: #889b65;
+    text-decoration: none;
+    padding: 8px 18px;
+    margin: 1.8% 0%;
+    border: 1px;
+    border-radius: 15px;
+    margin: auto 1rem;
+    color: white;
+}
+
+.button:hover {
+    background-color: #9fb478;
+    color: #000;
+}
+.imagen {
+    width: 310px;
+    align-self: center;
+}

@@ -21,7 +21,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 4%;
+    margin: 1.5%;
 
 }
 
@@ -130,6 +130,46 @@ img {
 
 /*    Estilos main admin */
 
+
+/*Estilos banner-admin*/
+.banner-admin {
+    display: flex;
+    width: 100vw;
+    background-color: #744841;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-admin .welcome-text {
+    margin-left: 2rem;
+}
+
+.banner-admin .photo-admin{
+    margin-right: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.banner-admin h1, p {
+    margin: 0.2rem;
+}
+
+.banner-admin h1{
+    font-size: 16px;
+}
+.banner-admin p{
+    font-size: 12px;
+}
+
+.banner-admin img{
+    width: 100px;
+    height: 100px;
+    border-radius: 160px;
+    border: 2px solid #666;
+}
+
+
+
 .info-admin ul,
 li,
 a {
@@ -231,4 +271,86 @@ aside {
 }
 @media(min-width:900px) {
 
+    /* Estilos Banner*/
+    .banner-admin h1{
+        font-size: 2rem;
+    }
+
+    .banner-admin p{
+        font-size: 1rem;
+    }
+
+    /* Estilos header*/
+    .icono-hamburguesa{
+        visibility: hidden;
+    }
+
+ aside{
+    visibility: visible;
+    display: flex;
+    background: #cdbd9d;
+    align-self: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 481px;
+    padding: 60px 0px 6px 0px;
+    border-radius: 5px;
+    flex: auto;
+}
+
+.admin-main {
+    background-color: #ffebe0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ .info-admin {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.product-list{
+    background-color: #ffebe0;
+    display: flex;
+}
+.info-producto{
+    display: flex;
+    flex-direction: column;
+}
+.info-admin ul, li, a {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: none;
+    font-size: small;
+    font-weight: bold;
+    color: #000;
+}
+.info-producto img {
+    width: 11rem;
+    margin-top: 1rem;
+    border-radius: 30px;
+}
+ul.aside {
+    display: flex;
+    flex-direction: column;
+    display: contents;
+}
+ul.productos {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    white-space: pre;
+}
+.product-list article {
+        background-color: #cdbd9d;
+        margin: 1rem;
+        border-radius: 10px;
+}
 }

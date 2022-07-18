@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/miCuenta.css">
+    <title>Mi Cuenta</title>
+<body>
+    <%- include('./partials/header') %>
+    <main class="main-cuenta">
+        <div class="container-perfil">
+            <div class="info-user">
+                <div class="image-user">
+                    <img src="./../img/users_images/default.jpg" alt="Foto de perfil de usuario">
+                </div>
+                <h2>Nombre de Usuario</h2>
+            </div>
+            <div class="buttons-users">
+                <div class="user-button">
+                    <input type="button" value="Editar información">
+                </div>
+                <div class="user-button">
+                    <input type="button" value="Cerrar sesión">
+                </div>
+            </div>
+            
+        </div>
+        <div class="mis-datos">
+            <h3>Mis Datos</h3>
+            <div class="user-email">
+                <!--icon-->
+                <h4>Correo Electrónico</h4>
+                <p>user123@gmail.com</p>
+            </div>
+            <div class="user-nombre">
+                <!--icon-->
+                <h4>Nombre y Apellido</h4>
+                <p>Jennifer Lopez</p>
+            </div>
+            <div class="user-telefono">
+                <!--icon-->
+                <h4>Celular</h4>
+                <p>+5403764123456</p>
+            </div>
+            <h3>Datos de Envío</h3>
+            <div class="user-postal">
+                <!--icon-->
+                <h4>Código Postal</h4>
+                <p>3300</p>
+            </div>
+            <div class="user-direccion">
+                <!--icon-->
+                <h4>Dirección</h4>
+                <p>Barrio ??? calle ??? numero de casa ??? Localidad ??? Provincia ???? </p>
+            </div>
+            <h3>Tarjetas Asociadas</h3>
+            <div class="user-tarjetas">
+                <!--icon-->
+                <h4>Tarjeta</h4>
+                <p>VISA</p>
+                <p>Numero de tarjeta</p>
+            </div>
+
+            <div class="user-buttonEliminar">
+                <input type="button" value="Eliminar cuenta">
+            </div>
+        </div>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>
