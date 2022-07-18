@@ -89,7 +89,6 @@
 
 .form-imput:focus ~ .form-line, .form-input:not(:placeholder-shown) ~ .form-label{
     transform: scale(1);
-    transi
 }
 
 
