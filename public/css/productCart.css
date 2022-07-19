@@ -47,6 +47,7 @@ td input {
     width: 20%;
     border-radius: 20px;
     margin-right: 27px;
+    height: 140px ;
 }
 
 .total-carrito {
@@ -86,22 +87,35 @@ th:last-child {
     .article-carrito {
         background-color: #ffebe0;
         width: 95vw;
-        height: 100vw;
+        height: 140vw;
         display: flex;
         border-radius: 20px;
         flex-direction: column;
         margin: 20px auto;
     }
+        .td-carrito img {
+            width: 30%;
+            border-radius: 20px;
+            margin-right: 25px;
+        }
+    
 }
 
 @media(min-width:900px) {
     .article-carrito {
         background-color: #ffebe0;
         width: 98vw;
-        height: 46vw;
+        height: 45vw;
         display: flex;
         border-radius: 20px;
         flex-direction: column;
         margin: 185px auto;
     }
+    .td-carrito img {
+        width: 15%;
+        border-radius: 25px;
+        margin-right: 15px;
+        height: 130px ;
+    }
+
 }
