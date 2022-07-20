@@ -78,7 +78,7 @@ const userController = {
 
     //Eliminar usuario
     delete: function (req, res) {
-        modelsController.FnDelete("users", req.params.userId)
+        modelsController.FnDelete("users", req.params.idUser)
         res.redirect("/")
     },
 

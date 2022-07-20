@@ -11,7 +11,7 @@
                 <a href="/user/editAccount/<%= user.id %>"><input type="button" value="Editar información"></a>
             </div>
             <div class="user-button">
-                <input type="button" value="Cerrar sesión">
+                <a href="/user/un-login"><input type="button" value="Cerrar sesión"></a>
             </div>
         </div>
         
@@ -71,8 +71,8 @@
                 <h4>No cuenta con targetas asociadas</h4>
             </div>
         <% } %>
-        <div class="user-buttonEliminar">
-            <input type="button" value="Eliminar cuenta">
-        </div>
+        <form action="/user/delete/<%= user.id %>?_method=delete" method="post" class="user-buttonEliminar">
+            <input type="submit" value="Eliminar cuenta">
+        </form>
     </div>
 </main>

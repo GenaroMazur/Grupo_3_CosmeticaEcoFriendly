@@ -34,5 +34,5 @@ routes.post("/login",
 //PUT
 
 //DELETE
-
+routes.delete("/delete/:idUser",userController.delete)
 module.exports = routes
