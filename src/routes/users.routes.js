@@ -14,9 +14,11 @@ routes.get("/un-login",userController.unlogin)
 routes.get("/registro", userController.register)
 routes.get("/admin", userController.admin)
 routes.get("/userPanel", userController.userPanel)
-routes.get("/myAccount/:idUser?",
+routes.get("/myAccount/:idUser",
     userMiddlewares.account,
     userController.myAccount)
+routes.get("/editAccount/:idUser",
+    userController.editAccount)
 
 //POST
 routes.post("/registro",

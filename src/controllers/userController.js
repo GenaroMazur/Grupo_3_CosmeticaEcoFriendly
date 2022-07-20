@@ -47,7 +47,13 @@ const userController = {
         let user = modelsController.FnSearch("users","id",req.params.idUser)
         user.dateCreation=undefined
         user.password=undefined
-        res.render("myAccount",{user : user})
+        res.render("myAccount",{user : user,edit:false})
+    },
+    editAccount: function(req, res) {
+        let user = modelsController.FnSearch("users","id",req.params.idUser)
+        user.dateCreation=undefined
+        user.password=undefined
+        res.render("myAccount",{user : user,edit:true})
     },
 
     //Crear usuario

@@ -6,18 +6,14 @@
 <body>
     <%- include('./partials/header') %>
     <main>
-
-        <!--Tarjeta de informacion de usuario-->
-        <%- include('./partials/main-cuenta') %>
-
-        <!--formulario de editar usuario-->
-        <%- include('./partials/userEdit') %>
-
-        
+        <% if (edit) { %>
+            <!--formulario de editar usuario-->
+            <%- include('./partials/userEdit') %>
+        <% } else {%>
+            <!--Tarjeta de informacion de usuario-->
+            <%- include('./partials/main-cuenta') %>
+        <% } %>         
     </main>
-    
-
-    
     <%- include('./partials/footer') %>
 </body>
 </html>
