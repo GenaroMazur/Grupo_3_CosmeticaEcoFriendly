@@ -1,1 +1,87 @@
+img.img-icon {
+    width: 200px;
+}
+.menu-navegacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to top, #9fb478 0%, #cdbd9d 100%);
+    width: 30vw;
+    height: 100%;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    box-shadow: 0 0 6px rgb(0 0 0 / 0%);
+    transform: translate(360%);
+    z-index: 10;
+}
+.nav__input:checked+.menu-navegacion {
+    transform: translate(233%);
+}
+.userpanel {
+    display: flex;
+}
+.usuariopanel {
+    background-color: #ffebe0;
+    width: 15rem;
+    text-align: center;
+    margin: 5px;
+    border-radius: 30px;
+    padding: 40px 10px 40px 10px;
+}
+.boton{
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 52px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    display: inline-block;
+}
+
+.botoneditar{
+ background-color: #9fb478;
+}
+.botonborrar{
+    background-color: #ae2510;
+}
+.botoneditar:hover{
+    background-color: #84975f;
+}
+.botonborrar:hover{
+       background-color: rgb(144, 42, 42);
+}
+.imagen {
+    background: rgb(227 198 172);
+    padding: 10px 0px 5px 0px;
+    border-radius: 11px;
+}
+.decoraciones {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+}
+.usuariopanel img{
+    width: 100px;
+    height: 100px;
+    border-radius: 160px;
+    border: 2px solid #666;
+}
+.separacion {
+    margin-bottom: 20px;
+}
+select {
+    background: rgb(207, 189, 148);
+    width: 7rem;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px rgb(193, 176, 136);
+    color: white;
+    text-align: center;
+}
+
 

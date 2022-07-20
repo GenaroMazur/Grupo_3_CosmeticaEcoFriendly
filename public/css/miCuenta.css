@@ -200,6 +200,7 @@
     .container-perfil{
         align-self: flex-start;
         flex-direction: column;
+        padding-top: 50px;
     }
 
     .user-buttonEliminar {
