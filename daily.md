@@ -169,3 +169,17 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 
 ### Joel: 
 - Fixeé todas las páginas que se habian roto a causa de separar el style.css. Luego, agregué en el registro los inputs faltantes e implementé el ícono del ojo para ocultar la contraseña e hice responsive de la vista del administrador. Como inconvenientes que tuve fue unos problemas del git por meras confusiones propias y lo que voy a hacer será implementar un poco más de UX al proyecto, darle estructura y estilo a la vista del error 404.  
+
+## Daily día 11/07
+
+### Leandro Joel Ramos: 
+- Sólo me encargué de la vista 'not-found' porque tuve inconvenientes de salud. Lo que voy a hacer a partir de hoy es encargarme del Panel de Administrador.
+
+### Genaro Mazur:
+- Modifiqué el json de usuarios para identificar a cada usuario, implementé el express session, cookies parcer y al controlador de modelos lo modifiqué. También implementé la fase de confirmación de imagen. Como inconveniente, tuve problemas con los status en las verificaciones, los res.status y para solucionar dicho problema voy a investigar más para ser más eficiente en la parte del backend y me encargaré de la parte lógica del banner de administrador.
+
+### Fabricio Saucedo:
+- Esta semana pude terminar de ajustar las vistas 'editProduct' y 'newProduct' y a su vez también fixeé la vista 'nosotros' en la parte del banner. No tuve ningún inconveniente en mis tareas y pienso mejorar y encargarme de otras vistas.
+
+### Camila Morand:
+- Me dediqué a agregar y cambiar las imágenes de los nuevos productos, mediante el json de productos. Mis inconvenientes fueron a causa de una enfermedad que tuve y me encontré muy atrasada en los temas. Entonces para la siguiente reunión me gustaría arreglar las imágenes y me dedicaré en lo que mi grupo necesite.
