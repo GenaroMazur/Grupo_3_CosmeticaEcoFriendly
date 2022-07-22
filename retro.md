@@ -72,3 +72,28 @@ Viendo los avances como grupo y consolidándonos cada vez más, mantuvimos nueva
 ### Stop Doing:  
 - Dormir en días de reunión faltando  a momentos fundamentales como dailys, día de planificación y reunión de retro. 
 
+
+## Sprint-4-Restrospectiva
+
+### Start Doing: 
+- Empezar a realizar más contribuciones al proyecto.
+- Investigar más funcionalidades extras que pueden ser útiles para la página.
+
+### More of:
+- Mejorar más el diseño UX-UI.
+- Juntarnos más de seguido a codear.
+- Utilizar en conjunto el trello del grupo.
+- Más reuniones de por medio para sacar dudas.
+
+### Keep Doing: 
+- Seguir con las dailys diarias de los lunes.
+- Seguir participando en dichas dailys y en cualquier inconveniente que se presente.
+- Fomentar el compañerismo.
+- Participar de eventos del grupo.
+
+### Less of: 
+- Adelantarse en los sprints futuros.
+- Seguir las tareas propuestas en el sprint actual y llevar un orden de actividades.
+
+### Stop Doing: 
+- Faltar a las dailys. 
