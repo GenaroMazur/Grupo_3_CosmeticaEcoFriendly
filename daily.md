@@ -183,3 +183,17 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 
 ### Camila Morand:
 - Me dediqué a agregar y cambiar las imágenes de los nuevos productos, mediante el json de productos. Mis inconvenientes fueron a causa de una enfermedad que tuve y me encontré muy atrasada en los temas. Entonces para la siguiente reunión me gustaría arreglar las imágenes y me dedicaré en lo que mi grupo necesite.
+
+## Daily 18/07
+
+### Fabricio Saucedo:
+- Esta vez me encargué de hacer un formulario para editUsers, un banner de administradores junto con su estructura y estilos propios (para el panel de administradores), agregué una nueva vista llamada 'myAccount' junto con su estructura, estilos y respectivos botones. Tampoco tuve algún inconveniente y me dedicaré a seguir con la vista del catálogo de productos y luego fixear la vista 'home' que son tareas pendientes que me quedan.
+
+### Genaro Mazur:
+- Me dediqué a modificar el json de usuarios para que esté más completo y parametricé vistas que necesitábamos (adaptable a cada usuario). Como inconveniente tuve problemas familiares y perdí mucho tiempo entonces lo que haré será terminar la parte lógica de 'myAccount' y agregarle el multer.
+
+### Camila Morand:
+- Completé las descripciones, ingredientes y modos de uso de los productos para hacer el catálogo, arreglé las medias queries del carrito de compras. Como inconveniente podríamos decir que el tiempo aunque no tanto como anteriores veces y ahora me concentraré en ver y mejorar las vistas del panel de administrador y el del detalle del producto.
+
+### Leandro Joel Ramos:
+- Lo que hice fue arreglar un poco más el panel de administrador junto con su aside, agregué alertas en los formularios de el registro de usuarios y tuve como inconveniente algunos problemas de salud asi que ahora me encargaré de terminal el panel de usuario, agregarle los estilos y agarrar alguna tarea pendiente.
