@@ -17,7 +17,9 @@
                             <label for="nameProduct">
                                 <h4>Nombre Del Producto</h4>
                             </label>
-                            <input type="text" name="nameProduct" id="nameProduct" class="textArea" required>
+                            <input type="text" name="nameProduct" id="nameProduct" class="textArea" required <% if (old && old.nameProduct) { %>
+                                value="<%= old.nameProduct %>"
+                            <% } %>>
                             <% if (locals.errors && errors.nameProduct) { %>
                                 <p class="alerta"><%= errors.nameProduct.msg %> </p>
                             <% } %>
@@ -26,8 +28,7 @@
                             <label for="description">
                                 <h4>Descripcion</h4>
                             </label>
-                            <textarea name="description" id="description" cols="30" rows="10" class="textArea"
-                                required></textarea>
+                            <textarea name="description" id="description" cols="30" rows="10" class="textArea"required><% if (old && old.description) { %><%= old.description %><% } %></textarea>
                         </div>
                         <div>
                             <label for="Category">
@@ -51,7 +52,9 @@
                         </div>
                         <div>
                             <label for="fragance">Fragancia</label>
-                            <input type="text" name="fragrance" id="fragrance" class="textArea">
+                            <input type="text" name="fragrance" id="fragrance" class="textArea"<% if (old && old.fragrance) { %>
+                                value="<%= old.fragrance %>"
+                            <% } %>>
                         </div>
                         <div>
                             <label for="grams">Cantidad</label>
@@ -66,7 +69,9 @@
                             <label for="price">
                                 <h5>Precio</h5>
                             </label>
-                            <input type="number" name="price" id="price" min="0" class="textArea">
+                            <input type="number" name="price" id="price" min="0" class="textArea"<% if (old && old.price) { %>
+                                value="<%= old.price %>"
+                            <% } %>>
                             <% if (locals.errors && errors.price) { %>
                                 <p class="alerta"><%= errors.price.msg %> </p>
                             <% } %>

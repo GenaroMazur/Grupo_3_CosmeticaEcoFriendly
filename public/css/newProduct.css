@@ -95,7 +95,13 @@ label {
     width: 60%;
     padding: 0px 0px 0px 216px
 }
-
+.alerta{
+    color: red;
+    border: solid;
+    border-radius: 30px;
+    background: rgb(232, 232, 232);
+    font: -webkit-control;
+}
 @media(min-width:900px) {
 
     

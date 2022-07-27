@@ -23,9 +23,9 @@ productsMiddlewares = {
     product: function (req, res, next) {
         let validaciones = validationResult(req)
         if (!validaciones.isEmpty()) {
+            
             if (req.file) {
                 let directory = path.join(__dirname, "./../../public/img/products_images", req.file.filename)
-
                 fs.unlink(directory)
                     .catch(err => {
                         exists("./../logs", exist => {
@@ -39,8 +39,8 @@ productsMiddlewares = {
                             }
                         })
                     })
-
             }
+
             return res.render("newProduct", { errors: validaciones.mapped(), old: req.body })
         } else {
             return next()
