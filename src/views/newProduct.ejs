@@ -18,6 +18,9 @@
                                 <h4>Nombre Del Producto</h4>
                             </label>
                             <input type="text" name="nameProduct" id="nameProduct" class="textArea" required>
+                            <% if (locals.errors && errors.nameProduct) { %>
+                                <p class="alerta"><%= errors.nameProduct.msg %> </p>
+                            <% } %>
                         </div>
                         <div>
                             <label for="description">
@@ -38,10 +41,13 @@
                             </select>
                         </div>
                         <div>
-                            <label for="productImg">
+                            <label for="image">
                                 <h5>Insertar imagen</h5>
                             </label>
                             <input type="file" id="image" name="image" accept="image/png, image/jpeg" required>
+                            <% if (locals.errors && errors.image) { %>
+                                <p class="alerta"><%= errors.image.msg %> </p>
+                            <% } %>
                         </div>
                         <div>
                             <label for="fragance">Fragancia</label>
@@ -61,6 +67,9 @@
                                 <h5>Precio</h5>
                             </label>
                             <input type="number" name="price" id="price" min="0" class="textArea">
+                            <% if (locals.errors && errors.price) { %>
+                                <p class="alerta"><%= errors.price.msg %> </p>
+                            <% } %>
                         </div>
                         <div class="botons">
                             <input type="submit" value="Agregar">

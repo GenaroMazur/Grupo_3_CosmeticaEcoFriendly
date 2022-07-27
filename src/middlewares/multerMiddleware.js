@@ -39,7 +39,7 @@ multerMiddleware = {
     productsImage:function(){
         const config = multer.diskStorage({
             destination:(req,file,cb)=>{
-                let destino = path.join(__dirname,"./../../public/img/%temp%")
+                let destino = path.join(__dirname,"./../../public/img/products_images")
                 cb(null,destino)
             },
             filename:(req,file,cb)=>{
