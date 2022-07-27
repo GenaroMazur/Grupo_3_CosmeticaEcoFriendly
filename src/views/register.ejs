@@ -70,8 +70,8 @@
                 <div>
                     <label for="file">Foto de perfil</label>
                     <input type="file" name="image" id="file" accept="image/jpg image/png">
-                    <% if (locals.errors && errors.userImage) { %>
-                        <p class="alerta"><%= errors.userImage.msg %> </p>
+                    <% if (locals.errors && errors.image) { %>
+                        <p class="alerta"><%= errors.image.msg %> </p>
                     <% } %>
                 </div>
                 <input type="submit" value="Registrarse"class="button">

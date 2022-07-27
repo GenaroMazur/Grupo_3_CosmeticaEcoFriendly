@@ -40,21 +40,22 @@ const userMiddlewares = {
             }),
         body("image")
             .custom((value,{req})=>{
-                if (req.file && !(path.extname(req.file.filename) == ".jpg" || path.extname(req.file.filename) == ".png")) {
-                    throw new Error ("Solo se aceptan formatos JPG o PNG")
+                let ext = [".jpg",".jepg",".png"]
+                if (req.body.image && !ext.some(extencion => path.extname(req.body.image) == extencion) ){
+                    throw new Error ("Solo se aceptan formatos JPG, JEPG o PNG")
                 }
                 return true
             })
     ],
 
-    //comprueba que paso todas las validaciones y controla carpeta %temp%
+    //comprueba que paso todas las validaciones
     register: function (req, res, next) {
         let validaciones = validationResult(req)
 
         if (!validaciones.isEmpty()) {
             if (req.file) {
-                let temporals = path.join(__dirname, "./../../public/img/%temp%", req.file.filename)
-                fs.unlink(temporals)
+                let directory = path.join(__dirname, "./../../public/img/users_images", req.file.filename)
+                fs.unlink(directory)
                     .catch(err=>{
                         exists("./../logs",exist=>{
                             if(exist){
@@ -70,25 +71,6 @@ const userMiddlewares = {
             }
             return res.render("register", { errors: validaciones.mapped(), old: req.body })
         } else {
-
-            if (req.file) {
-                let temporals = path.join(__dirname, "./../../public/img/%temp%", req.file.filename)
-                let users_images = path.join(__dirname, "./../../public/img/users_images", req.file.filename)
-                fs.rename(temporals, users_images)
-                    .catch(err=>{
-                        exists("./../logs",exist=>{
-                            if(exist){
-                                fs.appendFile("./../logs/erros.txt",err,"utf-8")
-                            } else {
-                                fs.mkdir("./../logs")
-                                    .then(()=>{
-                                        fs.appendFile("./../logs/erros.txt",err,"utf-8")
-                                    })
-                            }
-                        })
-                    })
-            }
-
             return next()
         }
     },
