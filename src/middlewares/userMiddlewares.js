@@ -6,7 +6,7 @@ const modelsController = require("./../models/modelsController")
 const path = require("path")
 //importa FS
 const fs = require("fs/promises")
-const {exists, existsSync} = require ("fs")
+const {exists} = require ("fs")
 //cifrado de contraseña
 const bcrypt = require ("bcrypt")
 
@@ -56,12 +56,16 @@ const userMiddlewares = {
                 let temporals = path.join(__dirname, "./../../public/img/%temp%", req.file.filename)
                 fs.unlink(temporals)
                     .catch(err=>{
-                        if(existsSync("./../logs")){
-                            fs.appendFile("./../logs/erros.txt",err,"utf-8")
-                        } else {
-                            fs.mkdir("./../logs")
-                            fs.appendFile("./../logs/erros.txt",err,"utf-8")
-                        }
+                        exists("./../logs",exist=>{
+                            if(exist){
+                                fs.appendFile("./../logs/erros.txt",err,"utf-8")
+                            } else {
+                                fs.mkdir("./../logs")
+                                    .then(()=>{
+                                        fs.appendFile("./../logs/erros.txt",err,"utf-8")
+                                    })
+                            }
+                        })
                     })
             }
             return res.render("register", { errors: validaciones.mapped(), old: req.body })
@@ -72,12 +76,16 @@ const userMiddlewares = {
                 let users_images = path.join(__dirname, "./../../public/img/users_images", req.file.filename)
                 fs.rename(temporals, users_images)
                     .catch(err=>{
-                        if(existsSync("./../logs")){
-                            fs.appendFile("./../logs/erros.txt",err,"utf-8")
-                        } else {
-                            fs.mkdir("./../logs")
-                            fs.appendFile("./../logs/erros.txt",err,"utf-8")
-                        }
+                        exists("./../logs",exist=>{
+                            if(exist){
+                                fs.appendFile("./../logs/erros.txt",err,"utf-8")
+                            } else {
+                                fs.mkdir("./../logs")
+                                    .then(()=>{
+                                        fs.appendFile("./../logs/erros.txt",err,"utf-8")
+                                    })
+                            }
+                        })
                     })
             }
 
