@@ -22,7 +22,7 @@ routes.get("/editAccount/:idUser",
 
 //POST
 routes.post("/registro",
-    multerMiddleware.usersImage().single("userImage"),
+    multerMiddleware.usersImage().single("image"),
     userMiddlewares.validationsCreate,
     userMiddlewares.register,
     userController.create)

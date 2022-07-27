@@ -13,7 +13,7 @@
                 <div>    
                     <label for="name">Nombre del usuario</label>
                     <input type="text" id="name" name="username" placeholder="Nombre"class="textArea"
-                    <% if (locals.errors && errors.username) { %>
+                    <% if (locals.errors && old.username) { %>
                         value=<%= old.username %> 
                     <% } %>
                     >
@@ -24,7 +24,7 @@
                 <div>
                     <label for="lastname">apellido del usuario</label>
                     <input type="text" id="lastname" name="lastname" placeholder="apellido"class="textArea"
-                    <% if (locals.errors && errors.lastname) { %>
+                    <% if (locals.errors && old.lastname) { %>
                         value=<%= old.lastname %>
                     <% } %>>
                     <% if (locals.errors && errors.lastname) { %>
@@ -69,7 +69,7 @@
                 </div>
                 <div>
                     <label for="file">Foto de perfil</label>
-                    <input type="file" name="userImage" id="file" accept="image/jpg image/png">
+                    <input type="file" name="image" id="file" accept="image/jpg image/png">
                     <% if (locals.errors && errors.userImage) { %>
                         <p class="alerta"><%= errors.userImage.msg %> </p>
                     <% } %>

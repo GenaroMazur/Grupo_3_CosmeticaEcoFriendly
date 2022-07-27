@@ -47,19 +47,21 @@ const userController = {
         let user = modelsController.FnSearch("users","id",req.params.idUser)
         user.dateCreation=undefined
         user.password=undefined
-        res.render("myAccount",{user : user,edit:false})
+        return res.render("myAccount",{user : user,edit:false})
     },
     editAccount: function(req, res) {
         let user = modelsController.FnSearch("users","id",req.params.idUser)
         user.dateCreation=undefined
         user.password=undefined
-        res.render("myAccount",{user : user,edit:true})
+        return res.render("myAccount",{user : user,edit:true})
     },
 
     //Crear usuario
     create: function (req, res) {
+        
         let dateCreation=new Date()
         dateCreation=[dateCreation.getFullYear(),dateCreation.getMonth()+1,dateCreation.getDate()]
+        
         let newUser = {
             id : Date.now(),
             dateCreation:dateCreation,
@@ -72,21 +74,28 @@ const userController = {
         }
 
         modelsController.FnCreate("users", newUser)
-
-        res.redirect("/")
+        return res.redirect("/")
     },
 
     //Eliminar usuario
     delete: function (req, res) {
         modelsController.FnDelete("users", req.params.idUser)
-        res.redirect("/")
+        return res.redirect("/")
     },
 
     loginUser: function (req,res) {
+
+        let user = modelsController.FnSearch("users","email",req.body.userEmail)
+        req.session.user ={
+            id:user.id,
+            username:user.username,
+            status:user.status
+        } 
+
         if (req.body.remember) {
-            res.cookie("remember",req.session.user,{maxAge : 120000})
+            res.cookie("remember",req.session.user,{maxAge : 3600000*12})
         }
-        res.redirect("/")
+        return res.redirect("/")
     }
 }
 
