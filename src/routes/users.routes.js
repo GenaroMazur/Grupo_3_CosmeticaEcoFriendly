@@ -22,17 +22,20 @@ routes.get("/editAccount/:idUser",
 
 //POST
 routes.post("/registro",
+    userMiddlewares.maintain,
     multerMiddleware.usersImage().single("image"),
     userMiddlewares.validationsCreate,
     userMiddlewares.register,
     userController.create)
-routes.post("/login",
+    routes.post("/login",
     userMiddlewares.validationsLogin,
     userMiddlewares.login,
     userController.loginUser)
-
-//PUT
-
-//DELETE
-routes.delete("/delete/:idUser",userController.delete)
+    
+    //PUT
+    
+    //DELETE
+routes.delete("/delete/:idUser",
+    userMiddlewares.maintain,
+    userController.delete)
 module.exports = routes

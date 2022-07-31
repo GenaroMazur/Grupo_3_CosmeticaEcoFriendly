@@ -16,16 +16,20 @@ routes.get("/editProduct/:idProduct", productController.editProduct)
 
 //POST
 routes.post("/newProduct",
+    productsMiddlewares.maintain,
     multerMiddleware.productsImage().single("image"),
     productsMiddlewares.validations,
     productsMiddlewares.product,
     productController.createProduct)
-
-//PUT
-routes.put("/editProduct/:idProduct", productController.editProductId)
-
-//DELETE
-// routes.delete("/deleteProduct/:idProduct",productController.deleteProduct)
-routes.delete("/deleteProduct/:idProduct", productController.deleteProduct)
+    
+    //PUt
+    routes.put("/editProduct/:idProduct",
+    productsMiddlewares.maintain,
+    productController.editProductId)
+    
+    //DELETE
+    routes.delete("/deleteProduct/:idProduct",
+    productsMiddlewares.maintain,
+    productController.deleteProduct)
 
 module.exports = routes
