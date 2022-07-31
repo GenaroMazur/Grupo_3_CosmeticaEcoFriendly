@@ -1,25 +1,27 @@
-const express = require("express")
-const routes = express.Router()
+const express = require("express");
+const routes = express.Router();
 
 //importa controlador
-const userController = require("./../controllers/userController")
+const userController = require("./../controllers/userController");
 
 //importar middlewares
-const userMiddlewares = require("./../middlewares/userMiddlewares")
-const multerMiddleware = require("./../middlewares/multerMiddleware")
-const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware")
+const userMiddlewares = require("./../middlewares/userMiddlewares");
+const multerMiddleware = require("./../middlewares/multerMiddleware");
+const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware");
 
 //GET
-routes.get("/login", userController.login)
-routes.get("/un-login",userController.unlogin)
-routes.get("/registro", userController.register)
-routes.get("/admin", authAdminMiddleware ,userController.admin)
-routes.get("/userPanel", userController.userPanel)
+routes.get("/login", userController.login);
+routes.get("/un-login",userController.unlogin);
+routes.get("/registro", userController.register);
+routes.get("/admin",
+    authAdminMiddleware,
+    userController.admin);
+routes.get("/userPanel", userController.userPanel);
 routes.get("/myAccount/:idUser",
     userMiddlewares.account,
-    userController.myAccount)
+    userController.myAccount);
 routes.get("/editAccount/:idUser",
-    userController.editAccount)
+    userController.editAccount);
 
 //POST
 routes.post("/registro",
@@ -27,16 +29,16 @@ routes.post("/registro",
     multerMiddleware.usersImage().single("image"),
     userMiddlewares.validationsCreate,
     userMiddlewares.register,
-    userController.create)
-    routes.post("/login",
+    userController.create);
+routes.post("/login",
     userMiddlewares.validationsLogin,
     userMiddlewares.login,
-    userController.loginUser)
+    userController.loginUser);
     
     //PUT
     
     //DELETE
 routes.delete("/delete/:idUser",
     userMiddlewares.maintain,
-    userController.delete)
+    userController.delete);
 module.exports = routes

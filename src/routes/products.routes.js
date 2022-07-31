@@ -1,35 +1,42 @@
-const express = require("express")
-const routes = express.Router()
+const express = require("express");
+const routes = express.Router();
 
 
 //importar middlewares
-const multerMiddleware = require("./../middlewares/multerMiddleware")
-const productsMiddlewares = require ("./../middlewares/productsMiddlewares")
+const multerMiddleware = require("./../middlewares/multerMiddleware");
+const productsMiddlewares = require ("./../middlewares/productsMiddlewares");
+const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware");
 //importa controlador
-const productController = require("./../controllers/productController")
+const productController = require("./../controllers/productController");
 
 //GET
-routes.get("/CarritoDeCompras", productController.productCard)
-routes.get("/DetalleDeProducto", productController.productDetail)
-routes.get("/newProduct", productController.newProduct)
-routes.get("/editProduct/:idProduct", productController.editProduct)
-
+routes.get("/CarritoDeCompras", productController.productCard);
+routes.get("/DetalleDeProducto", productController.productDetail);
+routes.get("/newProduct",
+    authAdminMiddleware,
+    productController.newProduct);
+routes.get("/editProduct/:idProduct",
+    authAdminMiddleware,
+    productController.editProduct);
+    
 //POST
 routes.post("/newProduct",
+    authAdminMiddleware,
     productsMiddlewares.maintain,
     multerMiddleware.productsImage().single("image"),
     productsMiddlewares.validations,
     productsMiddlewares.product,
-    productController.createProduct)
+    productController.createProduct);
     
-    //PUt
-    routes.put("/editProduct/:idProduct",
+//PUt
+routes.put("/editProduct/:idProduct",
+    authAdminMiddleware,
     productsMiddlewares.maintain,
-    productController.editProductId)
+    productController.editProductId);
     
-    //DELETE
-    routes.delete("/deleteProduct/:idProduct",
+//DELETE
+routes.delete("/deleteProduct/:idProduct",
     productsMiddlewares.maintain,
-    productController.deleteProduct)
+    productController.deleteProduct);
 
 module.exports = routes
