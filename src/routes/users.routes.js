@@ -8,11 +8,19 @@ const userController = require("./../controllers/userController");
 const userMiddlewares = require("./../middlewares/userMiddlewares");
 const multerMiddleware = require("./../middlewares/multerMiddleware");
 const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware");
+const authUserMiddleware = require ("./../middlewares/authUserMiddleware");
+const authGuestMiddleware = require ("./../middlewares/authGuestMiddleware");
 
 //GET
-routes.get("/login", userController.login);
-routes.get("/un-login",userController.unlogin);
-routes.get("/registro", userController.register);
+routes.get("/login",
+    authGuestMiddleware, 
+    userController.login);
+routes.get("/un-login",
+    authUserMiddleware,
+    userController.unlogin);
+routes.get("/registro",
+    authGuestMiddleware, 
+    userController.register);
 routes.get("/admin",
     authAdminMiddleware,
     userController.admin);
@@ -21,6 +29,7 @@ routes.get("/myAccount/:idUser",
     userMiddlewares.account,
     userController.myAccount);
 routes.get("/editAccount/:idUser",
+    authGuestMiddleware,
     userController.editAccount);
 
 //POST

@@ -6,11 +6,14 @@ const routes = express.Router();
 const multerMiddleware = require("./../middlewares/multerMiddleware");
 const productsMiddlewares = require ("./../middlewares/productsMiddlewares");
 const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware");
+const authUserMiddleware = require ("./../middlewares/authUserMiddleware");
 //importa controlador
 const productController = require("./../controllers/productController");
 
 //GET
-routes.get("/CarritoDeCompras", productController.productCard);
+routes.get("/CarritoDeCompras",
+    authUserMiddleware, 
+    productController.productCard);
 routes.get("/DetalleDeProducto", productController.productDetail);
 routes.get("/newProduct",
     authAdminMiddleware,
