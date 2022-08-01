@@ -24,17 +24,11 @@ const userController = {
     //panel de administrador
     admin: (req, res) => {
         let productsJson = modelsController.FnRead("products")
-        if (req.session.user.status == "admin") {
-            let admin = modelsController.FnSearch("users","username",req.session.user.username)
-            admin.password=undefined
-            admin.id=undefined
-            admin.dateCreation=undefined
-            return res.render("admin", { products: productsJson , admin : admin})
-        } else if (req.session.user.status == "guest"){
-            return res.redirect("/user/login")
-        } else {
-            return res.redirect("/")
-        }
+        let admin = modelsController.FnSearch("users","username",req.session.user.username)
+        admin.id=undefined
+        admin.password=undefined
+        admin.dateCreation=undefined
+        return res.render("admin", { products: productsJson , admin : admin})
         }
     ,
      //panel de usuario

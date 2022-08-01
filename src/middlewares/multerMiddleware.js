@@ -2,8 +2,6 @@
 const multer= require ("multer")
 //importa el path
 const path=require ("path")
-//validator
-const {body,validationResult}=require("express-validator")
 
 multerMiddleware = {
     
@@ -30,7 +28,6 @@ multerMiddleware = {
                     cb(null,false)
                 }
             }
-
         })
         return upload
     },
@@ -61,7 +58,6 @@ multerMiddleware = {
         })
         return upload
     }
-
 }
 
 module.exports=multerMiddleware
