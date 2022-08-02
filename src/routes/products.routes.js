@@ -15,6 +15,7 @@ routes.get("/CarritoDeCompras",
     authUserMiddleware, 
     productController.productCard);
 routes.get("/DetalleDeProducto", productController.productDetail);
+routes.get("/catalogoProductos", productController.catalogoProductos);
 routes.get("/newProduct",
     authAdminMiddleware,
     productController.newProduct);

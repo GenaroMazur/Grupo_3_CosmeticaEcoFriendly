@@ -6,7 +6,10 @@ const productController = {
     productCard: (req, res) => {
         return res.render("productCard",{status :req.session.user})
     },
-
+    //pagina de catalogo de productos
+    catalogoProductos: (req, res) => {
+        return res.render("catalogoProductos")
+    },
     //pagina del detalle del producto
     productDetail: (req, res) => {
         let products = modelsController.FnRead("products")

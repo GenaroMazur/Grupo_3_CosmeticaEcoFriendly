@@ -1,23 +1,738 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/catalogoProductos.css">
+    <title>La Vie Naturelle - catalogo</title>
 <body>
+    <%- include('./partials/header') %>
+    <div class="menu">
+        <div>
+            <label for="mis fav">mis favoritos</label>
+            <ion-icon name="heart-outline"></ion-icon>
+        </div>
+        <div>
+          <input type="search" name="search" placeholder="buscar" id="">
+          <ion-icon name="search-outline"></ion-icon>
+        </div>
+
+        <div>
+            <label for="ordenar por">ordenar por</label>
+            <select>
+                <option value="destacado">destacado</option>
+                <option value="precio menor">precio: menor a mayor</option>
+                <option value="precio mayor">precio: mayor a menor</option>
+                <option value="alfabeticamente menor">A-Z</option>
+                <option value="alfabeticamente mayor">Z-A</option>
+                <option value="mas vendido">mas vendido</option>
+                <option value="destacado">destacado</option>
+            </select>
+        </div>
+    </div>
     <main>
+    <aside>
         <div>
             <div>
-                <aside>
-
-                </aside>
+                <h1>categorias</h1>
             </div>
             <div>
-                
+                <h1>filtros</h1>
+            </div>
+            <div>
+                <h1>fragancias</h1>
+            </div>
+            <div>
+                <h1>variantes</h1>
             </div>
         </div>
+    </aside>
+
+    <div class="catalogo">
+        <fieldset>
+            <legend>shampoos</legend>
+            <div class="box">
+                <div>
+                    <ion-icon name="arrow-undo-circle-outline"></ion-icon>
+                </div>
+                <div class="productos">
+                   <div class="producto">
+                        <div class="img product">
+                            <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                        </div>
+                        <div>
+                           <h5>ACONDICIONADOR SÓLIDO</h5> 
+                        </div>
+                        <div class="precio">
+                            <div class="old price">
+                                <h5>
+                                    599.99
+                                </h5>
+                            </div>
+                            <div>
+                                <h5>
+                                    420.29
+                                </h5>
+                            </div>
+                            <div class="oferta">
+                                <H3>30%off</H3>
+                            </div>
+                </div>
+                <div class="stock">
+                    <h5 class="stocker">stock</h5>
+                </div>
+                </div>
+                <div class="producto">
+                    <div class="img product">
+                        <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                    </div>
+                    <div>
+                       <h5>ACONDICIONADOR SÓLIDO</h5> 
+                    </div>
+                    <div class="precio">
+                        <div class="old price">
+                            <h5>
+                                599.99
+                            </h5>
+                        </div>
+                        <div>
+                            <h5>
+                                420.29
+                            </h5>
+                        </div>
+                        <div class="oferta">
+                            <H3>30%off</H3>
+                        </div>
+            </div>
+            <div class="stock">
+                <h5 class="stocker">stock</h5>
+            </div>
+            </div>
+            <div class="producto">
+                <div class="img product">
+                    <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                </div>
+                <div>
+                   <h5>ACONDICIONADOR SÓLIDO</h5> 
+                </div>
+                <div class="precio">
+                    <div class="old price">
+                        <h5>
+                            599.99
+                        </h5>
+                    </div>
+                    <div>
+                        <h5>
+                            420.29
+                        </h5>
+                    </div>
+                    <div class="oferta">
+                        <H3>30%off</H3>
+                    </div>
+        </div>
+        <div class="stock">
+            <h5 class="stocker">stock</h5>
+        </div>
+        </div>
+                           <div class="producto">
+                        <div class="img product">
+                            <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                        </div>
+                        <div>
+                           <h5>ACONDICIONADOR SÓLIDO</h5> 
+                        </div>
+                        <div class="precio">
+                            <div class="old price">
+                                <h5>
+                                    599.99
+                                </h5>
+                            </div>
+                            <div>
+                                <h5>
+                                    420.29
+                                </h5>
+                            </div>
+                            <div class="oferta">
+                                <H3>30%off</H3>
+                            </div>
+                </div>
+                <div class="stock">
+                    <h5 class="stocker">stock</h5>
+                </div>
+                </div>
+                <div class="producto">
+                    <div class="img product">
+                        <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                    </div>
+                    <div>
+                       <h5>ACONDICIONADOR SÓLIDO</h5> 
+                    </div>
+                    <div class="precio">
+                        <div class="old price">
+                            <h5>
+                                599.99
+                            </h5>
+                        </div>
+                        <div>
+                            <h5>
+                                420.29
+                            </h5>
+                        </div>
+                        <div class="oferta">
+                            <H3>30%off</H3>
+                        </div>
+            </div>
+            <div class="stock">
+                <h5 class="stocker">stock</h5>
+            </div>
+            </div>
+            
+                <div class="producto">
+                    <div class="img product">
+                        <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                    </div>
+                    <div>
+                       <h5>ACONDICIONADOR SÓLIDO</h5> 
+                    </div>
+                    <div class="precio">
+                        <div class="old price">
+                            <h5>
+                                599.99
+                            </h5>
+                        </div>
+                        <div>
+                            <h5>
+                                420.29
+                            </h5>
+                        </div>
+                        <div class="oferta">
+                            <H3>30%off</H3>
+                        </div>
+            </div>
+            <div class="stock">
+                <h5 class="stocker">stock</h5>
+            </div>
+            </div>
+                   </div>
+                <div>
+                    <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>acondicionadores</legend>
+            <div class="box">
+                <div>
+                    <ion-icon name="arrow-undo-circle-outline"></ion-icon>
+                </div>
+                <div class="productos">
+                   <div class="producto">
+                        <div class="img product">
+                            <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                        </div>
+                        <div>
+                           <h5>ACONDICIONADOR SÓLIDO</h5> 
+                        </div>
+                        <div class="precio">
+                            <div class="old price">
+                                <h5>
+                                    599.99
+                                </h5>
+                            </div>
+                            <div>
+                                <h5>
+                                    420.29
+                                </h5>
+                            </div>
+                            <div class="oferta">
+                                <H3>30%off</H3>
+                            </div>
+                </div>
+                <div class="stock">
+                    <h5 class="stocker">stock</h5>
+                </div>
+                </div>
+                <div class="producto">
+                    <div class="img product">
+                        <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                    </div>
+                    <div>
+                       <h5>ACONDICIONADOR SÓLIDO</h5> 
+                    </div>
+                    <div class="precio">
+                        <div class="old price">
+                            <h5>
+                                599.99
+                            </h5>
+                        </div>
+                        <div>
+                            <h5>
+                                420.29
+                            </h5>
+                        </div>
+                        <div class="oferta">
+                            <H3>30%off</H3>
+                        </div>
+            </div>
+            <div class="stock">
+                <h5 class="stocker">stock</h5>
+            </div>
+            </div>
+            <div class="producto">
+                <div class="img product">
+                    <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                </div>
+                <div>
+                   <h5>ACONDICIONADOR SÓLIDO</h5> 
+                </div>
+                <div class="precio">
+                    <div class="old price">
+                        <h5>
+                            599.99
+                        </h5>
+                    </div>
+                    <div>
+                        <h5>
+                            420.29
+                        </h5>
+                    </div>
+                    <div class="oferta">
+                        <H3>30%off</H3>
+                    </div>
+        </div>
+        <div class="stock">
+            <h5 class="stocker">stock</h5>
+        </div>
+        </div>
+                           <div class="producto">
+                        <div class="img product">
+                            <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                        </div>
+                        <div>
+                           <h5>ACONDICIONADOR SÓLIDO</h5> 
+                        </div>
+                        <div class="precio">
+                            <div class="old price">
+                                <h5>
+                                    599.99
+                                </h5>
+                            </div>
+                            <div>
+                                <h5>
+                                    420.29
+                                </h5>
+                            </div>
+                            <div class="oferta">
+                                <H3>30%off</H3>
+                            </div>
+                </div>
+                <div class="stock">
+                    <h5 class="stocker">stock</h5>
+                </div>
+                </div>
+                <div class="producto">
+                    <div class="img product">
+                        <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                    </div>
+                    <div>
+                       <h5>ACONDICIONADOR SÓLIDO</h5> 
+                    </div>
+                    <div class="precio">
+                        <div class="old price">
+                            <h5>
+                                599.99
+                            </h5>
+                        </div>
+                        <div>
+                            <h5>
+                                420.29
+                            </h5>
+                        </div>
+                        <div class="oferta">
+                            <H3>30%off</H3>
+                        </div>
+            </div>
+            <div class="stock">
+                <h5 class="stocker">stock</h5>
+            </div>
+            </div>
+            
+                <div class="producto">
+                    <div class="img product">
+                        <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                    </div>
+                    <div>
+                       <h5>ACONDICIONADOR SÓLIDO</h5> 
+                    </div>
+                    <div class="precio">
+                        <div class="old price">
+                            <h5>
+                                599.99
+                            </h5>
+                        </div>
+                        <div>
+                            <h5>
+                                420.29
+                            </h5>
+                        </div>
+                        <div class="oferta">
+                            <H3>30%off</H3>
+                        </div>
+            </div>
+            <div class="stock">
+                <h5 class="stocker">stock</h5>
+            </div>
+            </div>
+                   </div>
+                <div>
+                    <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>jabones</legend>
+            <div class="box">
+                <div>
+                    <ion-icon name="arrow-undo-circle-outline"></ion-icon>
+                </div>
+                <div class="productos">
+                   <div class="producto">
+                        <div class="img product">
+                            <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                        </div>
+                        <div>
+                           <h5>ACONDICIONADOR SÓLIDO</h5> 
+                        </div>
+                        <div class="precio">
+                            <div class="old price">
+                                <h5>
+                                    599.99
+                                </h5>
+                            </div>
+                            <div>
+                                <h5>
+                                    420.29
+                                </h5>
+                            </div>
+                            <div class="oferta">
+                                <H3>30%off</H3>
+                            </div>
+                </div>
+                <div class="stock">
+                    <h5 class="stocker">stock</h5>
+                </div>
+                </div>
+                <div class="producto">
+                    <div class="img product">
+                        <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                    </div>
+                    <div>
+                       <h5>ACONDICIONADOR SÓLIDO</h5> 
+                    </div>
+                    <div class="precio">
+                        <div class="old price">
+                            <h5>
+                                599.99
+                            </h5>
+                        </div>
+                        <div>
+                            <h5>
+                                420.29
+                            </h5>
+                        </div>
+                        <div class="oferta">
+                            <H3>30%off</H3>
+                        </div>
+            </div>
+            <div class="stock">
+                <h5 class="stocker">stock</h5>
+            </div>
+            </div>
+            <div class="producto">
+                <div class="img product">
+                    <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                </div>
+                <div>
+                   <h5>ACONDICIONADOR SÓLIDO</h5> 
+                </div>
+                <div class="precio">
+                    <div class="old price">
+                        <h5>
+                            599.99
+                        </h5>
+                    </div>
+                    <div>
+                        <h5>
+                            420.29
+                        </h5>
+                    </div>
+                    <div class="oferta">
+                        <H3>30%off</H3>
+                    </div>
+        </div>
+        <div class="stock">
+            <h5 class="stocker">stock</h5>
+        </div>
+        </div>
+                           <div class="producto">
+                        <div class="img product">
+                            <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                        </div>
+                        <div>
+                           <h5>ACONDICIONADOR SÓLIDO</h5> 
+                        </div>
+                        <div class="precio">
+                            <div class="old price">
+                                <h5>
+                                    599.99
+                                </h5>
+                            </div>
+                            <div>
+                                <h5>
+                                    420.29
+                                </h5>
+                            </div>
+                            <div class="oferta">
+                                <H3>30%off</H3>
+                            </div>
+                </div>
+                <div class="stock">
+                    <h5 class="stocker">stock</h5>
+                </div>
+                </div>
+                <div class="producto">
+                    <div class="img product">
+                        <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                    </div>
+                    <div>
+                       <h5>ACONDICIONADOR SÓLIDO</h5> 
+                    </div>
+                    <div class="precio">
+                        <div class="old price">
+                            <h5>
+                                599.99
+                            </h5>
+                        </div>
+                        <div>
+                            <h5>
+                                420.29
+                            </h5>
+                        </div>
+                        <div class="oferta">
+                            <H3>30%off</H3>
+                        </div>
+            </div>
+            <div class="stock">
+                <h5 class="stocker">stock</h5>
+            </div>
+            </div>
+            
+                <div class="producto">
+                    <div class="img product">
+                        <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                    </div>
+                    <div>
+                       <h5>ACONDICIONADOR SÓLIDO</h5> 
+                    </div>
+                    <div class="precio">
+                        <div class="old price">
+                            <h5>
+                                599.99
+                            </h5>
+                        </div>
+                        <div>
+                            <h5>
+                                420.29
+                            </h5>
+                        </div>
+                        <div class="oferta">
+                            <H3>30%off</H3>
+                        </div>
+            </div>
+            <div class="stock">
+                <h5 class="stocker">stock</h5>
+            </div>
+            </div>
+                   </div>
+                <div>
+                    <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Desodorantes</legend>
+            <div class="box">
+                <div>
+                    <ion-icon name="arrow-undo-circle-outline"></ion-icon>
+                </div>
+                <div class="productos">
+                   <div class="producto">
+                        <div class="img product">
+                            <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                        </div>
+                        <div>
+                           <h5>ACONDICIONADOR SÓLIDO</h5> 
+                        </div>
+                        <div class="precio">
+                            <div class="old price">
+                                <h5>
+                                    599.99
+                                </h5>
+                            </div>
+                            <div>
+                                <h5>
+                                    420.29
+                                </h5>
+                            </div>
+                            <div class="oferta">
+                                <H3>30%off</H3>
+                            </div>
+                </div>
+                <div class="stock">
+                    <h5 class="stocker">stock</h5>
+                </div>
+                </div>
+                <div class="producto">
+                    <div class="img product">
+                        <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                    </div>
+                    <div>
+                       <h5>ACONDICIONADOR SÓLIDO</h5> 
+                    </div>
+                    <div class="precio">
+                        <div class="old price">
+                            <h5>
+                                599.99
+                            </h5>
+                        </div>
+                        <div>
+                            <h5>
+                                420.29
+                            </h5>
+                        </div>
+                        <div class="oferta">
+                            <H3>30%off</H3>
+                        </div>
+            </div>
+            <div class="stock">
+                <h5 class="stocker">stock</h5>
+            </div>
+            </div>
+            <div class="producto">
+                <div class="img product">
+                    <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                </div>
+                <div>
+                   <h5>ACONDICIONADOR SÓLIDO</h5> 
+                </div>
+                <div class="precio">
+                    <div class="old price">
+                        <h5>
+                            599.99
+                        </h5>
+                    </div>
+                    <div>
+                        <h5>
+                            420.29
+                        </h5>
+                    </div>
+                    <div class="oferta">
+                        <H3>30%off</H3>
+                    </div>
+        </div>
+        <div class="stock">
+            <h5 class="stocker">stock</h5>
+        </div>
+        </div>
+                           <div class="producto">
+                        <div class="img product">
+                            <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                        </div>
+                        <div>
+                           <h5>ACONDICIONADOR SÓLIDO</h5> 
+                        </div>
+                        <div class="precio">
+                            <div class="old price">
+                                <h5>
+                                    599.99
+                                </h5>
+                            </div>
+                            <div>
+                                <h5>
+                                    420.29
+                                </h5>
+                            </div>
+                            <div class="oferta">
+                                <H3>30%off</H3>
+                            </div>
+                </div>
+                <div class="stock">
+                    <h5 class="stocker">stock</h5>
+                </div>
+                </div>
+                <div class="producto">
+                    <div class="img product">
+                        <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                    </div>
+                    <div>
+                       <h5>ACONDICIONADOR SÓLIDO</h5> 
+                    </div>
+                    <div class="precio">
+                        <div class="old price">
+                            <h5>
+                                599.99
+                            </h5>
+                        </div>
+                        <div>
+                            <h5>
+                                420.29
+                            </h5>
+                        </div>
+                        <div class="oferta">
+                            <H3>30%off</H3>
+                        </div>
+            </div>
+            <div class="stock">
+                <h5 class="stocker">stock</h5>
+            </div>
+            </div>
+            
+                <div class="producto">
+                    <div class="img product">
+                        <img src="./../img/products_images/acondicionador solido 3.jpeg" alt="imagen producto 1">
+                    </div>
+                    <div>
+                       <h5>ACONDICIONADOR SÓLIDO</h5> 
+                    </div>
+                    <div class="precio">
+                        <div class="old price">
+                            <h5>
+                                599.99
+                            </h5>
+                        </div>
+                        <div>
+                            <h5>
+                                420.29
+                            </h5>
+                        </div>
+                        <div class="oferta">
+                            <H3>30%off</H3>
+                        </div>
+            </div>
+            <div class="stock">
+                <h5 class="stocker">stock</h5>
+            </div>
+            </div>
+                   </div>
+                <div>
+                    <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+                </div>
+            </div>
+        </fieldset>
+    </div>
     </main>
+
+    
 </body>
 </html>
