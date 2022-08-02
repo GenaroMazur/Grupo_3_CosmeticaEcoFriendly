@@ -7,6 +7,7 @@ const multerMiddleware = require("./../middlewares/multerMiddleware");
 const productsMiddlewares = require ("./../middlewares/productsMiddlewares");
 const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware");
 const authUserMiddleware = require ("./../middlewares/authUserMiddleware");
+const maintainMiddleware = require ("./../middlewares/maintainMiddleware");
 //importa controlador
 const productController = require("./../controllers/productController");
 
@@ -25,7 +26,7 @@ routes.get("/editProduct/:idProduct",
 //POST
 routes.post("/newProduct",
     authAdminMiddleware,
-    productsMiddlewares.maintain,
+    maintainMiddleware,
     multerMiddleware.productsImage().single("image"),
     productsMiddlewares.validations,
     productsMiddlewares.product,
@@ -34,12 +35,12 @@ routes.post("/newProduct",
 //PUt
 routes.put("/editProduct/:idProduct",
     authAdminMiddleware,
-    productsMiddlewares.maintain,
+    maintainMiddleware,
     productController.editProductId);
     
 //DELETE
 routes.delete("/deleteProduct/:idProduct",
-    productsMiddlewares.maintain,
+    maintainMiddleware,
     productController.deleteProduct);
 
 module.exports = routes

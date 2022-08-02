@@ -45,9 +45,6 @@ productsMiddlewares = {
         } else {
             return next()
         }
-    },
-    maintain:(req, res)=>{
-        res.render("maintain")
     }
 }
 

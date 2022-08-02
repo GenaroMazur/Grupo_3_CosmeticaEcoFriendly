@@ -118,9 +118,6 @@ const userMiddlewares = {
             }
         }
         return res.redirect("/")
-    },
-    maintain: (req, res) => {
-        res.render("maintain")
     }
 }
 
