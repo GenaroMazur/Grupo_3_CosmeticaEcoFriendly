@@ -4,19 +4,19 @@ module.exports =function(sequelize,DataTypes){
         "dataCreation":{
             type:DataTypes.DATE
         },
-        "userName":{
+        "username":{
             type:DataTypes.STRING
         },
-        "lastName":{
+        "lastname":{
             type:DataTypes.STRING
         },
         "email":{
             type:DataTypes.STRING
         },
-        "userImage":{
+        "image":{
             type:DataTypes.STRING
         },
-        "idStatus":{
+        "idStatusUser":{
             type:DataTypes.INTEGER
         },
         "telephone":{
@@ -27,13 +27,10 @@ module.exports =function(sequelize,DataTypes){
         },
         "direction":{
             type:DataTypes.STRING
-        },
-        "cards":{
-            type:DataTypes.INTEGER
-        },
+        }
     }
     let config = {
-        tableName : "",
+        tableName : "Users",
         timeStamps :false
     }
 
