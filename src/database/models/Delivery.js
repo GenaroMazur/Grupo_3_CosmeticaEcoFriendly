@@ -1,25 +1,25 @@
-module.exports = function (sequelize,DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     let name = "Delivery"
     let cols = {
-        "locality" : {
-            "type" : DataTypes.STRING
+        "locality": {
+            "type": DataTypes.STRING
         },
-        "province" : {
-            "type" : DataTypes.STRING
+        "province": {
+            "type": DataTypes.STRING
         },
-        "price" : {
-            "type" : DataTypes.INTEGER
+        "price": {
+            "type": DataTypes.INTEGER
         }
     }
     let config = {
-        tableName : "Delivery",
-        timeStamps : false
+        "tableName": "Delivery",
+        "timeStamps": false
     }
-    const Delivery = sequelize.define(name,cols,config);
+    const Delivery = sequelize.define(name, cols, config);
 
     Delivery.associate(models => {
-        
+
     })
-    
+
     return Delivery
 }

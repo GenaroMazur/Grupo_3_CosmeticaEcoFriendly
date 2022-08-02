@@ -1,23 +1,23 @@
 module.exports = function (sequelize, DataTypes) {
     const name = "OrderCart"
     const cols = {
-        "idOrder":{
-            type:DataTypes.INTEGER
+        "idOrder": {
+            "type": DataTypes.INTEGER
         },
-        "idCart":{
-            type:DataTypes.INTEGER
+        "idCart": {
+            "type": DataTypes.INTEGER
         }
     }
     const config = {
-        tableName:"OrderCart",
-        timeStamps : false
+        "tableName": "OrderCart",
+        "timeStamps": false
     }
 
     const OrderCart = sequelize.define(name, cols, config)
 
-    OrderCart.associate(models=>{
-        
+    OrderCart.associate(models => {
+
     })
 
-    return OrderCart 
+    return OrderCart
 }

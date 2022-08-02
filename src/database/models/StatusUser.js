@@ -1,18 +1,18 @@
 module.exports = function (sequelize, DataTypes) {
     const name = "StatusUser"
     const cols = {
-        "name" : {
-            "type" : DataTypes.STRING
+        "name": {
+            "type": DataTypes.STRING
         }
     }
     const config = {
-        "tableName" : "StatusUsers",
-        "timeStamps" : false
+        "tableName": "StatusUsers",
+        "timeStamps": false
     }
 
-    const StatusUser = sequelize.define (name, cols, config)
-    StatusUser.associate (models => {
+    const StatusUser = sequelize.define(name, cols, config)
+    StatusUser.associate(models => {
 
     })
-    return StatusUser 
+    return StatusUser
 }

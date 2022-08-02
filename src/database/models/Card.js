@@ -1,31 +1,31 @@
 module.exports = function (sequelize, DataTypes) {
     const name = "Card"
     const cols = {
-        "date" : {
-            "type" : DataTypes.DATE
+        "date": {
+            "type": DataTypes.DATE
         },
-        "name" : {
-            "type" : DataTypes.STRING
+        "name": {
+            "type": DataTypes.STRING
         },
-        "cvv" : {
-            "type" : DataTypes.INTEGER
+        "cvv": {
+            "type": DataTypes.INTEGER
         },
-        "brand" : {
-            "type" : DataTypes.STRING
+        "brand": {
+            "type": DataTypes.STRING
         },
         "idUser": {
-            "type" : DataTypes.INTEGER
+            "type": DataTypes.INTEGER
         }
     }
     const config = {
-        "tableName" : "Cards",
-        "timeStamps" : false
+        "tableName": "Cards",
+        "timeStamps": false
     }
 
-    const Card = sequelize.define (name, cols, config)
-    Card.associate (models => {
+    const Card = sequelize.define(name, cols, config)
+    Card.associate(models => {
 
     })
 
-    return Card 
+    return Card
 }
