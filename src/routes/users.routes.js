@@ -10,6 +10,7 @@ const multerMiddleware = require("./../middlewares/multerMiddleware");
 const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware");
 const authUserMiddleware = require ("./../middlewares/authUserMiddleware");
 const authGuestMiddleware = require ("./../middlewares/authGuestMiddleware");
+const maintainMiddleware = require ("./../middlewares/maintainMiddleware");
 
 //GET
 routes.get("/login",
@@ -34,7 +35,7 @@ routes.get("/editAccount/:idUser",
 
 //POST
 routes.post("/registro",
-    userMiddlewares.maintain,
+    maintainMiddleware,
     multerMiddleware.usersImage().single("image"),
     userMiddlewares.validationsCreate,
     userMiddlewares.register,
@@ -48,6 +49,6 @@ routes.post("/login",
     
     //DELETE
 routes.delete("/delete/:idUser",
-    userMiddlewares.maintain,
+    maintainMiddleware,
     userController.delete);
 module.exports = routes

@@ -17,7 +17,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon src/app.js"
+    "start": "nodemon src/app.js",
+    "dev": "nodemon src/app.js 1"
   },
   "repository": {
     "type": "git",
