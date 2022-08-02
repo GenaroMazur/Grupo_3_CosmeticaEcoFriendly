@@ -10,7 +10,90 @@ body {
     margin: 0px 0px;
     background-color: #cdbd9d;
 }
+.menu{
+    background: rgb(158, 60, 60);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding: 3rem;
+}
 
+.catalogo {
+    display: flex;
+    flex-direction: column;
+    background: #f0e7d9;
+    inline-size: -webkit-fill-available;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+fieldset{
+    margin: 30px;
+    padding: 20px 4px 20px 4px;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.productos{
+    display:flex;
+
+}
+.producto {
+    display: flex;
+    background: #cfc3ab;
+    flex-direction: column;
+    text-align: center;
+    width: 200px;
+    margin-right: 5px;
+}
+
+.img.product {
+    width: 199px;
+    height: 230px;
+    margin-top: 10px;
+}
+
+.precio{
+    display: flex;
+    justify-content:space-around;
+}
+
+.old.price {
+    text-decoration: line-through;
+}
+
+.oferta{
+    color: rgb(70 169 70);
+}
+
+.stock {
+    border: solid 1px;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+h5.stocker {
+    text-align: center;
+    text-transform: capitalize;
+    margin-block: auto;
+    padding: 6px 10px 6px 10px;
+}
+
+aside {
+    display: flex;
+    background: rgb(158, 60, 60);
+    margin-right: 7px;
+    padding: 3rem;
+}
 
 ion-icon {
     color: black;
