@@ -26,9 +26,30 @@ body {
 }
 .boton.heartBoton {
     background: white;
+    display: flex;
+    align-items: center;
 }
+
 .boton.heartBoton:hover {
     background: rgb(179, 179, 179);
+}
+
+.barra.barradebusqueda {
+    display: flex;
+    text-align: center;
+    direction: rtl;
+}
+
+input[type="search"] {
+    border-radius: 30px;
+    text-align: center;
+    width: 274px;
+    background-color: #fafafa;
+}
+.icono.de.busqueda {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
 }
 
 .catalogo {
