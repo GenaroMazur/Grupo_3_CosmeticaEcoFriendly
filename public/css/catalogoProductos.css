@@ -52,6 +52,10 @@ input[type="search"] {
     margin-right: 10px;
 }
 
+.decoration-off {
+    color: black;
+    text-decoration: none;
+}
 .catalogo {
     display: flex;
     flex-direction: column;
