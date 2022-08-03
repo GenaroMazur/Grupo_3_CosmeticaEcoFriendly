@@ -18,6 +18,18 @@ body {
     align-content: center;
     padding: 3rem;
 }
+.boton {
+    border-radius: 30px;
+    padding: 10px 20px 10px 20px;
+    color: black;
+    text-decoration: none;
+}
+.boton.heartBoton {
+    background: white;
+}
+.boton.heartBoton:hover {
+    background: rgb(179, 179, 179);
+}
 
 .catalogo {
     display: flex;
