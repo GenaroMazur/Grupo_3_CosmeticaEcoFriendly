@@ -22,6 +22,7 @@ img.img-icon {
 }
 .userpanel {
     display: flex;
+    flex-wrap: wrap;
 }
 .usuariopanel {
     background-color: #ffebe0;
