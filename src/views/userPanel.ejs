@@ -33,74 +33,32 @@
 <body>
     <main>
      <div class="userpanel">
-         <div class="usuariopanel">   
+        <% users.forEach(user=>{ %>
+
+            <div class="usuariopanel">   
                 <div class="separacion nombre">
-                    nombre
+                    <%= user.username+" "+user.lastname %> 
                 </div>
                 <div class="separacion imagen">
-                    <img src="./../../img/users_images/leandroramos1657584227715.jpg" alt="Foto de perfil de usuario">
+                    <img src="./../../img/users_images/<%= user.userImage %>" alt="Foto de perfil de usuario">
                 </div>
                 <div class="separacion option">
                     <select>
-                    <option value="user">usuario</option>
-                    <option value="admin">admin</option>
-                </select>
+                        <option value="user" <%= user.status=="user"?"selected":""%>>usuario</option>
+                        <option value="admin"<%= user.status=="admin"?"selected":""%>>admin</option>
+                    </select>
                 </div>
                 <div class="separacion botom">
-                    <div class="boton botoneditar">
-                        <input type="button" value="editar perfil"class="decoraciones">
-                    </div>
-                    <div class="boton botonborrar">
+                    <form action="/user/myAccount/<%= user.id %>" method="get" class="boton botoneditar">
+                        <input type="submit" value="editar perfil"class="decoraciones">
+                    </form>
+                    <form action ="/user/delete/<%= user.id %>?_method=delete" method="POST" class="boton botonborrar">
                         <button type="submit" class="decoraciones" >borrar perfil</button>
-                    </div>
+                    </form>
+                </div>
             </div> 
+        <% }) %> 
     </div> 
-    <div class="userpanel">
-        <div class="usuariopanel">   
-               <div class="separacion nombre">
-                   nombre
-               </div>
-               <div class="separacion imagen">
-                   <img src="./../../img/users_images/leandroramos1657584227715.jpg" alt="Foto de perfil de usuario">
-               </div>
-               <div class="separacion option">
-                   <select>
-                   <option value="user">usuario</option>
-                   <option value="admin">admin</option>
-               </select>
-               </div>
-               <div class="separacion botom">
-                   <div class="boton botoneditar">
-                       <input type="button" value="editar perfil"class="decoraciones">
-                   </div>
-                   <div class="boton botonborrar">
-                       <button type="submit" class="decoraciones" >borrar perfil</button>
-                   </div>
-           </div> 
-   </div> 
-   <div class="userpanel">
-    <div class="usuariopanel">   
-           <div class="separacion nombre">
-               nombre
-           </div>
-           <div class="separacion imagen">
-               <img src="./../../img/users_images/leandroramos1657584227715.jpg" alt="Foto de perfil de usuario">
-           </div>
-           <div class="separacion option">
-               <select>
-               <option value="user">usuario</option>
-               <option value="admin">admin</option>
-           </select>
-           </div>
-           <div class="separacion botom">
-               <div class="boton botoneditar">
-                   <input type="button" value="editar perfil"class="decoraciones">
-               </div>
-               <div class="boton botonborrar">
-                   <button type="submit" class="decoraciones" >borrar perfil</button>
-               </div>
-       </div> 
-</div> 
     </main>
 </body>
 </html>

@@ -25,7 +25,9 @@ routes.get("/registro",
 routes.get("/admin",
     authAdminMiddleware,
     userController.admin);
-routes.get("/userPanel", userController.userPanel);
+routes.get("/userPanel",
+    authAdminMiddleware,
+    userController.userPanel);
 routes.get("/myAccount/:idUser",
     userMiddlewares.account,
     userController.myAccount);

@@ -33,7 +33,8 @@ const userController = {
     ,
      //panel de usuario
     userPanel: (req, res) => {
-        return res.render("userPanel")
+        let users = modelsController.FnRead("users")
+        return res.render("userPanel",{users})
     },
 
     //Vista Mi cuenta
