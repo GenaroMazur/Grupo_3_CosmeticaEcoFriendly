@@ -51,7 +51,12 @@ input[type="search"] {
     align-items: center;
     margin-right: 10px;
 }
-
+.flecha:hover{
+    background-color: #e3d8c6;;
+    display: flex;
+    align-items: center;
+    padding: 180px 0px 180px 0px;
+}
 .decoration-off {
     color: black;
     text-decoration: none;
