@@ -11,7 +11,7 @@ body {
     background-color: #cdbd9d;
 }
 .menu{
-    background: rgb(158, 60, 60);
+    background: #a39883;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -64,7 +64,7 @@ input[type="search"] {
 .catalogo {
     display: flex;
     flex-direction: column;
-    background: #f0e7d9;
+    background: #ffebe0;
     inline-size: -webkit-fill-available;
     padding-left: 15px;
     margin-top: 10px;
@@ -91,7 +91,7 @@ fieldset{
 }
 .producto {
     display: flex;
-    background: #cfc3ab;
+    background: #efd8aa;
     flex-direction: column;
     text-align: center;
     width: 200px;
@@ -132,7 +132,7 @@ h5.stocker {
 
 aside {
     display: flex;
-    background: rgb(158, 60, 60);
+    background: #cdbd9d;
     margin-right: 7px;
     padding: 3rem;
 }
