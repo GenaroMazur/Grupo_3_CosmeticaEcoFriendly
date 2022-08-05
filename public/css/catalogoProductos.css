@@ -157,6 +157,12 @@ aside {
     margin-right: 7px;
     padding: 3rem;
 }
+ul{
+    list-style: none;
+}
+li:hover {
+    color: #f0ff6f;
+}
 
 ion-icon {
     color: black;
