@@ -7,18 +7,19 @@
     <%- include('./partials/header') %>
     <div class="menu">
         <div class="boton heartBoton">
-           <a href="/" class="boton"><label for="mis fav">Mis favoritos</label></a> 
-            <ion-icon name="heart-outline"></ion-icon>
+           <a href="#" class="boton"><label for="mis fav">Mis favoritos</label></a> 
+           <ion-icon name="heart" class="heartbuton"></ion-icon>
+           
         </div>
         <div class="barra barradebusqueda">
-          <input type="search" name="search" placeholder="buscar" id="">
+          <input type="search" name="search" placeholder="buscar" >
           <div class="icono de busqueda">
               <ion-icon name="search-outline"></ion-icon>
           </div>
         </div>
 
-        <div>
-            <label for="ordenar por">Ordenar por</label>
+        <div class="opciones">
+            <label for="ordenar por" id="orden"> Ordenar por:</label>
             <select>
                 <option value="destacado">Destacado</option>
                 <option value="precio menor">Precio: menor a mayor</option>

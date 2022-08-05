@@ -34,6 +34,11 @@ body {
     background: rgb(179, 179, 179);
 }
 
+
+ion-icon.heartbuton.md.hydrated:active {
+    color: hotpink;
+}
+
 .barra.barradebusqueda {
     display: flex;
     text-align: center;
@@ -51,16 +56,32 @@ input[type="search"] {
     align-items: center;
     margin-right: 10px;
 }
+
+.opciones {
+    display: flex;
+}
+
+label {
+    display: flex;
+    align-self: center;
+}
+
+select {
+    border-radius: 10px;
+}
+
 .flecha:hover{
     background-color: #e3d8c6;;
     display: flex;
     align-items: center;
     padding: 180px 0px 180px 0px;
 }
+
 .decoration-off {
     color: black;
     text-decoration: none;
 }
+
 .catalogo {
     display: flex;
     flex-direction: column;
