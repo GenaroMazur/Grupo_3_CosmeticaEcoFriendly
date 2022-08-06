@@ -20,9 +20,9 @@ module.exports = function (sequelize, DataTypes) {
     }
 
     const Cart = sequelize.define(name, cols, config)
-    Cart.associate(models => {
-
-    })
+    //.associate = function (models) {
+        
+    // }
 
     return Cart
 }

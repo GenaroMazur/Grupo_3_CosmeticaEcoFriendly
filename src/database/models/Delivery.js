@@ -17,9 +17,9 @@ module.exports = function (sequelize, DataTypes) {
     }
     const Delivery = sequelize.define(name, cols, config);
 
-    Delivery.associate(models => {
-
-    })
+    //.associate = function (models) {
+        
+    // }
 
     return Delivery
 }

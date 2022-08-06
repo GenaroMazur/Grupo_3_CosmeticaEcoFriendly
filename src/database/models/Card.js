@@ -23,9 +23,9 @@ module.exports = function (sequelize, DataTypes) {
     }
 
     const Card = sequelize.define(name, cols, config)
-    Card.associate(models => {
-
-    })
+    //.associate = function (models) {
+        
+    // }
 
     return Card
 }

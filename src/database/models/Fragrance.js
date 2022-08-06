@@ -11,9 +11,9 @@ module.exports = function (sequelize, DataTypes) {
     }
     const Fragrance = sequelize.define(name, cols, config);
 
-    Fragrance.associate(models => {
-
-    })
+    //.associate = function (models) {
+        
+    // }
 
     return Fragrance
 }

@@ -11,8 +11,8 @@ module.exports = function (sequelize, DataTypes) {
     }
 
     const StatusUser = sequelize.define(name, cols, config)
-    StatusUser.associate(models => {
-
-    })
+    //.associate = function (models) {
+        
+    // }
     return StatusUser
 }

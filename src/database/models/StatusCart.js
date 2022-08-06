@@ -11,9 +11,9 @@ module.exports = function (sequelize, DataTypes) {
     }
 
     const StatusCart = sequelize.define(name, cols, config)
-    StatusCart.associate(models => {
-
-    })
+    //.associate = function (models) {
+        
+    // }
 
     return StatusCart
 }

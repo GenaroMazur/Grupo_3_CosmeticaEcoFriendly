@@ -36,9 +36,9 @@ module.exports = function (sequelize, DataTypes) {
 
     let User = sequelize.define(name, cols, config)
 
-    User.associate(models => {
-
-    })
+    //.associate = function (models) {
+        
+    // }
 
     return User
 }

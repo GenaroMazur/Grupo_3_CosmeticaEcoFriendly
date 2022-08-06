@@ -17,9 +17,9 @@ module.exports = function (sequelize, DataTypes) {
     }
 
     const Order = sequelize.define(name, cols, config)
-    Order.associate(models => {
-
-    })
+    //.associate = function (models) {
+        
+    // }
 
     return Order
 }

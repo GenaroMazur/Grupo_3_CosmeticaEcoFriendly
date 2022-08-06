@@ -17,9 +17,9 @@ module.exports = function (sequelize, DataTypes) {
     }
     const Category = sequelize.define(name, cols, config);
 
-    Category.associate(models => {
-
-    })
+    //.associate = function (models) {
+        
+    // }
 
     return Category
 }
