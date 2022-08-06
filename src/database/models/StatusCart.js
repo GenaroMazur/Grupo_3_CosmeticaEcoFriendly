@@ -1,19 +1,22 @@
 module.exports = function (sequelize, DataTypes) {
     const name = "StatusCart"
     const cols = {
-        "name": {
-            "type": DataTypes.STRING
+        "nameStatusCart": {
+            "type": DataTypes.STRING(15),
+            "allowNull":false
         }
     }
     const config = {
-        "tableName": "StatusCart",
-        "timeStamps": false
+        "tableName": "statusCart"
     }
 
     const StatusCart = sequelize.define(name, cols, config)
-    //.associate = function (models) {
-        
-    // }
+    StatusCart.associate = function (models) {
+        StatusCart.hasMany(models.Cart,{
+            "as":"status",
+            "foreignKey":"idStatus"
+        })
+    }
 
     return StatusCart
 }

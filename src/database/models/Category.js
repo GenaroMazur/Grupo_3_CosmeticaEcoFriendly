@@ -2,24 +2,29 @@ module.exports = function (sequelize, DataTypes) {
     let name = "Category"
     let cols = {
         "categoryName": {
-            "type": DataTypes.STRING
+            "type": DataTypes.STRING(20),
+            "allowNull": false
         },
-        "description": {
-            "type": DataTypes.STRING
+        "descriptionCategory": {
+            "type": DataTypes.TEXT
         },
         "image": {
-            "type": DataTypes.STRING
+            "type": DataTypes.STRING(60)
         }
     }
     let config = {
-        "tableName": "Category",
-        "timeStamps": false
+        "tableName": "category"
     }
     const Category = sequelize.define(name, cols, config);
 
-    //.associate = function (models) {
+    Category.associate = function (models) {
         
-    // }
+        Category.belongsTo(models.Product,{
+            "as":"category",
+            "foreignKey":"idCategory"
+        })
+
+    }
 
     return Category
 }

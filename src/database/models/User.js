@@ -5,40 +5,69 @@ module.exports = function (sequelize, DataTypes) {
             "type": DataTypes.DATE
         },
         "username": {
-            "type": DataTypes.STRING
+            "type": DataTypes.STRING(15),
+            "allowNull":false
         },
         "lastname": {
-            "type": DataTypes.STRING
+            "type": DataTypes.STRING(15),
+            "allowNull":false
+        },
+        "passwordUser": {
+            "type": DataTypes.STRING(100),
+            "allowNull":false
         },
         "email": {
-            "type": DataTypes.STRING
+            "type": DataTypes.STRING(45)
         },
         "image": {
-            "type": DataTypes.STRING
-        },
-        "idStatusUser": {
-            "type": DataTypes.INTEGER
+            "type": DataTypes.STRING(60)
         },
         "telephone": {
+            "type": DataTypes.STRING(30)
+        },
+        "direction": {
+            "type": DataTypes.STRING(50),
+            "allowNull": false
+        },
+        "idStatusUser": {
             "type": DataTypes.INTEGER
         },
         "postalCode": {
             "type": DataTypes.INTEGER
         },
-        "direction": {
-            "type": DataTypes.STRING
-        }
     }
     let config = {
-        "tableName": "Users",
-        "timeStamps": false
+        "tableName": "users"
     }
 
     let User = sequelize.define(name, cols, config)
 
-    //.associate = function (models) {
+    User.associate = function (models) {
+        User.hasMany(models.Order,{
+            "as": "ordersUser",
+            "foreignKey": "idUser"
+        })
+
+        User.hasMany(models.Cart,{
+            "as": "cart",
+            "foreignKey": "idUser"
+        })
         
-    // }
+        User.hasMany(models.Card,{
+            "as": "cards",
+            "foreignKey": "idUser"
+        })
+
+        User.belongsTo(models.StatusUser,{
+            "as": "status",
+            "foreignKey":"idStatusUser"
+        })
+
+        User.belongsTo(models.Delivery,{
+            "as":"ubication",
+            "foreignKey": "postalCode"
+        })
+    }
 
     return User
 }
