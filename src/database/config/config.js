@@ -2,10 +2,9 @@ module.exports={
   "development": {
     "username": "root",
     "password": "",
-    "database": "LaVieNaturelle",
+    "database": "bd_cosmetica",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "timestamps": false
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",

@@ -5,14 +5,15 @@
         </div>
         <div class="background-fondo-productos">
             <% if (products.length>0) { %>
-
                 <% for( let i=0; i < 4; i++ ) { %>
-                    <div class="producto-nuevo">
-                        <div class="new-producto">
-                            <img src="./../img/products_images/<%= products[i].image %>" alt="producto-new1">
-                        </div>
-                        <div>
-                            <div class="titulo-producto">
+                    <% if (products[i]) { %>
+                    
+                        <div class="producto-nuevo">
+                            <div class="new-producto">
+                                <img src="./../img/products_images/<%= products[i].Image %>" alt="producto-new1">
+                            </div>
+                            <div>
+                                <div class="titulo-producto">
                                 <p>
                                     <%= products[i].nameProduct %>
                                 </p>
@@ -29,6 +30,7 @@
                             </div>
                         </div>
                     </div>
+                    <% } %>
                 <% } %>
             <% } %>
         </div>
