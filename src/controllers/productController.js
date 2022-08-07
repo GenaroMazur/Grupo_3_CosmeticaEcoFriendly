@@ -1,4 +1,5 @@
 const fs = require ("fs")
+const db = require("../database/models")
 const modelsController = require("./../models/modelsController")
 
 const productController = {
@@ -58,6 +59,68 @@ const productController = {
     },
     usersList: function () {
         return modelsController.FnRead("products")
+    },
+
+    //----------- database ------------
+
+    productCard_v2:function (req, res) {
+        db.Order.findAll()
+            .then(cart=>{
+                return res.render("productCart",cart)
+            })
+            .catch(err=>{
+                console.error(err);
+                return res.redirect("/")
+            })
+    },
+    catalogoProductos_v2: function (req, res){
+        db.Product.findAll()
+            .then(products=>{
+                res.render("catalogoProducto",{products})
+            })
+            .catch(err=>{
+                console.log(err);
+                res.redirect("/")
+            })
+    },
+    productDetail_v2: function (req, res){
+        db.Product.findAll()
+            .then(products=>{
+                res.render("productDetail",{products})
+            })
+            .catch(err=>{
+                console.log(err);
+                res.redirect("/")
+            })
+    },
+    editProduct_v2: function (req, res) {
+        db.Product.findByPk(req.params.idProduct)
+            .then(product=>{
+                res.render("editProduct",{product})
+            })
+            .catch(err=>{
+                console.log(err);
+                res.redirect("/")
+            })
+    },
+    editProductId_v2: function (req, res) {
+        db.Product.update({
+            nameProduct : req.body.nameProduct,
+            price : req.body.price || 0,
+            description : req.body.description,
+            grams : req.body.grams,
+            image : req.file.filename
+        },{
+            where:{
+                id:req.params.idProduct
+            }
+        }).then(()=>{
+            res.redirect("/user/admin")
+        })
+        .catch(err=>{
+            console.log(err);
+            res.redirect("/")
+        })
     }
 }
 
