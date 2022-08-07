@@ -130,10 +130,10 @@ const userController = {
             })
     },
     myAccount_v2:function (req, res) {
-        db.User.findByPk(req.params.id)
+        db.User.findByPk(req.params.idUser)
             .then(user =>{
-                user.dateCreation = undefined
-                user.password= undefined
+                // user.dateCreation = undefined
+                // user.password= undefined
                 res.render("myAccount",{user, edit:false})
             })
             .catch(err => {
@@ -142,11 +142,11 @@ const userController = {
             })
     },
     editAccount_v2: function (req, res) {
-        db.User.findByPk(req.params.id)
+        db.User.findByPk(req.params.idUser)
             .then(user=>{
-                user.dateCreation = undefined
-                user.password = undefined
-                res.render("myAccount",{user, edot:true})
+                // user.dateCreation = undefined
+                // user.password = undefined
+                res.render("myAccount",{user, edit:true})
             })
             .catch(err=>{
                 console.log(err);
@@ -175,7 +175,7 @@ const userController = {
     delete_v2: function(req, res) {
         db.User.destroy({
             where:{
-                id:req.params.id
+                id:req.params.idUser
             }
         }).then(()=>{
             res.redirect("/")

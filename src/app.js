@@ -29,7 +29,7 @@ app.use(session({
 app.use((req, res, next)=> {
     if (process.argv[2] && req.session.user == undefined) {
         req.session.user = {
-            "id": 1659450540488,
+            "id": 1,
             "username":"desarrollador",
             "status":"admin"
         }

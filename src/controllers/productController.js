@@ -63,7 +63,7 @@ const productController = {
     productCard_v2:function (req, res) {
         db.Order.findAll()
             .then(cart=>{
-                return res.render("productCart",cart)
+                return res.render("productCard",cart)
             })
             .catch(err=>{
                 console.error(err);
@@ -73,7 +73,7 @@ const productController = {
     catalogoProductos_v2: function (req, res){
         db.Product.findAll()
             .then(products=>{
-                res.render("catalogoProducto",{products})
+                res.render("catalogoProductos",{products})
             })
             .catch(err=>{
                 console.log(err);
