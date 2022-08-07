@@ -27,13 +27,13 @@ routes.get("/admin",
     userController.admin_v2);
 routes.get("/userPanel",
     authAdminMiddleware,
-    userController.userPanel);
+    userController.userPanel_v2);
 routes.get("/myAccount/:idUser",
     userMiddlewares.account,
-    userController.myAccount);
+    userController.myAccount_v2);
 routes.get("/editAccount/:idUser",
     authGuestMiddleware,
-    userController.editAccount);
+    userController.editAccount_v2);
 
 //POST
 routes.post("/registro",
@@ -41,16 +41,16 @@ routes.post("/registro",
     multerMiddleware.usersImage().single("image"),
     userMiddlewares.validationsCreate,
     userMiddlewares.register,
-    userController.create);
+    userController.create_v2);
 routes.post("/login",
     userMiddlewares.validationsLogin,
     userMiddlewares.login,
-    userController.loginUser);
+    userController.loginUser_v2);
     
     //PUT
     
     //DELETE
 routes.delete("/delete/:idUser",
     maintainMiddleware,
-    userController.delete);
+    userController.delete_v2);
 module.exports = routes
