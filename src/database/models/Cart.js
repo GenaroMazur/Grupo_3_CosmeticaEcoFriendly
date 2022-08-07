@@ -31,12 +31,12 @@ module.exports = function (sequelize, DataTypes) {
             "foreignKey":"idStatus"
         })
         Cart.belongsTo(models.User,{
-            "as":"status",
+            "as":"user",
             "idStatus":"idUser"
         })
         Cart.belongsToMany(models.Order,{
             "as":"cart",
-            "thougth": "orderCart",
+            "through": "orderCart",
             "foreignKey": "idCart",
             "otherKey": "idOrder"
         })
