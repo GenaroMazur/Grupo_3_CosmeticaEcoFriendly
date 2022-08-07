@@ -97,18 +97,19 @@ const userController = {
     //------------ database --------------
 
     admin_v2:function(req, res) {
-        let admin = req.session.user.username 
+        let adminName = req.session.user.username 
         admin = db.User.findOne({
             where:{
-                "username": admin
+                "username": adminName
             }
         })
         products = db.Product.findAll()
 
         Promise.all([admin, products]).then(([admin, products])=>{
-            admin.id = undefined
-            admin.dateCreation = undefined
-            admin.password = undefined
+            
+            // admin.id = undefined
+            // admin.dateCreation = undefined
+            // admin.password = undefined
 
             res.render("admin",{admin, products})
         }).catch(err =>{
