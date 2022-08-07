@@ -7,18 +7,24 @@
     <%- include('./partials/header') %>
     <div class="menu">
         <div class="boton heartBoton">
+<<<<<<< HEAD
            <a href="/" class="boton"><label for="mis fav">Mis favoritos</label></a> 
            <ion-icon name="heart-sharp"></ion-icon>
+=======
+           <a href="#" class="boton"><label for="mis fav">Mis favoritos</label></a> 
+           <ion-icon name="heart" class="heartbuton"></ion-icon>
+           
+>>>>>>> c6794ccc1e3a84afa3a3b52770eb1afa5cf7c18a
         </div>
         <div class="barra barradebusqueda">
-          <input type="search" name="search" placeholder="buscar" id="">
+          <input type="search" name="search" placeholder="buscar" >
           <div class="icono de busqueda">
               <ion-icon name="search-outline"></ion-icon>
           </div>
         </div>
 
-        <div>
-            <label for="ordenar por">Ordenar por</label>
+        <div class="opciones">
+            <label for="ordenar por" id="orden"> Ordenar por:</label>
             <select>
                 <option value="destacado">Destacado</option>
                 <option value="precio menor">Precio: menor a mayor</option>
@@ -34,6 +40,13 @@
         <div>
             <div>
                 <h1>Categorias</h1>
+                <ul>
+                    <li>Todo</li>
+                    <li>Shampoos</li>
+                    <li>Acondicionadores</li>
+                    <li>Jabones</li>
+                    <li>Desodorantes</li>
+                </ul>
             </div>
             <div>
                 <h1>Filtros</h1>

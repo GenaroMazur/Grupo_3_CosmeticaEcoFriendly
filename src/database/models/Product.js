@@ -2,22 +2,28 @@ module.exports = function (sequelize, DataTypes) {
     let name = "Product"
     let cols = {
         "nameProduct": {
-            "type": DataTypes.STRING
+            "type": DataTypes.STRING(40),
+            "allowNull": false
         },
         "price": {
-            "type": DataTypes.INTEGER
+            "type": DataTypes.INTEGER,
+            "allowNull": false
         },
-        "description": {
-            "type": DataTypes.STRING
+        "descriptionProduct": {
+            "type": DataTypes.TEXT,
+            "allowNull": false
         },
         "modeOfUse": {
-            "type": DataTypes.STRING
+            "type": DataTypes.TEXT,
+            "allowNull": false
         },
         "ingredients": {
-            "type": DataTypes.STRING
+            "type": DataTypes.TEXT,
+            "allowNull": false
         },
         "grams": {
-            "type": DataTypes.INTEGER
+            "type": DataTypes.INTEGER,
+            "allowNull": false
         },
         "idFragrance": {
             "type": DataTypes.INTEGER
@@ -26,32 +32,34 @@ module.exports = function (sequelize, DataTypes) {
             "type": DataTypes.INTEGER
         },
         "Image": {
-            "type": DataTypes.INTEGER
+            "type": DataTypes.STRING(60)
         },
         "dateCreation": {
             "type": DataTypes.DATE
         }
     }
     let config = {
-        "tableName": "Products",
-        "timeStamps": false
+        "tableName": "products"
     }
 
     let Product = sequelize.define(name, cols, config)
 
-    Product.associate(models => {
-        Product.belonsTo(models.Fragrance, {
-            "as": "fragrance",
-            "foreingKey": "idFragrance"
+    Product.associate = function (models) {
+        Product.belongsTo(models.Category,{
+            "as":"category",
+            "foreignKey":"idCategory"
         })
-        Product.belonsTo(models.Category, {
-            "as": "category",
-            "foreingKey": "idCategory"
+        
+        Product.belongsTo(models.Fragrance,{
+            "as":"fragrance",
+            "foreignKey":"idFragrance"
         })
-        Product.belonsTo(models.Image, {
-            "as": "image",
-            "foreingKey": "Image"
+
+        Product.hasMany(models.Order,{
+            "as":"product",
+            "foreignKey":"idProduct"
         })
-    })
+    }
+    
     return Product
 }

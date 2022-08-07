@@ -1,19 +1,24 @@
 module.exports = function (sequelize, DataTypes) {
     let name = "Fragrance"
     let cols = {
-        "name": {
-            "type": DataTypes.STRING
+        "nameFragrance": {
+            "type": DataTypes.STRING(15),
+            "allowNull": false
         }
     }
     let config = {
-        "tableName": "Fragrance",
-        "timeStamps": false
+        "tableName": "fragrance"
     }
     const Fragrance = sequelize.define(name, cols, config);
 
-    Fragrance.associate(models => {
+    Fragrance.associate = function (models) {
+        
+        Fragrance.belongsTo(models.Product,{
+            "as": "fragrance",
+            "foreignKey":"idFragrance"
+        })
 
-    })
+    }
 
     return Fragrance
 }

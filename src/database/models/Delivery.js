@@ -1,25 +1,42 @@
 module.exports = function (sequelize, DataTypes) {
     let name = "Delivery"
     let cols = {
+        "postalCode": {
+            "type":DataTypes.INTEGER,
+            "allowNull": false
+        },
         "locality": {
-            "type": DataTypes.STRING
+            "type": DataTypes.STRING(25),
+            "allowNull": false
         },
         "province": {
-            "type": DataTypes.STRING
+            "type": DataTypes.STRING(25),
+            "allowNull": false
         },
         "price": {
-            "type": DataTypes.INTEGER
+            "type": DataTypes.INTEGER,
+            "allowNull": false
         }
     }
     let config = {
-        "tableName": "Delivery",
-        "timeStamps": false
+        "tableName": "delivery"
     }
+    
     const Delivery = sequelize.define(name, cols, config);
 
-    Delivery.associate(models => {
+    Delivery.associate = function (models) {
 
-    })
+        Delivery.hasMany(models.User,{
+            "as":"ubication",
+            "foreignKey":"postalCode"
+        })
+
+        Delivery.hasMany(models.Order,{
+            "as":"delivery",
+            "foreignKey":"idDelivery"
+        })
+
+    }
 
     return Delivery
 }

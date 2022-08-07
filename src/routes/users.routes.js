@@ -24,7 +24,7 @@ routes.get("/registro",
     userController.register);
 routes.get("/admin",
     authAdminMiddleware,
-    userController.admin);
+    userController.admin_v2);
 routes.get("/userPanel",
     authAdminMiddleware,
     userController.userPanel);

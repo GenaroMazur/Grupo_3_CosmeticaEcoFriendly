@@ -12,14 +12,33 @@ module.exports = function (sequelize, DataTypes) {
         }
     }
     const config = {
-        "tableName": "Orders",
-        "timeStamps": false
+        "tableName": "orders"
     }
 
     const Order = sequelize.define(name, cols, config)
-    Order.associate(models => {
+    Order.associate = function (models) {
+        Order.belongsTo(models.Product,{
+            "as":"product",
+            "foreignKey": "idProduct"
+        })
 
-    })
+        Order.belongsTo(models.User,{
+            "as": "ordersUsers",
+            "foreignKey": "idUser"
+        })
+        
+        Order.belongsTo(models.Delivery,{
+            "as": "delivery",
+            "foreignKey": "idDelivery"
+        })
+
+        Order.belongsToMany(models.Cart,{
+            "as": "cart",
+            "through": "orderCart",
+            "foreignKey": "idOrder",
+            "otherKey": "idCart"
+        })
+    }
 
     return Order
 }

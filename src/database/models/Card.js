@@ -1,31 +1,43 @@
 module.exports = function (sequelize, DataTypes) {
     const name = "Card"
     const cols = {
-        "date": {
-            "type": DataTypes.DATE
+        "numbercard": {
+            "primaryKey": true,
+            "type": DataTypes.INTEGER,
+            "allowNull": false,
+            "unique": true
         },
-        "name": {
-            "type": DataTypes.STRING
+        "expirationdate":{
+            "type": DataTypes.DATE,
+            "allowNull": false
+        },
+        "username": {
+            "type": DataTypes.STRING(20),
+            "allowNull": false
         },
         "cvv": {
-            "type": DataTypes.INTEGER
+            "type": DataTypes.INTEGER,
+            "allowNull": false
         },
         "brand": {
-            "type": DataTypes.STRING
+            "type": DataTypes.STRING(15),
+            "allowNull": false
         },
         "idUser": {
             "type": DataTypes.INTEGER
         }
     }
     const config = {
-        "tableName": "Cards",
-        "timeStamps": false
+        "tableName": "cards"
     }
 
     const Card = sequelize.define(name, cols, config)
-    Card.associate(models => {
-
-    })
+    Card.associate = function (models) {
+        Card.belongsTo(models.User,{
+            "as":"cards",
+            "foreignKey":"idUser"
+        })
+    }
 
     return Card
 }

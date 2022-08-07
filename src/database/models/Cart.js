@@ -1,13 +1,19 @@
 module.exports = function (sequelize, DataTypes) {
     const name = "Cart"
     const cols = {
-        "idUser": {
-            "type": DataTypes.INTEGER
-        },
         "quantity": {
-            "type": DataTypes.INTEGER
+            "type": DataTypes.INTEGER,
+            "allowNull": false
         },
         "totalPrice": {
+            "type": DataTypes.INTEGER,
+            "allowNull": false
+        },
+        "createAt": {
+            "type": DataTypes.DATE,
+            "allowNull": false
+        },
+        "idUser": {
             "type": DataTypes.INTEGER
         },
         "idStatus": {
@@ -15,14 +21,26 @@ module.exports = function (sequelize, DataTypes) {
         }
     }
     const config = {
-        "tableName": "Cart",
-        "timeStamps": false
+        "tableName": "cart"
     }
 
     const Cart = sequelize.define(name, cols, config)
-    Cart.associate(models => {
-
-    })
+    Cart.associate = function (models) {
+        Cart.belongsTo(models.StatusCart,{
+            "as":"status",
+            "foreignKey":"idStatus"
+        })
+        Cart.belongsTo(models.User,{
+            "as":"user",
+            "idStatus":"idUser"
+        })
+        Cart.belongsToMany(models.Order,{
+            "as":"cart",
+            "through": "orderCart",
+            "foreignKey": "idCart",
+            "otherKey": "idOrder"
+        })
+    }
 
     return Cart
 }
