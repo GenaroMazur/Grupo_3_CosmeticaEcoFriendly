@@ -1,4 +1,5 @@
 const modelsController = require("./../models/modelsController")
+const db = require("./../database/models")
 const mainController = {
 
      //pagina de inicio
@@ -15,6 +16,19 @@ const mainController = {
      //pagina de contacto
      contacto: (req, res) => {
           return res.render('contacto',{status :req.session.user})
+     },
+
+     //---------- database ------------
+
+     index_v2: function (req, res) {
+          db.Product.findAll()
+               .then(products=>{
+                    res.render("index",{products,user:req.session.user})
+               })
+               .catch(err=>{
+                    console.log(err);
+                    res.render("maintain")
+               })
      }
 }
 

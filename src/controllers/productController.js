@@ -57,9 +57,6 @@ const productController = {
         modelsController.FnDelete("products", req.params.idProduct)
         res.redirect("/user/admin")
     },
-    usersList: function () {
-        return modelsController.FnRead("products")
-    },
 
     //----------- database ------------
 
@@ -115,6 +112,20 @@ const productController = {
                 id:req.params.idProduct
             }
         }).then(()=>{
+            res.redirect("/user/admin")
+        })
+        .catch(err=>{
+            console.log(err);
+            res.redirect("/")
+        })
+    },
+    deleteProduct_v2: function(req, res){
+        db.Product.destroy({
+            where:{
+                id:req.params.idProduct
+            }
+        })
+        .then(()=>{
             res.redirect("/user/admin")
         })
         .catch(err=>{
