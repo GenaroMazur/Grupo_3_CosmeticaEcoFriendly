@@ -1,7 +1,7 @@
 module.exports = function (sequelize, DataTypes) {
     let name = "User"
     let cols = {
-        "dataCreation": {
+        "dateCreation": {
             "type": DataTypes.DATE
         },
         "username": {
@@ -37,7 +37,8 @@ module.exports = function (sequelize, DataTypes) {
         },
     }
     let config = {
-        "tableName": "users"
+        "tableName": "users",
+        "timestamps": false
     }
 
     let User = sequelize.define(name, cols, config)

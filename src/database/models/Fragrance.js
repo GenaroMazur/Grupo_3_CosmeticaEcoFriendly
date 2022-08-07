@@ -7,7 +7,8 @@ module.exports = function (sequelize, DataTypes) {
         }
     }
     let config = {
-        "tableName": "fragrance"
+        "tableName": "fragrance",
+        "timestamps": false
     }
     const Fragrance = sequelize.define(name, cols, config);
 

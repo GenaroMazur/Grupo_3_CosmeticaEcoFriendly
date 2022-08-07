@@ -21,7 +21,8 @@ module.exports = function (sequelize, DataTypes) {
         }
     }
     const config = {
-        "tableName": "cart"
+        "tableName": "cart",
+        "timestamps": false
     }
 
     const Cart = sequelize.define(name, cols, config)
@@ -38,7 +39,8 @@ module.exports = function (sequelize, DataTypes) {
             "as":"cart",
             "through": "orderCart",
             "foreignKey": "idCart",
-            "otherKey": "idOrder"
+            "otherKey": "idOrder",
+            "timestamps": false
         })
     }
 
