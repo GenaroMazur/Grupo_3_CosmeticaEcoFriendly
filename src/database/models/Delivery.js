@@ -19,7 +19,8 @@ module.exports = function (sequelize, DataTypes) {
         }
     }
     let config = {
-        "tableName": "delivery"
+        "tableName": "delivery",
+        "timestamps": false
     }
     
     const Delivery = sequelize.define(name, cols, config);

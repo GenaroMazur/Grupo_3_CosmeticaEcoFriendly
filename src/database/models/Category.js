@@ -13,7 +13,8 @@ module.exports = function (sequelize, DataTypes) {
         }
     }
     let config = {
-        "tableName": "category"
+        "tableName": "category",
+        "timestamps": false
     }
     const Category = sequelize.define(name, cols, config);
 

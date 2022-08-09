@@ -97,18 +97,19 @@ const userController = {
     //------------ database --------------
 
     admin_v2:function(req, res) {
-        let admin = req.session.user.username 
+        let adminName = req.session.user.username 
         admin = db.User.findOne({
             where:{
-                "username": admin
+                "username": adminName
             }
         })
         products = db.Product.findAll()
 
         Promise.all([admin, products]).then(([admin, products])=>{
-            admin.id = undefined
-            admin.dateCreation = undefined
-            admin.password = undefined
+            
+            // admin.id = undefined
+            // admin.dateCreation = undefined
+            // admin.password = undefined
 
             res.render("admin",{admin, products})
         }).catch(err =>{
@@ -129,10 +130,10 @@ const userController = {
             })
     },
     myAccount_v2:function (req, res) {
-        db.User.findByPk(req.params.id)
+        db.User.findByPk(req.params.idUser)
             .then(user =>{
-                user.dateCreation = undefined
-                user.password= undefined
+                // user.dateCreation = undefined
+                // user.password= undefined
                 res.render("myAccount",{user, edit:false})
             })
             .catch(err => {
@@ -141,11 +142,11 @@ const userController = {
             })
     },
     editAccount_v2: function (req, res) {
-        db.User.findByPk(req.params.id)
+        db.User.findByPk(req.params.idUser)
             .then(user=>{
-                user.dateCreation = undefined
-                user.password = undefined
-                res.render("myAccount",{user, edot:true})
+                // user.dateCreation = undefined
+                // user.password = undefined
+                res.render("myAccount",{user, edit:true})
             })
             .catch(err=>{
                 console.log(err);
@@ -174,7 +175,7 @@ const userController = {
     delete_v2: function(req, res) {
         db.User.destroy({
             where:{
-                id:req.params.id
+                id:req.params.idUser
             }
         }).then(()=>{
             res.redirect("/")

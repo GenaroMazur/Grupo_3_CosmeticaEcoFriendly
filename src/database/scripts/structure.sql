@@ -2,6 +2,45 @@ CREATE SCHEMA `bd_cosmetica`;
 
 USE bd_cosmetica;
 
+CREATE TABLE statusUsers (
+id INT UNIQUE AUTO_INCREMENT PRIMARY KEY,
+nameStatus VARCHAR(15) DEFAULT 'User' 
+);
+
+USE bd_cosmetica;
+
+CREATE TABLE delivery (
+postalCode INT NOT NULL PRIMARY KEY,
+locality VARCHAR(25) NOT NULL,
+province VARCHAR(25) NOT NULL,
+price INT NOT NULL 
+);
+
+USE bd_cosmetica;
+
+CREATE TABLE category (
+id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
+categoryName VARCHAR(20) NOT NULL,
+descriptionCategory TEXT NOT NULL,
+image VARCHAR(60)
+);
+
+USE bd_cosmetica;
+
+CREATE TABLE fragrance (
+id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
+nameFragrance VARCHAR(15) NOT NULL 
+);
+
+USE bd_cosmetica;
+
+CREATE TABLE statusCart (
+id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
+nameStatusCart VARCHAR(15) NOT NULL
+);
+
+USE bd_cosmetica;
+
 CREATE TABLE users(
 id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
 dateCreation DATETIME,
@@ -30,21 +69,7 @@ idUser INT,
 FOREIGN KEY(idUser) REFERENCES users(id)
 );
 
-USE bd_cosmetica;
 
-CREATE TABLE statusUsers (
-id INT UNIQUE AUTO_INCREMENT PRIMARY KEY,
-nameStatus VARCHAR(15) DEFAULT 'User' 
-);
-
-USE bd_cosmetica;
-
-CREATE TABLE delivery (
-postalCode INT NOT NULL PRIMARY KEY,
-locality VARCHAR(25) NOT NULL,
-province VARCHAR(25) NOT NULL,
-price INT NOT NULL 
-);
 
 USE bd_cosmetica;
 
@@ -64,21 +89,7 @@ FOREIGN KEY(idFragrance) REFERENCES fragrance(id),
 FOREIGN KEY(idCategory) REFERENCES category(id)
 );
 
-USE bd_cosmetica;
 
-CREATE TABLE category (
-id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
-categoryName VARCHAR(20) NOT NULL,
-descriptionCategory TEXT NOT NULL,
-image VARCHAR(60)
-);
-
-USE bd_cosmetica;
-
-CREATE TABLE fragrance (
-id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
-nameFragrance VARCHAR(15) NOT NULL 
-);
 
 USE bd_cosmetica;
 
@@ -105,12 +116,6 @@ FOREIGN KEY(idUser) REFERENCES users(id),
 FOREIGN KEY(idStatus) REFERENCES statusCart(id)
 );
 
-USE bd_cosmetica;
-
-CREATE TABLE statusCart (
-id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
-nameStatusCart VARCHAR(15) NOT NULL
-);
 
 USE bd_cosmetica;
 

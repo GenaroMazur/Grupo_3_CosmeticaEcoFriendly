@@ -28,7 +28,8 @@ module.exports = function (sequelize, DataTypes) {
         }
     }
     const config = {
-        "tableName": "cards"
+        "tableName": "cards",
+        "timestamps": false
     }
 
     const Card = sequelize.define(name, cols, config)

@@ -7,7 +7,8 @@ module.exports = function (sequelize, DataTypes) {
         }
     }
     const config = {
-        "tableName": "statusUsers"
+        "tableName": "statusUsers",
+        "timestamps": false
     }
 
     const StatusUser = sequelize.define(name, cols, config)

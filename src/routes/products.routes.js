@@ -14,15 +14,15 @@ const productController = require("./../controllers/productController");
 //GET
 routes.get("/CarritoDeCompras",
     authUserMiddleware, 
-    productController.productCard);
-routes.get("/DetalleDeProducto", productController.productDetail);
-routes.get("/catalogoProductos", productController.catalogoProductos);
+    productController.productCard_v2);
+routes.get("/DetalleDeProducto", productController.productDetail_v2);
+routes.get("/catalogoProductos", productController.catalogoProductos_v2);
 routes.get("/newProduct",
     authAdminMiddleware,
     productController.newProduct);
 routes.get("/editProduct/:idProduct",
     authAdminMiddleware,
-    productController.editProduct);
+    productController.editProduct_v2);
     
 //POST
 routes.post("/newProduct",
@@ -37,11 +37,11 @@ routes.post("/newProduct",
 routes.put("/editProduct/:idProduct",
     authAdminMiddleware,
     maintainMiddleware,
-    productController.editProductId);
+    productController.editProductId_v2);
     
 //DELETE
 routes.delete("/deleteProduct/:idProduct",
     maintainMiddleware,
-    productController.deleteProduct);
+    productController.deleteProduct_v2);
 
 module.exports = routes
