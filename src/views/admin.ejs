@@ -35,7 +35,7 @@
                 <p>Bienvenido al panel de administrador de La Vie Naturelle</p>
             </div>
             <div class="photo-admin">
-                <img src="./../img/users_images/<%=admin.userImage%>" alt="">
+                <img src="./../img/users_images/<%=admin.image%>" alt="">
             </div>
         </div>
         <div class="info-admin">
@@ -62,7 +62,7 @@
             <% products.map(product=>{ %>
                 <article>
                     <div class="info-producto">
-                        <img src="/img/products_images/<%= product.image %>" alt="imagen">
+                        <img src="/img/products_images/<%= product.Image %>" alt="imagen">
                         <p>
                             <%= product.nameProduct %>
                         </p>
