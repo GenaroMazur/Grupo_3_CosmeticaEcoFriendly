@@ -28,8 +28,8 @@ routes.get("/admin",
 routes.get("/userPanel",
     authAdminMiddleware,
     userController.userPanel_v2);
-routes.get("/myAccount/:idUser",
-    userMiddlewares.account,
+routes.get("/myAccount/:id",
+    userMiddlewares.account_v2,
     userController.myAccount_v2);
 routes.get("/editAccount/:idUser",
     authGuestMiddleware,
