@@ -181,13 +181,14 @@ const userController = {
         db.User.findOne({
             where:{
                 email:req.body.userEmail
-            }
+            },
+            include: [{association: "status"}]
         }).then(user=>{
             
             req.session.user ={
                 id:user.id,
                 username:user.username,
-                status:user.status
+                status:user.idStatusUser
             } 
             if (req.body.remember) {
                 res.cookie("remember",req.session.user,{maxAge : 3600000*12})

@@ -31,30 +31,18 @@
         <div class="user-telefono">
             <!--icon-->
             <h4>Celular</h4>
-            <% if (user.telephone) { %>
-                <p><%= user.telephone%> </p>
-            <% } else {%>
-                <p>Sin completar</p>
-            <% } %>
+            <p><%= user.telephone?user.telephone:"sin completar" %></p>
         </div>
         <h3>Datos de Envío</h3>
         <div class="user-postal">
             <!--icon-->
             <h4>Código Postal</h4>
-            <% if (user.postalCode) { %>
-                <p><%= user.postalCode %></p>
-            <% } else {%>
-                <p>Sin completar</p>
-            <% } %> 
+            <P><%= user.postalCode?user.postalCode:"sin completar" %></P> 
         </div>
         <div class="user-direccion">
             <!--icon-->
             <h4>Dirección</h4>
-            <% if (user.direction) { %>
-                <p><%= user.direction %></p>
-            <% } else {%>
-                <p>Sin completar</p>
-            <% } %> 
+            <p><%= user.direction?user.direction:"sin completar" %></p>
         </div>
         <h3>Tarjetas Asociadas</h3>
         <% if (user.cards) { %>

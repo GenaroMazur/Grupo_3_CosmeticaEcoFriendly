@@ -43,14 +43,15 @@ routes.post("/registro",
     userMiddlewares.register,
     userController.create_v2);
 routes.post("/login",
-    userMiddlewares.validationsLogin,
+    userMiddlewares.validationsLogin_v2,
     userMiddlewares.login,
     userController.loginUser_v2);
     
-    //PUT
+//PUT
     
-    //DELETE
+//DELETE
 routes.delete("/delete/:idUser",
     maintainMiddleware,
     userController.delete_v2);
+    
 module.exports = routes
