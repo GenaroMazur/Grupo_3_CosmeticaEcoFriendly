@@ -106,10 +106,6 @@ const userController = {
         products = db.Product.findAll()
 
         Promise.all([admin, products]).then(([admin, products])=>{
-            
-            // admin.id = undefined
-            // admin.dateCreation = undefined
-            // admin.password = undefined
 
             res.render("admin",{admin, products})
         }).catch(err =>{
@@ -132,20 +128,16 @@ const userController = {
     myAccount_v2:function (req, res) {
         db.User.findByPk(req.params.id)
             .then(user =>{
-                user.dateCreation = undefined
-                user.password= undefined
                 res.render("myAccount",{user, edit:false})
             })
             .catch(err => {
                 console.log(err)
-                res.redirect("/")
+                res.send(err)
             })
     },
     editAccount_v2: function (req, res) {
         db.User.findByPk(req.params.id)
             .then(user=>{
-                user.dateCreation = undefined
-                user.password = undefined
                 res.render("myAccount",{user, edot:true})
             })
             .catch(err=>{
