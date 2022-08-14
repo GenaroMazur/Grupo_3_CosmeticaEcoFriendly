@@ -31,8 +31,8 @@ routes.get("/userPanel",
 routes.get("/myAccount/:id",
     userMiddlewares.account_v2,
     userController.myAccount_v2);
-routes.get("/editAccount/:idUser",
-    authGuestMiddleware,
+routes.get("/editAccount/:id",
+    authUserMiddleware,
     userController.editAccount_v2);
 
 //POST

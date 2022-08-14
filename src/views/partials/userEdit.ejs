@@ -9,53 +9,47 @@
         </div>
         <!--CONTENEDOR DEL INPUT EMAIL-->
         <div class="form-group">
-            <input type="email" name="" id="email" class="form-input" placeholder="">
+            <input type="text" name="email" id="email" class="form-input" placeholder="" value="<%= user.email %>">
             <label for="email" class="form-label">Correo Electronico</label>
             <span class="form-line"></span>
         </div>
 
         <!--CONTENEDOR DEL INPUT NOMBRE-->
         <div class="form-group">
-            <input type="text" name="" id="name" class="form-input" placeholder="">
-            <label for="name" class="form-label">Nombre y Apellido</label>
+            <input type="text" name="username" id="name" class="form-input" placeholder="" value="<%= user.username %>">
+            <label for="name" class="form-label">Nombre</label>
+            <span class="form-line"></span>
+        </div>
+        <div class="form-group">
+            <input type="text" name="lastname" id="name" class="form-input" placeholder="" value="<%= user.lastname %>">
+            <label for="name" class="form-label">Apellido</label>
             <span class="form-line"></span>
         </div>
 
         <!--CONTENEDOR DEL INPUT CELULAR-->
         <div class="form-group">
-            <input type="text" name="" id="telephone" class="form-input" placeholder="">
+            <input type="text" name="telephone" id="telephone" class="form-input" placeholder="" value="<%= user.telephone?user.telephone:""%>" >
             <label for="telephone" class="form-label">Celular</label>
             <span class="form-line"></span>
         </div>
 
         <!--CONTENEDOR DEL INPUT CODIGO POSTAL-->
         <div class="form-group">
-            <input type="text" name="" id="postalCode" class="form-input" placeholder="">
+            <input type="text" name="postalCode" id="postalCode" class="form-input" placeholder="" value="<%= user.postalCode %>">
             <label for="postalCode" class="form-label">Código Postal</label>
             <span class="form-line"></span>
         </div>
 
         <!--CONTENEDOR DEL INPUT DIRECCION-->
         <div class="form-group">
-            <input type="text" name="" id="direction" class="form-input" placeholder="">
+            <input type="text" name="direction" id="direction" class="form-input" placeholder="" value="<%= user.direction?user.direction:""%>">
             <label for="direction" class="form-label">Dirección</label>
             <span class="form-line"></span>
         </div>
 
-        <!--CONTENEDOR DEL INPUT TARJETAS-->
-        <h3>Asociar Tarjeta</h3>
-        <div class="form-group">
-            <input type="text" name="" id="cards" class="form-input" placeholder="">
-            <label for="cards" class="form-label">Tarjeta de Crédito/Débito</label>
-            <span class="form-line"></span>
-        </div>
-        <div class="form-group">
-            <input type="text" name="" id="cards" class="form-input" placeholder="">
-            <label for="cards" class="form-label">Número de Tarjeta</label>
-            <span class="form-line"></span>
-        </div>
         <!--CONTENEDOR DEL INPUT BOTON SUBMIT-->
         <input type="submit" value="Guardar cambios" class="form-submit">
+        <input type="reset" value="Descartar cambios" class="form-submit">
     </div>
 
 </form>

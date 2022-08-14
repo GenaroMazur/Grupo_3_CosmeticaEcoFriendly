@@ -138,7 +138,7 @@ const userController = {
     editAccount_v2: function (req, res) {
         db.User.findByPk(req.params.id)
             .then(user=>{
-                res.render("myAccount",{user, edot:true})
+                res.render("myAccount",{user, edit:true})
             })
             .catch(err=>{
                 console.log(err);
