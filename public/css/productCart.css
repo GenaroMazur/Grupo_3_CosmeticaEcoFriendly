@@ -1,11 +1,9 @@
 .article-carrito {
     background-color: #ffebe0;
-    width: 97vw;
-    height: 34vw;
     display: flex;
     border-radius: 20px;
     flex-direction: column;
-    margin: 185px auto;
+    margin: 20px auto;
 }
 
 .tabla-carrito {
@@ -23,8 +21,14 @@
     padding: 2%;
     color: #fff;
     background-color: #9fb478;
+    font-size: 15px;
+    text-transform: uppercase;
 }
-
+.style-name{
+    font-size: 18px;
+    font-weight: bold;
+    color:  #8d7d63;
+}
 .td-carrito {
     padding: 10px 5px;
 }
@@ -33,16 +37,27 @@
     align-self: center;
 }
 
-.veremos {
+.subtitulos {
     height: 21px;
 }
 
 td input {
-    width: 40px;
-    height: 30px;
     padding: 5px;
+    background-color: #fff7e7;
+    width: 40px;
+    border: 1px solid #a79776;
+    height: 30px;
+    margin-top: 2px;
+    font-size: 15px;
+    padding-left: 8px;
 }
-
+.price {
+    text-align: right;
+    height: 30px;
+    border-radius: 5px;
+    color: #8d7d63;
+    font-size: 15px;
+}
 .td-carrito img {
     width: 20%;
     border-radius: 20px;
@@ -53,6 +68,11 @@ td input {
 .total-carrito {
     display: flex;
     justify-content: flex-end;
+    border-radius: 5px;
+    color:  #8d7d63;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .total-carrito table {
@@ -63,6 +83,12 @@ td input {
 
 td:last-child {
     text-align: right;
+    height: 30px;
+    border-radius: 5px;
+    color:  #8d7d63;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 th:last-child {
@@ -83,11 +109,10 @@ th:last-child {
     background-color: #9fb478;
     color: #000;
 }
-@media(min-width:480px) {
+@media(min-width:481px) {
     .article-carrito {
         background-color: #ffebe0;
         width: 95vw;
-        height: 140vw;
         display: flex;
         border-radius: 20px;
         flex-direction: column;
@@ -98,7 +123,11 @@ th:last-child {
             border-radius: 20px;
             margin-right: 25px;
         }
-    
+        .style-name {
+            font-size: 15px;
+            font-weight: bold;
+            color: #8d7d63;
+        }
 }
 
 @media(min-width:900px) {
@@ -109,7 +138,7 @@ th:last-child {
         display: flex;
         border-radius: 20px;
         flex-direction: column;
-        margin: 185px auto;
+        margin: 95px auto;
     }
     .td-carrito img {
         width: 15%;

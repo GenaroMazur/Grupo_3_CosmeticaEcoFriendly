@@ -88,6 +88,9 @@ input#input_product {
     font-size: 15px;
     padding-left: 8px;
 }
+#favorito-icon {
+    color:#9e855a;
+}
 #favorito-icon:hover{
     color: palevioletred;
 }
@@ -300,7 +303,7 @@ Transition: all .25s;
     color: #000;
 }
 @media(min-width:480px) {
-    aside h3 {
+    /*aside h3 {
         text-align: center;
         text-align: center;
         height: 10px;
@@ -309,7 +312,7 @@ Transition: all .25s;
         font-size: 10px;
         text-transform: uppercase;
         text-shadow: 3px 3px 2px #fff4de;
-    }
+    }*/
     .new-producto img {
         padding: 10%;
         width: 280%;

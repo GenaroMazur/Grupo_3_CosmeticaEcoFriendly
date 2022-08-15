@@ -83,22 +83,44 @@ const userMiddlewares = {
             .notEmpty().withMessage("Debe completar este campo").bail()
             .isEmail().withMessage("Debe ser un correo electronico").bail()
             .custom((value,{req})=>{
-                let user = modelsController.FnSearch("users","email",value)
-                if (!user) {
-                    throw new Error("Correo inexistente")
-                }
-                return true
+                // let user = modelsController.FnSearch("users","email",value)
+                db.User.findOne({
+                    where:{
+                        email:req.body.userEmail
+                    }
+                })
+                .then(user=>{
+                    if (!user) {
+                        throw new Error("Correo inexistente")
+                    }
+                    return true
+                })
+                .catch(err=>{
+                    console.log(err);
+                    return true
+                })
             }),
         body("password")
             .notEmpty().withMessage("Debe completar este campo").bail()
             .custom((value, { req }) => {
-                let user = modelsController.FnSearch("users","email",req.body.userEmail)
-                if (user) {
-                    if (!bcrypt.compareSync(value,user.password)) {
-                        throw new Error("Contraseña invalida")
+                // let user = modelsController.FnSearch("users","email",req.body.userEmail)
+                db.User.findOne({
+                    where:{
+                        email:req.body.userEmail
                     }
-                }
-                return true
+                })
+                .then(user=>{
+                    if (user) {
+                        if (!bcrypt.compareSync(value,user.passwordUser)) {
+                            throw new Error("Contraseña invalida")
+                        }
+                    }
+                    return true
+                })
+                .catch(err=>{
+                    console.log(err);
+                    return true
+                })
             })
     ],
     
@@ -111,8 +133,8 @@ const userMiddlewares = {
         }
     },
     account : function (req, res, next) {
-        let idUser = req.params.idUser
-        let foundUser = modelsController.FnSearch("users","id",req.params.idUser)
+        let idUser = req.params.id
+        let foundUser = modelsController.FnSearch("users","id",req.params.id)
         if (idUser) {
             if (foundUser) {
                 return next()

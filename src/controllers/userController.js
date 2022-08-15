@@ -126,7 +126,7 @@ const userController = {
             })
     },
     myAccount_v2:function (req, res) {
-        db.User.findByPk(req.params.id)
+        db.User.findByPk(req.params.idUser)
             .then(user =>{
                 res.render("myAccount",{user, edit:false})
             })
@@ -136,7 +136,7 @@ const userController = {
             })
     },
     editAccount_v2: function (req, res) {
-        db.User.findByPk(req.params.id)
+        db.User.findByPk(req.params.idUser)
             .then(user=>{
                 res.render("myAccount",{user, edit:true})
             })
@@ -168,7 +168,7 @@ const userController = {
     delete_v2: function(req, res) {
         db.User.destroy({
             where:{
-                id:req.params.id
+                id:req.params.idUser
             }
         }).then(()=>{
             res.redirect("/")
