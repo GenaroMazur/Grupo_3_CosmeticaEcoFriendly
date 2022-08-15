@@ -192,39 +192,21 @@ const userMiddlewares = {
             .notEmpty().withMessage("Debe completar este campo").bail()
             .isEmail().withMessage("Debe ser un correo electronico").bail()
             .custom((value,{req})=>{
-                User.findOne({
-                    where:{
-                        "email":value
-                    }
-                })
-                .then(user=>{
-                    if (!user) {
+                let user= req.foundUser
+                    if (user == null) {
                         throw new Error("Correo inexistente")
                     }
-                })
-                .catch(err=>{
-                    console.log(err);
-                })
-                return true
+                    return true
             }),
         body("password")
             .notEmpty().withMessage("Debe completar este campo").bail()
             .custom((value, { req }) => {
-                User.findOne({
-                    where:{
-                        email:req.body.userEmail
+                let user=req.foundUser
+                if (user) {
+                    if (!bcrypt.compareSync(value,user.passwordUser)) {
+                        throw new Error("Contraseña invalida")
                     }
-                })
-                .then(user=>{
-                    if (user) {
-                        if (!bcrypt.compareSync(value,user.password)) {
-                            throw new Error("Contraseña invalida")
-                        }
-                    }
-                })
-                .catch(err=>{
-                    console.log(err);
-                })
+                }
                 return true
             })
     ],

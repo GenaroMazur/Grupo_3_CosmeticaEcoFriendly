@@ -126,7 +126,7 @@ const userController = {
             })
     },
     myAccount_v2:function (req, res) {
-        db.User.findByPk(req.params.idUser)
+        db.User.findByPk(req.params.id)
             .then(user =>{
                 res.render("myAccount",{user, edit:false})
             })
@@ -136,7 +136,7 @@ const userController = {
             })
     },
     editAccount_v2: function (req, res) {
-        db.User.findByPk(req.params.idUser)
+        db.User.findByPk(req.params.id)
             .then(user=>{
                 res.render("myAccount",{user, edit:true})
             })
@@ -147,7 +147,7 @@ const userController = {
     },
     create_v2:function (req, res){
         let dateCreation=new Date()
-        dateCreation=dateCreation.getFullYear()+"/"+dateCreation.getMonth()+1+"/"+dateCreation.getDate()
+        dateCreation=dateCreation.getFullYear()+"-"+dateCreation.getMonth()+1+"-"+dateCreation.getDate()
         db.User.create({
             dateCreation:dateCreation,
             username : req.body.username,
@@ -179,27 +179,16 @@ const userController = {
         })
     },
     loginUser_v2:function(req, res){
-        db.User.findOne({
-            where:{
-                email:req.body.userEmail
-            },
-            include: [{association: "status"}]
-        }).then(user=>{
-            
-            req.session.user ={
-                id:user.id,
-                username:user.username,
-                status:user.idStatusUser
-            } 
-            if (req.body.remember) {
-                res.cookie("remember",req.session.user,{maxAge : 3600000*12})
-            }
-            return res.redirect("/")
-
-        }).catch(err=>{
-            console.log(err);
-            return res.redirect("/")
-        })
+        let user = req.foundUser
+        req.session.user ={
+            id:user.id,
+            username:user.username,
+            status:user.status.dataValues.nameStatus
+        } 
+        if (req.body.remember) {
+            res.cookie("remember",req.session.user,{maxAge : 3600000*12})
+        }
+        return res.redirect("/")
     }
 }
 

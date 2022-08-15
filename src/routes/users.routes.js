@@ -11,6 +11,7 @@ const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware");
 const authUserMiddleware = require ("./../middlewares/authUserMiddleware");
 const authGuestMiddleware = require ("./../middlewares/authGuestMiddleware");
 const maintainMiddleware = require ("./../middlewares/maintainMiddleware");
+const searchUserMiddleware = require("./../middlewares/searchUserMiddleware")
 
 //GET
 routes.get("/login",
@@ -37,12 +38,12 @@ routes.get("/editAccount/:id",
 
 //POST
 routes.post("/registro",
-    maintainMiddleware,
     multerMiddleware.usersImage().single("image"),
     userMiddlewares.validationsCreate_v2,
     userMiddlewares.register,
     userController.create_v2);
 routes.post("/login",
+    searchUserMiddleware,
     userMiddlewares.validationsLogin_v2,
     userMiddlewares.login,
     userController.loginUser_v2);
