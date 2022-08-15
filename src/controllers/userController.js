@@ -147,14 +147,15 @@ const userController = {
     },
     create_v2:function (req, res){
         let dateCreation=new Date()
-        dateCreation=[dateCreation.getFullYear(),dateCreation.getMonth()+1,dateCreation.getDate()]
+        dateCreation=dateCreation.getFullYear()+"/"+dateCreation.getMonth()+1+"/"+dateCreation.getDate()
         db.User.create({
             dateCreation:dateCreation,
             username : req.body.username,
             lastname: req.body.lastname,
-            password : bcrypt.hashSync(req.body.password,10),
+            passwordUser : bcrypt.hashSync(req.body.password,10),
             email : req.body.email,
-            userImage : req.file? req.file.filename : "default.jpg"
+            image : req.file? req.file.filename :undefined,
+            idStatusUser: 1
         })
         .then(()=>{
             res.redirect("/user/login")
