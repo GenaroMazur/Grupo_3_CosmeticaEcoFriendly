@@ -59,12 +59,12 @@
                 </div>
                 <div>
                     <label for="email">Correo</label>
-                    <input type="email" name="email" id="email" placeholder="Correo"class="textArea"
-                    <% if (locals.errors && old.email) { %>
-                        value=<%= old.email %> 
+                    <input type="email" name="userEmail" id="email" placeholder="Correo"class="textArea"
+                    <% if (locals.errors && old.userEmail) { %>
+                        value=<%= old.userEmail %> 
                     <% } %>>
-                    <% if ( locals.errors && errors.email) { %>
-                        <p class="alerta"><%= errors.email.msg %> </p>
+                    <% if ( locals.errors && errors.userEmail) { %>
+                        <p class="alerta"><%= errors.userEmail.msg %> </p>
                         <% } %>
                 </div>
                 <div>

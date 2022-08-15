@@ -147,13 +147,15 @@ const userController = {
     },
     create_v2:function (req, res){
         let dateCreation=new Date()
-        dateCreation=dateCreation.getFullYear()+"-"+dateCreation.getMonth()+1+"-"+dateCreation.getDate()
+        let month=dateCreation.getMonth()+1
+        dateCreation=dateCreation.getFullYear()+"-"+month+"-"+dateCreation.getDate()
+        console.log(dateCreation);
         db.User.create({
             dateCreation:dateCreation,
             username : req.body.username,
             lastname: req.body.lastname,
             passwordUser : bcrypt.hashSync(req.body.password,10),
-            email : req.body.email,
+            email : req.body.userEmail,
             image : req.file? req.file.filename :undefined,
             idStatusUser: 1
         })
@@ -168,7 +170,7 @@ const userController = {
     delete_v2: function(req, res) {
         db.User.destroy({
             where:{
-                id:req.params.idUser
+                id:req.params.id
             }
         }).then(()=>{
             res.redirect("/")

@@ -39,6 +39,7 @@ routes.get("/editAccount/:id",
 //POST
 routes.post("/registro",
     multerMiddleware.usersImage().single("image"),
+    searchUserMiddleware,
     userMiddlewares.validationsCreate_v2,
     userMiddlewares.register,
     userController.create_v2);
@@ -51,8 +52,7 @@ routes.post("/login",
 //PUT
     
 //DELETE
-routes.delete("/delete/:idUser",
-    maintainMiddleware,
+routes.delete("/delete/:id",
     userController.delete_v2);
 
 module.exports = routes
