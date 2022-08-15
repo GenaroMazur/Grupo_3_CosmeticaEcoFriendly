@@ -11,7 +11,9 @@ const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware");
 const authUserMiddleware = require ("./../middlewares/authUserMiddleware");
 const authGuestMiddleware = require ("./../middlewares/authGuestMiddleware");
 const maintainMiddleware = require ("./../middlewares/maintainMiddleware");
-const searchUserMiddleware = require("./../middlewares/searchUserMiddleware")
+const searchUserMiddleware = require("./../middlewares/searchUserMiddleware");
+const editAccountMiddleware = require("./../middlewares/editAccountMiddleware")
+const validationsEditMiddleware = require("./../middlewares/validationsEditMiddleware")
 
 //GET
 routes.get("/login",
@@ -39,6 +41,7 @@ routes.get("/editAccount/:id",
 //POST
 routes.post("/registro",
     multerMiddleware.usersImage().single("image"),
+    searchUserMiddleware,
     userMiddlewares.validationsCreate_v2,
     userMiddlewares.register,
     userController.create_v2);
@@ -49,10 +52,14 @@ routes.post("/login",
     userController.loginUser_v2);
     
 //PUT
-    
-//DELETE
-routes.delete("/delete/:idUser",
+routes.put("/editAccount/:id",
     maintainMiddleware,
+    searchUserMiddleware,
+    validationsEditMiddleware,
+    editAccountMiddleware,
+    userController.putAccount_v2)
+//DELETE
+routes.delete("/delete/:id",
     userController.delete_v2);
 
 module.exports = routes
