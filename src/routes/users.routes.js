@@ -52,11 +52,12 @@ routes.post("/login",
     userController.loginUser_v2);
     
 //PUT
-    routes.put("/editAccount/:id",
-        searchUserMiddleware,
-        validationsEditMiddleware,
-        editAccountMiddleware,
-        userController.putAccount_v2)
+routes.put("/editAccount/:id",
+    maintainMiddleware,
+    searchUserMiddleware,
+    validationsEditMiddleware,
+    editAccountMiddleware,
+    userController.putAccount_v2)
 //DELETE
 routes.delete("/delete/:id",
     userController.delete_v2);
