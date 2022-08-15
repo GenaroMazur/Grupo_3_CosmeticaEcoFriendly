@@ -13,7 +13,7 @@ module.exports = function (sequelize, DataTypes) {
 
     const StatusUser = sequelize.define(name, cols, config)
     StatusUser.associate = function (models) {
-        StatusUser.belongsTo(models.User,{
+        StatusUser.hasMany(models.User,{
             "as":"status",
             "foreignKey":"idStatusUser"
         })

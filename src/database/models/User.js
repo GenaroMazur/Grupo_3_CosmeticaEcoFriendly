@@ -2,7 +2,8 @@ module.exports = function (sequelize, DataTypes) {
     let name = "User"
     let cols = {
         "dateCreation": {
-            "type": DataTypes.DATE
+            "type": DataTypes.DATE,
+            "allowNull": false
         },
         "username": {
             "type": DataTypes.STRING(15),
@@ -26,8 +27,7 @@ module.exports = function (sequelize, DataTypes) {
             "type": DataTypes.STRING(30)
         },
         "direction": {
-            "type": DataTypes.STRING(50),
-            "allowNull": false
+            "type": DataTypes.STRING(50)
         },
         "idStatusUser": {
             "type": DataTypes.INTEGER
