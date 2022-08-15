@@ -59,7 +59,6 @@ td input {
     font-size: 15px;
 }
 .td-carrito img {
-    width: 20%;
     border-radius: 20px;
     margin-right: 27px;
     height: 140px ;
@@ -76,8 +75,6 @@ td input {
 }
 
 .total-carrito table {
-    border-top: 3px solid black;
-    width: 100%;
     max-width: 480px;
 }
 
@@ -109,24 +106,31 @@ th:last-child {
     background-color: #9fb478;
     color: #000;
 }
-@media(min-width:481px) {
+@media(min-width:479px) {
     .article-carrito {
         background-color: #ffebe0;
-        width: 95vw;
+        width: 95vw;;
         display: flex;
         border-radius: 20px;
         flex-direction: column;
         margin: 20px auto;
+        padding: 0px 0px 7px 0px;
     }
-        .td-carrito img {
-            width: 30%;
-            border-radius: 20px;
-            margin-right: 25px;
-        }
+    .td-carrito img {
+        /* width: 20%; */
+        border-radius: 20px;
+        margin-right: 27px;
+        height: 140px;
+    }
         .style-name {
             font-size: 15px;
             font-weight: bold;
             color: #8d7d63;
+        }
+        .total-carrito table {
+            border-top: 2px solid black;
+            width: 10%;
+            max-width: 480px;
         }
 }
 
@@ -134,7 +138,6 @@ th:last-child {
     .article-carrito {
         background-color: #ffebe0;
         width: 98vw;
-        height: 45vw;
         display: flex;
         border-radius: 20px;
         flex-direction: column;
@@ -146,5 +149,9 @@ th:last-child {
         margin-right: 15px;
         height: 130px ;
     }
-
+    .total-carrito table {
+        border-top: 3px solid black;
+        width: 100%;
+        max-width: 250px;
+}
 }
