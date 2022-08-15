@@ -1,4 +1,4 @@
-<form action="" method="post" class="form">
+<form action="/user/editAccount/<%=user.id%>?_method=put" method="post" class="form">
     <h2 class="form-title">Edita tu información</h2>
     <div class="form-container">
         <h3>Cambiar tu foto de perfil</h3>
@@ -9,7 +9,7 @@
         </div>
         <!--CONTENEDOR DEL INPUT EMAIL-->
         <div class="form-group">
-            <input type="text" name="email" id="email" class="form-input" placeholder="" value="<%= user.email %>">
+            <input type="text" name="userEmail" id="email" class="form-input" placeholder="" value="<%= user.email %>">
             <label for="email" class="form-label">Correo Electronico</label>
             <span class="form-line"></span>
         </div>

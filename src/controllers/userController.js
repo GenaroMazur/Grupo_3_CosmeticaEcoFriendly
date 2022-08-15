@@ -180,6 +180,26 @@ const userController = {
             res.redirect("/")
         })
     },
+    putAccount_v2:function(req, res){
+        db.User.findByPk(req.params.id)
+        .then(user=>{
+            let form = req.body
+            let userDb= user.dataValues
+            for(let key in user.dataValues){
+                if (user.dataValues[key] != form[key] && form[key]){
+                    userDb[key] = form[key]
+                }
+            }
+            return db.User.update(userDb,{where:{id:userDb.id}})
+        })
+        .then(()=>{
+            res.redirect("/user/myAccount/"+req.params.id)
+        })
+        .catch(err=>{
+            console.error(err);
+            res.redirect("/user/editAccount/"+req.params.id)
+        })
+    },
     loginUser_v2:function(req, res){
         let user = req.foundUser
         req.session.user ={
