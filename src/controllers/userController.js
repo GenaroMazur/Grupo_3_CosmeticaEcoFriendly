@@ -181,10 +181,7 @@ const userController = {
         })
     },
     putAccount_v2:function(req, res){
-        
-        return res.redirect("/user/myAccount/"+req.params.id)
-        db.User.findByPk(req.params.id)
-        .then(user=>{
+        let user = req.foundUserId
             let form = req.body
             let userDb= user.dataValues
             for(let key in user.dataValues){
@@ -192,8 +189,7 @@ const userController = {
                     userDb[key] = form[key]
                 }
             }
-            return db.User.update(userDb,{where:{id:userDb.id}})
-        })
+        db.User.update(userDb,{where:{id:userDb.id}})
         .then(()=>{
             res.redirect("/user/myAccount/"+req.params.id)
         })
