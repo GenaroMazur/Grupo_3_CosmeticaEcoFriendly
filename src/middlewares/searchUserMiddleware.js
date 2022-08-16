@@ -8,8 +8,8 @@ module.exports=function (req, res, next){
             if(user != null){
                 req.foundUser = user.dataValues
             console.log(req.foundUser);
-            return next()
         }
+        return next()
     })
     .catch(err=>{
         console.error(err);

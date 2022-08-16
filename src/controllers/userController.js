@@ -181,6 +181,8 @@ const userController = {
         })
     },
     putAccount_v2:function(req, res){
+        
+        return res.redirect("/user/myAccount/"+req.params.id)
         db.User.findByPk(req.params.id)
         .then(user=>{
             let form = req.body

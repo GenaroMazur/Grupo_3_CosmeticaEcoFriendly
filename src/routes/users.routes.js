@@ -12,6 +12,7 @@ const authUserMiddleware = require ("./../middlewares/authUserMiddleware");
 const authGuestMiddleware = require ("./../middlewares/authGuestMiddleware");
 const maintainMiddleware = require ("./../middlewares/maintainMiddleware");
 const searchUserMiddleware = require("./../middlewares/searchUserMiddleware");
+const searchEditUserMiddleware = require("./../middlewares/searchEditUserMiddleware");
 const editAccountMiddleware = require("./../middlewares/editAccountMiddleware")
 const validationsEditMiddleware = require("./../middlewares/validationsEditMiddleware")
 
@@ -53,8 +54,8 @@ routes.post("/login",
     
 //PUT
 routes.put("/editAccount/:id",
-    maintainMiddleware,
     searchUserMiddleware,
+    searchEditUserMiddleware,
     validationsEditMiddleware,
     editAccountMiddleware,
     userController.putAccount_v2)
