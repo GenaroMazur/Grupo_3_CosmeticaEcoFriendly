@@ -54,6 +54,7 @@ routes.post("/login",
     
 //PUT
 routes.put("/editAccount/:id",
+    multerMiddleware.usersImage().single("image"),
     searchUserMiddleware,
     searchEditUserMiddleware,
     validationsEditMiddleware,

@@ -1,12 +1,6 @@
-<form action="/user/editAccount/<%=user.id%>?_method=put" method="post" class="form">
+<form action="/user/editAccount/<%=user.id%>?_method=put" method="post" enctype="multipart/form-data" class="form">
     <h2 class="form-title">Edita tu información</h2>
     <div class="form-container">
-        <h3>Cambiar tu foto de perfil</h3>
-        <div class="form-group">
-            <!--INPUT DE CAMBIO DE FOTO-->
-            <input type="file" name="" id="userImage" class="form-input" placeholder="">
-            <span class="form-line"></span>
-        </div>
         <!--CONTENEDOR DEL INPUT EMAIL-->
         <div class="form-group">
             <input type="text" name="userEmail" id="email" class="form-input" placeholder="" <% if (locals.old && old.userEmail) { %>
@@ -74,14 +68,23 @@
             <input type="text" name="direction" id="direction" class="form-input" placeholder="" <% if (locals.old && old.direction) { %>
                 value = "<%= old.direction %>"
                 <% } else if (user.direction){%>
-                value = "<%= user.direction %>"    
-                <% } %>>
-            <label for="direction" class="form-label">Dirección</label>
-            <span class="form-line"></span>
-        </div>
-        <!--CONTENEDOR DEL INPUT BOTON SUBMIT-->
-        <input type="submit" value="Guardar cambios" class="form-submit">
-        <input type="reset" value="Descartar cambios" class="form-submit">
-    </div>
-
-</form>
+                    value = "<%= user.direction %>"    
+                    <% } %>>
+                    <label for="direction" class="form-label">Dirección</label>
+                    <span class="form-line"></span>
+                </div>
+                <h3>Cambiar tu foto de perfil</h3>
+                <div class="form-group">
+                    <!--INPUT DE CAMBIO DE FOTO-->
+                    <input type="file" name="image" id="userImage" class="form-input" placeholder="">
+                    <span class="form-line"></span>
+                    <% if (locals.errors && errors.image) { %>
+                        <p><%= errors.image.msg %></p>
+                    <% } %>
+                </div>
+                <!--CONTENEDOR DEL INPUT BOTON SUBMIT-->
+                <input type="submit" value="Guardar cambios" class="form-submit">
+                <input type="reset" value="Descartar cambios" class="form-submit">
+            </div>
+            
+        </form>
