@@ -159,23 +159,16 @@ const userMiddlewares = {
                 }
                 return true
             }),
-        body("email")
+        body("userEmail")
             .notEmpty().withMessage("Debe ingresar un Correo electronico").bail()
             .isEmail().withMessage("El correo electronico debe tener un formato valido").bail()
             .custom((value,{req})=>{
-                User.findOne({
-                    where:{
-                        "email":value
-                    }
-                })
-                .then(userFound=>{
-                    if (userFound) {
-                        throw new Error ("Este correo ya existe")
-                    }
-                })
-                .catch(err=>{
-                    console.log(err);
-                })
+                let userFound = req.foundUser
+                console.log("hasta aqui llegue hdp");
+                console.log(userFound);
+                if (userFound) {
+                    throw new Error ("Este correo ya existe")
+                }
                 return true
             }),
         body("image")
@@ -194,6 +187,7 @@ const userMiddlewares = {
             .custom((value,{req})=>{
                 let user= req.foundUser
                     if (user == null) {
+                        console.log(user);
                         throw new Error("Correo inexistente")
                     }
                     return true

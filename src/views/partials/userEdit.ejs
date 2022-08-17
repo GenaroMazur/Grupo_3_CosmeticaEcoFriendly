@@ -1,4 +1,4 @@
-<form action="" method="post" class="form">
+<form action="/user/editAccount/<%=user.id%>?_method=put" method="post" class="form">
     <h2 class="form-title">Edita tu información</h2>
     <div class="form-container">
         <h3>Cambiar tu foto de perfil</h3>
@@ -9,40 +9,73 @@
         </div>
         <!--CONTENEDOR DEL INPUT EMAIL-->
         <div class="form-group">
-            <input type="text" name="email" id="email" class="form-input" placeholder="" value="<%= user.email %>">
+            <input type="text" name="userEmail" id="email" class="form-input" placeholder="" <% if (locals.old && old.userEmail) { %>
+                value = "<%= old.userEmail %>"
+                <% } else if (user.email){%>
+                value = "<%= user.email %>"    
+                <% } %>>
             <label for="email" class="form-label">Correo Electronico</label>
             <span class="form-line"></span>
+            <% if (locals.errors && errors.userEmail) { %>
+                <p><%= errors.userEmail.msg %></p>
+            <% } %>
         </div>
 
         <!--CONTENEDOR DEL INPUT NOMBRE-->
         <div class="form-group">
-            <input type="text" name="username" id="name" class="form-input" placeholder="" value="<%= user.username %>">
+            <input type="text" name="username" id="name" class="form-input" placeholder="" <% if (locals.old && old.username) { %>
+                value = "<%= old.username %>"
+                <% } else if (user.username){%>
+                value = "<%= user.username %>"    
+                <% } %>>
             <label for="name" class="form-label">Nombre</label>
             <span class="form-line"></span>
+            <% if (locals.errors && errors.username) { %>
+                <p><%= errors.username.msg %></p>
+            <% } %>
         </div>
         <div class="form-group">
-            <input type="text" name="lastname" id="name" class="form-input" placeholder="" value="<%= user.lastname %>">
+            <input type="text" name="lastname" id="name" class="form-input" placeholder="" <% if (locals.old && old.lastname) { %>
+                value = "<%= old.lastname %>"
+                <% } else if (user.lastname){%>
+                value = "<%= user.lastname %>"    
+                <% } %>>
             <label for="name" class="form-label">Apellido</label>
             <span class="form-line"></span>
+            <% if (locals.errors && errors.lastname) { %>
+                <p><%= errors.lastname.msg %></p>
+            <% } %>
         </div>
 
         <!--CONTENEDOR DEL INPUT CELULAR-->
         <div class="form-group">
-            <input type="text" name="telephone" id="telephone" class="form-input" placeholder="" value="<%= user.telephone?user.telephone:""%>" >
+            <input type="text" name="telephone" id="telephone" class="form-input" placeholder=""<% if (locals.old && old.telephone) { %>
+            value = "<%= old.telephone %>"
+            <% } else if (user.telephone){%>
+            value = "<%= user.telephone %>"    
+            <% } %>>
             <label for="telephone" class="form-label">Celular</label>
             <span class="form-line"></span>
         </div>
 
         <!--CONTENEDOR DEL INPUT CODIGO POSTAL-->
         <div class="form-group">
-            <input type="text" name="postalCode" id="postalCode" class="form-input" placeholder="" value="<%= user.postalCode %>">
+            <input type="text" name="postalCode" id="postalCode" class="form-input" placeholder="" <% if (locals.old && old.postalCode) { %>
+                value = "<%= old.postalCode %>"
+                <% } else if (user.postalCode){%>
+                value = "<%= user.postalCode %>"    
+                <% } %>>
             <label for="postalCode" class="form-label">Código Postal</label>
             <span class="form-line"></span>
         </div>
 
         <!--CONTENEDOR DEL INPUT DIRECCION-->
         <div class="form-group">
-            <input type="text" name="direction" id="direction" class="form-input" placeholder="" value="<%= user.direction?user.direction:""%>">
+            <input type="text" name="direction" id="direction" class="form-input" placeholder="" <% if (locals.old && old.direction) { %>
+                value = "<%= old.direction %>"
+                <% } else if (user.direction){%>
+                value = "<%= user.direction %>"    
+                <% } %>>
             <label for="direction" class="form-label">Dirección</label>
             <span class="form-line"></span>
         </div>
