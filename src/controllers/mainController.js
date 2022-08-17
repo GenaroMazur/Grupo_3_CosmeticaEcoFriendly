@@ -7,10 +7,6 @@ const mainController = {
           let products = modelsController.FnRead("products")
           return res.render('index', {products: products , user :req.session.user})
      },
-     //vista
-     vista: (req, res) => {
-          return res.render('vista',{status :req.session.user})
-     },
 
      //pagina de nosotros
      nosotros: (req, res) => {

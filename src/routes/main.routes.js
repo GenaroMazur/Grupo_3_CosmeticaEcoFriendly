@@ -8,5 +8,4 @@ const mainController = require("./../controllers/mainController")
 routes.get("/", mainController.index_v2)
 routes.get("/nosotros", mainController.nosotros)
 routes.get("/contacto", mainController.contacto)
-routes.get("/vista", mainController.vista)
 module.exports = routes
