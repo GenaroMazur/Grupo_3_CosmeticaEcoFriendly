@@ -22,8 +22,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 4px 46px 4px 26px;
-
+    margin: 0.1vw 4vw 0.1vw 2vw;
 }
 
 .nav-2 {
@@ -41,9 +40,9 @@ img {
     object-fit: fill
 }
 
-.img-icon img{
-    height: 150px;
-    width: 150px;
+.img-icon img {
+    height: 8vw;
+    width: 8vw;
 }
 
 .usuario-icon {
@@ -114,6 +113,51 @@ img {
 
 }
 
+.foto.usuario {
+    width: 3.3vw;
+    height: 3.3vw;
+    border-radius: 200px;
+    border: solid 1px black;
+    align-items: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.foto.usuario:hover {
+    border: solid 2px white;
+}
+#menu {
+    position: absolute;
+    background:#a39883;
+    width: 15vw;
+    height: 145px;
+    top: -200px;
+    z-index: 10;
+    border-radius: 7px;
+}
+
+#menu.mostrar {
+    top: 60px;
+    left: 65vw;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    margin-top: 14px;
+    justify-content: flex-start;
+}
+a.a-nav:hover{
+    color: rgb(185, 121, 74);
+}
 .icono-hamburguesa {
     display: flex;
     align-items: center;

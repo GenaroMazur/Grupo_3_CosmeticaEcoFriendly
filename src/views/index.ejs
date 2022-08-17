@@ -4,58 +4,66 @@
 <%- include('./partials/head') %>
 <link rel="stylesheet" href="/css/home.css">
     <body>
-        <header id="index">
-            <nav class="banner">
-                <div class="nav-index">
-                    <div class="contenedor-nav">
-                        <span><a class="a-nav" href="/">Inicio</a></span>
-                        <span><a class="a-nav" href="/nosotros">Nosotros</a></span>
-                        <span><a class="a-nav" href="/product/catalogoproductos">Productos</a></span>
-                        <span><a class="a-nav" href="/contacto">Contacto</a></span>
-                    </div>
-                    <div class="titulo-parrafo">
-                        <h1 class="titulo-header">La Vie Naturelle</h1>
-                        <p class="parrafo-header">Cosmética natural, amigable con el medio ambiente, hecha
-                            artesanalmente con productos naturales, compostables y cruelty free🌾✨🌍</p>
-                    </div>
+        <div class="pos">
+            <div class="nav navegacion">
+                <div class="boton menu">
+                    <a href="/">
+                        <p>inicio</p>
+                    </a>
                 </div>
-                <div class="nav-2">
-                    <% if (user.status == "guest") { %>
-                        <div>
-                            <span><a class="a-nav" href="user/registro">registrate</a></span>
-                        </div>
-                        <div>
-                            <span><a class="a-nav" href="user/login">login</a></span>
-                        </div>
-                    <% } else if (user.status == "Admin") {%>
-                        <div>
-                            <span><a class="a-nav" href="user/admin">Admin Panel</a></span>
-                        </div>
-                        <div>
-                            <span><a class="a-nav" href="user/myAccount/<%= user.id %>">Mi Cuenta</a></span>
-                        </div>
-                        <div>
-                            <span><a class="a-nav" href="user/un-login">Un-login</a></span>
-                        </div>
-                    <% } else {%>
-                        <div>
-                            <span><a class="a-nav" href="user/myAccount/<%= user.id %>">Mi Cuenta</a></span>
-                        </div>
-                        <div>
-                            <span><a class="a-nav" href="user/un-login">Un-login</a></span>
-                        </div>
-                    <% } %> 
-                    <div class="carrito-icon">
-                        <a href="/product/CarritoDeCompras"><img src="./img/icons_images/carrito-de-compras.svg"
-                                alt="carrito"></a>
-                    </div>
+                <div class="boton menu">
+                    <a href="/nosotros">
+                        <p>nosotros</p>
+                    </a>
                 </div>
-            </nav>
+                <div class="boton menu">
+                    <a href="/product/catalogoproductos">
+                        <p>productos</p>
+                    </a>
+                </div>
+                <div class="boton menu">
+                    <a href="/contacto">
+                        <p>contacto</p>
+                    </a>
+    
+                </div>
+                
+                <div>
+                    
+                </div>
+    
+                <div class="nav usuario">
+                    <div class="imagen">
+                        <img src="./../../img/users_images/leandroramos1657584227715.jpg" alt="Foto de perfil de usuario"
+                            class="foto usuario">
+                    </div>
+                    <div id="menu">
+                        <ul>
+                            <li><a class="a-nav" href="user/myAccount/<%= user.id %>">mi perfil</a></li>
+                            <li><a class="a-nav" href="user/admin">panel administrador</a></li>
+                            <li><a class="a-nav" href="user/un-login">cerrar sesion</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="/product/CarritoDeCompras"><img src="./img/icons_images/carrito-de-compras.svg"alt="carrito"class="carrito"></a>
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="titulo-parrafo">
+                <h1 class="titulo-header">La Vie Naturelle</h1>
+                <p class="parrafo-header">Cosmética natural, amigable con el medio ambiente, hecha
+                    artesanalmente con productos naturales, compostables y cruelty free🌾✨🌍</p>
+                <p class="parrafo-header">producto de calidad y gran diseño</p>
+            </div>
+    
+        </div>
         </header>
 
         <section id="section-index">
             <div class="info">
                 <div class="cuadro">
+                    <a href="/product/DetalleDeProducto">
                     <div class="tarjeta">
                         <div>
                             <h3>Shampoo Sólido</h3>
@@ -65,12 +73,14 @@
                                 esenciales, que dejara tu cabello suave y brillante.</p>
                         </div>
                         <div class="boton-carrito-index">
-                            <a href="/product/DetalleDeProducto" class="carrito-index">ver más</a>
+                            
                         </div>
                         <div class="imagenes-index">
                             <img src="./img/products_images/shampoo solido graso.jpeg">
                         </div>
                     </div>
+                </a>
+                <a href="/product/DetalleDeProducto">
                     <div class="tarjeta">
                         <div>
                             <h3>Jabones sólidos</h3>
@@ -80,12 +90,13 @@
                                 mantendra tu piel hidratada.</p>
                         </div>
                         <div class="boton-carrito-index">
-                            <a href="/product/DetalleDeProducto" class="carrito-index">ver más</a>
                         </div>
                         <div class="imagenes-index">
                             <img src="./img/products_images/jabon_exfoliante_1.jpeg" alt="imagen acondicionador">
                         </div>
                     </div>
+                </a>
+                <a href="/product/DetalleDeProducto">
                     <div class="tarjeta">
                         <div>
                             <h3>Acondicionador sólido</h3>
@@ -95,12 +106,13 @@
                                 suave. Es libre de siliconas.</p>
                         </div>
                         <div class="boton-carrito-index">
-                            <a href="/product/DetalleDeProducto" class="carrito-index">ver más</a>
                         </div>
                         <div class="imagenes-index">
                             <img src="./img/products_images/acondicionador_normal.jpeg" alt="imagen producto 3">
                         </div>
                     </div>
+                    </a>
+                    <a href="/product/DetalleDeProducto" class="carrito-index">
                     <div class="tarjeta">
                         <div>
                             <h3>Desodorante Sólido</h3>
@@ -111,18 +123,18 @@
                             </p>
                         </div>
                         <div class="boton-carrito-index">
-                            <a href="/product/DetalleDeProducto" class="carrito-index">ver más</a>
                         </div>
                         <div class="imagenes-index">
                             <img src="./img/products_images/desodorante.jpg"
                                 alt="imagen producto 4">
                         </div>
                     </div>
+                </a>
                 </div>
             </div>
             <%- include('./partials/ultimosProductos')%>
         </section>
-
+        <script src="\js\index.js"></script>
         <%- include('./partials/footer') %>
     </body>
 
