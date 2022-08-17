@@ -55,8 +55,8 @@ body {
 
 .foto.usuario {
     position: fixed;
-    width: 50px;
-    height: 50px;
+    width: 3.3vw;
+    height: 3.3vw;
     border-radius: 200px;
     border: solid 1px;
     align-items: center;
@@ -88,7 +88,7 @@ a {
 }
 
 #menu.mostrar {
-    top: 60px;
+    top: 3.8vw;
     left: 65vw;
 }
 
