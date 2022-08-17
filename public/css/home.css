@@ -211,6 +211,12 @@ p.parrafo-header {
 
 }
 
+.cuadro2 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
 .producto-nuevo {
     background-color: #fce4d4;
     margin: 1%;
