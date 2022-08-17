@@ -29,6 +29,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: nowrap;
     height: 2vw;
 }
 
@@ -103,11 +104,12 @@ li {
     margin-top: 14px;
     justify-content: flex-start;
 }
-a.a-nav:hover{
+li:hover{
     color: rgb(185, 121, 74);
 }
 
 .wrap {
+
     height: 50vw;
     display: flex;
     align-items: center;
@@ -132,102 +134,4 @@ p.parrafo-header {
 
 .titulo-parrafo {
     color: white;
-}
-
-
-#section-index {
-    background-color: #cdbd9d;
-    display: flex;
-    flex-direction: column;
-}
-
-.cuadro {
-    width: 100%;
-    max-width: 1200px;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 5rem;
-}
-
-.cuadro .tarjeta {
-    width: 250px;
-    height: 460px;
-    border-radius: 8px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 20px;
-    transition: all 0.25s;
-    background-color: #ffebe0;
-    text-align: center;
-}
-
-.cuadro .tarjeta:hover {
-    transform: translateY(-15px);
-    box-shadow: o 12px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.cuadro .tarjeta img {
-    width: 185px;
-    height: 190px;
-    margin-top: 50px;
-}
-
-.cuadro .tarjeta h3 {
-    font-weight: 600;
-    text-align: center;
-}
-
-.cuadro .tarjeta p {
-    padding: 0.3rem;
-    font-size: 16px;
-    font-weight: 300;
-    text-align: center;
-}
-
-.cuadro .tarjeta a {
-    text-decoration: none;
-}
-
-.ultimos-productos {
-    background-color: #cdbd9d;
-}
-
-.cuadro2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.background-fondo-productos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    margin: 3%;
-    padding: 3%;
-
-}
-
-.producto-nuevo {
-    background-color: #fce4d4;
-    margin: 1%;
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 30px;
-    text-align: center;
-    box-shadow: #464646;
-}
-
-.new-producto img {
-    padding: 10%;
-    width: 280%;
-    height: 300px;
-    border-radius: 20%;
-}
-
-.info {
-    display: flex;
-    justify-content: center;
 }
