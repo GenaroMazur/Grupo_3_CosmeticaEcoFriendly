@@ -134,7 +134,7 @@ a {
     background:#a39883;
     width: 15vw;
     height: 145px;
-    top: 3000px;
+    top: -200px;
     z-index: 10;
     border-radius: 7px;
 }
