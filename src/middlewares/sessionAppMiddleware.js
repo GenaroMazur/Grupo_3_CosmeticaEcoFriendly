@@ -10,6 +10,7 @@ module.exports=function (req, res, next){
         req.session.user = req.cookies.remember
     } else if (req.cookies == undefined && req.session.user == undefined) {
         req.session.user = {status : "guest"}
+        req.session.user.image="default.jpg"
     }
     return next()
 }

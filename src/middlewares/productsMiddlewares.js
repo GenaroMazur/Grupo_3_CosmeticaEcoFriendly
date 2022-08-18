@@ -41,7 +41,7 @@ productsMiddlewares = {
                     })
             }
 
-            return res.render("newProduct", { errors: validaciones.mapped(), old: req.body })
+            return res.render("newProduct", { errors: validaciones.mapped(), old: req.body, user: req.session.user })
         } else {
             return next()
         }
