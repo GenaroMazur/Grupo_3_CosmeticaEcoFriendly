@@ -237,3 +237,52 @@ p.parrafo-header {
     display: flex;
     justify-content: center;
 }
+@media(max-width:480px){
+
+    .pos {
+        position: fixed;
+        width: 100vw;
+        height: 9.7vw;
+        z-index: 10;
+        background: #cdbd9d;
+        top: 0px;
+    }
+
+    .carrito {
+    width: 4vw;
+}
+
+    #menu.mostrar {
+        top: 7vw;
+        left: 67vw;
+    }
+    
+    
+
+    #menu {
+        
+        position: absolute;
+        background: #a39883;
+        width: 33vw;
+        height: 145px;
+        top: 3000px;
+        z-index: 10;
+        border-radius: 7px;
+    }
+
+    .nav.navegacion {
+        display: flex;
+        margin: 4vw 45px 0px 20px;
+    }
+    
+    .foto.usuario {
+        position: fixed;
+        width: 5vw;
+        height: 5vw;
+        border-radius: 200px;
+        border: solid 1px;
+        align-items: center;
+        left: 78vw;
+        top: 2vw;
+    }
+}
