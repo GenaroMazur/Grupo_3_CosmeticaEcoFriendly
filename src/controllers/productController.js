@@ -59,7 +59,9 @@ const productController = {
     },
 
     //----------- database ------------
-
+    createProduct_v2:function(req, res) {
+        
+    },
     productCard_v2:function (req, res) {
         db.Order.findAll()
             .then(cart=>{
