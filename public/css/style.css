@@ -281,7 +281,7 @@ footer a {
     }
 
 }
-@media(min-width:480px){
+@media(max-width:480px){
 .menu-navegacion {
     position: fixed;
     top: 0;
