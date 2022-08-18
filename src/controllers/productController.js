@@ -81,9 +81,10 @@ const productController = {
             })
     },
     productDetail_v2: function (req, res){
-        db.Product.findAll()
-            .then(products=>{
-                res.render("productDetail",{products, user: req.session.user})
+
+        db.Product.findByPk(req.params.id) //Buscará el producto por su id
+            .then(product=>{
+                res.render("productDetail",{product, user: req.session.user})
             })
             .catch(err=>{
                 console.log(err);
