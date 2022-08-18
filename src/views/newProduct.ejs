@@ -57,6 +57,18 @@
                             <% } %>>
                         </div>
                         <div>
+                            <label for="ingredients">Ingredientes</label>
+                            <input type="text" name="ingredients" id="ingredients" class="textArea"<% if (locals.old && old.ingredients) { %>
+                                value="<%= old.ingredients %>"
+                            <% } %>>
+                        </div>
+                        <div>
+                            <label for="modeOfUse">Modo de uso</label>
+                            <input type="text" name="modeOfUse" id="modeOfUser" class="textArea"<% if (locals.old && old.modeOfUse) { %>
+                                value="<%= old.modeOfUse %>"
+                            <% } %>>
+                        </div>
+                        <div>
                             <label for="grams">Cantidad</label>
                             <select name="grams" id="grams" class="textArea">
                                 <option value="70">70 gramos</option>
