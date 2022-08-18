@@ -8,7 +8,7 @@ const userController = {
 
     //pagina de login
     login: (req, res) => {
-        return res.render("login")
+        return res.render("login",{ user: req.session.user})
     },
     unlogin: (req, res) => {
         req.session.user.status="guest"
@@ -19,7 +19,7 @@ const userController = {
 
     //pagina de registro
     register: (req, res) => {
-        return res.render("register")
+        return res.render("register",{ user: req.session.user})
     },
 
     //panel de administrador
@@ -97,17 +97,17 @@ const userController = {
     //------------ database --------------
 
     admin_v2:function(req, res) {
-        let adminName = req.session.user.username 
+        let adminId = req.session.user.id
         admin = db.User.findOne({
             where:{
-                "username": adminName
+                "id": adminId
             }
         })
         products = db.Product.findAll()
 
         Promise.all([admin, products]).then(([admin, products])=>{
 
-            res.render("admin",{admin, products})
+            res.render("admin",{admin, products, user: req.session.user})
         }).catch(err =>{
 
             console.log(err);
@@ -118,7 +118,7 @@ const userController = {
     userPanel_v2:function (req, res) {
         db.User.findAll()
             .then(users=>{
-                return res.render("userPanel",{users})
+                return res.render("userPanel",{users, user: req.session.user})
             })
             .catch(err=>{
                 console.log(err);
@@ -128,6 +128,7 @@ const userController = {
     myAccount_v2:function (req, res) {
         db.User.findByPk(req.params.id)
             .then(user =>{
+                user.status = req.session.user.status
                 res.render("myAccount",{user, edit:false})
             })
             .catch(err => {
@@ -138,6 +139,7 @@ const userController = {
     editAccount_v2: function (req, res) {
         db.User.findByPk(req.params.id)
             .then(user=>{
+                user.status = req.session.user.status
                 res.render("myAccount",{user, edit:true})
             })
             .catch(err=>{
@@ -203,7 +205,8 @@ const userController = {
         req.session.user ={
             id:user.id,
             username:user.username,
-            status:user.status.dataValues.nameStatus
+            status:user.status.dataValues.nameStatus,
+            image:user.image
         } 
         if (req.body.remember) {
             res.cookie("remember",req.session.user,{maxAge : 3600000*12})

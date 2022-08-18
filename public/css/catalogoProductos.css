@@ -114,6 +114,11 @@ fieldset{
     justify-content: space-between;
 
 }
+
+.carousel_productos {
+    display: contents;
+}
+
 .productos{
     display: flex;
     justify-content: space-around;
@@ -166,6 +171,7 @@ aside {
     margin-right: 0.4vw;
     padding: 1.5vw;
 }
+
 ul{
     list-style: none;
 }
@@ -176,4 +182,95 @@ li:hover {
 ion-icon {
     color: black;
     font-size: 25px;
+}
+
+@media(min-width:900px){
+    aside {
+        visibility: visible;
+    }
+    .category{
+        display: none;
+    }
+}
+@media(max-width:480px){
+
+    aside {
+        display: none;
+    }
+
+    .category{
+        visibility: visible;
+    }
+
+    main {
+        display: flex;
+        /* flex-wrap: nowrap; */
+        flex-direction: column;
+    }
+    .menu {
+        background: #a39883;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        width: 100vw;
+        padding: 3vw;
+    }
+
+    label {
+        display: flex;
+        align-self: center;
+        font-size: 1.8vw;
+    }
+
+    input[type="search"] {
+        border-radius: 30px;
+        text-align: center;
+        width: 20vw;
+        font-size: 2vw;
+        background-color: #fafafa;
+    }
+
+    .icono.de.busqueda {
+        display: flex;
+        align-items: center;
+        margin-right: 1vw;
+    }
+
+    select {
+        border-radius: 1vw;
+        font-size: 2vw;
+        width: 19vw;
+    }
+
+    .producto {
+        display: flex;
+        background: #efd8aa;
+        flex-direction: column;
+        text-align: center;
+        width: 21.3vw;
+    }
+    
+    .img.product {
+        width: 22vw;
+        height: 21vw;
+        margin-top: 2vw;
+    }
+
+    .precio {
+        font-size: 2.2vw;
+        display: flex;
+        justify-content: space-around;
+    }
+    .nombre {
+        font-size: 2.3vw;
+    }
+    
+   .iconoFIlter {
+    display: flex;
+    margin-top: 2.8vw;
+} 
+    
+
+    
 }

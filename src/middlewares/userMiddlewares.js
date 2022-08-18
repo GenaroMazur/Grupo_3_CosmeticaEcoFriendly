@@ -70,7 +70,7 @@ const userMiddlewares = {
                         })
                     })
             }
-            return res.render("register", { errors: validaciones.mapped(), old: req.body })
+            return res.render("register", { errors: validaciones.mapped(), old: req.body, user: req.session.user })
         } else {
             return next()
         }
@@ -127,7 +127,7 @@ const userMiddlewares = {
     login:function (req, res, next) {
         let validaciones = validationResult(req)
         if ( !validaciones.isEmpty() ) {
-            res.render ("login", {errors : validaciones.mapped(), old : req.body})
+            res.render ("login", {errors : validaciones.mapped(), old : req.body, user: req.session.user})
         } else {
             next()
         }

@@ -10,12 +10,12 @@ const mainController = {
 
      //pagina de nosotros
      nosotros: (req, res) => {
-          return res.render('nosotros',{status :req.session.user})
+          return res.render('nosotros',{status :req.session.user, user: req.session.user})
      },
 
      //pagina de contacto
      contacto: (req, res) => {
-          return res.render('contacto',{status :req.session.user})
+          return res.render('contacto',{status :req.session.user, user: req.session.user})
      },
 
      //---------- database ------------
@@ -27,7 +27,7 @@ const mainController = {
                })
                .catch(err=>{
                     console.log(err);
-                    res.render("maintain")
+                    res.render("maintain",{ user: req.session.user})
                })
      }
 }
