@@ -149,7 +149,6 @@ const userController = {
         let dateCreation=new Date()
         let month=dateCreation.getMonth()+1
         dateCreation=dateCreation.getFullYear()+"-"+month+"-"+dateCreation.getDate()
-        console.log(dateCreation);
         db.User.create({
             dateCreation:dateCreation,
             username : req.body.username,
@@ -182,13 +181,14 @@ const userController = {
     },
     putAccount_v2:function(req, res){
         let user = req.foundUserId
-            let form = req.body
-            let userDb= user.dataValues
-            for(let key in user.dataValues){
-                if (user.dataValues[key] != form[key] && form[key]){
-                    userDb[key] = form[key]
-                }
+        let form = req.body
+        form.image = req.file.filename
+        let userDb= user
+        for(let key in user){
+            if (user[key] != form[key] && form[key]){
+                userDb[key] = form[key]
             }
+        }
         db.User.update(userDb,{where:{id:userDb.id}})
         .then(()=>{
             res.redirect("/user/myAccount/"+req.params.id)

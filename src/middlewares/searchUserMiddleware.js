@@ -7,7 +7,6 @@ module.exports=function (req, res, next){
         .then(user=>{
             if(user != null){
                 req.foundUser = user.dataValues
-            console.log(req.foundUser);
         }
         return next()
     })
