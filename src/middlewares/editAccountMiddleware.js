@@ -23,6 +23,7 @@ module.exports=function(req, res, next){
                     })
             }
             let user = req.foundUserId
+            user.status = req.session.user.status
             res.render("myAccount",{edit:true,errors : validaciones.mapped(), old : req.body,user})
         } else {
             next()

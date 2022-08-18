@@ -5,11 +5,11 @@ const modelsController = require("./../models/modelsController")
 const productController = {
     //pagina de carrito de compras
     productCard: (req, res) => {
-        return res.render("productCard",{status :req.session.user})
+        return res.render("productCard",{status :req.session.user, user: req.session.user})
     },
     //pagina de catalogo de productos
     catalogoProductos: (req, res) => {
-        return res.render("catalogoProductos")
+        return res.render("catalogoProductos",{ user: req.session.user})
     },
     //pagina del detalle del producto
     productDetail: (req, res) => {
@@ -19,7 +19,7 @@ const productController = {
 
     //pagina de nuevo producto
     newProduct: (req, res) => {
-        res.render("newProduct")
+        res.render("newProduct", {user: req.session.user})
     },
 
     //pagina edicion de producto
@@ -46,7 +46,7 @@ const productController = {
             category : req.body.category,
             image : req.file.filename
         }
-        modelsController.FnCreate("products", newProduct)
+        modelsController.FnCreate("products", {newProduct, user: req.session.user})
 
         res.redirect("/product/DetalleDeProducto")
     },
@@ -73,7 +73,7 @@ const productController = {
     catalogoProductos_v2: function (req, res){
         db.Product.findAll()
             .then(products=>{
-                res.render("catalogoProductos",{products})
+                res.render("catalogoProductos",{products, user: req.session.user})
             })
             .catch(err=>{
                 console.log(err);
@@ -83,7 +83,7 @@ const productController = {
     productDetail_v2: function (req, res){
         db.Product.findAll()
             .then(products=>{
-                res.render("productDetail",{products})
+                res.render("productDetail",{products, user: req.session.user})
             })
             .catch(err=>{
                 console.log(err);
@@ -93,7 +93,7 @@ const productController = {
     editProduct_v2: function (req, res) {
         db.Product.findByPk(req.params.idProduct)
             .then(product=>{
-                res.render("editProduct",{product})
+                res.render("editProduct",{product, user: req.session.user})
             })
             .catch(err=>{
                 console.log(err);
