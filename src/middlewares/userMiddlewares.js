@@ -164,8 +164,6 @@ const userMiddlewares = {
             .isEmail().withMessage("El correo electronico debe tener un formato valido").bail()
             .custom((value,{req})=>{
                 let userFound = req.foundUser
-                console.log("hasta aqui llegue hdp");
-                console.log(userFound);
                 if (userFound) {
                     throw new Error ("Este correo ya existe")
                 }

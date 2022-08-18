@@ -11,7 +11,10 @@ const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware");
 const authUserMiddleware = require ("./../middlewares/authUserMiddleware");
 const authGuestMiddleware = require ("./../middlewares/authGuestMiddleware");
 const maintainMiddleware = require ("./../middlewares/maintainMiddleware");
-const searchUserMiddleware = require("./../middlewares/searchUserMiddleware")
+const searchUserMiddleware = require("./../middlewares/searchUserMiddleware");
+const searchEditUserMiddleware = require("./../middlewares/searchEditUserMiddleware");
+const editAccountMiddleware = require("./../middlewares/editAccountMiddleware")
+const validationsEditMiddleware = require("./../middlewares/validationsEditMiddleware")
 
 //GET
 routes.get("/login",
@@ -50,7 +53,13 @@ routes.post("/login",
     userController.loginUser_v2);
     
 //PUT
-    
+routes.put("/editAccount/:id",
+    multerMiddleware.usersImage().single("image"),
+    searchUserMiddleware,
+    searchEditUserMiddleware,
+    validationsEditMiddleware,
+    editAccountMiddleware,
+    userController.putAccount_v2)
 //DELETE
 routes.delete("/delete/:id",
     userController.delete_v2);
