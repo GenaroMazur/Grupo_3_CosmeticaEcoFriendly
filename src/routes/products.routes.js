@@ -15,7 +15,7 @@ const productController = require("./../controllers/productController");
 routes.get("/CarritoDeCompras",
     authUserMiddleware, 
     productController.productCard_v2);
-routes.get("/DetalleDeProducto", productController.productDetail_v2);
+routes.get("/DetalleDeProducto/:id", productController.productDetail_v2);
 routes.get("/catalogoProductos", productController.catalogoProductos_v2);
 routes.get("/newProduct",
     authAdminMiddleware,
