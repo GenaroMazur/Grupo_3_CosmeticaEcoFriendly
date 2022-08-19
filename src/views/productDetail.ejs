@@ -17,9 +17,9 @@
                             <div class="fav">
                             <ion-icon name="heart-sharp" id="favorito-icon" ></ion-icon>
                             </div>
-                           <h2 class = "name"><%= product.nameProduct%></h2>
+                           <h2 class = "name"><%= products.nameProduct%></h2>
                             <div class="precio-detalle">
-                                <h3 class="price"><%= product.price%></h3>
+                                <h3 class="price"><%= products.price%></h3>
                                 <h3 class="cantidad">Cantidad:</h3>
                                 <input type ="number"  min="0" max="100" placeholder="1" id="input_product">
                             </div>
@@ -42,15 +42,15 @@
                     <nav class="bloque2">
                         <details class="informacion-producto">
                             <summary class="summary1">Descripcion</summary>
-                            <p><%= product.descriptionProduct%></p>
+                            <p><%= products.descriptionProduct%></p>
                         </details>
                         <details class="informacion-producto">
                             <summary class="summary2">Ingredientes</summary>
-                            <p><%= product.ingredients%></p>
+                            <p><%= products.ingredients%></p>
                         </details>
                         <details class="informacion-producto">
                             <summary class="summary3">Modo de Uso</summary>
-                            <p><%= product.modeOfUse%></p>
+                            <p><%= products.modeOfUse%></p>
                                 <div class="mododeuso">
                                     <img src="./../img/lavie_images/mododeuso.png" alt="imagen mododeuso">
                                 </div>
