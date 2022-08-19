@@ -192,6 +192,9 @@ p.parrafo-header {
 
 .ultimos-productos {
     background-color: #cdbd9d;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .cuadro2 {
@@ -214,7 +217,6 @@ p.parrafo-header {
 .cuadro2 {
     display: flex;
     flex-direction: column;
-    align-content: center;
 }
 
 .producto-nuevo {
