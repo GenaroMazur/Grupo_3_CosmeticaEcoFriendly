@@ -197,3 +197,52 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 
 ### Leandro Joel Ramos:
 - Lo que hice fue arreglar un poco más el panel de administrador junto con su aside, agregué alertas en los formularios de el registro de usuarios y tuve como inconveniente algunos problemas de salud asi que ahora me encargaré de terminal el panel de usuario, agregarle los estilos y agarrar alguna tarea pendiente.
+
+
+### Daily 01/08
+
+### Fabricio Saucedo:
+- Me dediqué a armar el diagrama de nuestra base de datos esta semana con algunos inconvenientes en el tiempo para trabajar con el grupo. A partir de hoy, modificaré la DER adaptándola mejor, armar la estructura y poblarla de datos.
+
+### Genaro Mazur:
+- Configuré el sequelize, quité las vulnerabilidades del package.json, agregué una lista de mantenimiento (un middleware) y no tuve ningún inconveniente con una semana bastante tranquila. A partir de ahora me fijaré el tema si hay algun error sobre el diagrama.
+
+### Camila Morand:
+- Arreglé la vista detalle del producto, ayudé en el diagrama de entidad relación y sin ningún inconveniente. Entonces me dedicaré a las tareas asignadas en el trello.
+
+### Leandro Joel Ramos:
+- No pude terminar a tiempo la vista de catalogo por inconvenientes de tiempo, asi que me propondré terminar esa vista junto con la ayuda de mis compañeros.
+
+### Daily 08/08
+
+### Fabricio Saucedo:
+- Me encargué de la estructura de la base de datos, modifiqué la DER adaptándola mejor a las necesidades y con ciertas complicaciones tiempo así que terminaré de poblar con datos el archivo data.sql y ayudaré al departamento de front-end en la vista home.
+
+
+### Genaro Mazur:
+- Lo que hice fue arreglar temas de middlewares y de ejs (de rendimiento), implementé por primera vez las config de sequelize y el intento de la base de datos, de las relaciones. siendo este finde implemente de una mejor forma las relaciones. Hice muchos cambios en vista del mantenimiento, los controladores necesarios, importé la db. Como inconvenientes: mis archivos a veces se corrompen y pierdo lo que he hecho hasta el momento y tengo que volver hacerlo. Voy a hacer funcionar los controladores de usuarios y productos, osea, hacer que funcione el CRUD de usuarios y productos para la proxima reunion.
+
+
+### Camila Morand:
+- Arreglé la vista de carrito, terminé de arreglar el diseño de la vista del detalle del producto. cambie los colores de la vista de catálogo y lo que nos faltaría de modificar es la vista de home. Ayudé a armar la tabla de delivery, Fragrance, statusCart. Complicaciones: en las medias queries de las vista de detalle del producto y en el carrito. A partir de hoy voy a centrarme en arreglar las queries.
+
+### Leandro Joel Ramos:
+- Ayudé a Camila a cambiar los colores de la vista de catálogos, y algunas funcionalidades más como el botón de favoritos. Como inconveniente: el workbench, que no me corre en la notebook. Me encargaré de hacer la vista de favoritos, la vista de mantenimineto y fixear la vista home.
+
+
+### Daily 15/08
+
+### Fabricio Saucedo:
+- Logré poblar la base de datos, ayudé en implementar la lógica en el catálogo de productos, y tuve problemas en el detalle del producto que por temas de tiempo no pude hacer funcionar esa vista. Lo que voy a hacer es hacer funcionar la vista detalle del producto implementando bien la lógica y comenzar a ver el tema de formularios con las validaciones. 
+
+
+### Genaro Mazur:
+- Implementé el CRUD de usuarios al 100% usando las base de datos, junto con algunos temas de configuraciones de los modelos, implementé las validaciones para quese hagan a xampp. Mis complicaciones fueron pocas, como el tiempo como siempre y voy a tratar de terminar el CRUD de productos.
+
+
+### Camila Morand:
+- Arreglé las vistas de carrito, media queries del detalle del producto, cambié los nombres de las imágene pero me faltó los cambios de la vista home. Tuve inconvenientes, con el worbench y el xampp pero los pude solucionar entonces me voy a dedicar a terminar de pulir la vista de carrito.
+
+
+### Leandro Joel Ramos:
+- Lo que hic fue rehacer la página entera del index y del catálogo y le hice rsponsive. Agregué lógica del frontend al index. Tuve inconvenientes porque tenía windows de 32 bits, y me daba problemas con el xampp y el worbench, tuve virus, malwares y tardé en limpiarlos. Ahora, voy a implementar lógica frontend, quitaré el menú hamburguesa de ahora y lo sustituiré por otro.
