@@ -4,7 +4,7 @@ module.exports = function (req, res, next) {
     } else if(req.session.user.status == "User"){
         res.redirect("/")
     } else {
-        res.send("/user/login")
+        res.redirect("/user/login")
     }
     
 }

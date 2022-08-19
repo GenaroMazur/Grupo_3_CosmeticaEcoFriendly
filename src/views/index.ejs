@@ -34,14 +34,22 @@
     
                 <div class="nav usuario">
                     <div class="imagen">
-                        <img src="./../../img/users_images/leandroramos1657584227715.jpg" alt="Foto de perfil de usuario"
+                        <img src="./../../img/users_images/<%= user.image %>" alt="Foto de perfil de usuario"
                             class="foto usuario">
                     </div>
                     <div id="menu">
                         <ul>
-                            <li><a class="a-nav" href="user/myAccount/<%= user.id %>">mi perfil</a></li>
-                            <li><a class="a-nav" href="user/admin">panel administrador</a></li>
-                            <li><a class="a-nav" href="user/un-login">cerrar sesion</a></li>
+                            <% if (user.status == "Admin") { %>
+                                <li><a class="a-nav" href="user/myAccount/<%= user.id %>">mi perfil</a></li>
+                                <li><a class="a-nav" href="user/admin">panel administrador</a></li>
+                                <li><a class="a-nav" href="user/un-login">cerrar sesion</a></li>
+                            <% } else if (user.status == "User"){ %>
+                                <li><a class="a-nav" href="user/myAccount/<%= user.id %>">mi perfil</a></li>
+                                <li><a class="a-nav" href="user/un-login">cerrar sesion</a></li>
+                            <% }  else {%>
+                                    <li><a class="a-nav" href="user/login">Iniciar sesion</a></li>
+                                    <li><a class="a-nav" href="user/registro">Registrarse</a></li>
+                            <% } %>
                         </ul>
                     </div>
 

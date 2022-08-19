@@ -10,13 +10,20 @@ body {
     margin: 0px 0px;
     background-color: #cdbd9d;
 }
+
+.catalogo {
+    width: 100%;
+    max-width: 100vw;
+}
+
 .menu{
     background: #a39883;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
-    padding: 3rem;
+    width: 100vw;
+    padding: 3vw;
 }
 .boton {
     border-radius: 30px;
@@ -70,11 +77,12 @@ select {
     border-radius: 10px;
 }
 
-.flecha:hover{
-    background-color: #e3d8c6;;
+.flecha {
     display: flex;
     align-items: center;
-    padding: 180px 0px 180px 0px;
+}
+.flecha:hover{
+    background-color: #e3d8c6;;
 }
 
 .decoration-off {
@@ -84,11 +92,11 @@ select {
 
 .catalogo {
     display: flex;
+    width: 100%;
+    max-width: 100vw;
     flex-direction: column;
     background: #ffebe0;
-    inline-size: -webkit-fill-available;
-    padding-left: 15px;
-    margin-top: 10px;
+    margin-top: 0.7vw;
 }
 
 main {
@@ -97,17 +105,23 @@ main {
 }
 
 fieldset{
-    margin: 30px;
-    padding: 20px 4px 20px 4px;
+    margin: 1vw;
+    padding: 1vw 0.1vw 1vw 0.1vw;
 }
 
 .box{
     display: flex;
-    align-items: center;
     justify-content: space-between;
+
 }
+
+.carousel_productos {
+    display: contents;
+}
+
 .productos{
-    display:flex;
+    display: flex;
+    justify-content: space-around;
 
 }
 .producto {
@@ -115,14 +129,14 @@ fieldset{
     background: #efd8aa;
     flex-direction: column;
     text-align: center;
-    width: 200px;
-    margin-right: 5px;
+    width: 15vw;
 }
 
+
 .img.product {
-    width: 199px;
-    height: 230px;
-    margin-top: 10px;
+    width: 15vw;
+    height: 16vw;
+    margin-top: 1vw;
 }
 
 .precio{
@@ -154,9 +168,10 @@ h5.stocker {
 aside {
     display: flex;
     background: #cdbd9d;
-    margin-right: 7px;
-    padding: 3rem;
+    margin-right: 0.4vw;
+    padding: 1.5vw;
 }
+
 ul{
     list-style: none;
 }
@@ -167,4 +182,95 @@ li:hover {
 ion-icon {
     color: black;
     font-size: 25px;
+}
+
+@media(min-width:900px){
+    aside {
+        visibility: visible;
+    }
+    .category{
+        display: none;
+    }
+}
+@media(max-width:480px){
+
+    aside {
+        display: none;
+    }
+
+    .category{
+        visibility: visible;
+    }
+
+    main {
+        display: flex;
+        /* flex-wrap: nowrap; */
+        flex-direction: column;
+    }
+    .menu {
+        background: #a39883;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        width: 100vw;
+        padding: 3vw;
+    }
+
+    label {
+        display: flex;
+        align-self: center;
+        font-size: 1.8vw;
+    }
+
+    input[type="search"] {
+        border-radius: 30px;
+        text-align: center;
+        width: 20vw;
+        font-size: 2vw;
+        background-color: #fafafa;
+    }
+
+    .icono.de.busqueda {
+        display: flex;
+        align-items: center;
+        margin-right: 1vw;
+    }
+
+    select {
+        border-radius: 1vw;
+        font-size: 2vw;
+        width: 19vw;
+    }
+
+    .producto {
+        display: flex;
+        background: #efd8aa;
+        flex-direction: column;
+        text-align: center;
+        width: 21.3vw;
+    }
+    
+    .img.product {
+        width: 22vw;
+        height: 21vw;
+        margin-top: 2vw;
+    }
+
+    .precio {
+        font-size: 2.2vw;
+        display: flex;
+        justify-content: space-around;
+    }
+    .nombre {
+        font-size: 2.3vw;
+    }
+    
+   .iconoFIlter {
+    display: flex;
+    margin-top: 2.8vw;
+} 
+    
+
+    
 }

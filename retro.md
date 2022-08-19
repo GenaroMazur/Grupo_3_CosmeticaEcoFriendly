@@ -97,3 +97,25 @@ Viendo los avances como grupo y consolidándonos cada vez más, mantuvimos nueva
 
 ### Stop Doing: 
 - Faltar a las dailys. 
+
+
+## Sprint-5-Restrospectiva
+
+### Start Doing: 
+- Salir a otros lugares y no solo en una casa a codear.
+
+### More of:
+- Juntarnos más a codear juntos.
+- Más opiniones de como mejorar la página.
+- Más coordinación y organización en las tareas. 
+ 
+### Keep Doing: 
+- Seguir con las dailys de los Lunes.
+- Ser así de proactivos como lo estamos haciendo.
+
+### Less of: 
+- Dejar las tareas a último momento.
+- Dormirse en horas de las reuniones.
+
+### Stop Doing: 
+- Faltar a las dailys. 

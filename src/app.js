@@ -46,5 +46,5 @@ app.listen(port, () => {
 //Importa las rutas
 app.use("/", routes)
 app.use((req, res, next) => {
-    res.status(404).render("not-found")
+    res.status(404).render("not-found",{ user: req.session.user})
 })
