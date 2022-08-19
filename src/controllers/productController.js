@@ -86,7 +86,7 @@ const productController = {
 
         db.Product.findByPk(req.params.id) //Buscará el producto por su id
             .then(product=>{
-                res.render("productDetail",{products:products})
+                res.render("productDetail",{product:product})
             })
             .catch(err=>{
                 console.log(err);
