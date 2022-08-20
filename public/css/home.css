@@ -252,7 +252,7 @@ p.parrafo-header {
 
     .carrito {
     width: 4vw;
-}
+    }
 
     #menu.mostrar {
         top: 7vw;
@@ -287,4 +287,16 @@ p.parrafo-header {
         left: 78vw;
         top: 2vw;
     }
+
+    .background-fondo-productos {
+        display: flex;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        margin: 3%;
+        padding: 3%;
+        flex-direction: column;
+    }
+
 }

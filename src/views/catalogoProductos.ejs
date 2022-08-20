@@ -51,6 +51,15 @@
                         </div>
                         <div>
                             <h1>Fragancias</h1>
+                            <ul>
+                                <li> <label for=""><input type="checkbox" name="" id=""> Menta Limón</label></li>  
+                                <li> <label for=""> <input type="checkbox" name="" id=""> Lavanda </label></li> 
+                                <li> <label for=""> <input type="checkbox" name="" id=""> Naranja  Lima </label></li> 
+                                <li> <label for=""> <input type="checkbox" name="" id=""> Cacao Sándalo </label></li> 
+                                <li> <label for=""> <input type="checkbox" name="" id=""> Herbal</li></label> 
+                                <li> <label for=""> <input type="checkbox" name="" id=""> Café Naranja</label></li> 
+                                <li> <label for=""> <input type="checkbox" name="" id=""> Limón Lima</label></li> 
+                              </ul>
                         </div>
                         <div>
                             <h1>Variantes</h1>
@@ -72,12 +81,27 @@
                         </div>
                         <div>
                             <h1>Filtros</h1>
+                            <ul>
+
+                            </ul>
                         </div>
                         <div>
                             <h1>Fragancias</h1>
+                            <ul>
+                              <li> <label for=""><input type="checkbox" name="" id=""> Menta Limón</label></li>  
+                              <li> <label for=""> <input type="checkbox" name="" id=""> Lavanda </label></li> 
+                              <li> <label for=""> <input type="checkbox" name="" id=""> Naranja  Lima </label></li> 
+                              <li> <label for=""> <input type="checkbox" name="" id=""> Cacao Sándalo </label></li> 
+                              <li> <label for=""> <input type="checkbox" name="" id=""> Herbal</li></label> 
+                              <li> <label for=""> <input type="checkbox" name="" id=""> Café Naranja</label></li> 
+                              <li> <label for=""> <input type="checkbox" name="" id=""> Limón Lima</label></li> 
+                            </ul>
                         </div>
                         <div>
                             <h1>Variantes</h1>
+                            <ul>
+
+                            </ul>
                         </div>
                     </div>
                 </aside>
@@ -240,10 +264,11 @@
                                 <ion-icon name="arrow-undo-circle-outline" role="img" class="md hydrated"
                                     aria-label="arrow undo circle outline"></ion-icon>
                             </div>
-                                <div class="carousel_productos">
-                                    <% for (let i=0; i < products.length; i++) { %>
+                            <div class="carousel_productos">
+                                <% for (let i=0; i < products.length; i++) { %>
                                     <div class="productos">
-                                        <a href="/product/DetalleDeProducto/<%= products[i].id %> " class="decoration-off">
+                                        <a href="/product/DetalleDeProducto/<%= products[i].id %> "
+                                            class="decoration-off">
                                             <div class="producto">
                                                 <div class="img product">
                                                     <img src="./../img/products_images/<%= products[i].image%>"
@@ -272,15 +297,15 @@
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>    
+                                    </div>
                                     <% } %>
-                             </div>
+                            </div>
                             <div class="flecha">
                                 <ion-icon name="arrow-redo-circle-outline" role="img" class="md hydrated"
-                                aria-label="arrow redo circle outline"></ion-icon>
+                                    aria-label="arrow redo circle outline"></ion-icon>
                             </div>
-                        </div>  
-                 </fieldset> 
+                        </div>
+                    </fieldset>
             </main>
 
             <%- include('./partials/footer') %>
