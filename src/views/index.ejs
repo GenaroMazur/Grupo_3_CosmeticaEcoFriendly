@@ -41,7 +41,7 @@
                         <ul>
                             <% if (user.status == "Admin") { %>
                                 <li><a class="a-nav" href="user/myAccount/<%= user.id %>">mi perfil</a></li>
-                                <li><a class="a-nav" href="user/admin">panel administrador</a></li>
+                                <li><a class="a-nav" href="user/admin">Admin Panel</a></li>
                                 <li><a class="a-nav" href="user/un-login">cerrar sesion</a></li>
                             <% } else if (user.status == "User"){ %>
                                 <li><a class="a-nav" href="user/myAccount/<%= user.id %>">mi perfil</a></li>

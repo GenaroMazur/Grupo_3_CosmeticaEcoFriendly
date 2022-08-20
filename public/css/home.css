@@ -239,7 +239,7 @@ p.parrafo-header {
     display: flex;
     justify-content: center;
 }
-@media(max-width:480px){
+@media(max-width:500px){
 
     .pos {
         position: fixed;
