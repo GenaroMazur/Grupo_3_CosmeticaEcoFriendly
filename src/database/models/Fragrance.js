@@ -14,7 +14,7 @@ module.exports = function (sequelize, DataTypes) {
 
     Fragrance.associate = function (models) {
         
-        Fragrance.belongsTo(models.Product,{
+        Fragrance.hasMany(models.Product,{
             "as": "fragrance",
             "foreignKey":"idFragrance"
         })
