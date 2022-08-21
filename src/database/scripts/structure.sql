@@ -20,7 +20,7 @@ USE bd_cosmetica;
 
 CREATE TABLE category (
 id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
-categoryName VARCHAR(20) NOT NULL,
+categoryName VARCHAR(25) NOT NULL,
 descriptionCategory TEXT NOT NULL,
 image VARCHAR(60)
 );
@@ -126,3 +126,8 @@ idCart INT,
 FOREIGN KEY(idOrder) REFERENCES orders(id),
 FOREIGN KEY(idCart) REFERENCES cart(id)
 )
+
+
+USE bd_cosmetica;
+ALTER TABLE `bd_cosmetica`.`users` 
+CHANGE COLUMN `image` `image` VARCHAR(60) NULL DEFAULT 'default.jpg' ;
