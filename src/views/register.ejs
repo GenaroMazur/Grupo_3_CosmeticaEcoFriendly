@@ -44,7 +44,7 @@
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </span>
                             </div>
-                            <input type="password" name="password" id="pass" placeholder="contraseña" class="textArea"
+                            <input type="password" name="password" id="pass" placeholder="contraseña" class="textArea password"
                                 <% if (locals.errors && old.password) { %>
                             value=<%= old.password %>
                                 <% } %>>
@@ -57,13 +57,13 @@
                         </div>
                         <div class="wrapp-input">
                             <label for="copass">Confirmar Contraseña</label>
-                            <div class="eyes">
+                            <div class="eye">
                                 <span class="hidden">
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </span>
                             </div>
                             <input type="password" name="coPass" id="copass" placeholder="Confirmar contraseña "
-                                class="textArea" <% if (locals.errors && old.coPass) { %>
+                                class="textArea password" <% if (locals.errors && old.coPass) { %>
                             value=<%= old.coPass %>
                                 <% } %>>
                                     <% if (locals.errors && errors.coPass) { %>
