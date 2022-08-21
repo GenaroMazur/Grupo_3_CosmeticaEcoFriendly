@@ -10,16 +10,16 @@
                 <article class="article-producto">
                     <div class="bloque1">
                         <div class="img">
-                            <img src="./../img/products_images/acondicionador_normal.jpeg" alt="imagen producto 1"
+                            <img src="/img/products_images/<%= products.image%>" alt="imagen producto 1"
                                 class="img-detalle-producto">
                         </div>
                         <div class="precio-cantidad-tipo">
                             <div class="fav">
                             <ion-icon name="heart-sharp" id="favorito-icon" ></ion-icon>
                             </div>
-                           <h2 class = "name"><%= Product.nameProduct%></h2>
+                           <h2 class = "name"><%= products.nameProduct%></h2>
                             <div class="precio-detalle">
-                                <h3 class="price">$590.99</h3>
+                                <h3 class="price"><%= products.price%></h3>
                                 <h3 class="cantidad">Cantidad:</h3>
                                 <input type ="number"  min="0" max="100" placeholder="1" id="input_product">
                             </div>
@@ -42,25 +42,15 @@
                     <nav class="bloque2">
                         <details class="informacion-producto">
                             <summary class="summary1">Descripcion</summary>
-                            <p>Acondicionador capilar sólido nutritivo para largos y puntas. Suaviza, humecta e hidrata
-                                la fibra capilar. Brinda luminosidad. Fortalece el cabello maltratado. pH adecuado.
-                                Producto natural vegano. Libre de parabenos, siliconas, petrolatos, sulfatos, colorantes
-                                y aromas artificiales. No testeado en animales
-                            </p>
+                            <p><%= products.descriptionProduct%></p>
                         </details>
                         <details class="informacion-producto">
                             <summary class="summary2">Ingredientes</summary>
-                            <p>Aceite de primera presión en frío de palta, almendra, coco, ricino, proteína de seda de
-                                origen natural, tensioactivo BTMS (Emulsionante de origen vegetal), manteca de Karité,
-                                glicerina vegetal, aceite esencial de pomelo y verbena. Vitamina E y B5
-                            </p>
+                            <p><%= products.ingredients%></p>
                         </details>
                         <details class="informacion-producto">
                             <summary class="summary3">Modo de Uso</summary>
-                            <p>Después de aplicar el shampoo frotar la pastilla en las manos para que se deshagan y
-                                emulsionen sus aceites y aplicar sobre el cabello mojado (de medios a puntas, o sólo
-                                puntas en caso de cabello fino y/o graso) extendiéndolo con las manos o con un peine.
-                                Dejar actuar unos minutos y aclarar con agua para retirar el posible exceso. </p>
+                            <p><%= products.modeOfUse%></p>
                                 <div class="mododeuso">
                                     <img src="./../img/lavie_images/mododeuso.png" alt="imagen mododeuso">
                                 </div>
@@ -68,7 +58,7 @@
                     </nav>
 
                     <!--bloque 3-->
-                    <%- include('./partials/ultimosProductos')%>
+                    <!--aca va el partials de ultimos productos pero no funciona-->
                 </article>
 
                 <aside>

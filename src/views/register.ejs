@@ -1,85 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include('./partials/head') %>
-<link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/register.css">
     <title>La Vie Naturelle - Register</title>
-<body>
-    <%- include('./partials/header') %>
-    <article class="container" id="register">
-        <section class="form">
-            <img src="/img/lavie_images/la_vie_icon.png" alt="logo registro">
-            <h2>Regístrate</h2>
-            <form method="post" action="/user/registro" enctype="multipart/form-data">
-                <div>    
-                    <label for="name">Nombre del usuario</label>
-                    <input type="text" id="name" name="username" placeholder="Nombre"class="textArea"
-                    <% if (locals.errors && old.username) { %>
-                        value=<%= old.username %> 
-                    <% } %>
-                    >
-                    <% if (locals.errors && errors.username) { %>
-                    <p class="alerta"><%= errors.username.msg %> </p>
-                    <% } %>
-                </div>
-                <div>
-                    <label for="lastname">apellido del usuario</label>
-                    <input type="text" id="lastname" name="lastname" placeholder="apellido"class="textArea"
-                    <% if (locals.errors && old.lastname) { %>
-                        value=<%= old.lastname %>
-                    <% } %>>
-                    <% if (locals.errors && errors.lastname) { %>
-                        <p class="alerta"><%= errors.lastname.msg %> </p>
-                    <% } %>
-                </div>
-                <div class="wrapp-input">
-                    <label for="pass">Contraseña</label>
-                    <input type="password" name="password" id="pass" placeholder="contraseña"class="textArea"
-                    <% if (locals.errors && old.password) { %>
-                        value=<%= old.password %> 
-                    <% } %>>
-                    <% if (locals.errors && errors.password) { %>
-                        <p class="alerta"><%= errors.password.msg %> </p>
-                    <% } %>
-                    <div class="eye">
-                        <span class="hidden"><input type="checkbox"><ion-icon name="eye-outline"></ion-icon></span>
-                    </div>
-                </div>
-                <div class="wrapp-input">
-                    <label for="copass">Confirmar Contraseña</label>
-                    <div class="eye">
-                        <span class="hidden"><input type="checkbox"><ion-icon name="eye-outline"></ion-icon></span>
-                    </div>
-                    <input type="password" name="coPass"id="copass" placeholder="Confirmar contraseña "class="textArea"
-                    <% if (locals.errors && old.coPass) { %>
-                        value=<%= old.coPass %> 
-                    <% } %>>
-                    <% if (locals.errors && errors.coPass) { %>
-                        <p class="alerta"><%= errors.coPass.msg %> </p>
-                        <% } %>
-                </div>
-                <div>
-                    <label for="email">Correo</label>
-                    <input type="email" name="userEmail" id="email" placeholder="Correo"class="textArea"
-                    <% if (locals.errors && old.userEmail) { %>
-                        value=<%= old.userEmail %> 
-                    <% } %>>
-                    <% if ( locals.errors && errors.userEmail) { %>
-                        <p class="alerta"><%= errors.userEmail.msg %> </p>
-                        <% } %>
-                </div>
-                <div>
-                    <label for="file">Foto de perfil</label>
-                    <input type="file" name="image" id="file" accept="image/jpg image/png">
-                    <% if (locals.errors && errors.image) { %>
-                        <p class="alerta"><%= errors.image.msg %> </p>
-                    <% } %>
-                </div>
-                <input type="submit" value="Registrarse"class="button">
-            </form>
-            <p>¿ Ya tienes una cuenta ? <a href="/user/login"><button class="button">Login</button ></a></p>
-            </section>
-        <img src="/img/products_images/acondicionador_seco.jpg" alt="imagen Registro" class="img">
-    </article>
-    <%- include('./partials/footer') %>
-</body>
+
+    <body>
+        <%- include('./partials/header') %>
+            <article class="container" id="register">
+                <section class="form">
+                    <img src="/img/lavie_images/la_vie_icon.png" alt="logo registro">
+                    <h2>Regístrate</h2>
+                    <form method="post" action="/user/registro" enctype="multipart/form-data">
+                        <div>
+                            <label for="name">Nombre del usuario</label>
+                            <input type="text" id="name" name="username" placeholder="Nombre" class="textArea" <% if
+                                (locals.errors && old.username) { %>
+                            value=<%= old.username %>
+                                <% } %>
+                                    >
+                                    <% if (locals.errors && errors.username) { %>
+                                        <p class="alerta">
+                                            <%= errors.username.msg %>
+                                        </p>
+                                        <% } %>
+
+                        </div>
+                        <div>
+                            <label for="lastname">apellido del usuario</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="apellido" class="textArea" <%
+                                if (locals.errors && old.lastname) { %>
+                            value=<%= old.lastname %>
+                                <% } %>>
+                                    <% if (locals.errors && errors.lastname) { %>
+                                        <p class="alerta">
+                                            <%= errors.lastname.msg %>
+                                        </p>
+                                        <% } %>
+                        </div>
+                        <div class="wrapp-input">
+                            <label for="pass">Contraseña</label>
+                            <div class="eye">
+                                <span class="hidden">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </span>
+                            </div>
+                            <input type="password" name="password" id="pass" placeholder="contraseña" class="textArea password"
+                                <% if (locals.errors && old.password) { %>
+                            value=<%= old.password %>
+                                <% } %>>
+                                    <% if (locals.errors && errors.password) { %>
+                                        <p class="alerta">
+                                            <%= errors.password.msg %>
+                                        </p>
+                                        <% } %>
+
+                        </div>
+                        <div class="wrapp-input">
+                            <label for="copass">Confirmar Contraseña</label>
+                            <div class="eye">
+                                <span class="hidden">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </span>
+                            </div>
+                            <input type="password" name="coPass" id="copass" placeholder="Confirmar contraseña "
+                                class="textArea password" <% if (locals.errors && old.coPass) { %>
+                            value=<%= old.coPass %>
+                                <% } %>>
+                                    <% if (locals.errors && errors.coPass) { %>
+                                        <p class="alerta">
+                                            <%= errors.coPass.msg %>
+                                        </p>
+                                        <% } %>
+                        </div>
+                        <div>
+                            <label for="email">Correo</label>
+                            <input type="email" name="userEmail" id="email" placeholder="Correo" class="textArea" <% if
+                                (locals.errors && old.userEmail) { %>
+                            value=<%= old.userEmail %>
+                                <% } %>>
+                                    <% if ( locals.errors && errors.userEmail) { %>
+                                        <p class="alerta">
+                                            <%= errors.userEmail.msg %>
+                                        </p>
+                                        <% } %>
+                        </div>
+                        <div>
+                            <label for="file">Foto de perfil</label>
+                            <input type="file" name="image" id="file" accept="image/jpg image/png">
+                            <% if (locals.errors && errors.image) { %>
+                                <p class="alerta">
+                                    <%= errors.image.msg %>
+                                </p>
+                                <% } %>
+                        </div>
+                        <input type="submit" value="Registrarse" class="button">
+                    </form>
+                    <p>¿ Ya tienes una cuenta ? <a href="/user/login"><button class="button">Login</button></a></p>
+                </section>
+                <img src="/img/products_images/acondicionador_seco.jpg" alt="imagen Registro" class="img">
+            </article>
+            <%- include('./partials/footer') %>
+                <script src="\js\register.js"></script>
+    </body>
+
 </html>
