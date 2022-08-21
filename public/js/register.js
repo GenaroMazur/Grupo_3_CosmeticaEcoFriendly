@@ -1,40 +1,37 @@
 let ojo = document.querySelectorAll(".eye");
-let password = document.querySelectorAll(".password")
+let password = document.querySelectorAll(".password");
+let icon = document.querySelectorAll(".eyeIcon");
+console.log(icon[0].attributes.name.value);
+function ojos(indice) {
+    if (icon[indice].attributes.name.value == "eye-outline") {
+        icon[indice].setAttribute("name", "eye-outline");
+        icon[indice].setAttribute("name", "eye-off-outline");
+    }
+    else {
+        icon[indice].setAttribute("name", "eye-off-outline");
+        icon[indice].setAttribute("name", "eye-outline");
+    }
 
-ojo[0].addEventListener("click", function() {
-    let icon = this.querySelector("ion-icon")
-    // if(this.nextElementSibling.type === "password"){
-    //     this.nextElementSibling.type = "text";
-    //     icon.setAttribute("name", "eye-outline");
-    //     icon.setAttribute("name", "eye-off-outline");
-    //    }else{
-    //     this.nextElementSibling.type = "password";
-    //     icon.setAttribute("name", "eye-off-outline");
-    //     icon.setAttribute("name", "eye-outline");
-    //    }
-    if (password[0].type == "password"){
+}
+
+ojo[0].addEventListener("click", function () {
+
+    if (password[0].type == "password") {
         password[0].type = "text"
-    }else{
+        ojos(0)
+    } else {
         password[0].type = "password"
+        ojos(0)
     }
 });
 
-// let ojos = document.querySelector(".eyes");
+ojo[1].addEventListener("click", function () {
 
-ojo[1].addEventListener("click", function() {
-//     let icon = this.querySelector("ion-icon")
-//    if(this.nextElementSibling.type === "password"){
-//     this.nextElementSibling.type = "text";
-//     icon.setAttribute("name", "eye-outline");
-//     icon.setAttribute("name", "eye-off-outline");
-//    }else{
-//     this.nextElementSibling.type = "password";
-//     icon.setAttribute("name", "eye-off-outline");
-//     icon.setAttribute("name", "eye-outline");
-//    }
-   if (password[1].type == "password"){
-    password[1].type = "text"
-}else{
-    password[1].type = "password"
-}
+    if (password[1].type == "password") {
+        password[1].type = "text"
+        ojos(1)
+    } else {
+        password[1].type = "password"
+        ojos(1)
+    }
 });
