@@ -18,6 +18,13 @@
     top: 45%;
     right: -8%;
 }
+
+.eyes {
+    position: absolute;
+    top: 45%;
+    right: -8%;
+}
+
 input[type="checkbox"]{
     display: none;
 }
