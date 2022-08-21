@@ -126,3 +126,8 @@ idCart INT,
 FOREIGN KEY(idOrder) REFERENCES orders(id),
 FOREIGN KEY(idCart) REFERENCES cart(id)
 )
+
+
+USE bd_cosmetica;
+ALTER TABLE `bd_cosmetica`.`users` 
+CHANGE COLUMN `image` `image` VARCHAR(60) NULL DEFAULT 'default.jpg' ;
