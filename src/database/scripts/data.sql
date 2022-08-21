@@ -60,3 +60,7 @@ INSERT INTO `bd_cosmetica`.`products` (`nameProduct`, `price`, `descriptionProdu
 USE bd_cosmetica;
 
 INSERT INTO `bd_cosmetica`.`users` (`userName`, `lastName`, `passwordUser`, `email`, `image`, `idStatusUser`) VALUES ('desarrollador', 'LaVie', '$2b$10$FS.Hk0a76pgYkQuBQuQUweSsml3dU1HzUpLIMtj0B0wCANp6Nr6Dm', 'desarrollador@hotmail.com', 'default.jpg', '1');
+UPDATE `bd_cosmetica`.`users` SET `idStatusUser` = '2' WHERE (`id` = '1');
+UPDATE `bd_cosmetica`.`users` SET `idStatusUser` = '2' WHERE (`id` = '2');
+INSERT INTO `bd_cosmetica`.`users` (`userName`, `lastName`, `passwordUser`, `email`, `image`, `idStatusUser`) VALUES ('Camila', 'Morand', '$2b$10$uG.1zCfS8stlsgVRZhoEduiy91OoDqFm6aRArW.5DdUvwmUOYVUNC', 'magalicamila251@gmail.com', 'default.jpg', '2');
+INSERT INTO `bd_cosmetica`.`users` (`userName`, `lastName`, `passwordUser`, `email`, `image`, `idStatusUser`) VALUES ('leandro', 'ramos', '$2b$10$ITPG.GPaZh6/QGiKmCBg0.NsoA2xTnt8gj0NVy4PKKEI4CQ.PCj2a', 'leo-rammos@hotmail.com', 'leandroramos1657584227715.jpg', '2');
