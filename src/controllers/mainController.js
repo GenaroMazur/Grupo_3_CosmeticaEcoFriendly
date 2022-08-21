@@ -1,12 +1,6 @@
-const modelsController = require("./../models/modelsController")
+
 const db = require("./../database/models")
 const mainController = {
-
-     //pagina de inicio
-     index: (req, res) => {
-          let products = modelsController.FnRead("products")
-          return res.render('index', {products: products , user :req.session.user})
-     },
 
      //pagina de nosotros
      nosotros: (req, res) => {

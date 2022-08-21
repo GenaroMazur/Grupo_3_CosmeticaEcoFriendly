@@ -125,7 +125,7 @@ idOrder INT,
 idCart INT,
 FOREIGN KEY(idOrder) REFERENCES orders(id),
 FOREIGN KEY(idCart) REFERENCES cart(id)
-)
+);
 
 
 USE bd_cosmetica;

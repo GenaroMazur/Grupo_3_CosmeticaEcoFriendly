@@ -30,7 +30,7 @@ routes.post("/newProduct",
     multerMiddleware.productsImage().single("image"),
     productsMiddlewares.validations,
     productsMiddlewares.product,
-    productController.createProduct);
+    productController.createProduct_v2);
     
 //PUt
 routes.put("/editProduct/:idProduct",

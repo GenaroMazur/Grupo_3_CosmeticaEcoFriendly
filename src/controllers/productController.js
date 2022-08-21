@@ -1,6 +1,5 @@
 const fs = require ("fs")
 const db = require("../database/models")
-const modelsController = require("./../models/modelsController")
 
 const productController = {
     //pagina de carrito de compras
@@ -11,56 +10,15 @@ const productController = {
     catalogoProductos: (req, res) => {
         return res.render("catalogoProductos",{ user: req.session.user})
     },
-    //pagina del detalle del producto
-    productDetail: (req, res) => {
-        let products = modelsController.FnRead("products")
-        return res.render("productDetail", { products: products, status :req.session.user })
-    },
 
     //pagina de nuevo producto
     newProduct: (req, res) => {
         res.render("newProduct", {user: req.session.user})
     },
 
-    //pagina edicion de producto
-    editProduct: (req, res) => {
-        let product = modelsController.FnSearch("products", "id", req.params.idProduct)
-        res.render("editProduct", { product: product})
-    },
-    //Editar un producto
-    editProductId: (req, res) => {
-        modelsController.FnEdit("products", req)
-        res.redirect("/product/editProduct/" + req.params.idProduct)
-    },
-
-    //Crear un nuevo producto
-    createProduct: function (req, res) {
-
-        let newProduct ={
-            id : Date.now(),
-            nameProduct : req.body.nameProduct,
-            price : req.body.price || 0,
-            description : req.body.description,
-            grams : req.body.grams,
-            fragance : req.body.fragance,
-            category : req.body.category,
-            image : req.file.filename
-        }
-        modelsController.FnCreate("products", {newProduct, user: req.session.user})
-
-        res.redirect("/product/DetalleDeProducto")
-    },
-    //Eliminar un producto
-    deleteProduct: function (req, res) {
-        let imagen = (modelsController.FnSearch("products","id",req.params.idProduct)).image
-        fs.rmSync(__dirname+"./../../public/img/products_images/"+imagen)
-        modelsController.FnDelete("products", req.params.idProduct)
-        res.redirect("/user/admin")
-    },
-
     //----------- database ------------
     createProduct_v2:function(req, res) {
-        
+        res.send(req.body)
     },
     productCard_v2:function (req, res) {
         db.Order.findAll()
