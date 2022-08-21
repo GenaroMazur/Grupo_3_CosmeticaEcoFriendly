@@ -10,10 +10,23 @@
     text-decoration: none;
     color: #464646;
 }
-.wrapp-input{
- position: relative;
+
+a:hover {
+    color: #32a936aa;
 }
-.eye{
+
+.wrapp-input {
+    position: relative;
+}
+
+
+.ojos {
+    position: absolute;
+    left: 78%;
+    top: 91%;
+}
+
+.eye {
     position: absolute;
     top: 45%;
     right: -8%;
@@ -25,12 +38,14 @@
     right: -8%;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
     display: none;
 }
-#recordar{
+
+#recordar {
     display: block;
 }
+
 .form {
     display: flex;
     flex-wrap: wrap;
@@ -52,13 +67,15 @@ input[type="checkbox"]{
     align-content: center;
     padding: 1%;
 }
-.alerta{
+
+.alerta {
     color: red;
     border: solid;
     border-radius: 30px;
     background: rgb(232, 232, 232);
     font: -webkit-control;
 }
+
 form>* {
     margin: 13px 0px;
 }
@@ -114,7 +131,9 @@ form>div {
     background-color: #9fb478;
     color: #000;
 }
-@media(max-width:500px){
+
+@media(max-width:500px) {
+
     /*  Estilo de Login y Register Genaro*/
     .form {
         margin: 3% 10%;
@@ -125,8 +144,19 @@ form>div {
         display: block;
         visibility: visible;
     }
+
+    .ojos {
+        position: absolute;
+        left: 74vw;
+        top: 104vw;
+    }
+
+
+
 }
-@media(min-width:900px){
+
+@media(min-width:900px) {
+
     /*  Estilo de Login y Register Genaro*/
     .img {
         visibility: visible;
