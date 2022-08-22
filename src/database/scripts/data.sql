@@ -53,7 +53,7 @@ INSERT INTO `bd_cosmetica`.`users` (`userName`, `lastName`, `passwordUser`, `ema
 UPDATE `bd_cosmetica`.`users` SET `idStatusUser` = '2' WHERE (`id` = '1');
 UPDATE `bd_cosmetica`.`users` SET `idStatusUser` = '2' WHERE (`id` = '2');
 INSERT INTO `bd_cosmetica`.`users` (`userName`, `lastName`, `passwordUser`, `email`, `image`, `idStatusUser`) VALUES ('Camila', 'Morand', '$2b$10$uG.1zCfS8stlsgVRZhoEduiy91OoDqFm6aRArW.5DdUvwmUOYVUNC', 'magalicamila251@gmail.com', 'default.jpg', '2');
-INSERT INTO `bd_cosmetica`.`users` (`userName`, `lastName`, `passwordUser`, `email`, `image`, `idStatusUser`) VALUES ('leandro', 'ramos', '$2b$10$ITPG.GPaZh6/QGiKmCBg0.NsoA2xTnt8gj0NVy4PKKEI4CQ.PCj2a', 'leo-rammos@hotmail.com', 'leandroramos1657584227715.jpg', '2');
+INSERT INTO `bd_cosmetica`.`users` (`userName`, `lastName`, `passwordUser`, `email`, `image`, `idStatusUser`) VALUES ('leandro', 'ramos', '$2b$10$ITPG.GPaZh6/QGiKmCBg0.NsoA2xTnt8gj0NVy4PKKEI4CQ.PCj2a', 'leo-rammos@hotmail.com', 'leandrojoelramos.jpg', '2');
 
 USE bd_cosmetica;
 
