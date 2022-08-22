@@ -19,12 +19,12 @@ a:hover {
     position: relative;
 }
 
-
 .ojos {
     position: absolute;
-    left: 78%;
-    top: 91%;
+    top: 79vw;
+    left: 68vw;
 }
+
 
 .eye {
     position: absolute;
@@ -132,7 +132,7 @@ form>div {
     color: #000;
 }
 
-@media(max-width:500px) {
+@media(min-width:500px) {
 
     /*  Estilo de Login y Register Genaro*/
     .form {
@@ -145,11 +145,6 @@ form>div {
         visibility: visible;
     }
 
-    .ojos {
-        position: absolute;
-        left: 74vw;
-        top: 104vw;
-    }
 
 
 
@@ -180,4 +175,14 @@ form>div {
     .container {
         background-image: none;
     }
+    
+    .ojos {
+        position: absolute;
+        left: 78vw;
+        top: 47.6vw;
+    }
+
+    
+
+
 }

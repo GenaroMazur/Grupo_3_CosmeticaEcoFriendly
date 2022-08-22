@@ -281,7 +281,7 @@ footer a {
     }
 
 }
-@media(max-width:500px){
+@media(max-width:900px){
 .menu-navegacion {
     position: fixed;
     top: 0;
@@ -312,4 +312,18 @@ footer a {
     align-items: center;
 }
 
+#menu {
+    position: absolute;
+    background: #a39883;
+    width: 32vw;
+    height: 145px;
+    top: -200px;
+    z-index: 20;
+    border-radius: 7px;
+}
+
+#menu.mostrar {
+    top: 10.7vw;
+    left: 51vw;
+}
 }
