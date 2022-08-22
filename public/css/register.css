@@ -1,22 +1,35 @@
-:root{
-   /*  colores de la pàgina */
- --color-letra: #464646;
- --color-hover: #32a936aa;
- --color-form: #fce4d4aa;
- --color-alerta: #ff0000;
- --color-dentroAlerta: #e8e8e8;
- --color-textArea: #f8f3f0;
- --color-fuente-button: white;
- --color-button:  #889b65;
- --color-borde-textArea: #ddc387b5;
- --color-hover-button:#9fb478;
- --color-negro:#000;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+    margin: 0px 0px;
+    background-color: #cdbd9d;
+}
+:root {
+    /*  colores de la pàgina */
+    --color-imagen-fondo: #fce4d4;
+    --color-letra: #464646;
+    --color-hover: #32a936aa;
+    --color-fondo-form: #fce4d4;
+    --color-alerta: #ff0000;
+    --color-dentroAlerta: #e8e8e8;
+    --color-textArea: #f8f3f0;
+    --color-fuente-button: white;
+    --color-button: #889b65;
+    --color-borde-textArea: #ddc387b5;
+    --color-hover-button: #9fb478;
+    --color-negro: #000;
 }
 
 .container {
     display: flex;
     flex-wrap: nowrap;
-    background: #fce4d4;
+    background: var(--color-imagen-fondo);
     background-image: url(/img/products_images/jabon_1.jpg);
     background-repeat: round;
 }
@@ -67,7 +80,7 @@ input[type="checkbox"] {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: var(--color-form);
+    background-color: var(--color-fondo-form);
     flex-grow: 1;
     color: var(--color-letra);
     text-align: center;
@@ -144,7 +157,7 @@ form>div {
 
 .button:hover {
     background-color: var(--color-hover-button);
-    color:var(--color-negro) ;
+    color: var(--color-negro);
 }
 
 @media(min-width:500px) {
@@ -174,7 +187,7 @@ form>div {
     }
 
     .form {
-        background-color: var(--color-form);
+        background-color: var(--color-fondo-form);
         margin: 0px;
         border-radius: 0px;
     }
@@ -190,14 +203,14 @@ form>div {
     .container {
         background-image: none;
     }
-    
+
     .ojos {
         position: absolute;
         left: 78vw;
         top: 47.6vw;
     }
 
-    
+
 
 
 }

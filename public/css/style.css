@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
+:root {
+    /*  colores de la pàgina */
+    --color-imagen-fondo: #fce4d4;
+    --color-letra: #464646;
+    --color-hover: #32a936aa;
+    --color-fondo-form: #fce4d4;
+    --color-alerta: #ff0000;
+    --color-dentroAlerta: #e8e8e8;
+    --color-textArea: #f8f3f0;
+    --color-fuente-button: white;
+    --color-button: #889b65;
+    --color-borde-textArea: #ddc387b5;
+    --color-hover-button: #9fb478;
+    --color-negro: #000;
+}
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
