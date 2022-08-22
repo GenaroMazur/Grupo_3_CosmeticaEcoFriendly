@@ -31,9 +31,11 @@ const productController = {
             })
     },
     catalogoProductos_v2: function (req, res){
-        db.Product.findAll()
-            .then(products=>{
-                res.render("catalogoProductos",{products, user: req.session.user})
+        let fragrances = db.Fragrance.findAll()
+        let products = db.Product.findAll()
+        Promise.all([fragrances,products])
+            .then(([fragrances,products])=>{
+                res.render("catalogoProductos",{products,fragrances, user: req.session.user})
             })
             .catch(err=>{
                 console.log(err);

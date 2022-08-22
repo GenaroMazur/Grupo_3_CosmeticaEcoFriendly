@@ -52,14 +52,10 @@
                         <div>
                             <h1>Fragancias</h1>
                             <ul>
-                                <li> <label for=""><input type="checkbox" name="" id=""> Menta Limón</label></li>  
-                                <li> <label for=""> <input type="checkbox" name="" id=""> Lavanda </label></li> 
-                                <li> <label for=""> <input type="checkbox" name="" id=""> Naranja  Lima </label></li> 
-                                <li> <label for=""> <input type="checkbox" name="" id=""> Cacao Sándalo </label></li> 
-                                <li> <label for=""> <input type="checkbox" name="" id=""> Herbal</li></label> 
-                                <li> <label for=""> <input type="checkbox" name="" id=""> Café Naranja</label></li> 
-                                <li> <label for=""> <input type="checkbox" name="" id=""> Limón Lima</label></li> 
-                              </ul>
+                                <% fragrances.map(fragrance=>{ %>
+                                    <li> <label for=""><input type="checkbox" name="" id=""> <%=fragrance.nameFragrance %> </label></li>  
+                                <% }) %>
+                            </ul>
                         </div>
                         <div>
                             <h1>Variantes</h1>
@@ -88,13 +84,9 @@
                         <div>
                             <h1>Fragancias</h1>
                             <ul>
-                              <li> <label for=""><input type="checkbox" name="" id=""> Menta Limón</label></li>  
-                              <li> <label for=""> <input type="checkbox" name="" id=""> Lavanda </label></li> 
-                              <li> <label for=""> <input type="checkbox" name="" id=""> Naranja  Lima </label></li> 
-                              <li> <label for=""> <input type="checkbox" name="" id=""> Cacao Sándalo </label></li> 
-                              <li> <label for=""> <input type="checkbox" name="" id=""> Herbal</li></label> 
-                              <li> <label for=""> <input type="checkbox" name="" id=""> Café Naranja</label></li> 
-                              <li> <label for=""> <input type="checkbox" name="" id=""> Limón Lima</label></li> 
+                                <% fragrances.map(fragrance=>{ %>
+                                    <li> <label for=""><input type="checkbox" name="" id=""> <%=fragrance.nameFragrance %> </label></li>  
+                                <% }) %>
                             </ul>
                         </div>
                         <div>
@@ -121,7 +113,7 @@
                                             class="decoration-off">
                                             <div class="producto">
                                                 <div class="img product">
-                                                    <img src="./../img/products_images/<%= products[i].image%>"
+                                                    <img src="../../img/products_images/<%=products[i].Image%>"
                                                         alt="imagen producto 1">
                                                 </div>
                                                 <div class="nombre">
