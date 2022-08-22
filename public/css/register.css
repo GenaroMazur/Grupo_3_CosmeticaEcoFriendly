@@ -1,3 +1,18 @@
+:root{
+   /*  colores de la pàgina */
+ --color-letra: #464646;
+ --color-hover: #32a936aa;
+ --color-form: #fce4d4aa;
+ --color-alerta: #ff0000;
+ --color-dentroAlerta: #e8e8e8;
+ --color-textArea: #f8f3f0;
+ --color-fuente-button: white;
+ --color-button:  #889b65;
+ --color-borde-textArea: #ddc387b5;
+ --color-hover-button:#9fb478;
+ --color-negro:#000;
+}
+
 .container {
     display: flex;
     flex-wrap: nowrap;
@@ -8,11 +23,11 @@
 
 .container a {
     text-decoration: none;
-    color: #464646;
+    color: var(--color-letra);
 }
 
 a:hover {
-    color: #32a936aa;
+    color: var(--color-hover);
 }
 
 .wrapp-input {
@@ -52,9 +67,9 @@ input[type="checkbox"] {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #fce4d4aa;
+    background-color: var(--color-form);
     flex-grow: 1;
-    color: #464646;
+    color: var(--color-letra);
     text-align: center;
     padding: 4%;
 }
@@ -69,10 +84,10 @@ input[type="checkbox"] {
 }
 
 .alerta {
-    color: red;
+    color: var(--color-alerta);
     border: solid;
     border-radius: 30px;
-    background: rgb(232, 232, 232);
+    background: var(--color-dentroAlerta);
     font: -webkit-control;
 }
 
@@ -93,13 +108,13 @@ form>div {
 }
 
 .textArea {
-    background-color: #f8f3f0;
+    background-color: var(--color-textArea);
     height: 40px;
     width: 330px;
     margin: 1.8%;
     text-align: center;
     border-radius: 30px;
-    border: #ddc387b5 inset 1px;
+    border: var(--color-borde-textArea) inset 1px;
 }
 
 .form img {
@@ -118,18 +133,18 @@ form>div {
 }
 
 .button {
-    background-color: #889b65;
+    background-color: var(--color-button);
     padding: 8px 18px;
     margin: 1.8% 0%;
     border: 1px;
     border-radius: 15px;
     margin: auto 1rem;
-    color: white;
+    color: var(--color-fuente-button);
 }
 
 .button:hover {
-    background-color: #9fb478;
-    color: #000;
+    background-color: var(--color-hover-button);
+    color:var(--color-negro) ;
 }
 
 @media(min-width:500px) {
@@ -159,7 +174,7 @@ form>div {
     }
 
     .form {
-        background-color: #fce4d4;
+        background-color: var(--color-form);
         margin: 0px;
         border-radius: 0px;
     }
