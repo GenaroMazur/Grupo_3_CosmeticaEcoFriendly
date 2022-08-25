@@ -137,6 +137,7 @@ fieldset {
     flex-direction: column;
     text-align: center;
     width: 15vw;
+    height: 100%
 }
 
 
