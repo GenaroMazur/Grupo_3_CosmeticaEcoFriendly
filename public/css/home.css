@@ -117,22 +117,34 @@ a.a-nav:hover{
     background-position: center;
     background-repeat: no-repeat;
 }
+@keyframes opacidad {
+    from{ opacity: 0;}
+
+    to{ opacity: 1;}
+} 
 
 h1.titulo-header {
     display: flex;
     font-size: 8vw;
     justify-content: flex-start;
+    animation-name: opacidad;
+    animation-duration: 5s;
+    animation-timing-function: ease;
 }
 
 p.parrafo-header {
     font-size: 2vw;
     display: flex;
     justify-content: flex-start;
+    animation-name: opacidad;
+    animation-duration: 8s;
+    animation-timing-function: ease-out;
 }
 
 .titulo-parrafo {
     color: white;
 }
+
 
 
 #section-index {
@@ -289,7 +301,6 @@ p.parrafo-header {
 
     .background-fondo-productos {
         display: flex;
-        /* flex-wrap: wrap; */
         justify-content: center;
         align-items: center;
         border-radius: 10px;
