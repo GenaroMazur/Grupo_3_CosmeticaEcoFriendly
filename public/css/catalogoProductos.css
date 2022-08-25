@@ -139,7 +139,17 @@ fieldset {
     width: 15vw;
     height: 100%
 }
+@keyframes traslado{
+    from{transform: translateY(0px);}
 
+    to{ transform: translateY(-8px);}
+}
+
+.productos:hover {
+   animation-name: traslado;
+   animation-duration: 60ms;
+   animation-timing-function: ease-out;
+}
 
 .img.product {
     width: 15vw;
