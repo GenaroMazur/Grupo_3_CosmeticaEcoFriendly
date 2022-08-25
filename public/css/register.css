@@ -43,6 +43,10 @@ a:hover {
     color: var(--color-hover);
 }
 
+h1 {
+    font-size: 30px;
+}
+
 .wrapp-input {
     position: relative;
 }

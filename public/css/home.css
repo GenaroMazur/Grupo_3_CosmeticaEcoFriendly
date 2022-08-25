@@ -157,7 +157,7 @@ p.parrafo-header {
     width: 100%;
     max-width: 1200px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     margin-top: 5rem;
 }
@@ -216,13 +216,12 @@ p.parrafo-header {
 
 .background-fondo-productos {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     margin: 3%;
     padding: 3%;
-
 }
 
 .cuadro2 {
