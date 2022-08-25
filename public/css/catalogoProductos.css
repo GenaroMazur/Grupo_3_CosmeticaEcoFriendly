@@ -285,8 +285,17 @@ ion-icon {
     }
 
     .iconoFIlter {
-        display: flex;
-        margin-top: 2.8vw;
+    display: flex;
+    margin-top: 2.8vw;
+    border: solid 1.4px;
+    width: 33px;
+    margin-left: 10px;
+    justify-content: center;
+    }
+
+    .oculto {
+        height: 0;
+        overflow: hidden;
     }
 
 
