@@ -107,6 +107,7 @@
                                     aria-label="arrow undo circle outline"></ion-icon>
                             </div>
                             <div class="carousel_productos">
+                                <div class="caja">
                                 <% for (let i=0; i < products.length; i++) { %>
                                     <div class="productos">
                                         <a href="/product/DetalleDeProducto/<%= products[i].id %> "
@@ -125,6 +126,9 @@
                                                             599.99
                                                         </h5>
                                                     </div>
+                                                    <div class="comparacion">
+                                                        &#47;
+                                                    </div>
                                                     <div>
                                                         <h5>
                                                             <h5> $<%= products[i].price%>
@@ -141,6 +145,7 @@
                                         </a>
                                     </div>
                                     <% } %>
+                                </div>
                             </div>
                             <div class="flecha">
                                 <ion-icon name="arrow-redo-circle-outline" role="img" class="md hydrated"
@@ -149,155 +154,7 @@
                         </div>
                     </fieldset>
 
-                    <fieldset>
-                        <legend>Acondicionadores</legend>
-                        <div class="box">
-                            <div class="flecha">
-                                <ion-icon name="arrow-undo-circle-outline" role="img" class="md hydrated"
-                                    aria-label="arrow undo circle outline"></ion-icon>
-                            </div>
-                            <div class="carousel_productos">
-                                <% for (let i=0; i < products.length; i++) { %>
-                                    <div class="productos">
-                                        <a href="/product/DetalleDeProducto/<%= products[i].id %> "
-                                            class="decoration-off">
-                                            <div class="producto">
-                                                <div class="img product">
-                                                    <img src="./../img/products_images/<%= products[i].image%>"
-                                                        alt="imagen producto 1">
-                                                </div>
-                                                <div class="nombre">
-                                                    <%= products[i].nameProduct%>
-                                                </div>
-                                                <div class="precio">
-                                                    <div class="old price">
-                                                        <h5>
-                                                            599.99
-                                                        </h5>
-                                                    </div>
-                                                    <div>
-                                                        <h5>
-                                                            <h5> $<%= products[i].price%>
-                                                            </h5>
-                                                    </div>
-                                                    <div class="oferta">
-                                                        <h3>30%off</h3>
-                                                    </div>
-                                                </div>
-                                                <div class="stock">
-                                                    <h5 class="stocker">Stock</h5>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <% } %>
-                            </div>
-                            <div class="flecha">
-                                <ion-icon name="arrow-redo-circle-outline" role="img" class="md hydrated"
-                                    aria-label="arrow redo circle outline"></ion-icon>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Jabones</legend>
-                        <div class="box">
-                            <div class="flecha">
-                                <ion-icon name="arrow-undo-circle-outline" role="img" class="md hydrated"
-                                    aria-label="arrow undo circle outline"></ion-icon>
-                            </div>
-                            <div class="carousel_productos">
-                                <% for (let i=0; i < products.length; i++) { %>
-                                    <div class="productos">
-                                        <a href="/product/DetalleDeProducto/<%= products[i].id %> "
-                                            class="decoration-off">
-                                            <div class="producto">
-                                                <div class="img product">
-                                                    <img src="./../img/products_images/<%= products[i].image%>"
-                                                        alt="imagen producto 1">
-                                                </div>
-                                                <div class="nombre">
-                                                    <%= products[i].nameProduct%>
-                                                </div>
-                                                <div class="precio">
-                                                    <div class="old price">
-                                                        <h5>
-                                                            599.99
-                                                        </h5>
-                                                    </div>
-                                                    <div>
-                                                        <h5>
-                                                            <h5> $<%= products[i].price%>
-                                                            </h5>
-                                                    </div>
-                                                    <div class="oferta">
-                                                        <h3>30%off</h3>
-                                                    </div>
-                                                </div>
-                                                <div class="stock">
-                                                    <h5 class="stocker">Stock</h5>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <% } %>
-                            </div>
-                            <div class="flecha">
-                                <ion-icon name="arrow-redo-circle-outline" role="img" class="md hydrated"
-                                    aria-label="arrow redo circle outline"></ion-icon>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Desodorantes</legend>
-                        <div class="box">
-                            <div class="flecha">
-                                <ion-icon name="arrow-undo-circle-outline" role="img" class="md hydrated"
-                                    aria-label="arrow undo circle outline"></ion-icon>
-                            </div>
-                            <div class="carousel_productos">
-                                <% for (let i=0; i < products.length; i++) { %>
-                                    <div class="productos">
-                                        <a href="/product/DetalleDeProducto/<%= products[i].id %> "
-                                            class="decoration-off">
-                                            <div class="producto">
-                                                <div class="img product">
-                                                    <img src="./../img/products_images/<%= products[i].image%>"
-                                                        alt="imagen producto 1">
-                                                </div>
-                                                <div class="nombre">
-                                                    <%= products[i].nameProduct%>
-                                                </div>
-                                                <div class="precio">
-                                                    <div class="old price">
-                                                        <h5>
-                                                            599.99
-                                                        </h5>
-                                                    </div>
-                                                    <div>
-                                                        <h5>
-                                                            <h5> $<%= products[i].price%>
-                                                            </h5>
-                                                    </div>
-                                                    <div class="oferta">
-                                                        <h3>30%off</h3>
-                                                    </div>
-                                                </div>
-                                                <div class="stock">
-                                                    <h5 class="stocker">Stock</h5>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <% } %>
-                            </div>
-                            <div class="flecha">
-                                <ion-icon name="arrow-redo-circle-outline" role="img" class="md hydrated"
-                                    aria-label="arrow redo circle outline"></ion-icon>
-                            </div>
-                        </div>
-                    </fieldset>
+    
             </main>
             <script src="\js\catalogoproductos.js"></script>
             <%- include('./partials/footer') %>

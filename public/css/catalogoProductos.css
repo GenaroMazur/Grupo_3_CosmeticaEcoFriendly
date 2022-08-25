@@ -117,13 +117,18 @@ fieldset {
 }
 
 .carousel_productos {
-    display: contents;
+    display: flex;
+    width: 77.6vw;
+    overflow: hidden;
+}
+
+.caja {
+    display: flex;
 }
 
 .productos {
     display: flex;
-    justify-content: space-around;
-
+    margin-left: 6px;
 }
 
 .producto {
@@ -144,6 +149,11 @@ fieldset {
 .precio {
     display: flex;
     justify-content: space-around;
+}
+
+.comparacion {
+    display: flex;
+    align-items: center;
 }
 
 .old.price {
