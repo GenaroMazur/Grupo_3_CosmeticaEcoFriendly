@@ -46,7 +46,7 @@ const productController = {
 
         db.Product.findByPk(req.params.id) //Buscará el producto por su id
             .then(product=>{
-                res.render("productDetail",{products, user: req.sessions.user})
+                res.render("productDetail",{product, user: req.session.user})
             })
             .catch(err=>{
                 console.log(err);
