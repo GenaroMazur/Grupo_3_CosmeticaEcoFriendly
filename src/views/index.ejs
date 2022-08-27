@@ -36,15 +36,15 @@
                     <div id="menu">
                         <ul>
                             <% if (user.status == "Admin") { %>
-                                <li><a class="a-nav" href="user/myAccount/<%= user.id %>">Mi perfil</a></li>
-                                <li><a class="a-nav" href="user/admin">Admin Panel</a></li>
-                                <li><a class="a-nav" href="user/un-login">Cerrar sesión</a></li>
+                                <li><a class="a-nav" href="/user/myAccount/<%= user.id %>">Mi perfil</a></li>
+                                <li><a class="a-nav" href="/user/admin">Admin Panel</a></li>
+                                <li><a class="a-nav" href="/user/un-login">Cerrar sesión</a></li>
                             <% } else if (user.status == "User"){ %>
-                                <li><a class="a-nav" href="user/myAccount/<%= user.id %>">Mi perfil</a></li>
-                                <li><a class="a-nav" href="user/un-login">Cerrar sesión</a></li>
+                                <li><a class="a-nav" href="/user/myAccount/<%= user.id %>">Mi perfil</a></li>
+                                <li><a class="a-nav" href="/user/un-login">Cerrar sesión</a></li>
                             <% }  else {%>
-                                    <li><a class="a-nav" href="user/login">Iniciar sesión</a></li>
-                                    <li><a class="a-nav" href="user/registro">Registrarse</a></li>
+                                    <li><a class="a-nav" href="/user/login">Iniciar sesión</a></li>
+                                    <li><a class="a-nav" href="/user/registro">Registrarse</a></li>
                             <% } %>
                         </ul>
                     </div>
