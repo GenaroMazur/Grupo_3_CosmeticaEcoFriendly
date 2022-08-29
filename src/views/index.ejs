@@ -8,22 +8,22 @@
             <div class="nav navegacion">
                 <div class="boton menu">
                     <a href="/">
-                        <p>inicio</p>
+                        <p>Inicio</p>
                     </a>
                 </div>
                 <div class="boton menu">
                     <a href="/nosotros">
-                        <p>nosotros</p>
+                        <p>Nosotros</p>
                     </a>
                 </div>
                 <div class="boton menu">
                     <a href="/product/catalogoproductos">
-                        <p>productos</p>
+                        <p>Productos</p>
                     </a>
                 </div>
                 <div class="boton menu">
                     <a href="/contacto">
-                        <p>contacto</p>
+                        <p>Contacto</p>
                     </a>
     
                 </div>
@@ -36,15 +36,15 @@
                     <div id="menu">
                         <ul>
                             <% if (user.status == "Admin") { %>
-                                <li><a class="a-nav" href="user/myAccount/<%= user.id %>">Mi perfil</a></li>
-                                <li><a class="a-nav" href="user/admin">Admin Panel</a></li>
-                                <li><a class="a-nav" href="user/un-login">Cerrar sesión</a></li>
+                                <li><a class="a-nav" href="/user/myAccount/<%= user.id %>">Mi perfil</a></li>
+                                <li><a class="a-nav" href="/user/admin">Admin Panel</a></li>
+                                <li><a class="a-nav" href="/user/un-login">Cerrar sesión</a></li>
                             <% } else if (user.status == "User"){ %>
-                                <li><a class="a-nav" href="user/myAccount/<%= user.id %>">Mi perfil</a></li>
-                                <li><a class="a-nav" href="user/un-login">Cerrar sesión</a></li>
+                                <li><a class="a-nav" href="/user/myAccount/<%= user.id %>">Mi perfil</a></li>
+                                <li><a class="a-nav" href="/user/un-login">Cerrar sesión</a></li>
                             <% }  else {%>
-                                    <li><a class="a-nav" href="user/login">Iniciar sesión</a></li>
-                                    <li><a class="a-nav" href="user/registro">Registrarse</a></li>
+                                    <li><a class="a-nav" href="/user/login">Iniciar sesión</a></li>
+                                    <li><a class="a-nav" href="/user/registro">Registrarse</a></li>
                             <% } %>
                         </ul>
                     </div>
