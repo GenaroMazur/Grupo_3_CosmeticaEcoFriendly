@@ -48,9 +48,6 @@
                             </ul>
                         </div>
                         <div>
-                            <h1>Filtros</h1>
-                        </div>
-                        <div>
                             <h1>Fragancias</h1>
                             <ul>
                                 <% fragrances.map(fragrance=>{ %>
@@ -62,6 +59,13 @@
                         </div>
                         <div>
                             <h1>Variantes</h1>
+                            <ul>
+                            <% for (let i=0; i < products.length; i++) { %>
+                                <li> <label for=""><input type="checkbox" name="" id="">
+                                <%= products[i].nameProduct%>
+                                </label></li>
+                                <% } %>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -79,12 +83,6 @@
                             </ul>
                         </div>
                         <div>
-                            <h1>Filtros</h1>
-                            <ul>
-
-                            </ul>
-                        </div>
-                        <div>
                             <h1>Fragancias</h1>
                             <ul>
                                 <% fragrances.map(fragrance=>{ %>
@@ -96,9 +94,13 @@
                         </div>
                         <div>
                             <h1>Variantes</h1>
-                            <ul>
-
-                            </ul>
+                                <ul>
+                                    <% for (let i=0; i < products.length; i++) { %>
+                                        <li> <label for=""><input type="checkbox" name="" id="">
+                                        <%= products[i].nameProduct%>
+                                        </label></li>
+                                        <% } %>
+                                 </ul>
                         </div>
                     </div>
                 </aside>
