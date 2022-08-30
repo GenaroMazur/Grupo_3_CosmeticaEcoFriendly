@@ -236,6 +236,7 @@ p.parrafo-header {
     margin: 2vw 0vw 0vw 2vw;
     text-align: center;
     box-shadow: #464646;
+    width: 15vw
 }
 
 .new-producto img {
