@@ -195,8 +195,9 @@ aside {
     padding: 1.5vw;
 }
 
-ul {
+aside ul {
     list-style: none;
+    border-top: solid 2px;
 }
 
 li:hover {
@@ -226,6 +227,7 @@ ion-icon {
 
     .category {
         visibility: visible;
+        padding-bottom: 10px;
     }
 
     main {
