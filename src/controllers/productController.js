@@ -13,11 +13,17 @@ const productController = {
 
     //pagina de nuevo producto
     newProduct: (req, res) => {
-        res.render("newProduct", {user: req.session.user})
+        const fragraces = db.Fragrance.findAll()
+        const categories = db.Category.findAll()
+        Promise.all([fragraces,categories])
+        .then(([fragrances,categories])=>{
+            res.render("newProduct", {user: req.session.user,fragrances,categories})
+        })
     },
 
     //----------- database ------------
     createProduct_v2:function(req, res) {
+        req.body.image = req.file.filename
         res.send(req.body)
     },
     productCard_v2:function (req, res) {
