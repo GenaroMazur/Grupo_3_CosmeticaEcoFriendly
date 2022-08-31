@@ -23,8 +23,25 @@ const productController = {
 
     //----------- database ------------
     createProduct_v2:function(req, res) {
-        req.body.image = req.file.filename
-        res.send(req.body)
+        if (req.file){
+            req.body.Image = req.file.filename
+        }
+        let dateCreation=new Date()
+        let month=dateCreation.getMonth()+1
+        dateCreation=dateCreation.getFullYear()+"-"+month+"-"+dateCreation.getDate()
+        db.Product.create({
+            nameProduct:req.body.nameProduct,
+            price:req.body.price,
+            descriptionProduct:req.body.descriptionProduct,
+            modeOfUse:req.body.modeOfUse,
+            ingredients:req.body.ingredients,
+            grams:req.body.grams,
+            idFragrance:req.body.fragrance,
+            idCategory:req.body.category,
+            Image:req.body.Image,
+            dateCreation:dateCreation
+        })
+        res.redirect("/user/admin")
     },
     productCard_v2:function (req, res) {
         db.Order.findAll()
@@ -60,9 +77,12 @@ const productController = {
             })
     },
     editProduct_v2: function (req, res) {
-        db.Product.findByPk(req.params.idProduct)
-            .then(product=>{
-                res.render("editProduct",{product, user: req.session.user})
+        let category = db.Category.findAll()
+        let fragrance = db.Fragrance.findAll()
+        let product =db.Product.findByPk(req.params.idProduct)
+        Promise.all([category,fragrance,product])
+            .then(([category,fragrances,product])=>{
+                res.render("editProduct",{product,fragrances,category, user: req.session.user})
             })
             .catch(err=>{
                 console.log(err);
@@ -70,16 +90,18 @@ const productController = {
             })
     },
     editProductId_v2: function (req, res) {
-        db.Product.update({
-            nameProduct : req.body.nameProduct,
-            price : req.body.price || 0,
-            description : req.body.description,
-            grams : req.body.grams,
-            image : req.file.filename
-        },{
-            where:{
-                id:req.params.idProduct
+        let form = req.body
+        if (req.file){
+            form.Image = req.file.filename
+        }
+        let product = req.foundProductId.dataValues
+        let productDb = product
+        for(let key in product){
+            if (product[key] != form[key] && form[key]){
+                productDb[key] = form[key]
             }
+        }
+        db.Product.update(productDb,{where:{id:req.params.idProduct}
         }).then(()=>{
             res.redirect("/user/admin")
         })

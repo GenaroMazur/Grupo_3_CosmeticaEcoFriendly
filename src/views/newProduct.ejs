@@ -28,7 +28,7 @@
                             <label for="description">
                                 <h4>Descripcion</h4>
                             </label>
-                            <textarea name="description" id="description" cols="30" rows="10" class="textArea"required><% if (locals.old && old.description) { %><%= old.description %><% } %></textarea>
+                            <textarea name="descriptionProduct" id="description" cols="30" rows="10" class="textArea"required><% if (locals.old && old.descriptionProduct) { %><%= old.descriptionProduct %><% } %></textarea>
                         </div>
                         <div>
                             <label for="Category">
@@ -36,7 +36,7 @@
                             </label>
                             <select name="category" id="Category">
                                 <% categories.map(category=>{ %>
-                                    <option value="<%= category.id %>" <% if(locals.old && old.category == category){%>selected<%}%>><%= category.categoryName %></option>
+                                    <option value="<%= category.id %>" <% if(locals.old && old.category == category.id){%>selected<%}%>><%= category.categoryName %></option>
                                 <% }) %> 
                             </select>
                         </div>
@@ -53,7 +53,7 @@
                             <label for="fragance">Fragancia</label>
                             <select name="fragrance" id="fragrance">
                                 <% fragrances.map(fragrance=>{ %>
-                                    <option value="<%= fragrance.id %>" <%if(locals.old && old.fragrance){%>selected<%}%>><%= fragrance.nameFragrance %></option>
+                                    <option value="<%= fragrance.id %>" <%if(locals.old && old.fragrance && old.fragrance.id == fragrance.id){%>selected<%}%>><%= fragrance.nameFragrance %></option>
                                 <%}) %> 
                             </select>
                         </div>

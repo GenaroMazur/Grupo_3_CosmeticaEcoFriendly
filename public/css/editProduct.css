@@ -109,7 +109,10 @@ img {
     align-items: center;
 
 }
-
+#fragrance {
+    padding: 5px 7%;
+    border-radius: 30px;
+}
 .titulo {
     display: flex;
     align-items: center;
