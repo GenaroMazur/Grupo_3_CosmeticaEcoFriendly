@@ -77,6 +77,10 @@ input[type="checkbox"] {
 #recordar {
     display: block;
 }
+.recordar{
+    display: flex;
+    justify-content: center;
+}
 
 .form {
     display: flex;
