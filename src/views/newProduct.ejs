@@ -29,6 +29,9 @@
                                 <h4>Descripcion</h4>
                             </label>
                             <textarea name="descriptionProduct" id="description" cols="30" rows="10" class="textArea"required><% if (locals.old && old.descriptionProduct) { %><%= old.descriptionProduct %><% } %></textarea>
+                            <% if (locals.errors && errors.descriptionProduct) { %>
+                                <p class="alerta"><%= errors.descriptionProduct.msg %> </p>
+                            <% } %>
                         </div>
                         <div>
                             <label for="Category">

@@ -7,7 +7,11 @@ const db = require("./../database/models")
 productsMiddlewares = {
     validations: [
         body("nameProduct")
-            .notEmpty().withMessage("Este campo no puede estar vacio"),
+            .notEmpty().withMessage("Este campo no puede estar vacio").bail()
+            .isLength({min:5}).withMessage("Debe tener al menos 5 caracteres"),
+        body("descriptionProduct")
+            .notEmpty().withMessage("Este campo no puede estar vacio").bail()
+            .isLength({min:20}).withMessage("Debe tener al menos 20 caracteres"),
         body("price")
             .notEmpty().withMessage("Este campo no puede estar vacio"),
         body("image")
@@ -23,7 +27,11 @@ productsMiddlewares = {
     ],
     putValidations: [
         body("nameProduct")
-            .notEmpty().withMessage("Este campo no puede estar vacio"),
+            .notEmpty().withMessage("Este campo no puede estar vacio").bail()
+            .isLength({min:5}).withMessage("Debe tener al menos 5 caracteres"),
+        body("descriptionProduct")
+            .notEmpty().withMessage("Este campo no puede estar vacio").bail()
+            .isLength({min:20}).withMessage("Debe tener al menos 20 caracteres"),
         body("price")
             .notEmpty().withMessage("Este campo no puede estar vacio"),
         body("image")
@@ -33,7 +41,8 @@ productsMiddlewares = {
                     throw new Error("Los formatos permitidos son :" + ext.join(", "))
                 }
                 return true
-            })],
+            })
+        ],
     product: function (req, res, next) {
         let validaciones = validationResult(req)
         if (!validaciones.isEmpty()) {
