@@ -60,7 +60,7 @@ body {
     border-radius: 200px;
     border: solid 1px;
     align-items: center;
-    left: 76vw;
+    left: 81vw;
     top: 0.5vw;
 }
 
@@ -89,7 +89,7 @@ a {
 
 #menu.mostrar {
     top: 3.8vw;
-    left: 70vw;
+    left: 75vw;
 }
 
 ul {
@@ -117,22 +117,34 @@ a.a-nav:hover{
     background-position: center;
     background-repeat: no-repeat;
 }
+@keyframes opacidad {
+    from{ opacity: 0;}
+
+    to{ opacity: 1;}
+} 
 
 h1.titulo-header {
     display: flex;
     font-size: 8vw;
     justify-content: flex-start;
+    animation-name: opacidad;
+    animation-duration: 5s;
+    animation-timing-function: ease;
 }
 
 p.parrafo-header {
     font-size: 2vw;
     display: flex;
     justify-content: flex-start;
+    animation-name: opacidad;
+    animation-duration: 8s;
+    animation-timing-function: ease-out;
 }
 
 .titulo-parrafo {
     color: white;
 }
+
 
 
 #section-index {
@@ -144,9 +156,8 @@ p.parrafo-header {
 .cuadro {
     width: 100%;
     max-width: 1200px;
-
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     margin-top: 5rem;
 }
@@ -205,13 +216,12 @@ p.parrafo-header {
 
 .background-fondo-productos {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     margin: 3%;
     padding: 3%;
-
 }
 
 .cuadro2 {
@@ -221,11 +231,12 @@ p.parrafo-header {
 
 .producto-nuevo {
     background-color: #fce4d4;
-    margin: 1%;
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 30px;
+    margin: 2vw 0vw 0vw 2vw;
     text-align: center;
     box-shadow: #464646;
+    width: 15vw
 }
 
 .new-producto img {
@@ -239,7 +250,7 @@ p.parrafo-header {
     display: flex;
     justify-content: center;
 }
-@media(max-width:500px){
+@media(max-width:900px){
 
     .pos {
         position: fixed;
@@ -284,13 +295,12 @@ p.parrafo-header {
         border-radius: 200px;
         border: solid 1px;
         align-items: center;
-        left: 78vw;
+        left: 80vw;
         top: 2vw;
     }
 
     .background-fondo-productos {
         display: flex;
-        /* flex-wrap: wrap; */
         justify-content: center;
         align-items: center;
         border-radius: 10px;
@@ -299,4 +309,13 @@ p.parrafo-header {
         flex-direction: column;
     }
 
+    .cuadro {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+        flex-direction: column;
+        align-items: center;
+    }
 }

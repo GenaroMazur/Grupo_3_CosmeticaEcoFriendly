@@ -89,7 +89,6 @@ const userMiddlewares = {
             .custom((value,{req})=>{
                 let user= req.foundUser
                     if (user == null) {
-                        console.log(user);
                         throw new Error("Correo inexistente")
                     }
                     return true

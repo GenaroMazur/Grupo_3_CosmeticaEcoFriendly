@@ -4,11 +4,9 @@ let icon = document.querySelectorAll(".eyeIcon");
 console.log(icon[0].attributes.name.value);
 function ojos(indice) {
     if (icon[indice].attributes.name.value == "eye-outline") {
-        icon[indice].setAttribute("name", "eye-outline");
         icon[indice].setAttribute("name", "eye-off-outline");
     }
     else {
-        icon[indice].setAttribute("name", "eye-off-outline");
         icon[indice].setAttribute("name", "eye-outline");
     }
 

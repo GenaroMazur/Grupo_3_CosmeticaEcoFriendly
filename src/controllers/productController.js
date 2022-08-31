@@ -29,7 +29,7 @@ const productController = {
     productCard_v2:function (req, res) {
         db.Order.findAll()
             .then(cart=>{
-                return res.render("productCard",cart)
+                return res.render("productCard",{cart,user: req.session.user})
             })
             .catch(err=>{
                 console.error(err);
@@ -37,9 +37,11 @@ const productController = {
             })
     },
     catalogoProductos_v2: function (req, res){
-        db.Product.findAll()
-            .then(products=>{
-                res.render("catalogoProductos",{products, user: req.session.user})
+        let fragrances = db.Fragrance.findAll()
+        let products = db.Product.findAll()
+        Promise.all([fragrances,products])
+            .then(([fragrances,products])=>{
+                res.render("catalogoProductos",{products,fragrances, user: req.session.user})
             })
             .catch(err=>{
                 console.log(err);
@@ -50,7 +52,7 @@ const productController = {
 
         db.Product.findByPk(req.params.id) //Buscará el producto por su id
             .then(product=>{
-                res.render("productDetail",{products, user: req.sessions.user})
+                res.render("productDetail",{product, user: req.session.user})
             })
             .catch(err=>{
                 console.log(err);

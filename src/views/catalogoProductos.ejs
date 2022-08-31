@@ -7,10 +7,12 @@
     <body>
         <%- include('./partials/header') %>
             <div class="menu">
+                <a href="/" class="boton">
                 <div class="boton heartBoton">
-                    <a href="/" class="boton"><label for="mis fav">Mis favoritos</label></a>
+                    <label for="mis fav">Mis favoritos</label>
                     <ion-icon name="heart-outline" class="heartbuton"></ion-icon>
                 </div>
+                 </a>
                 <div class="barra barradebusqueda">
                     <input type="search" name="search" placeholder="buscar">
                     <div class="icono de busqueda">
@@ -31,11 +33,12 @@
                 </div>
             </div>
             <main>
+
                 <div class="category">
-                    <div>
-                        <div class="iconoFIlter">
-                            <ion-icon name="filter-outline"></ion-icon>
-                        </div>
+                    <div class="iconoFIlter">
+                        <ion-icon name="filter-outline"></ion-icon>
+                    </div>
+                    <div class="oculto">
                         <div>
                             <h1>Categorias</h1>
                             <ul>
@@ -47,22 +50,24 @@
                             </ul>
                         </div>
                         <div>
-                            <h1>Filtros</h1>
-                        </div>
-                        <div>
                             <h1>Fragancias</h1>
                             <ul>
-                                <li> <label for=""><input type="checkbox" name="" id=""> Menta Limón</label></li>  
-                                <li> <label for=""> <input type="checkbox" name="" id=""> Lavanda </label></li> 
-                                <li> <label for=""> <input type="checkbox" name="" id=""> Naranja  Lima </label></li> 
-                                <li> <label for=""> <input type="checkbox" name="" id=""> Cacao Sándalo </label></li> 
-                                <li> <label for=""> <input type="checkbox" name="" id=""> Herbal</li></label> 
-                                <li> <label for=""> <input type="checkbox" name="" id=""> Café Naranja</label></li> 
-                                <li> <label for=""> <input type="checkbox" name="" id=""> Limón Lima</label></li> 
-                              </ul>
+                                <% fragrances.map(fragrance=>{ %>
+                                    <li> <label for=""><input type="checkbox" name="" id="">
+                                            <%=fragrance.nameFragrance %>
+                                        </label></li>
+                                    <% }) %>
+                            </ul>
                         </div>
                         <div>
                             <h1>Variantes</h1>
+                            <ul>
+                            <% for (let i=0; i < products.length; i++) { %>
+                                <label for="Variantes"><input type="radio" name="Variantes" id="variantes-productos">
+                                <%= products[i].nameProduct%>
+                                </label></li>
+                                <% } %>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -80,28 +85,24 @@
                             </ul>
                         </div>
                         <div>
-                            <h1>Filtros</h1>
-                            <ul>
-
-                            </ul>
-                        </div>
-                        <div>
                             <h1>Fragancias</h1>
                             <ul>
-                              <li> <label for=""><input type="checkbox" name="" id=""> Menta Limón</label></li>  
-                              <li> <label for=""> <input type="checkbox" name="" id=""> Lavanda </label></li> 
-                              <li> <label for=""> <input type="checkbox" name="" id=""> Naranja  Lima </label></li> 
-                              <li> <label for=""> <input type="checkbox" name="" id=""> Cacao Sándalo </label></li> 
-                              <li> <label for=""> <input type="checkbox" name="" id=""> Herbal</li></label> 
-                              <li> <label for=""> <input type="checkbox" name="" id=""> Café Naranja</label></li> 
-                              <li> <label for=""> <input type="checkbox" name="" id=""> Limón Lima</label></li> 
+                                <% fragrances.map(fragrance=>{ %>
+                                    <li> <label for=""><input type="checkbox" name="" id="">
+                                            <%=fragrance.nameFragrance %>
+                                        </label></li>
+                                    <% }) %>
                             </ul>
                         </div>
                         <div>
                             <h1>Variantes</h1>
-                            <ul>
-
-                            </ul>
+                                <ul>
+                                    <% for (let i=0; i < products.length; i++) { %>
+                                        <li> <label for="Variantes"><input type="radio" name="Variantes" id="variantes-productos">
+                                        <%= products[i].nameProduct%>
+                                        </label></li>
+                                        <% } %>
+                                 </ul>
                         </div>
                     </div>
                 </aside>
@@ -115,40 +116,45 @@
                                     aria-label="arrow undo circle outline"></ion-icon>
                             </div>
                             <div class="carousel_productos">
-                                <% for (let i=0; i < products.length; i++) { %>
-                                    <div class="productos">
-                                        <a href="/product/DetalleDeProducto/<%= products[i].id %> "
-                                            class="decoration-off">
-                                            <div class="producto">
-                                                <div class="img product">
-                                                    <img src="./../img/products_images/<%= products[i].image%>"
-                                                        alt="imagen producto 1">
-                                                </div>
-                                                <div class="nombre">
-                                                    <%= products[i].nameProduct%>
-                                                </div>
-                                                <div class="precio">
-                                                    <div class="old price">
-                                                        <h5>
-                                                            599.99
-                                                        </h5>
+                                <div class="caja">
+                                    <% for (let i=0; i < products.length; i++) { %>
+                                        <div class="productos">
+                                            <a href="/product/DetalleDeProducto/<%= products[i].id %> "
+                                                class="decoration-off">
+                                                <div class="producto">
+                                                    <div class="img product">
+                                                        <img src="../../img/products_images/<%=products[i].Image%>"
+                                                            alt="imagen producto 1">
                                                     </div>
-                                                    <div>
-                                                        <h5>
-                                                            <h5> $<%= products[i].price%>
+                                                    <div class="nombre">
+                                                        <%= products[i].nameProduct%>
+                                                    </div>
+                                                    <div class="precio">
+                                                        <div class="old price">
+                                                            <h5>
+                                                                599.99
                                                             </h5>
+                                                        </div>
+                                                        <div class="comparacion">
+                                                            &#47;
+                                                        </div>
+                                                        <div>
+                                                            <h5>
+                                                                <h5> $<%= products[i].price%>
+                                                                </h5>
+                                                        </div>
+                                                        <div class="oferta">
+                                                            <h3>30%off</h3>
+                                                        </div>
                                                     </div>
-                                                    <div class="oferta">
-                                                        <h3>30%off</h3>
+                                                    <div class="stock">
+                                                        <h5 class="stocker">Stock</h5>
                                                     </div>
                                                 </div>
-                                                <div class="stock">
-                                                    <h5 class="stocker">Stock</h5>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <% } %>
+                                            </a>
+                                        </div>
+                                        <% } %>
+                                </div>
                             </div>
                             <div class="flecha">
                                 <ion-icon name="arrow-redo-circle-outline" role="img" class="md hydrated"
@@ -165,40 +171,45 @@
                                     aria-label="arrow undo circle outline"></ion-icon>
                             </div>
                             <div class="carousel_productos">
-                                <% for (let i=0; i < products.length; i++) { %>
-                                    <div class="productos">
-                                        <a href="/product/DetalleDeProducto/<%= products[i].id %> "
-                                            class="decoration-off">
-                                            <div class="producto">
-                                                <div class="img product">
-                                                    <img src="./../img/products_images/<%= products[i].image%>"
-                                                        alt="imagen producto 1">
-                                                </div>
-                                                <div class="nombre">
-                                                    <%= products[i].nameProduct%>
-                                                </div>
-                                                <div class="precio">
-                                                    <div class="old price">
-                                                        <h5>
-                                                            599.99
-                                                        </h5>
+                                <div class="caja">
+                                    <% for (let i=0; i < products.length; i++) { %>
+                                        <div class="productos">
+                                            <a href="/product/DetalleDeProducto/<%= products[i].id %> "
+                                                class="decoration-off">
+                                                <div class="producto">
+                                                    <div class="img product">
+                                                        <img src="../../img/products_images/<%=products[i].Image%>"
+                                                            alt="imagen producto 1">
                                                     </div>
-                                                    <div>
-                                                        <h5>
-                                                            <h5> $<%= products[i].price%>
+                                                    <div class="nombre">
+                                                        <%= products[i].nameProduct%>
+                                                    </div>
+                                                    <div class="precio">
+                                                        <div class="old price">
+                                                            <h5>
+                                                                599.99
                                                             </h5>
+                                                        </div>
+                                                        <div class="comparacion">
+                                                            &#47;
+                                                        </div>
+                                                        <div>
+                                                            <h5>
+                                                                <h5> $<%= products[i].price%>
+                                                                </h5>
+                                                        </div>
+                                                        <div class="oferta">
+                                                            <h3>30%off</h3>
+                                                        </div>
                                                     </div>
-                                                    <div class="oferta">
-                                                        <h3>30%off</h3>
+                                                    <div class="stock">
+                                                        <h5 class="stocker">Stock</h5>
                                                     </div>
                                                 </div>
-                                                <div class="stock">
-                                                    <h5 class="stocker">Stock</h5>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <% } %>
+                                            </a>
+                                        </div>
+                                        <% } %>
+                                </div>
                             </div>
                             <div class="flecha">
                                 <ion-icon name="arrow-redo-circle-outline" role="img" class="md hydrated"
@@ -206,7 +217,6 @@
                             </div>
                         </div>
                     </fieldset>
-
                     <fieldset>
                         <legend>Jabones</legend>
                         <div class="box">
@@ -215,40 +225,45 @@
                                     aria-label="arrow undo circle outline"></ion-icon>
                             </div>
                             <div class="carousel_productos">
-                                <% for (let i=0; i < products.length; i++) { %>
-                                    <div class="productos">
-                                        <a href="/product/DetalleDeProducto/<%= products[i].id %> "
-                                            class="decoration-off">
-                                            <div class="producto">
-                                                <div class="img product">
-                                                    <img src="./../img/products_images/<%= products[i].image%>"
-                                                        alt="imagen producto 1">
-                                                </div>
-                                                <div class="nombre">
-                                                    <%= products[i].nameProduct%>
-                                                </div>
-                                                <div class="precio">
-                                                    <div class="old price">
-                                                        <h5>
-                                                            599.99
-                                                        </h5>
+                                <div class="caja">
+                                    <% for (let i=0; i < products.length; i++) { %>
+                                        <div class="productos">
+                                            <a href="/product/DetalleDeProducto/<%= products[i].id %> "
+                                                class="decoration-off">
+                                                <div class="producto">
+                                                    <div class="img product">
+                                                        <img src="../../img/products_images/<%=products[i].Image%>"
+                                                            alt="imagen producto 1">
                                                     </div>
-                                                    <div>
-                                                        <h5>
-                                                            <h5> $<%= products[i].price%>
+                                                    <div class="nombre">
+                                                        <%= products[i].nameProduct%>
+                                                    </div>
+                                                    <div class="precio">
+                                                        <div class="old price">
+                                                            <h5>
+                                                                599.99
                                                             </h5>
+                                                        </div>
+                                                        <div class="comparacion">
+                                                            &#47;
+                                                        </div>
+                                                        <div>
+                                                            <h5>
+                                                                <h5> $<%= products[i].price%>
+                                                                </h5>
+                                                        </div>
+                                                        <div class="oferta">
+                                                            <h3>30%off</h3>
+                                                        </div>
                                                     </div>
-                                                    <div class="oferta">
-                                                        <h3>30%off</h3>
+                                                    <div class="stock">
+                                                        <h5 class="stocker">Stock</h5>
                                                     </div>
                                                 </div>
-                                                <div class="stock">
-                                                    <h5 class="stocker">Stock</h5>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <% } %>
+                                            </a>
+                                        </div>
+                                        <% } %>
+                                </div>
                             </div>
                             <div class="flecha">
                                 <ion-icon name="arrow-redo-circle-outline" role="img" class="md hydrated"
@@ -265,40 +280,45 @@
                                     aria-label="arrow undo circle outline"></ion-icon>
                             </div>
                             <div class="carousel_productos">
-                                <% for (let i=0; i < products.length; i++) { %>
-                                    <div class="productos">
-                                        <a href="/product/DetalleDeProducto/<%= products[i].id %> "
-                                            class="decoration-off">
-                                            <div class="producto">
-                                                <div class="img product">
-                                                    <img src="./../img/products_images/<%= products[i].image%>"
-                                                        alt="imagen producto 1">
-                                                </div>
-                                                <div class="nombre">
-                                                    <%= products[i].nameProduct%>
-                                                </div>
-                                                <div class="precio">
-                                                    <div class="old price">
-                                                        <h5>
-                                                            599.99
-                                                        </h5>
+                                <div class="caja">
+                                    <% for (let i=0; i < products.length; i++) { %>
+                                        <div class="productos">
+                                            <a href="/product/DetalleDeProducto/<%= products[i].id %> "
+                                                class="decoration-off">
+                                                <div class="producto">
+                                                    <div class="img product">
+                                                        <img src="../../img/products_images/<%=products[i].Image%>"
+                                                            alt="imagen producto 1">
                                                     </div>
-                                                    <div>
-                                                        <h5>
-                                                            <h5> $<%= products[i].price%>
+                                                    <div class="nombre">
+                                                        <%= products[i].nameProduct%>
+                                                    </div>
+                                                    <div class="precio">
+                                                        <div class="old price">
+                                                            <h5>
+                                                                599.99
                                                             </h5>
+                                                        </div>
+                                                        <div class="comparacion">
+                                                            &#47;
+                                                        </div>
+                                                        <div>
+                                                            <h5>
+                                                                <h5> $<%= products[i].price%>
+                                                                </h5>
+                                                        </div>
+                                                        <div class="oferta">
+                                                            <h3>30%off</h3>
+                                                        </div>
                                                     </div>
-                                                    <div class="oferta">
-                                                        <h3>30%off</h3>
+                                                    <div class="stock">
+                                                        <h5 class="stocker">Stock</h5>
                                                     </div>
                                                 </div>
-                                                <div class="stock">
-                                                    <h5 class="stocker">Stock</h5>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <% } %>
+                                            </a>
+                                        </div>
+                                        <% } %>
+                                </div>
                             </div>
                             <div class="flecha">
                                 <ion-icon name="arrow-redo-circle-outline" role="img" class="md hydrated"
@@ -306,6 +326,8 @@
                             </div>
                         </div>
                     </fieldset>
+
+
             </main>
             <script src="\js\catalogoproductos.js"></script>
             <%- include('./partials/footer') %>

@@ -9,16 +9,16 @@ img.img-icon {
     flex-direction: column;
     justify-content: space-evenly;
     background-image: linear-gradient(to top, #9fb478 0%, #cdbd9d 100%);
-    width: 30vw;
+    width: 100vw;
     height: 100%;
     align-items: center;
     transition: transform .3s ease-in-out;
     box-shadow: 0 0 6px rgb(0 0 0 / 0%);
-    transform: translate(360%);
+    transform: translate(230%);
     z-index: 10;
 }
 .nav__input:checked+.menu-navegacion {
-    transform: translate(233%);
+    transform: translate(0%);
 }
 .userpanel {
     display: flex;

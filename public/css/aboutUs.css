@@ -18,7 +18,10 @@ main#nosotros {
 
     box-shadow: 6px 6px 6px #6b6a6a;
 }
-
+.mision:hover, .vision:hover, .valores:hover {
+    background-color: #f7e6d0;
+    border-radius: 30px;
+}
 
 .mision, .vision, .valores {
     background-color: antiquewhite;
