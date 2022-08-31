@@ -132,6 +132,7 @@ input#input_product {
     display: flex;
     flex-direction: column;
     background-color: #ffebe0;
+    width: 76vw;
 }
 
 

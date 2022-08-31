@@ -8,6 +8,7 @@ corazon.addEventListener("click", function () {
     myP.style.color = "hotpink";
 });
 
+
 //carousel de produtos
 let flecha = document.querySelectorAll(".flecha");
 let caja = document.querySelectorAll(".caja");

@@ -82,7 +82,10 @@ label {
 #Category {
     padding: 5px 7%;
     border-radius: 30px;
-
+}
+#fragrance {
+    padding: 5px 7%;
+    border-radius: 30px;
 }
 
 #grams {

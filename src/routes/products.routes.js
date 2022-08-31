@@ -8,6 +8,7 @@ const productsMiddlewares = require ("./../middlewares/productsMiddlewares");
 const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware");
 const authUserMiddleware = require ("./../middlewares/authUserMiddleware");
 const maintainMiddleware = require ("./../middlewares/maintainMiddleware");
+const searchProductMiddleware = require("./../middlewares/searchProductMiddleware")
 //importa controlador
 const productController = require("./../controllers/productController");
 
@@ -35,7 +36,10 @@ routes.post("/newProduct",
 //PUt
 routes.put("/editProduct/:idProduct",
     authAdminMiddleware,
-    maintainMiddleware,
+    multerMiddleware.productsImage().single("image"),
+    searchProductMiddleware,
+    productsMiddlewares.putValidations,
+    productsMiddlewares.putProduct,
     productController.editProductId_v2);
     
 //DELETE

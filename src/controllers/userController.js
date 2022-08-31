@@ -110,7 +110,9 @@ const userController = {
     putAccount_v2:function(req, res){
         let user = req.foundUserId
         let form = req.body
-        form.image = req.file.filename
+        if (req.file){
+            form.image = req.file.filename
+        }
         let userDb= user
         for(let key in user){
             if (user[key] != form[key] && form[key]){

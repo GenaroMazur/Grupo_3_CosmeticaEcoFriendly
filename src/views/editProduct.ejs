@@ -11,43 +11,52 @@
                 <h2>EDITAR PRODUCTO</h2>
             </div>
             <div>
-                <form action="/product/editProduct/<%= product.id %>?_method=put" method="post">
+                <form action="/product/editProduct/<%= product.id %>?_method=put" method="post" enctype="multipart/form-data">
                     <div>
                         <label for="nameProduct"><h4>Nombre Del Producto</h4></label>
                         <input type="text" name="nameProduct" id="nameProduct" class="textArea" value="<%= product.nameProduct%>" required>
+                        <% if (locals.errors && errors.nameProduct) { %>
+                            <p class="alerta"><%= errors.nameProduct.msg %> </p>
+                        <% } %>
                     </div>
                     <div>
                         <label for="description"><h4>Descripcion</h4></label>
-                        <textarea name="description" id="description" cols="30" rows="10" class="textArea"required><%= product.description%></textarea>
+                        <textarea name="descriptionProduct" id="description" cols="30" rows="10" class="textArea"required><%= product.descriptionProduct%></textarea>
+                        <% if (locals.errors && errors.descriptionProduct) { %>
+                            <p class="alerta"><%= errors.descriptionProduct.msg %> </p>
+                        <% } %>
                     </div>
                     <div>
                         <label for="Category"><h4>Categoria del producto</h4></label>
                         <select name="category" id="Category" >
-                            <option value="jabon_solido" <% if (product.category=="jabon_solido") { %>
-                            selected
-                            <% } %>>
-                                Jabon Solido
-                            </option>
-                            <option value="desodorante_solido" <% if (product.category=="desodorante_solido") { %>
-                            selected
-                            <% } %>>
-                                Desodorante Solido
-                            </option>
-                            <option value="shampoo_solido" <% if (product.category=="shampoo_solido") { %>
-                            selected
-                            <% } %>>
-                                Shampoo Solido
-                            </option>
-                            <option value="acondicionador_solido" <% if (product.category=="acondicionador_solido") { %>
-                            selected
-                            <% } %>>
-                                Acondicionador Solido
-                            </option>
+                            <% category.map(categori=>{%>
+                                <option value="<%= categori.id %>" <% if(locals.old && old.category == categori.id){%>selected<%}else if(product.idCategory == categori.id){%>selected<%}%>><%= categori.categoryName %></option>
+                            <% }) %> 
                         </select> 
                     </div>
                     <div>
                         <label for="fragance"><h4>Fragancia</h4></label>
-                        <input type="text" name="fragrance" id="fragance" class="textArea" value="<%= product.fragrance%>">
+                        <select name="fragrance" id="fragrance">
+                            <% fragrances.map(fragrance=>{%>
+                                <option value="<%=fragrance.id%>" <%if(locals.old && old.fragrance){%>selected<%}else if (product.idFragrance == fragrance.id){%>selected<%}%>><%= fragrance.nameFragrance %></option>
+                            <% }) %> 
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ingredients">Ingredientes</label>
+                        <input type="text" name="ingredients" id="ingredients" class="textArea"<% if (locals.old && old.ingredients) { %>
+                            value="<%= old.ingredients %>"
+                        <% }else if(product.ingredients){%>
+                            value="<%= product.ingredients %>"
+                        <%}%>>
+                    </div>
+                    <div>
+                        <label for="modeOfUse">Modo de uso</label>
+                        <input type="text" name="modeOfUse" id="modeOfUser" class="textArea"<% if (locals.old && old.modeOfUse) { %>
+                            value="<%= old.modeOfUse %>"
+                        <% }else if(product.modeOfUse){%>
+                            value="<%= product.modeOfUse %>"
+                        <% } %>>
                     </div>
                     <div>
                         <label for="grams"><h4>Cantidad</h4></label>
@@ -75,12 +84,24 @@
                         </select>
                     </div>
                     <div>
+                            <label for="image">
+                                <h5>Insertar imagen</h5>
+                            </label>
+                            <input type="file" id="image" name="image" accept="image/png, image/jpeg" >
+                            <% if (locals.errors && errors.image) { %>
+                                <p class="alerta"><%= errors.image.msg %> </p>
+                            <% } %>
+                        </div>
+                    <div>
                         <label for="price"><h4>Precio</h4></label>
-                        <input type="number" name="price" id="price" min="0" class="textArea" value=<%= product.price %> step=".01">
+                        <input type="number" name="price" id="price" min="0" class="textArea" value=<%=locals.old && old.price?old.price:product.price %> step=".01">
+                        <% if (locals.errors && errors.price) { %>
+                            <p class="alerta"><%= errors.price.msg %> </p>
+                        <% } %>
                     </div>
                     <div class="botons">
                         <input type="submit" value="Editar">
-                        <input type="button" value="Volver" class="volver">
+                        <a href="/user/admin"><input type="reset" value="Volver" class="volver"></a>
                     </div>
                 </form>
             </div>
