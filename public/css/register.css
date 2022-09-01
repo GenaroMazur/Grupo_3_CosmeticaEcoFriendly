@@ -46,10 +46,10 @@
  }
 
  .ojos {
-     position: absolute;
-     right: 11%;
-     top: 29%;
- }
+    position: absolute;
+    right: 11%;
+    top: 16%;
+}
 
 
  .eye {
@@ -57,6 +57,12 @@
      top: 14%;
      right: 13%;
  }
+ 
+ .recordar {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
 
  form {
      display: flex;

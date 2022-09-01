@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head') %>
-<link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/register.css">
     <title>La Vie Naturelle - Login</title>
+
     <body>
         <%- include('./partials/header') %>
             <article class="container" id="login">
@@ -13,48 +14,68 @@
                     <h1>Bienvenido de vuelta!</h1>
                     <p>Por favor ingresa tu cuenta para acceder a la página</p>
                     <form action="/user/login" method="post">
-                        <div>
-                            <label for="name">Correo electronico</label>
-                            <input type="text" class="textArea" name="userEmail" id="name"
-                            <% if (locals.old && old.userEmail) { %>
-                                value=<%= old.userEmail %> 
-                                <% } %>>
-                                
-                                <div>
-                                    <% if (locals.errors && errors.userEmail) { %>
-                                        <p class="alerta"><%= errors.userEmail.msg %></p>
-                                    <% } %>
+                        <div class="formulario__grupo" id="grupo__userEmail">
+                            <label for="userEmail" class="formulario__label">Correo Electrónico
+                                <div class="formulario__grupo-input">
+                                    <input type="email" class="formulario__input" name="userEmail" id="userEmail"
+                                        placeholder="LavieNaturelle@correo.com">
+                                    <p class="formulario__input-error">El correo no debe estar vacio.</p>
+                                    <% if (locals.old && old.userEmail) { %>
+                                        value=<%= old.userEmail %>
+                                            <% } %>
+
+                                                <div>
+                                                    <% if (locals.errors && errors.userEmail) { %>
+                                                        <p class="alerta">
+                                                            <%= errors.userEmail.msg %>
+                                                        </p>
+                                                        <% } %>
+                                                </div>
+                                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
                                 </div>
+                            </label>
                         </div>
                         <div>
-                            <div class="wrapp-input">
-                                    <label for="pass">Contraseña</label>
-                                    <div class="ojos">
-                                        <span class="hidden">
-                                            <ion-icon name="eye-outline"></ion-icon>
-                                        </span>
-                                    </div>
-                                    <input type="password" name="password" id="pass" class="textArea" 
-                                    <% if (locals.old && old.password) { %>
-                                        value=<%= old.password%> 
-                                        <% } %>>
-                                        <div>
-                                            <% if (locals.errors && errors.password) { %>
-                                                <p class="alerta"><%= errors.password.msg %></p>
-                                            <% } %>
+                            <div class="formulario__grupo" id="grupo__password">
+                                <label for="password" class="formulario__label">Contraseña
+                                    <div class="formulario__grupo-input">
+                                        <div class="ojos">
+                                            <span class="hidden">
+                                                <ion-icon name="eye-outline" class="eyeIcon"></ion-icon>
+                                            </span>
                                         </div>
-                                <div class="recordar">
-                                    <input type="checkbox" name="remember" id="recordar">recordar contraseña
-                                </div>
+                                        <input type="password" class="formulario__input" name="password"
+                                            placeholder="ingrese su contraseña" class="textArea password" id="password">
+                                        <p class="formulario__input-error">La contraseña no debe estar vacia.
+                                        </p>
+                                        <% if (locals.old && old.password) { %>
+                                            value=<%= old.password%>
+                                                <% } %>
+                                                    <div>
+                                                        <% if (locals.errors && errors.password) { %>
+                                                            <p class="alerta">
+                                                                <%= errors.password.msg %>
+                                                            </p>
+                                                            <% } %>
+                                                    </div>
+                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="recordar">
+                                <input type="checkbox" name="remember" id="recordar">recordar contraseña
+                            </div>
                         </div>
                         <span><a href="" target="_blank">¿ no recuerdas tu contraseña ?</a></span>
-                        <input type="submit" value="Iniciar sesion" class="button" >
+                        <input type="submit" value="Iniciar sesion" class="button">
                     </form>
-                    <p1>¿ No tienes una cuenta ? Create una!<a href="/user/registro"><button class="button">registrate</button></a></p1>
+                    <p1>¿ No tienes una cuenta ? Create una!<a href="/user/registro"><button
+                                class="button">registrate</button></a></p1>
                 </section>
             </article>
             <%- include('./partials/footer') %>
-            <script src="\js\login.js"></script>
+                <script src="\js\login.js"></script>
+                <script src="https://kit.fontawesome.com/2c36e9b7b1.js" ></script>
     </body>
 
 </html>
