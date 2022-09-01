@@ -6,7 +6,7 @@ let con = document.querySelectorAll(".formulario__validacion-estado");
 const expresiones = {
     name: /^[a-zA-Zà-ü\s]{4,16}$/, // acepta-letras,acentos,pueden llevar espacios,acepta de 4 a 16
     lastname:/^[a-zA-Zà-ü\s]{4,16}$/,// acepta-letras,acentos,pueden llevar espacios,acepta de 4 a 16
-	password: /^.{6,15}$/, // acepta de 6 a 15 digitos.
+	password: /^.{8,15}$/, // acepta de 6 a 15 digitos.
 	userEmail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,// acepta todo tipo de caracter numero e simbolo
 }
 

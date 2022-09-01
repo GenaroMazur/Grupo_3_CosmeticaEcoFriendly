@@ -132,8 +132,11 @@
 }
 
  .formulario__input-error-activo {
+    display: flex;
+    flex-direction: column-reverse;
     overflow: visible;
     height: max-content;
+    align-items: flex-end;
  }
 
  .formulario__validacion-estado {
