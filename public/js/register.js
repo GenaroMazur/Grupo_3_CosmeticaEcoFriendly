@@ -1,7 +1,6 @@
 let ojo = document.querySelectorAll(".eye");
-let password = document.querySelectorAll(".password");
+let password = document.querySelectorAll("#password");
 let icon = document.querySelectorAll(".eyeIcon");
-console.log(icon[0].attributes.name.value);
 function ojos(indice) {
     if (icon[indice].attributes.name.value == "eye-outline") {
         icon[indice].setAttribute("name", "eye-off-outline");
