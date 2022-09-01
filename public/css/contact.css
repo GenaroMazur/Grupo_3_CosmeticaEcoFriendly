@@ -16,6 +16,13 @@
     border-radius: 35px;
 }
 
+#formulario_mensaje{
+    display: none;
+}
+.formulario_mensaje_activo{
+    display: block;
+}
+
 #contacto form>* {
     margin-top: 25px;
 }
