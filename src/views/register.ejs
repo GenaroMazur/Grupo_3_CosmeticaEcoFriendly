@@ -65,7 +65,7 @@
                                     </div>
                                     <input type="password" class="formulario__input" name="password"
                                         placeholder="123456" class="textArea password" id="password">
-                                    <p class="formulario__input-error">La contraseña tiene que ser de 6 a 15 dígitos.
+                                    <p class="formulario__input-error">La contraseña tiene que ser de 8 a 15 dígitos.
                                     </p>
                                     <% if (locals.errors && old.password) { %>
                                         value=<%= old.password %>
@@ -124,14 +124,19 @@
                             </label>
                         </div>
 
-                        <div id="grupo__image">
+                        <div class="formulario__grupo"  id="grupo__image">
                             <label for="file" class="formulario__label">Foto de perfil
-                                <input type="file" name="image" id="file" accept="image/jpg image/png" <% if
+                              <div class="formulario__grupo-input">
+                                <input type="file" name="image" id="file" accept="image/jpg image/png image/jpeg">
+                                <p class="formulario__input-error">El correo solo puede contener letras, numeros,
+                                    puntos, guiones y guion bajo.</p>
+                                <% if
                                     (locals.errors && errors.image) { %>
                                 <p class="alerta">
                                     <%= errors.image.msg %>
                                 </p>
                                 <% } %>
+                             </div> 
                             </label>
                         </div>
 

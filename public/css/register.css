@@ -273,15 +273,15 @@
  }
 
  .alerta {
-     color: var(--color-alerta);
-     border: solid;
-     border-radius: 30px;
-     background: var(--color-dentroAlerta);
-     font: -webkit-control;
-     position: absolute;
-     width: 141%;
-     top: 75%;
-     left: -19%;
+    color: var(--color-alerta);
+    border: solid;
+    border-radius: 30px;
+    background: var(--color-dentroAlerta);
+    font: -webkit-control;
+    position: absolute;
+    width: 100%;
+    top: 34%;
+    left: 3%;
  }
 
  form>* {
