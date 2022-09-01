@@ -26,28 +26,31 @@
                                     <% } %>
                                 </div>
                         </div>
-                        <div class="wrapp-input">
-                            <label for="pass">Contraseña</label>
-                            <div class="ojos">
-                                <span class="hidden">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </span>
-                            </div>
-                            <input type="password" name="password" id="pass" class="textArea" 
-                            <% if (locals.old && old.password) { %>
-                                value=<%= old.password%> 
-                                <% } %>>
-                                <div>
-                                    <% if (locals.errors && errors.password) { %>
-                                        <p class="alerta"><%= errors.password.msg %></p>
-                                    <% } %>
+                        <div>
+                            <div class="wrapp-input">
+                                    <label for="pass">Contraseña</label>
+                                    <div class="ojos">
+                                        <span class="hidden">
+                                            <ion-icon name="eye-outline"></ion-icon>
+                                        </span>
+                                    </div>
+                                    <input type="password" name="password" id="pass" class="textArea" 
+                                    <% if (locals.old && old.password) { %>
+                                        value=<%= old.password%> 
+                                        <% } %>>
+                                        <div>
+                                            <% if (locals.errors && errors.password) { %>
+                                                <p class="alerta"><%= errors.password.msg %></p>
+                                            <% } %>
+                                        </div>
+                                <div class="recordar">
+                                    <input type="checkbox" name="remember" id="recordar">recordar contraseña
                                 </div>
-                            <input type="checkbox" name="remember" id="recordar">recordar contraseña
                         </div>
                         <span><a href="" target="_blank">¿ no recuerdas tu contraseña ?</a></span>
-                        <input type="submit" value="iniciar sesión" class="button" >
+                        <input type="submit" value="Iniciar sesion" class="button" >
                     </form>
-                    <p1>¿ No tienes una cuenta ? Create una!<a href="/user/registro"><button class="button">registrarse</button></a></p1>
+                    <p1>¿ No tienes una cuenta ? Create una!<a href="/user/registro"><button class="button">registrate</button></a></p1>
                 </section>
             </article>
             <%- include('./partials/footer') %>

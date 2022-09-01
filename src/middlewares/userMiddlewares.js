@@ -49,12 +49,41 @@ const userMiddlewares = {
     //-------- dataBase ---------
     validationsCreate_v2: [
         body("username")
-            .notEmpty().withMessage("Debe ingresar un nombre de usuario"),
+            .notEmpty().withMessage("Debe ingresar un nombre de usuario").bail()
+            .isLength({min:2}).withMessage("El nombre debe tener al menos 2 caracteres"),
         body("lastname")
             .notEmpty().withMessage("Debe ingresar un apellido"),
         body("password")
             .notEmpty().withMessage("Debe ingresar una contraseña").bail()
-            .isLength({ min: 6 }).withMessage("La contraseña debe tener al menos 6 caracteres"),
+            .isLength({ min: 8 }).withMessage("La contraseña debe tener al menos 8 caracteres")
+            .custom((value,{req})=>{
+                let upper = false
+                let num = false
+                let special = false
+                let lower = false
+                let capitalLetters = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+                let lowerLetters = capitalLetters.toLowerCase()
+                let numbers = "0123456789"
+                let specialLetters = ".,-_<>/=&%$#@!¡¿?"
+                for (let i of value){
+                    if (capitalLetters.includes(i)){
+                        upper = true
+                    }
+                    if(numbers.includes(i)){
+                        num = true
+                    }
+                    if(specialLetters.includes(i)){
+                        special = true
+                    }
+                    if(lowerLetters.includes(i)){
+                        lower = true
+                    }
+                }
+                if (!(num && upper && special && lower)){
+                    throw new Error("Debe tener al menos una letra mayuscula, minuscula, un caracter especial y un numero")
+                }
+                return true
+            }),
         body("coPass")
             .notEmpty().withMessage("Este campo no debe estar vacio").bail()
             .custom((value,{req})=>{

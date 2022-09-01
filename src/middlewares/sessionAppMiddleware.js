@@ -3,7 +3,7 @@ module.exports=function (req, res, next){
         req.session.user = {
             "id": 1,
             "username":"desarrollador",
-            "status":"admin"
+            "status":"Admin"
         }
     }
     if (req.cookies && req.session.user == undefined) {

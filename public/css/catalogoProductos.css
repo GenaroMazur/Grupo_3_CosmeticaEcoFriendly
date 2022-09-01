@@ -27,12 +27,14 @@ body {
 }
 
 .boton {
+    display: flex;
+    height: 4vw;
     border-radius: 30px;
-    padding: 10px 20px 10px 20px;
-    color: black;
-    text-decoration: none;
+    width: 12vw;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
 }
-
 .boton.heartBoton {
     background: white;
     display: flex;
@@ -195,8 +197,9 @@ aside {
     padding: 1.5vw;
 }
 
-ul {
+aside ul {
     list-style: none;
+    border-top: solid 2px;
 }
 
 li:hover {
@@ -226,6 +229,7 @@ ion-icon {
 
     .category {
         visibility: visible;
+        padding-bottom: 10px;
     }
 
     main {
