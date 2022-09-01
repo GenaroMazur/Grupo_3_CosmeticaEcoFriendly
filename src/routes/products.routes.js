@@ -18,6 +18,7 @@ routes.get("/CarritoDeCompras",
     productController.productCard_v2);
 routes.get("/DetalleDeProducto/:id", productController.productDetail_v2);
 routes.get("/catalogoProductos", productController.catalogoProductos_v2);
+routes.get("/favoritos", productController.favoritos_v2);
 routes.get("/newProduct",
     authAdminMiddleware,
     productController.newProduct);
