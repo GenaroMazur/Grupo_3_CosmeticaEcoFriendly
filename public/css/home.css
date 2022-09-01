@@ -124,6 +124,7 @@ a.a-nav:hover{
 } 
 
 h1.titulo-header {
+    padding: 0.5vw;
     display: flex;
     font-size: 8vw;
     justify-content: flex-start;
@@ -133,11 +134,12 @@ h1.titulo-header {
 }
 
 p.parrafo-header {
+    padding: 0.5vw;
     font-size: 2vw;
     display: flex;
     justify-content: flex-start;
     animation-name: opacidad;
-    animation-duration: 8s;
+    animation-duration: 5s;
     animation-timing-function: ease-out;
 }
 

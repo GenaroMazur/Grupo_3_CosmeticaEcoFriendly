@@ -28,17 +28,19 @@
                             <label for="description">
                                 <h4>Descripcion</h4>
                             </label>
-                            <textarea name="description" id="description" cols="30" rows="10" class="textArea"required><% if (locals.old && old.description) { %><%= old.description %><% } %></textarea>
+                            <textarea name="descriptionProduct" id="description" cols="30" rows="10" class="textArea"required><% if (locals.old && old.descriptionProduct) { %><%= old.descriptionProduct %><% } %></textarea>
+                            <% if (locals.errors && errors.descriptionProduct) { %>
+                                <p class="alerta"><%= errors.descriptionProduct.msg %> </p>
+                            <% } %>
                         </div>
                         <div>
                             <label for="Category">
                                 <h5>Categoria del producto</h5>
                             </label>
                             <select name="category" id="Category">
-                                <option value="jabon_solido">Jabon Solido</option>
-                                <option value="desodorante_solido">Desodorante Solido</option>
-                                <option value="shampoo_solido">Shampoo Solido</option>
-                                <option value="acondicionador_solido">Acondicionador Solido</option>
+                                <% categories.map(category=>{ %>
+                                    <option value="<%= category.id %>" <% if(locals.old && old.category == category.id){%>selected<%}%>><%= category.categoryName %></option>
+                                <% }) %> 
                             </select>
                         </div>
                         <div>
@@ -52,9 +54,11 @@
                         </div>
                         <div>
                             <label for="fragance">Fragancia</label>
-                            <input type="text" name="fragrance" id="fragrance" class="textArea"<% if (locals.old && old.fragrance) { %>
-                                value="<%= old.fragrance %>"
-                            <% } %>>
+                            <select name="fragrance" id="fragrance">
+                                <% fragrances.map(fragrance=>{ %>
+                                    <option value="<%= fragrance.id %>" <%if(locals.old && old.fragrance && old.fragrance.id == fragrance.id){%>selected<%}%>><%= fragrance.nameFragrance %></option>
+                                <%}) %> 
+                            </select>
                         </div>
                         <div>
                             <label for="ingredients">Ingredientes</label>
