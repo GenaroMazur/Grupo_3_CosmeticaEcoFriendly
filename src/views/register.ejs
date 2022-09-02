@@ -28,7 +28,8 @@
                                                         <%= errors.username.msg %>
                                                     </p>
                                                     <% } %>
-                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                        <i
+                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
                                 </div>
                             </label>
                         </div>
@@ -49,7 +50,8 @@
                                                         <%= errors.lastname.msg %>
                                                     </p>
                                                     <% } %>
-                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                        <i
+                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
                                 </div>
                             </label>
                         </div>
@@ -75,7 +77,8 @@
                                                         <%= errors.password.msg %>
                                                     </p>
                                                     <% } %>
-                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                        <i
+                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
                                 </div>
                             </label>
                         </div>
@@ -100,7 +103,8 @@
                                                         <%= errors.coPass.msg %>
                                                     </p>
                                                     <% } %>
-                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                        <i
+                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
                                 </div>
                             </label>
                         </div>
@@ -119,24 +123,24 @@
                                                         <%= errors.userEmail.msg %>
                                                     </p>
                                                     <% } %>
-                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                        <i
+                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
                                 </div>
                             </label>
                         </div>
 
-                        <div class="formulario__grupo"  id="grupo__image">
+                        <div class="formulario__grupo" id="grupo__image">
                             <label for="file" class="formulario__label">Foto de perfil
-                              <div class="formulario__grupo-input">
-                                <input type="file" name="image" id="file" accept="image/jpg image/png image/jpeg">
-                                <p class="formulario__input-error">El correo solo puede contener letras, numeros,
-                                    puntos, guiones y guion bajo.</p>
-                                <% if
-                                    (locals.errors && errors.image) { %>
-                                <p class="alerta">
-                                    <%= errors.image.msg %>
-                                </p>
-                                <% } %>
-                             </div> 
+                                <div class="formulario__grupo-input">
+                                    <input type="file" name="image" id="file" accept="image/jpg image/png image/jpeg">
+                                    <p class="formulario__input-error">El correo solo puede contener letras, numeros,
+                                        puntos, guiones y guion bajo.</p>
+                                    <% if (locals.errors && errors.image) { %>
+                                        <p class="alerta">
+                                            <%= errors.image.msg %>
+                                        </p>
+                                        <% } %>
+                                </div>
                             </label>
                         </div>
 
@@ -161,7 +165,7 @@
             </form>
             <%- include('./partials/footer') %>
                 <script src="\js\register.js"></script>
-                <script src="https://kit.fontawesome.com/2c36e9b7b1.js" ></script>
+                <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
                 <script src="\js\validacion.js"></script>
     </body>
 
