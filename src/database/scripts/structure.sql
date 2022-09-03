@@ -93,7 +93,7 @@ FOREIGN KEY(idCategory) REFERENCES category(id)
 
 USE bd_cosmetica;
 
-CREATE TABLE product-user (
+CREATE TABLE productUser (
 id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
 idProduct INT,
 idUser INT,
