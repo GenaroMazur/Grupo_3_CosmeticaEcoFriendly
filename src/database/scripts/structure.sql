@@ -104,22 +104,5 @@ FOREIGN KEY(idDelivery) REFERENCES delivery(postalCode)
 );
 
 USE bd_cosmetica;
-
-CREATE TABLE cart (
-id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
-quantity TINYINT NOT NULL,
-totalPrice INT NOT NULL,
-createAt DATETIME NOT NULL,
-idUser INT,
-idStatus INT,
-FOREIGN KEY(idUser) REFERENCES users(id),
-FOREIGN KEY(idStatus) REFERENCES statusCart(id)
-);
-
-
-
-
-
-USE bd_cosmetica;
 ALTER TABLE `bd_cosmetica`.`users` 
 CHANGE COLUMN `image` `image` VARCHAR(60) NULL DEFAULT 'default.jpg' ;
