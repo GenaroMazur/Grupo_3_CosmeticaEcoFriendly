@@ -65,15 +65,23 @@ const validarPassword2 = () => {
 	const inputPassword1 = prueba[0]
 	const inputPassword2 = prueba[1]
 
-	if(inputPassword1.value !== inputPassword2.value){
-
+	if(inputPassword2.value === ''){
 		document.getElementById(`grupo__coPass`).classList.add('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__coPass`).classList.remove('formulario__grupo-correcto');
 		document.querySelector(`#grupo__coPass i`).classList.add('fa-times-circle');
 		document.querySelector(`#grupo__coPass i`).classList.remove('fa-check-circle');
 		document.querySelector(`#grupo__coPass .formulario__input-error`).classList.add('formulario__input-error-activo');
 		campos['password'] = false;
-	} else {
+	}
+	else if(inputPassword1.value !== inputPassword2.value){
+		document.getElementById(`grupo__coPass`).classList.add('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__coPass`).classList.remove('formulario__grupo-correcto');
+		document.querySelector(`#grupo__coPass i`).classList.add('fa-times-circle');
+		document.querySelector(`#grupo__coPass i`).classList.remove('fa-check-circle');
+		document.querySelector(`#grupo__coPass .formulario__input-error`).classList.add('formulario__input-error-activo');
+		campos['password'] = false;
+	} else
+	{
 		document.getElementById(`grupo__coPass`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__coPass`).classList.add('formulario__grupo-correcto');
 		document.querySelector(`#grupo__coPass i`).classList.remove('fa-times-circle');
