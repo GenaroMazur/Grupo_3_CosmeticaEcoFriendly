@@ -93,11 +93,16 @@ FOREIGN KEY(idCategory) REFERENCES category(id)
 
 USE bd_cosmetica;
 
-CREATE TABLE orders (
+CREATE TABLE product-user (
 id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
 idProduct INT,
 idUser INT,
 idDelivery INT,
+quantity TINYINT NOT NULL,
+totalPrice INT NOT NULL,
+createAt DATETIME NOT NULL,
+idStatus INT,
+FOREIGN KEY(idStatus) REFERENCES statusCart(id),
 FOREIGN KEY(idProduct) REFERENCES products(id),
 FOREIGN KEY(idUser) REFERENCES users(id),
 FOREIGN KEY(idDelivery) REFERENCES delivery(postalCode)
