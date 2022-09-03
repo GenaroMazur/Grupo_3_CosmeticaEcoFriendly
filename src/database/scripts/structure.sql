@@ -117,15 +117,7 @@ FOREIGN KEY(idStatus) REFERENCES statusCart(id)
 );
 
 
-USE bd_cosmetica;
 
-CREATE TABLE orderCart (
-id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
-idOrder INT,
-idCart INT,
-FOREIGN KEY(idOrder) REFERENCES orders(id),
-FOREIGN KEY(idCart) REFERENCES cart(id)
-);
 
 
 USE bd_cosmetica;
