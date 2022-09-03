@@ -36,7 +36,6 @@ const validarFormulario = (e) => {
 		case "userEmail":
 			validarCampo(expresiones.userEmail, e.target, 'userEmail');
 		break;
-
 	}
 }
 
