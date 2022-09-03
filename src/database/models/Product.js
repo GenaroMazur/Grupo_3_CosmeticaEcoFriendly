@@ -57,7 +57,7 @@ module.exports = function (sequelize, DataTypes) {
         })
 
         Product.belongsToMany(models.User,{
-            "througt":"productUser",
+            "through":"productUser",
             "foreignKey":"idProduct",
             "otherKey":"idUser",
             "as":"ProductUser"

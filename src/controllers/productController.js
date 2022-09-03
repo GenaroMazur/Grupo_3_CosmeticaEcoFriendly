@@ -44,14 +44,7 @@ const productController = {
         res.redirect("/user/admin")
     },
     productCard_v2:function (req, res) {
-        db.Order.findAll()
-            .then(cart=>{
-                return res.render("productCard",{cart,user: req.session.user})
-            })
-            .catch(err=>{
-                console.error(err);
-                return res.redirect("/")
-            })
+        
     },
     catalogoProductos_v2: function (req, res){
         let fragrances = db.Fragrance.findAll()
