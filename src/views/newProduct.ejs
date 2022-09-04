@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="/css/newProduct.css">
     <title>La Vie Naturelle - Cargar Producto</title>
 <body>
+    
     <%- include('./partials/header') %>
         <main>
             <section>
@@ -12,7 +13,7 @@
                     <h2>AGREGAR PRODUCTO</h2>
                 </div>
                 <div>
-                    <form action="/product/newProduct" method="post" enctype="multipart/form-data">
+                    <form action="/product/newProduct" method="post" enctype="multipart/form-data" id="form_create">
                         <div>
                             <label for="nameProduct">
                                 <h4>Nombre Del Producto</h4>
@@ -20,6 +21,7 @@
                             <input type="text" name="nameProduct" id="nameProduct" class="textArea" required <% if (locals.old && old.nameProduct) { %>
                                 value="<%= old.nameProduct %>"
                             <% } %>>
+                            <div></div>
                             <% if (locals.errors && errors.nameProduct) { %>
                                 <p class="alerta"><%= errors.nameProduct.msg %> </p>
                             <% } %>
@@ -28,7 +30,8 @@
                             <label for="description">
                                 <h4>Descripcion</h4>
                             </label>
-                            <textarea name="descriptionProduct" id="description" cols="30" rows="10" class="textArea"required><% if (locals.old && old.descriptionProduct) { %><%= old.descriptionProduct %><% } %></textarea>
+                            <textarea name="descriptionProduct" id="description" cols="30" rows="10" class="textArea" data-name="description"><% if (locals.old && old.descriptionProduct) { %><%= old.descriptionProduct %><% } %></textarea>
+                            <div class="alert-error"></div>
                             <% if (locals.errors && errors.descriptionProduct) { %>
                                 <p class="alerta"><%= errors.descriptionProduct.msg %> </p>
                             <% } %>
@@ -48,6 +51,7 @@
                                 <h5>Insertar imagen</h5>
                             </label>
                             <input type="file" id="image" name="image" accept="image/png, image/jpeg" required>
+                            <div></div>
                             <% if (locals.errors && errors.image) { %>
                                 <p class="alerta"><%= errors.image.msg %> </p>
                             <% } %>
@@ -65,12 +69,14 @@
                             <input type="text" name="ingredients" id="ingredients" class="textArea"<% if (locals.old && old.ingredients) { %>
                                 value="<%= old.ingredients %>"
                             <% } %>>
+                            <div></div>
                         </div>
                         <div>
                             <label for="modeOfUse">Modo de uso</label>
                             <input type="text" name="modeOfUse" id="modeOfUser" class="textArea"<% if (locals.old && old.modeOfUse) { %>
                                 value="<%= old.modeOfUse %>"
                             <% } %>>
+                            <div></div>
                         </div>
                         <div>
                             <label for="grams">Cantidad</label>
@@ -88,6 +94,7 @@
                             <input type="number" name="price" id="price" min="0" class="textArea"<% if (locals.old && old.price) { %>
                                 value="<%= old.price %>"
                             <% } %>>
+                            <div></div>
                             <% if (locals.errors && errors.price) { %>
                                 <p class="alerta"><%= errors.price.msg %> </p>
                             <% } %>
@@ -101,6 +108,8 @@
             </section>
         </main>
         <%- include('./partials/footer') %>
+            <script src="\js\ValidatorNewProduct.js"></script>
+        
 </body>
 
 </html>
