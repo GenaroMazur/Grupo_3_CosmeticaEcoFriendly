@@ -43,8 +43,8 @@ const productController = {
         })
         res.redirect("/user/admin")
     },
-    productCard_v2:function (req, res) {
-        
+    productCart_v2:function (req, res) {
+        res.render("productCard",{user:req.session.user})
     },
     catalogoProductos_v2: function (req, res){
         let fragrances = db.Fragrance.findAll()
