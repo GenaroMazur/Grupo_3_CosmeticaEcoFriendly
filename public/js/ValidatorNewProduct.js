@@ -10,10 +10,11 @@
     let inputModeOfUse = document.getElementById('modeOfUser');
     let inputGrams = document.getElementById('grams');
     let inputPrice = document.getElementById('price');
-
+    let ext = [".jpg", ".png", ".jpeg"]
   
+    let error = document.getElementById('alert-error')
 
-    let arrayInput = [inputName, inputImage, inputIngredients, inputModeOfUse, inputPrice];
+    let arrayInput = [inputName, inputDescription, inputCategory, inputFragrance, inputImage, inputIngredients, inputModeOfUse, inputGrams, inputPrice];
     let textArea = inputDescription;
     let arraySelect = [inputCategory, inputFragrance, inputGrams];
 
@@ -36,29 +37,28 @@
                 input.nextElementSibling.innerHTML = ''
             }
 
-        });
-
-        //aca evaluar la descripcion
-        inputDescription.addEventListener('blur', function(){
-            if(inputDescription.value < 20){
+            if((input.dataset.name =='description') && (input.value.length < 20)){
                 inputDescription.classList.add('is-invalid');
-                inputDescription.nextElementSibling.innerHTML = 'Debe contener al menos 20 caracteres la descripción'
-
+                inputDescription.nextElementSibling.innerHTML = 'Debe contener al menos 20 caracteres la descripción';
+                errores++;
             }
-        })
-        arraySelect.forEach(function(select){
-            //aca evaluar los select
-            if(select.value == ''){
-
+            else if((input.dataset.name =='description') && (input.value.length > 20)){
+                inputDescription.classList.remove('is-invalid');
+                inputDescription.classList.add('is-valid');
+                inputDescription.nextElementSibling.innerHTML = ''
             }
-            if(select.value != ''){
 
+            if (!ext.some(ext=>{
+                return inputImage.value.endsWith(ext)
+            })){
+                inputImage.nextElementSibling.innerHTML = 'extensión no permitida';
+                errores++;
             }
-        })
+
+        });
 
         if(errores > 0){
             e.preventDefault();
-
         }
         
     })
@@ -70,12 +70,26 @@
                 input.classList.remove('is-valid');
                 input.nextElementSibling.innerHTML = 'El campo no puede estar vacío'
             }
-
-            if(input.value != ''){
+            else if(input.value != ''){
                 input.classList.add('is-valid');
                 input.classList.remove('is-invalid');
                 input.nextElementSibling.innerHTML = ''
             }
 
+            if((input.dataset.name =='description') && (input.value.length < 20)){
+                inputDescription.classList.add('is-invalid');
+                inputDescription.nextElementSibling.innerHTML = 'Debe contener al menos 20 caracteres la descripción'
+            }
+            else if((input.dataset.name =='description') && (input.value.length > 20)){
+                inputDescription.classList.remove('is-invalid');
+                inputDescription.classList.add('is-valid');
+                inputDescription.nextElementSibling.innerHTML = ''
+            }
+            if (!ext.some(ext=>{
+                return inputImage.value.endsWith(ext)
+            })){
+                inputImage.nextElementSibling.innerHTML = 'extensión no permitida'
+            }
         })
+       
     })
