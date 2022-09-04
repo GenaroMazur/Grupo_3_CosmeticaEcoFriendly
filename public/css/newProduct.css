@@ -118,6 +118,10 @@ label {
     border-color: green;
 }
 
+.alert-error{
+    color: red;
+}
+
     
 @media(min-width:900px) {
 

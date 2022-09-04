@@ -21,20 +21,20 @@
                             <input type="text" name="nameProduct" id="nameProduct" class="textArea" required <% if (locals.old && old.nameProduct) { %>
                                 value="<%= old.nameProduct %>"
                             <% } %>>
-                            <div></div>
-                            <% if (locals.errors && errors.nameProduct) { %>
+                            <div class="alert-error"><% if (locals.errors && errors.nameProduct) { %>
                                 <p class="alerta"><%= errors.nameProduct.msg %> </p>
-                            <% } %>
+                            <% } %></div>
+                            
                         </div>
                         <div>
                             <label for="description">
                                 <h4>Descripcion</h4>
                             </label>
                             <textarea name="descriptionProduct" id="description" cols="30" rows="10" class="textArea" data-name="description"><% if (locals.old && old.descriptionProduct) { %><%= old.descriptionProduct %><% } %></textarea>
-                            <div class="alert-error"></div>
-                            <% if (locals.errors && errors.descriptionProduct) { %>
+                            <div class="alert-error"><% if (locals.errors && errors.descriptionProduct) { %>
                                 <p class="alerta"><%= errors.descriptionProduct.msg %> </p>
-                            <% } %>
+                            <% } %></div>
+                            
                         </div>
                         <div>
                             <label for="Category">
@@ -45,16 +45,17 @@
                                     <option value="<%= category.id %>" <% if(locals.old && old.category == category.id){%>selected<%}%>><%= category.categoryName %></option>
                                 <% }) %> 
                             </select>
+                            <div class="alert-error"></div>
                         </div>
                         <div>
                             <label for="image">
                                 <h5>Insertar imagen</h5>
                             </label>
                             <input type="file" id="image" name="image" accept="image/png, image/jpeg" required>
-                            <div></div>
-                            <% if (locals.errors && errors.image) { %>
+                            <div><% if (locals.errors && errors.image) { %>
                                 <p class="alerta"><%= errors.image.msg %> </p>
-                            <% } %>
+                            <% } %></div>
+                            
                         </div>
                         <div>
                             <label for="fragance">Fragancia</label>
@@ -63,20 +64,21 @@
                                     <option value="<%= fragrance.id %>" <%if(locals.old && old.fragrance && old.fragrance.id == fragrance.id){%>selected<%}%>><%= fragrance.nameFragrance %></option>
                                 <%}) %> 
                             </select>
+                            <div class="alert-error"></div>
                         </div>
                         <div>
                             <label for="ingredients">Ingredientes</label>
                             <input type="text" name="ingredients" id="ingredients" class="textArea"<% if (locals.old && old.ingredients) { %>
                                 value="<%= old.ingredients %>"
                             <% } %>>
-                            <div></div>
+                            <div class="alert-error"></div>
                         </div>
                         <div>
                             <label for="modeOfUse">Modo de uso</label>
                             <input type="text" name="modeOfUse" id="modeOfUser" class="textArea"<% if (locals.old && old.modeOfUse) { %>
                                 value="<%= old.modeOfUse %>"
                             <% } %>>
-                            <div></div>
+                            <div class="alert-error"></div>
                         </div>
                         <div>
                             <label for="grams">Cantidad</label>
@@ -86,6 +88,7 @@
                                 <option value="150">150 gramos</option>
                                 <option value="250">250 gramos</option>
                             </select>
+                            <div class="alert-error"></div>
                         </div>
                         <div>
                             <label for="price">
@@ -94,10 +97,10 @@
                             <input type="number" name="price" id="price" min="0" class="textArea"<% if (locals.old && old.price) { %>
                                 value="<%= old.price %>"
                             <% } %>>
-                            <div></div>
-                            <% if (locals.errors && errors.price) { %>
+                            <div class="alert-error"><% if (locals.errors && errors.price) { %>
                                 <p class="alerta"><%= errors.price.msg %> </p>
-                            <% } %>
+                            <% } %></div>
+                            
                         </div>
                         <div class="botons">
                             <input type="submit" value="Agregar">
