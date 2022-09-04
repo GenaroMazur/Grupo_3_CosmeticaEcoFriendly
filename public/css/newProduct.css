@@ -105,6 +105,24 @@ label {
     background: rgb(232, 232, 232);
     font: -webkit-control;
 }
+
+.is-invalid{
+    color: red;
+    font-size: 12px;
+    border-color: red;
+}
+
+.is-valid{
+    color: black;
+    font-size: 12px;
+    border-color: green;
+}
+
+.alert-error{
+    color: red;
+}
+
+    
 @media(min-width:900px) {
 
     

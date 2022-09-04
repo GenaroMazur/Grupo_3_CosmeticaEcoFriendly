@@ -15,16 +15,17 @@
                     <div>
                         <label for="nameProduct"><h4>Nombre Del Producto</h4></label>
                         <input type="text" name="nameProduct" id="nameProduct" class="textArea" value="<%= product.nameProduct%>" required>
-                        <% if (locals.errors && errors.nameProduct) { %>
+                        <div class="alert-error"><% if (locals.errors && errors.nameProduct) { %>
                             <p class="alerta"><%= errors.nameProduct.msg %> </p>
-                        <% } %>
+                        <% } %></div>                     
                     </div>
                     <div>
                         <label for="description"><h4>Descripcion</h4></label>
                         <textarea name="descriptionProduct" id="description" cols="30" rows="10" class="textArea"required><%= product.descriptionProduct%></textarea>
-                        <% if (locals.errors && errors.descriptionProduct) { %>
+                        <div class="alert-error"><% if (locals.errors && errors.descriptionProduct) { %>
                             <p class="alerta"><%= errors.descriptionProduct.msg %> </p>
-                        <% } %>
+                        <% } %></div>
+                        
                     </div>
                     <div>
                         <label for="Category"><h4>Categoria del producto</h4></label>
@@ -33,6 +34,7 @@
                                 <option value="<%= categori.id %>" <% if(locals.old && old.category == categori.id){%>selected<%}else if(product.idCategory == categori.id){%>selected<%}%>><%= categori.categoryName %></option>
                             <% }) %> 
                         </select> 
+                        <div class="alert-error"></div>
                     </div>
                     <div>
                         <label for="fragance"><h4>Fragancia</h4></label>
@@ -41,6 +43,7 @@
                                 <option value="<%=fragrance.id%>" <%if(locals.old && old.fragrance){%>selected<%}else if (product.idFragrance == fragrance.id){%>selected<%}%>><%= fragrance.nameFragrance %></option>
                             <% }) %> 
                         </select>
+                        <div class="alert-error"></div>
                     </div>
                     <div>
                         <label for="ingredients">Ingredientes</label>
@@ -49,6 +52,7 @@
                         <% }else if(product.ingredients){%>
                             value="<%= product.ingredients %>"
                         <%}%>>
+                        <div class="alert-error"></div>
                     </div>
                     <div>
                         <label for="modeOfUse">Modo de uso</label>
@@ -57,6 +61,7 @@
                         <% }else if(product.modeOfUse){%>
                             value="<%= product.modeOfUse %>"
                         <% } %>>
+                        <div class="alert-error"></div>
                     </div>
                     <div>
                         <label for="grams"><h4>Cantidad</h4></label>
@@ -82,22 +87,25 @@
                                 250 gramos
                             </option>
                         </select>
+                        <div class="alert-error"></div>
                     </div>
                     <div>
                             <label for="image">
                                 <h5>Insertar imagen</h5>
                             </label>
                             <input type="file" id="image" name="image" accept="image/png, image/jpeg" >
-                            <% if (locals.errors && errors.image) { %>
+                            <div class="alert-error"><% if (locals.errors && errors.image) { %>
                                 <p class="alerta"><%= errors.image.msg %> </p>
-                            <% } %>
+                            <% } %></div>
+                            
                         </div>
                     <div>
                         <label for="price"><h4>Precio</h4></label>
                         <input type="number" name="price" id="price" min="0" class="textArea" value=<%=locals.old && old.price?old.price:product.price %> step=".01">
-                        <% if (locals.errors && errors.price) { %>
+                        <div class="alert-error"><% if (locals.errors && errors.price) { %>
                             <p class="alerta"><%= errors.price.msg %> </p>
-                        <% } %>
+                        <% } %></div>
+                        
                     </div>
                     <div class="botons">
                         <input type="submit" value="Editar">
@@ -108,5 +116,6 @@
         </section>
     </main>
     <%- include('./partials/footer') %>
+    <script src="\js\ValidatorFormProduct.js"></script>
 </body>
 </html>
