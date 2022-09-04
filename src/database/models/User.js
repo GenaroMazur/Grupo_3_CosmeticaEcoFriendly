@@ -44,15 +44,6 @@ module.exports = function (sequelize, DataTypes) {
     let User = sequelize.define(name, cols, config)
 
     User.associate = function (models) {
-        User.hasMany(models.Order,{
-            "as": "ordersUser",
-            "foreignKey": "idUser"
-        })
-
-        User.hasMany(models.Cart,{
-            "as": "cart",
-            "foreignKey": "idUser"
-        })
         
         User.hasMany(models.Card,{
             "as": "cards",
@@ -67,6 +58,12 @@ module.exports = function (sequelize, DataTypes) {
         User.belongsTo(models.Delivery,{
             "as":"ubication",
             "foreignKey": "postalCode"
+        })
+        User.belongsToMany(models.Product,{
+            "through":"productUser",
+            "foreignKey":"idUser",
+            "otherKey":"idProduct",
+            "as":"ProductUser"
         })
     }
 

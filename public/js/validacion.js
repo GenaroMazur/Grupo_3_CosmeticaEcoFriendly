@@ -4,8 +4,8 @@ let prueba = document.querySelectorAll("#password");
 let con = document.querySelectorAll(".formulario__validacion-estado");
 
 const expresiones = {
-    name: /^[a-zA-Zà-ü\s]{4,16}$/, // acepta-letras,acentos,pueden llevar espacios,acepta de 4 a 16
-    lastname:/^[a-zA-Zà-ü\s]{4,16}$/,// acepta-letras,acentos,pueden llevar espacios,acepta de 4 a 16
+    name: /^[a-zA-Zà-ü\s]{2,16}$/, // acepta-letras,acentos,pueden llevar espacios,acepta de 4 a 16
+    lastname:/^[a-zA-Zà-ü\s]{2,16}$/,// acepta-letras,acentos,pueden llevar espacios,acepta de 4 a 16
 	password: /^.{8,15}$/, // acepta de 6 a 15 digitos.
 	userEmail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,// acepta todo tipo de caracter numero e simbolo
 }
@@ -64,23 +64,14 @@ const validarPassword2 = () => {
 	const inputPassword1 = prueba[0]
 	const inputPassword2 = prueba[1]
 
-	if(inputPassword2.value === ''){
+	if(inputPassword2.value === '' || inputPassword1.value !== inputPassword2.value){
 		document.getElementById(`grupo__coPass`).classList.add('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__coPass`).classList.remove('formulario__grupo-correcto');
 		document.querySelector(`#grupo__coPass i`).classList.add('fa-times-circle');
 		document.querySelector(`#grupo__coPass i`).classList.remove('fa-check-circle');
 		document.querySelector(`#grupo__coPass .formulario__input-error`).classList.add('formulario__input-error-activo');
 		campos['password'] = false;
-	}
-	else if(inputPassword1.value !== inputPassword2.value){
-		document.getElementById(`grupo__coPass`).classList.add('formulario__grupo-incorrecto');
-		document.getElementById(`grupo__coPass`).classList.remove('formulario__grupo-correcto');
-		document.querySelector(`#grupo__coPass i`).classList.add('fa-times-circle');
-		document.querySelector(`#grupo__coPass i`).classList.remove('fa-check-circle');
-		document.querySelector(`#grupo__coPass .formulario__input-error`).classList.add('formulario__input-error-activo');
-		campos['password'] = false;
-	} else
-	{
+	} else {
 		document.getElementById(`grupo__coPass`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__coPass`).classList.add('formulario__grupo-correcto');
 		document.querySelector(`#grupo__coPass i`).classList.remove('fa-times-circle');

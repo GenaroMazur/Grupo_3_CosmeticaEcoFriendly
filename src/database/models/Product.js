@@ -56,9 +56,11 @@ module.exports = function (sequelize, DataTypes) {
             "foreignKey":"idFragrance"
         })
 
-        Product.hasMany(models.Order,{
-            "as":"product",
-            "foreignKey":"idProduct"
+        Product.belongsToMany(models.User,{
+            "through":"productUser",
+            "foreignKey":"idProduct",
+            "otherKey":"idUser",
+            "as":"ProductUser"
         })
     }
     
