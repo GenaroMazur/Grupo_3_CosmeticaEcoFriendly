@@ -2,6 +2,8 @@ const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 let prueba = document.querySelectorAll("#password");
 let con = document.querySelectorAll(".formulario__validacion-estado");
+let imagen = document.querySelector("#file");
+let ext = [".jpg", ".png", ".jpeg"]
 
 const expresiones = {
     name: /^[a-zA-Zà-ü\s]{2,16}$/, // acepta-letras,acentos,pueden llevar espacios,acepta de 4 a 16
@@ -80,6 +82,15 @@ const validarPassword2 = () => {
 		campos['password'] = true;
 	}
 }
+imagen.addEventListener("blur", function(){
+	if (!ext.some(exts=>{
+		return imagen.value.endsWith(exts)
+	})){
+		document.querySelector(`#grupo__image .formulario__input-error`).classList.add('formulario__input-error-activo');
+		document.getElementById(`grupo__image`).classList.add('formulario__grupo-incorrecto');
+	} 
+})
+
 
 inputs.forEach((input) => {
 	input.addEventListener('keyup', validarFormulario);

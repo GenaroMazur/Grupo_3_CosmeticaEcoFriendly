@@ -133,8 +133,7 @@
                             <label for="file" class="formulario__label">Foto de perfil
                                 <div class="formulario__grupo-input">
                                     <input type="file" name="image" id="file" accept="image/jpg image/png image/jpeg">
-                                    <p class="formulario__input-error">El correo solo puede contener letras, numeros,
-                                        puntos, guiones y guion bajo.</p>
+                                    <p class="formulario__input-error"> la imagen no es permitida solo acepta jpg png y jpeg.</p>
                                     <% if (locals.errors && errors.image) { %>
                                         <p class="alerta">
                                             <%= errors.image.msg %>
