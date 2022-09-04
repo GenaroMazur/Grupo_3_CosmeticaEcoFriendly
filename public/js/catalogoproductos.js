@@ -16,7 +16,6 @@ let productos = document.querySelectorAll(".productos");
 
 //shampoo
 function nextA(){
-
     caja[0].style.transform  = `translateX(-77.5vw)`;
     caja[0].style.transition = "all 0.5s";
 }
@@ -98,27 +97,16 @@ productos.forEach((producto,i) => {
     let x = i;
         for (i=1; i<x.length; i++){
             flecha[0].addEventListener("click", function () {
-            if(x===[1])
-            { 
-                let multiplicacion = x * valor;
-                caja.style.transform = `translateX(${ multiplicacion }vw)`;
-            }else
-            {
-                let derecha = x * contrario;
-                flecha[1].addEventListener("click", function () {
-                    caja.style.transform = `translateX(${ derecha }vw)`;
-                    });
             } 
             });
         }
 });
  */
 
+let filter = document.querySelector(".iconoFIlter")
+let contenido = document.querySelector(".contenido");
 
-
-let numero = "-15.52";
-caja.addEventListener("click", function () {
-    caja.style.transform = `translateX(${ numero }vw)`;
-});
-
+filter.addEventListener("click", function(){
+  contenido.classList.toggle("contenido_ver")
+})
 
