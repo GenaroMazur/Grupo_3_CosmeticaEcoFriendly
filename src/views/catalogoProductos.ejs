@@ -38,7 +38,7 @@
                     <div class="iconoFIlter">
                         <ion-icon name="filter-outline"></ion-icon>
                     </div>
-                    <div class="oculto">
+                    <div class="contenido">
                         <div>
                             <h1>Categorias</h1>
                             <ul>
@@ -61,7 +61,7 @@
                         </div>
                         <div>
                             <h1>Variantes</h1>
-                            <ul>
+                            <ul class="variantes">
                             <% for (let i=0; i < products.length; i++) { %>
                                 <label for="Variantes"><input type="radio" name="Variantes" id="variantes-productos">
                                 <%= products[i].nameProduct%>
