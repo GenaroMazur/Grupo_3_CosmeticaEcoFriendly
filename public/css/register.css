@@ -372,7 +372,7 @@
      .form {
         display: flex;
         background-color: var(--color-fondo-form);
-        /* margin: 0px; */
+         margin: 0px; 
         width: 50vw;
         /* border-radius: 0px; */
         justify-content: center;
