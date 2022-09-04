@@ -93,17 +93,25 @@ FOREIGN KEY(idCategory) REFERENCES category(id)
 
 USE bd_cosmetica;
 
-CREATE TABLE productUser (
+CREATE TABLE productCart (
 id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
 idProduct INT,
+quantity TINYINT NOT NULL,
+idCart INT,
+FOREIGN KEY(idCart) REFERENCES cart(id)
+FOREIGN KEY(idProduct) REFERENCES products(id),
+
+);
+
+USE bd_cosmetica;
+
+CREATE TABLE cart (
+id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
 idUser INT,
 idDelivery INT,
-quantity TINYINT NOT NULL,
-totalPrice INT NOT NULL,
-createAt DATETIME NOT NULL,
 idStatus INT,
+totalPrice INT NOT NULL,
 FOREIGN KEY(idStatus) REFERENCES statusCart(id),
-FOREIGN KEY(idProduct) REFERENCES products(id),
 FOREIGN KEY(idUser) REFERENCES users(id),
 FOREIGN KEY(idDelivery) REFERENCES delivery(postalCode)
 );
