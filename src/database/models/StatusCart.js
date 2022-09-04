@@ -12,10 +12,13 @@ module.exports = function (sequelize, DataTypes) {
     }
 
     const StatusCart = sequelize.define(name, cols, config)
-    StatusCart.associate = function (models) {
-        StatusCart.hasMany(models.ProductUser,{
+    
+    sequelize.associate= function(models){
+        StatusCart.hasMany(models.Cart,{
+
             "as":"status",
             "foreignKey":"idStatus"
+            
         })
     }
 
