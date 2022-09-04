@@ -59,11 +59,10 @@ module.exports = function (sequelize, DataTypes) {
             "as":"ubication",
             "foreignKey": "postalCode"
         })
-        User.belongsToMany(models.Product,{
-            "through":"productUser",
-            "foreignKey":"idUser",
-            "otherKey":"idProduct",
-            "as":"ProductUser"
+         
+        User.hasMany(models.Cart,{
+            "as":"user",
+            "foreignKey": "idUser"
         })
     }
 

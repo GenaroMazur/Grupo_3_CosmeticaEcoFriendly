@@ -32,8 +32,8 @@ module.exports = function (sequelize, DataTypes) {
             "foreignKey":"postalCode"
         })
 
-        Delivery.hasMany(models.ProductUser,{
-            "as":"status",
+        Delivery.hasMany(models.Cart,{
+            "as":"delivery",
             "foreignKey":"idDelivery"
         })
     }
