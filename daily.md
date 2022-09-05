@@ -259,7 +259,7 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 
 
 ### Camila Morand:
-- 
+- No pude aportar en esta semana en el proyecto por problemas de salud así que para la siguiente reunión voy a trabajar en la vista de 'favoritos' y voy a ayudar en las validaciones de los formularios.
 
 
 ### Leandro Joel Ramos:
@@ -272,3 +272,22 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 
 ## Daily 04/09
 
+### Fabricio Saucedo:
+- Esta semana me comprometí y terminé las validaciones para el formulario de creación y edición de productos y también tuve que modificar varias veces la DER nuestra. Como inconvenientes sigue la situación del poco tiempo y a partir de hoy me dedicaré a ponerme al dia con lo de React para este próximo sprint.
+
+
+### Genaro Mazur:
+- Terminé las validaciones del parte del back y las arreglé, ayudé en las validaciones del front, arreglé los archivos .js de los modelos y como inconvenientes: estado de ánimo bajo es lo que mas me retraso en este sprint, motivación. Que es lo que voy a hacer: completar la logica de carrito.
+
+
+### Camila Morand:
+- Comencé a tocar las validaciones de el formulario de contacto pero no lo pude terminar. Creé la vista de 'favoritos' y voy a tratar de terminar la misma. Esta semana no tuve inconvenientes. 
+
+
+### Leandro Joel Ramos:
+- Lo que hice fue las validaciones de register y el del login (que tuve algun problema con los input), añadí el filtro en el catálogo pero al parecer tiene algun problema. Como inconvientes no tuve ninguno por suerte. Entonces lo que voy a hacer será arrreglar el header de la vista home, y comenzar a implementar la vista de favoritos.
+
+
+
+### Jeremías Palacios:
+- Estuve tratando de estar al día con las clases y los micro desafíos, ayudé en los estilos de css de login y home y a lo último, ayudé a Leandro con las validaciones. Como inconvenientes que tuve son pequeños ajones y problemas con la computadora asi que, lo que voy a hacer será ayudar en lo que se necesite para llegar al final, arreglar header y ajustar la estética del detalle del producto.
