@@ -98,8 +98,6 @@ inputs.forEach((input) => {
 });
 
 formulario.addEventListener('submit', (e) => {
-	e.preventDefault();
-
 
 	if(campos.lastname && campos.name && campos.password && campos.userEmail ){
 		formulario.reset();
@@ -113,6 +111,7 @@ formulario.addEventListener('submit', (e) => {
 			icono.classList.remove('formulario__grupo-correcto');
 		});
 	} else {
+		e.preventDefault();
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');

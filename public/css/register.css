@@ -136,7 +136,7 @@
     flex-direction: column-reverse;
     overflow: visible;
     height: max-content;
-    align-items: flex-end;
+    align-items: center;
  }
 
  .formulario__validacion-estado {
@@ -297,7 +297,6 @@
      flex-direction: column;
      flex-wrap: wrap;
      align-content: center;
-     width: 236px;
  }
 
  .textArea {
