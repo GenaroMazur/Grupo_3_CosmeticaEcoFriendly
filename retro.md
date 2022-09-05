@@ -119,3 +119,24 @@ Viendo los avances como grupo y consolidándonos cada vez más, mantuvimos nueva
 
 ### Stop Doing: 
 - Faltar a las dailys. 
+
+## Sprint-6-Restrospectiva
+
+### Start Doing: 
+- Al integrar a un nuevo compañero al equipo, necesitamos comenzar a comunicarnos con él y de integrarlo a nosotros para que pueda entrar en confianza y dar lo mejor de sí.
+- Debemos comenzar a preparar la presentación para el día que tengamos que exponer el proyecto así llegamos preparados y sin dudas presentando de una forma adecuada lo que venimos trabajando hace casi 6 meses.
+
+### More of:
+- Insistir con más reuniones en el equipo, ya que, en estos tramos necesitamos la cooperación y la comunicación con más consistencia.
+
+### Keep Doing: 
+- Vemos en el grupo que venimos bien, así que hay que mantener el ritmo que llevamos y no bajar los brazos en estos últimos trayectos que quedan.
+- Seguir puliendo el proyecto, que ante el poco tiempo que tenemos, debemos aprovechar para ir mejorándolo de a poco.
+- Venimos bien con las dailys cada una semana, así que hay que mantenerlas.
+
+
+### Less of: 
+- Ir dejando tareas sin terminar en tiempo y forma.
+
+### Stop Doing: 
+- Parar de priorizar otras cosas dejando de lado el proyecto.
