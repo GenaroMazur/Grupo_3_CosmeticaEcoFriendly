@@ -33,7 +33,6 @@ body {
     width: 12vw;
     justify-content: space-evenly;
     align-items: center;
-    align-content: center;
 }
 .boton.heartBoton {
     background: white;

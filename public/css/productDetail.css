@@ -164,6 +164,12 @@ aside {
 
 }
 
+.signo{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
 .cat {
     margin: 5%;
     align-items: center;
