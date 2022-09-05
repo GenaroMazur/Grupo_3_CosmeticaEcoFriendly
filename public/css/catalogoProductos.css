@@ -250,7 +250,7 @@ ion-icon {
     label {
         display: flex;
         align-self: center;
-        font-size: 10%;
+        font-size: 1.5vw;
     }
 
     input[type="search"] {
@@ -301,7 +301,7 @@ ion-icon {
         display: flex;
         margin-top: 2.8vw;
         border: solid 1.4px;
-        width: 4vw;
+        width: 9%;
         margin-left: 4vw;
         justify-content: center;
     }
@@ -311,9 +311,9 @@ ion-icon {
     }
 
     .contenido {
-        overflow:hidden;
-        height:0;
-        transition: all 10s ease;
+        overflow: hidden;
+        height: 0;
+        transition: all 0.5s ease;
     }
     .contenido_ver{
         height:100%;
@@ -321,5 +321,8 @@ ion-icon {
     ul.variantes {
         display: block;
     }
-
+    ion-icon.heartbuton.md.hydrated {
+        font-size: 2vw;
+    }
+    
 }
