@@ -237,7 +237,7 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 
 
 ### Genaro Mazur:
-- Implementé el CRUD de usuarios al 100% usando las base de datos, junto con algunos temas de configuraciones de los modelos, implementé las validaciones para quese hagan a xampp. Mis complicaciones fueron pocas, como el tiempo como siempre y voy a tratar de terminar el CRUD de productos.
+- Implementé el CRUD de usuarios al 90% usando las base de datos, junto con algunos temas de configuraciones de los modelos, implementé las validaciones para quese hagan a xampp. Mis complicaciones fueron pocas, como el tiempo como siempre y voy a tratar de terminar el CRUD de productos.
 
 
 ### Camila Morand:
@@ -245,4 +245,28 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 
 
 ### Leandro Joel Ramos:
-- Lo que hic fue rehacer la página entera del index y del catálogo y le hice rsponsive. Agregué lógica del frontend al index. Tuve inconvenientes porque tenía windows de 32 bits, y me daba problemas con el xampp y el worbench, tuve virus, malwares y tardé en limpiarlos. Ahora, voy a implementar lógica frontend, quitaré el menú hamburguesa de ahora y lo sustituiré por otro.
+- Lo que hice fue rehacer la página entera del index y del catálogo y le hice rsponsive. Agregué lógica del frontend al index. Tuve inconvenientes porque tenía windows de 32 bits, y me daba problemas con el xampp y el worbench, tuve virus, malwares y tardé en limpiarlos. Ahora, voy a implementar lógica frontend, quitaré el menú hamburguesa de ahora y lo sustituiré por otro.
+
+
+### Daily 22/08
+
+### Fabricio Saucedo:
+- Lo que pude avanzar es que pude solucionar los problemas de las vistas del catálogo de productos y el del detalle del producto aún sin poder terminarlas porque tuve inconvenientes con el tiempo, así que pediré ayuda y comenzaré a ver el tema de las validaciones del lado del frontend.
+
+
+### Genaro Mazur:
+- Pude completar el CRUD de productos esta semana y no avancé en otras tareas porque tuve el inconveniente de estar muy desmotivado ultimamente así que voy a estar ayudando en lo que pueda en estos días
+
+
+### Camila Morand:
+- 
+
+
+### Leandro Joel Ramos:
+- Hice modificaciones en la vista de register, en el panel de usuario, viendose bien en dispositivos móviles. Agruegé variables de CSS para que se pueda modificar el color de manera más sencilla, agregué lógica, en el abrir y cerrar los ojos de la vista de register y puse estilos en el ícono del corazón que se encuentra en el detalle del producto. Como inconveniente, no tuve ninguno esta semana entonces lo que voy a hacer será implementar la lógica del catálogo del producto y las validaciones de los formularios de la parte del front end.
+
+
+### Jeremías Palacios:
+- Completé el playground, el toolkit, para estar a la par del equipo y voy comenzar a tocar la vista de carrito para hacerla funcional.
+
+

@@ -120,6 +120,7 @@ Viendo los avances como grupo y consolidándonos cada vez más, mantuvimos nueva
 ### Stop Doing: 
 - Faltar a las dailys. 
 
+
 ## Sprint-6-Restrospectiva
 
 ### Start Doing: 
