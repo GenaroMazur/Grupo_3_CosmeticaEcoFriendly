@@ -16,7 +16,6 @@ const validarFormulario = (e) => {
 	switch (e.target.name) {
 		case "password":
 			validarCampo(expresiones.password, e.target, 'password');
-			validarPassword2();
 
 		case "userEmail":
 			validarCampo(expresiones.userEmail, e.target, 'userEmail');
@@ -56,13 +55,7 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 
-	if(campos.password && campos.userEmail ){
-		formulario.reset();
-
-		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
-		setTimeout(() => {
-			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
-		}, 5000);
+	if(campos.password && campos.userEmail){
 
 		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
 			icono.classList.remove('formulario__grupo-correcto');
@@ -71,6 +64,6 @@ formulario.addEventListener('submit', (e) => {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
-		}, 10000);
+		}, 20000);
 	}
 });
