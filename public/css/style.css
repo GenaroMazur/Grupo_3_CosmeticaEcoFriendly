@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root {
+    /*  colores de la pàgina */
+    --color-imagen-fondo: #fce4d4;
+    --color-letra-header: white;
+    --color-fondo: #cdbd9d;
+    --color-menu-usuario:#a39883;
+    --color-hover: #32a936aa;
 
+
+
+    --color-fuente-button: white;
+    --color-button: #889b65;
+    --color-borde-textArea: #ddc387b5;
+    --color-hover-button: #9fb478;
+    --color-negro: #000;
+    --color-fuente-blanca: #fff;
+}
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -8,17 +24,17 @@
 
 body {
     margin: 0px 0px;
-    background-color: #cdbd9d;
+    background-color: var(--color-fondo);
 }
 
 ion-icon {
-    color: black;
+    color: var(--color-negro);
     font-size: 25px;
 }
 /*header general*/
 header {
-    color: white;
-    background-color: #cdbd9d;
+    color: var(--color-letra-header);
+    background-color: var(--color-fondo);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +47,7 @@ header {
 
 .titulo a {
     text-decoration: none;
-    color: #fff;
+    color: var(--color-fuente-blanca);
 }
 
 img {
@@ -73,7 +89,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-image: linear-gradient(to top, #9fb478 0%, #cdbd9d 100%);
+    background-image: linear-gradient(to top, var(--color-hover-button) 0%, var(--color-fondo) 100%);
     width: 30vw;
     height: 100%;
     align-items: center;
@@ -88,15 +104,15 @@ img {
 }
 
 .menu-navegacion a {
-    color: white;
+    color: var(--color-fuente-blanca);
     text-decoration: none;
     padding: 10px 13px 10px 13px;
     border-radius: 30px;
 }
 
 .menu-navegacion a:hover {
-    color: #000;
-    background-color: #9fb478;
+    color: var(--color-negro);
+    background-color: var(--color-hover-button);
 }
 
 .nav {
@@ -117,31 +133,31 @@ img {
     width: 3.3vw;
     height: 3.3vw;
     border-radius: 200px;
-    border: solid 1px black;
+    border: solid 1px var(--color-negro);
     align-items: center;
 }
 
 a {
-    color: black;
+    color: var(--color-negro);
     text-decoration: none;
 }
 
 .foto.usuario:hover {
-    border: solid 2px white;
+    border: solid 2px var(--color-fuente-blanca);
 }
 #menu {
     position: absolute;
-    background:#a39883;
+    background:var(--color-menu-usuario);
     width: 15vw;
     height: 145px;
     top: -200px;
-    z-index: 10;
+    z-index: 20;
     border-radius: 7px;
 }
 
 #menu.mostrar {
-    top: 60px;
-    left: 65vw;
+    top: 5.7vw;
+    left: 58vw;
 }
 
 ul {
@@ -281,7 +297,7 @@ footer a {
     }
 
 }
-@media(max-width:480px){
+@media(max-width:900px){
 .menu-navegacion {
     position: fixed;
     top: 0;
@@ -312,4 +328,18 @@ footer a {
     align-items: center;
 }
 
+#menu {
+    position: absolute;
+    background: var(--color-menu-usuario);
+    width: 32vw;
+    height: 145px;
+    top: -200px;
+    z-index: 20;
+    border-radius: 7px;
+}
+
+#menu.mostrar {
+    top: 10.7vw;
+    left: 51vw;
+}
 }

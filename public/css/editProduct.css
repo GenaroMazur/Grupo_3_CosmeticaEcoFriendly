@@ -109,7 +109,10 @@ img {
     align-items: center;
 
 }
-
+#fragrance {
+    padding: 5px 7%;
+    border-radius: 30px;
+}
 .titulo {
     display: flex;
     align-items: center;
@@ -121,6 +124,22 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.is-invalid{
+    color: red;
+    font-size: 12px;
+    border-color: red;
+}
+
+.is-valid{
+    color: black;
+    font-size: 12px;
+    border-color: green;
+}
+
+.alert-error{
+    color: red;
 }
 
 

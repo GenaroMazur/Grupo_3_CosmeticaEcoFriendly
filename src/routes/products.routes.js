@@ -8,15 +8,17 @@ const productsMiddlewares = require ("./../middlewares/productsMiddlewares");
 const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware");
 const authUserMiddleware = require ("./../middlewares/authUserMiddleware");
 const maintainMiddleware = require ("./../middlewares/maintainMiddleware");
+const searchProductMiddleware = require("./../middlewares/searchProductMiddleware")
 //importa controlador
 const productController = require("./../controllers/productController");
 
 //GET
 routes.get("/CarritoDeCompras",
     authUserMiddleware, 
-    productController.productCard_v2);
+    productController.productCart_v2);
 routes.get("/DetalleDeProducto/:id", productController.productDetail_v2);
 routes.get("/catalogoProductos", productController.catalogoProductos_v2);
+routes.get("/favoritos", productController.favoritos_v2);
 routes.get("/newProduct",
     authAdminMiddleware,
     productController.newProduct);
@@ -30,12 +32,15 @@ routes.post("/newProduct",
     multerMiddleware.productsImage().single("image"),
     productsMiddlewares.validations,
     productsMiddlewares.product,
-    productController.createProduct);
+    productController.createProduct_v2);
     
-//PUt
+//Put
 routes.put("/editProduct/:idProduct",
     authAdminMiddleware,
-    maintainMiddleware,
+    multerMiddleware.productsImage().single("image"),
+    searchProductMiddleware,
+    productsMiddlewares.putValidations,
+    productsMiddlewares.putProduct,
     productController.editProductId_v2);
     
 //DELETE

@@ -14,6 +14,28 @@
     width: 99%;
     padding: 10px 10px 10px 10px;
     border-radius: 35px;
+    color: #3d2a08;
+    font-weight:bold;
+}
+.errores {
+    color: #D8000C;
+    border-color: #ccc;
+    opacity: 4;
+    font-weight:bold;
+}
+.contact{
+    padding: 1px 12%;
+    font-size: xx-large;
+    border-radius: 200px;
+    margin: 8px;
+    height: 150px;
+}
+
+#formulario_mensaje{
+    display: none;
+}
+.formulario_mensaje_activo{
+    display: block;
 }
 
 #contacto form>* {
@@ -21,11 +43,14 @@
 }
 
 .contacto {
-    padding: 1px 12%;
-    border-radius: 30px;
+    padding: 1px 8%;
+    border-radius: 20px;
 
 }
-
+h2{
+    color: #3d2a08;
+    font-size: 34px;
+}
 .button {
     background-color: #889b65;
     padding: 8px 18px;
@@ -55,9 +80,16 @@
 
 @media(min-width:900px) {
     .contacto {
-    padding: 1px 12%;
-    font-size: xx-large;
+    padding: 1px 15%;
+    font-size: 28px;
     border-radius: 30px;
     margin: 8px;
+}
+.contact{
+    padding: 1px 12%;
+    font-size: xx-large;
+    border-radius: 200px;
+    margin: 8px;
+    height: 150px;
 }
 }

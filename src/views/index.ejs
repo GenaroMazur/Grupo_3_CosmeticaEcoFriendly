@@ -8,28 +8,24 @@
             <div class="nav navegacion">
                 <div class="boton menu">
                     <a href="/">
-                        <p>inicio</p>
+                        <p>Inicio</p>
                     </a>
                 </div>
                 <div class="boton menu">
                     <a href="/nosotros">
-                        <p>nosotros</p>
+                        <p>Nosotros</p>
                     </a>
                 </div>
                 <div class="boton menu">
                     <a href="/product/catalogoproductos">
-                        <p>productos</p>
+                        <p>Productos</p>
                     </a>
                 </div>
                 <div class="boton menu">
                     <a href="/contacto">
-                        <p>contacto</p>
+                        <p>Contacto</p>
                     </a>
     
-                </div>
-                
-                <div>
-                    
                 </div>
     
                 <div class="nav usuario">
@@ -40,20 +36,20 @@
                     <div id="menu">
                         <ul>
                             <% if (user.status == "Admin") { %>
-                                <li><a class="a-nav" href="user/myAccount/<%= user.id %>">mi perfil</a></li>
-                                <li><a class="a-nav" href="user/admin">panel administrador</a></li>
-                                <li><a class="a-nav" href="user/un-login">cerrar sesion</a></li>
+                                <li><a class="a-nav" href="/user/myAccount/<%= user.id %>">Mi perfil</a></li>
+                                <li><a class="a-nav" href="/user/admin">Admin Panel</a></li>
+                                <li><a class="a-nav" href="/user/un-login">Cerrar sesión</a></li>
                             <% } else if (user.status == "User"){ %>
-                                <li><a class="a-nav" href="user/myAccount/<%= user.id %>">mi perfil</a></li>
-                                <li><a class="a-nav" href="user/un-login">cerrar sesion</a></li>
+                                <li><a class="a-nav" href="/user/myAccount/<%= user.id %>">Mi perfil</a></li>
+                                <li><a class="a-nav" href="/user/un-login">Cerrar sesión</a></li>
                             <% }  else {%>
-                                    <li><a class="a-nav" href="user/login">Iniciar sesion</a></li>
-                                    <li><a class="a-nav" href="user/registro">Registrarse</a></li>
+                                    <li><a class="a-nav" href="/user/login">Iniciar sesión</a></li>
+                                    <li><a class="a-nav" href="/user/registro">Registrarse</a></li>
                             <% } %>
                         </ul>
                     </div>
 
-                    <a href="/product/CarritoDeCompras"><img src="./img/icons_images/carrito-de-compras.svg"alt="carrito"class="carrito"></a>
+                    <a href="/product/CarritoDeCompras"><ion-icon name="cart" class="carrito"></ion-icon></a>
                 </div>
             </div>
         </div>
@@ -61,8 +57,8 @@
             <div class="titulo-parrafo">
                 <h1 class="titulo-header">La Vie Naturelle</h1>
                 <p class="parrafo-header">Cosmética natural, amigable con el medio ambiente, hecha
-                    artesanalmente con productos naturales, compostables y cruelty free🌾✨🌍</p>
-                <p class="parrafo-header">producto de calidad y gran diseño</p>
+                    artesanalmente con productos naturales, compostables y cruelty free</p>
+                <p class="parrafo-header">Producto de calidad y gran diseño</p>
             </div>
     
         </div>

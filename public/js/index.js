@@ -1,9 +1,9 @@
 //click usuario
-let logo = document.querySelector(".foto.usuario");
-let menu = document.getElementById("menu");
+let foto = document.querySelector(".foto.usuario");
+let menu = document.querySelector("div#menu");
 
 
-  logo.addEventListener("click", function() {
+  foto.addEventListener("click", function() {
         menu.classList.toggle("mostrar")
     });
 
