@@ -52,8 +52,8 @@ inputs.forEach((input) => {
 });
 
 formulario.addEventListener('submit', (e) => {
-	e.preventDefault();
-
+	
+	let errores = 0
 
 	if(campos.password && campos.userEmail){
 
@@ -65,5 +65,8 @@ formulario.addEventListener('submit', (e) => {
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
 		}, 20000);
+	}
+	if(campos == false){
+		e.preventDefault();
 	}
 });

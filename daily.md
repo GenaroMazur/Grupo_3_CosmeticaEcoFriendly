@@ -270,3 +270,5 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 - Completé el playground, el toolkit, para estar a la par del equipo y voy comenzar a tocar la vista de carrito para hacerla funcional.
 
 
+## Daily 04/09
+
