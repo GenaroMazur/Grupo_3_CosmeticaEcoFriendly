@@ -8,8 +8,8 @@
     <body>
         <%- include('./partials/header') %>
             <article class="container" id="register">
-                <form method="post" action="/user/registro" enctype="multipart/form-data" id="formulario">
-                    <section class="form">
+                <section class="form">
+                    <form method="post" action="/user/registro" enctype="multipart/form-data" id="formulario">
                         <img src="/img/lavie_images/la_vie_icon.png" alt="logo registro">
                         <h2>Regístrate</h2>
                         <!-- Grupo: Nombre -->
@@ -133,7 +133,8 @@
                             <label for="file" class="formulario__label">Foto de perfil
                                 <div class="formulario__grupo-input">
                                     <input type="file" name="image" id="file" accept="image/jpg image/png image/jpeg">
-                                    <p class="formulario__input-error"> la imagen no es permitida solo acepta jpg png y jpeg.</p>
+                                    <p class="formulario__input-error"> la imagen no es permitida solo acepta jpg png y
+                                        jpeg.</p>
                                     <% if (locals.errors && errors.image) { %>
                                         <p class="alerta">
                                             <%= errors.image.msg %>
@@ -155,12 +156,15 @@
                             <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario Enviado
                                 Exitosamente!</p>
                         </div>
-                 </form>
-                <p>¿ Ya tienes una cuenta ? <a href="/user/login"><button class="button">iniciar sesión</button></a>
-                </p>
+                    </form>
+                    <p>¿ Ya tienes una cuenta ? <a href="/user/login"><button class="button">iniciar sesión</button></a>
+                    </p>
+
                 </section>
+                </p>
                 <img src="/img/banners_fondos_images/fondo-uso4.jpg" alt="imagen Registro" class="img">
-        </article>
+
+            </article>
             <%- include('./partials/footer') %>
                 <script src="\js\register.js"></script>
                 <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
