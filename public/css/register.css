@@ -132,8 +132,11 @@
 }
 
  .formulario__input-error-activo {
+    display: flex;
+    flex-direction: column-reverse;
     overflow: visible;
     height: max-content;
+    align-items: flex-end;
  }
 
  .formulario__validacion-estado {
@@ -270,15 +273,15 @@
  }
 
  .alerta {
-     color: var(--color-alerta);
-     border: solid;
-     border-radius: 30px;
-     background: var(--color-dentroAlerta);
-     font: -webkit-control;
-     position: absolute;
-     width: 141%;
-     top: 75%;
-     left: -19%;
+    color: var(--color-alerta);
+    border: solid;
+    border-radius: 30px;
+    background: var(--color-dentroAlerta);
+    font: -webkit-control;
+    position: absolute;
+    width: 100%;
+    top: 34%;
+    left: 3%;
  }
 
  form>* {
@@ -369,7 +372,7 @@
      .form {
         display: flex;
         background-color: var(--color-fondo-form);
-        /* margin: 0px; */
+         margin: 0px; 
         width: 50vw;
         /* border-radius: 0px; */
         justify-content: center;

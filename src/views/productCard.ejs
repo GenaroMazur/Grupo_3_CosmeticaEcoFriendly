@@ -14,48 +14,26 @@
                             <th class="subtitulo-carrito">Cantidad</th>
                             <th class="subtitulo-carrito">Precio</th>
                         </tr>
+                        <% if (locals.products) { %>
+                            <% products.forEach(product=>{ %>
+        
                         <tr>
                             <td class="td-carrito">
                                 <div class="card-info">
-                                    <img src="./../img/products_images/jabon_exfoliante_1.jpeg" alt="imagen jabon solido">
+                                    <img src="./../img/products_images/<%= product.Image %>" alt="LaVieNaturelle">
                                     <div class="style-name">
-                                        <p>Jabón sólido</p>
-                                        <small class="price">Precio: $599.99</small>
+                                        <p><%= product.namePorduct %></p>
+                                        <small class="price">Precio:<%= product.price %></small>
                                         <a href="#"><ion-icon name="close-outline"></ion-icon>
                                     </div>
                                 </div>
                             </td>
-                            <td class="td-carrito"><input type="number" value="1" id="input-carrito"></td>
+                            <td class="td-carrito"><span></span>id="input-carrito"></td>
                             <td class="td-carrito">$599.99</td>
                         </tr>
-                        <tr>
-                            <td class="td-carrito">
-                                <div class="card-info">
-                                    <img src="./../img/products_images/shampoo solido graso.jpeg" alt="imagen jabon solido">
-                                    <div class="style-name">
-                                        <p>Shampoo sólido graso</p>
-                                        <small class="price">Precio: $599.99</small>
-                                        <a href="#"><ion-icon name="close-outline"></ion-icon>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td-carrito"><input type="number" value="1" id="input-carrito"></td>
-                            <td class="td-carrito">$599.99</td>
-                        </tr>
-                        <tr>
-                            <td class="td-carrito">
-                                <div class="card-info">
-                                    <img src="./../img/products_images/acondicionador_normal.jpeg" alt="imagen jabon solido">
-                                    <div class="style-name">
-                                        <p>Acondicionador sólido</p>
-                                        <small class="price">Precio: $599.99</small>
-                                        <a href="#"><ion-icon name="close-outline"></ion-icon>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td-carrito"><input type="number" value="1" id="input-carrito"></td>
-                            <td class="td-carrito">$599.99</td>
-                        </tr>
+                        <% }) %> 
+                    <% } %>
+                        
                     </table>
 
                     <div class="total-carrito">
@@ -73,7 +51,6 @@
                                 <td>$1099.99</td>
                             </tr>
                         </table>
-
                     </div>
                     <div class="boton-compra">
                         <button type="button" class="boton">Proceder al pago</button>

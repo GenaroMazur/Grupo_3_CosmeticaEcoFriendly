@@ -13,7 +13,7 @@
                     <h2>inicia sesión</h2>
                     <h1>Bienvenido de vuelta!</h1>
                     <p>Por favor ingresa tu cuenta para acceder a la página</p>
-                    <form action="/user/login" method="post">
+                    <form action="/user/login" method="post" id="formulario">
                         <div class="formulario__grupo" id="grupo__userEmail">
                             <label for="userEmail" class="formulario__label">Correo Electrónico
                                 <div class="formulario__grupo-input">
@@ -75,6 +75,7 @@
             </article>
             <%- include('./partials/footer') %>
                 <script src="\js\login.js"></script>
+                <script src="\js\validacionLogin.js"></script>
                 <script src="https://kit.fontawesome.com/2c36e9b7b1.js" ></script>
     </body>
 

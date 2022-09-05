@@ -126,6 +126,22 @@ img {
     justify-content: center;
 }
 
+.is-invalid{
+    color: red;
+    font-size: 12px;
+    border-color: red;
+}
+
+.is-valid{
+    color: black;
+    font-size: 12px;
+    border-color: green;
+}
+
+.alert-error{
+    color: red;
+}
+
 
 /*----------Footer-------------*/
 footer {

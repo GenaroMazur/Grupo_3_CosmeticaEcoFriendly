@@ -88,44 +88,31 @@ idCategory INT,
 FOREIGN KEY(idFragrance) REFERENCES fragrance(id),
 FOREIGN KEY(idCategory) REFERENCES category(id)
 );
-
-
-
-USE bd_cosmetica;
-
-CREATE TABLE orders (
-id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
-idProduct INT,
-idUser INT,
-idDelivery INT,
-FOREIGN KEY(idProduct) REFERENCES products(id),
-FOREIGN KEY(idUser) REFERENCES users(id),
-FOREIGN KEY(idDelivery) REFERENCES delivery(postalCode)
-);
-
 USE bd_cosmetica;
 
 CREATE TABLE cart (
 id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
-quantity TINYINT NOT NULL,
-totalPrice INT NOT NULL,
-createAt DATETIME NOT NULL,
 idUser INT,
+idDelivery INT,
 idStatus INT,
+totalPrice INT NOT NULL,
+FOREIGN KEY(idStatus) REFERENCES statusCart(id),
 FOREIGN KEY(idUser) REFERENCES users(id),
-FOREIGN KEY(idStatus) REFERENCES statusCart(id)
+FOREIGN KEY(idDelivery) REFERENCES delivery(postalCode)
 );
 
 
 USE bd_cosmetica;
 
-CREATE TABLE orderCart (
+CREATE TABLE productCart (
 id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
-idOrder INT,
+quantity TINYINT NOT NULL,
+idProduct INT,
 idCart INT,
-FOREIGN KEY(idOrder) REFERENCES orders(id),
-FOREIGN KEY(idCart) REFERENCES cart(id)
+FOREIGN KEY(idCart) REFERENCES cart(id),
+FOREIGN KEY(idProduct) REFERENCES products(id)
 );
+
 
 
 USE bd_cosmetica;

@@ -1,47 +1,51 @@
 module.exports = function (sequelize, DataTypes) {
     const name = "Cart"
     const cols = {
-        "quantity": {
-            "type": DataTypes.INTEGER,
-            "allowNull": false
+        "idUser":{
+            type:DataTypes.INTEGER
         },
-        "totalPrice": {
-            "type": DataTypes.INTEGER,
-            "allowNull": false
+        "idDelivery":{
+            type:DataTypes.INTEGER
         },
-        "createAt": {
-            "type": DataTypes.DATE,
-            "allowNull": false
+        "idStatus":{
+            type:DataTypes.INTEGER
         },
-        "idUser": {
-            "type": DataTypes.INTEGER
-        },
-        "idStatus": {
-            "type": DataTypes.INTEGER
+        "totalPrice":{
+            type:DataTypes.INTEGER
         }
     }
     const config = {
-        "tableName": "cart",
+        "tableName": "Cart",
         "timestamps": false
     }
 
     const Cart = sequelize.define(name, cols, config)
-    Cart.associate = function (models) {
-        Cart.belongsTo(models.StatusCart,{
-            "as":"status",
-            "foreignKey":"idStatus"
-        })
+   
+    sequelize.associate = function(models){
+
         Cart.belongsTo(models.User,{
             "as":"user",
-            "idStatus":"idUser"
+            "foreignKey": "idUser"
         })
-        Cart.belongsToMany(models.Order,{
-            "as":"cart",
-            "through": "orderCart",
-            "foreignKey": "idCart",
-            "otherKey": "idOrder",
-            "timestamps": false
+
+        Cart.belongsTo(models.Delivery,{
+
+            "as":"delivery",
+            "foreignKey":"idDelivery"
+
         })
+         Cart.belongsTo(models.StatusCart,{
+
+            "as":"status",
+            "foreignKey":"idStatus"
+
+         })
+         Cart.belongsToMany(models.Product,{
+            "through":"ProductCart",
+            "foreignKey":"idCart",
+            "otherKey":"idProduct",
+            "as":"ProductCart"
+         })
     }
 
     return Cart
