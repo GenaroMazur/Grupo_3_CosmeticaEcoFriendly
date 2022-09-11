@@ -6,13 +6,14 @@
 
     <body>
         <%- include('./partials/header') %>
-            <div class="menu">
-                <a href="/" class="boton">
+        
+             <div class="menu">
+              <a href="http://localhost:8080/product/favoritos" >
                 <div class="boton heartBoton">
-                    <label for="mis fav">Mis favoritos</label>
-                    <ion-icon name="heart-outline" class="heartbuton"></ion-icon>
+                        <label for="mis fav">Mis favoritos</label>
+                        <ion-icon name="heart-outline" class="heartbuton"></ion-icon>
                 </div>
-                 </a>
+               </a>
                 <div class="barra barradebusqueda">
                     <input type="search" name="search" placeholder="buscar">
                     <div class="icono de busqueda">
@@ -38,7 +39,7 @@
                     <div class="iconoFIlter">
                         <ion-icon name="filter-outline"></ion-icon>
                     </div>
-                    <div class="oculto">
+                    <div class="contenido">
                         <div>
                             <h1>Categorias</h1>
                             <ul>
@@ -61,7 +62,7 @@
                         </div>
                         <div>
                             <h1>Variantes</h1>
-                            <ul>
+                            <ul class="variantes">
                             <% for (let i=0; i < products.length; i++) { %>
                                 <label for="Variantes"><input type="radio" name="Variantes" id="variantes-productos">
                                 <%= products[i].nameProduct%>

@@ -1,5 +1,5 @@
 let ojo = document.querySelectorAll(".eye");
-let password = document.querySelectorAll(".password");
+let password = document.querySelectorAll("#password");
 let icon = document.querySelectorAll(".eyeIcon");
 
 ojo.forEach((eye,index) => {

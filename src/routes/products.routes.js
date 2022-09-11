@@ -15,9 +15,10 @@ const productController = require("./../controllers/productController");
 //GET
 routes.get("/CarritoDeCompras",
     authUserMiddleware, 
-    productController.productCard_v2);
+    productController.productCart_v2);
 routes.get("/DetalleDeProducto/:id", productController.productDetail_v2);
 routes.get("/catalogoProductos", productController.catalogoProductos_v2);
+routes.get("/favoritos", productController.favoritos_v2);
 routes.get("/newProduct",
     authAdminMiddleware,
     productController.newProduct);
@@ -37,7 +38,7 @@ routes.post("/addCart/:id",
     productController.addToCart
     )
     
-//PUt
+//Put
 routes.put("/editProduct/:idProduct",
     authAdminMiddleware,
     multerMiddleware.productsImage().single("image"),

@@ -4,103 +4,171 @@
     <link rel="stylesheet" href="/css/register.css">
     <title>La Vie Naturelle - Register</title>
 
+
     <body>
         <%- include('./partials/header') %>
             <article class="container" id="register">
                 <section class="form">
-                    <img src="/img/lavie_images/la_vie_icon.png" alt="logo registro">
-                    <h2>Regístrate</h2>
-                    <form method="post" action="/user/registro" enctype="multipart/form-data">
-                        <div>
-                            <label for="name">Nombre del usuario</label>
-                            <input type="text" id="name" name="username" placeholder="Nombre" class="textArea" <% if
-                                (locals.errors && old.username) { %>
-                            value=<%= old.username %>
-                                <% } %>
-                                    >
-                                    <% if (locals.errors && errors.username) { %>
-                                        <p class="alerta">
-                                            <%= errors.username.msg %>
-                                        </p>
-                                        <% } %>
+                    <form method="post" action="/user/registro" enctype="multipart/form-data" id="formulario">
+                        <img src="/img/lavie_images/la_vie_icon.png" alt="logo registro">
+                        <h2>Regístrate</h2>
+                        <!-- Grupo: Nombre -->
+                        <div class="formulario__grupo" id="grupo__name">
+                            <label for="name" class="formulario__label">Nombre
+                                <div class="formulario__grupo-input">
+                                    <input type="text" class="formulario__input" name="name" id="name"
+                                        placeholder="cosme">
+                                    <p class="formulario__input-error">El nombre tiene que ser de 2 a 16 solo letras.
+                                    </p>
+                                    <% if (locals.errors && old.username) { %>
+                                        value=<%= old.username %>
+                                            <% } %>
+                                                <% if (locals.errors && errors.username) { %>
+                                                    <p class="alerta">
+                                                        <%= errors.username.msg %>
+                                                    </p>
+                                                    <% } %>
+                                                        <i
+                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                            </label>
+                        </div>
 
+                        <!-- Grupo: apellido -->
+                        <div class="formulario__grupo" id="grupo__lastname">
+                            <label for="lastname" class="formulario__label">apellido
+                                <div class="formulario__grupo-input">
+                                    <input type="text" class="formulario__input" name="lastname" id="lastname"
+                                        placeholder="fulanito">
+                                    <p class="formulario__input-error">El apellido tiene que ser de 2 a 16 solo letras.
+                                    </p>
+                                    <% if (locals.errors && old.lastname) { %>
+                                        value=<%= old.lastname %>
+                                            <% } %>
+                                                <% if (locals.errors && errors.lastname) { %>
+                                                    <p class="alerta">
+                                                        <%= errors.lastname.msg %>
+                                                    </p>
+                                                    <% } %>
+                                                        <i
+                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                            </label>
                         </div>
-                        <div>
-                            <label for="lastname">apellido del usuario</label>
-                            <input type="text" id="lastname" name="lastname" placeholder="apellido" class="textArea" <%
-                                if (locals.errors && old.lastname) { %>
-                            value=<%= old.lastname %>
-                                <% } %>>
-                                    <% if (locals.errors && errors.lastname) { %>
-                                        <p class="alerta">
-                                            <%= errors.lastname.msg %>
-                                        </p>
-                                        <% } %>
-                        </div>
-                        <div class="wrapp-input">
-                            <label for="pass">Contraseña</label>
-                            <div class="eye">
-                                <span class="hidden">
-                                    <ion-icon name="eye-outline" class="eyeIcon"></ion-icon>
-                                </span>
-                            </div>
-                            <input type="password" name="password" id="pass" placeholder="contraseña" class="textArea password"
-                                <% if (locals.errors && old.password) { %>
-                            value=<%= old.password %>
-                                <% } %>>
-                                    <% if (locals.errors && errors.password) { %>
-                                        <p class="alerta">
-                                            <%= errors.password.msg %>
-                                        </p>
-                                        <% } %>
 
+                        <!-- Grupo: Contraseña -->
+                        <div class="formulario__grupo" id="grupo__password">
+                            <label for="password" class="formulario__label">Contraseña
+                                <div class="formulario__grupo-input">
+                                    <div class="eye">
+                                        <span class="hidden">
+                                            <ion-icon name="eye-outline" class="eyeIcon"></ion-icon>
+                                        </span>
+                                    </div>
+                                    <input type="password" class="formulario__input" name="password"
+                                        placeholder="123456" class="textArea password" id="password">
+                                    <p class="formulario__input-error">La contraseña tiene que ser de 8 a 15 dígitos.
+                                    </p>
+                                    <% if (locals.errors && old.password) { %>
+                                        value=<%= old.password %>
+                                            <% } %>
+                                                <% if (locals.errors && errors.password) { %>
+                                                    <p class="alerta">
+                                                        <%= errors.password.msg %>
+                                                    </p>
+                                                    <% } %>
+                                                        <i
+                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                            </label>
                         </div>
-                        <div class="wrapp-input">
-                            <label for="copass">Confirmar Contraseña</label>
-                            <div class="eye">
-                                <span class="hidden">
-                                    <ion-icon name="eye-outline" class="eyeIcon"></ion-icon>
-                                </span>
-                            </div>
-                            <input type="password" name="coPass" id="copass" placeholder="Confirmar contraseña "
-                                class="textArea password" <% if (locals.errors && old.coPass) { %>
-                            value=<%= old.coPass %>
-                                <% } %>>
-                                    <% if (locals.errors && errors.coPass) { %>
+
+                        <!-- Grupo: Contraseña 2 -->
+                        <div class="formulario__grupo" id="grupo__coPass">
+                            <label for="coPass" class="formulario__label">Repetir Contraseña
+                                <div class="formulario__grupo-input">
+                                    <div class="eye">
+                                        <span class="hidden">
+                                            <ion-icon name="eye-outline" class="eyeIcon"></ion-icon>
+                                        </span>
+                                    </div>
+                                    <input type="password" class="formulario__input" placeholder="123456" name="coPass"
+                                        id="password">
+                                    <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+                                    <% if (locals.errors && old.coPass) { %>
+                                        value=<%= old.coPass %>
+                                            <% } %>
+                                                <% if (locals.errors && errors.coPass) { %>
+                                                    <p class="alerta">
+                                                        <%= errors.coPass.msg %>
+                                                    </p>
+                                                    <% } %>
+                                                        <i
+                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="formulario__grupo" id="grupo__userEmail">
+                            <label for="userEmail" class="formulario__label">Correo Electrónico
+                                <div class="formulario__grupo-input">
+                                    <input type="email" class="formulario__input" name="userEmail" id="userEmail"
+                                        placeholder="LavieNaturelle@correo.com">
+                                    <p class="formulario__input-error">El correo solo puede contener letras, numeros,
+                                        puntos, guiones y guion bajo.</p>
+                                    <% if (locals.errors && old.userEmail) { %>
+                                        value=<%= old.userEmail %>
+                                            <% } %>
+                                                <% if ( locals.errors && errors.userEmail) { %>
+                                                    <p class="alerta">
+                                                        <%= errors.userEmail.msg %>
+                                                    </p>
+                                                    <% } %>
+                                                        <i
+                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="formulario__grupo" id="grupo__image">
+                            <label for="file" class="formulario__label">Foto de perfil
+                                <div class="formulario__grupo-input">
+                                    <input type="file" name="image" id="file" accept="image/jpg image/png image/jpeg">
+                                    <p class="formulario__input-error"> la imagen no es permitida solo acepta jpg png y
+                                        jpeg.</p>
+                                    <% if (locals.errors && errors.image) { %>
                                         <p class="alerta">
-                                            <%= errors.coPass.msg %>
+                                            <%= errors.image.msg %>
                                         </p>
                                         <% } %>
+                                </div>
+                            </label>
                         </div>
-                        <div>
-                            <label for="email">Correo</label>
-                            <input type="email" name="userEmail" id="email" placeholder="Correo" class="textArea" <% if
-                                (locals.errors && old.userEmail) { %>
-                            value=<%= old.userEmail %>
-                                <% } %>>
-                                    <% if ( locals.errors && errors.userEmail) { %>
-                                        <p class="alerta">
-                                            <%= errors.userEmail.msg %>
-                                        </p>
-                                        <% } %>
+
+                        <div class="formulario__mensaje" id="formulario__mensaje">
+                            <p>
+                                <ion-icon name="warning-outline"></ion-icon> <b>Aviso:</b> Por Favor Complete El
+                                Formulario Correctamente.
+                            </p>
                         </div>
-                        <div>
-                            <label for="file">Foto de perfil</label>
-                            <input type="file" name="image" id="file" accept="image/jpg image/png">
-                            <% if (locals.errors && errors.image) { %>
-                                <p class="alerta">
-                                    <%= errors.image.msg %>
-                                </p>
-                                <% } %>
+
+                        <div class="bot">
+                            <input type="submit" value="Registrarse" class="button">
+                            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario Enviado
+                                Exitosamente!</p>
                         </div>
-                        <input type="submit" value="Registrarse" class="button">
                     </form>
-                    <p>¿ Ya tienes una cuenta ? <a href="/user/login"><button class="button">iniciar sesión</button></a></p>
+                    <p>¿ Ya tienes una cuenta ? <a href="/user/login"><button class="button">iniciar sesión</button></a>
+                    </p>
+
                 </section>
+                </p>
                 <img src="/img/banners_fondos_images/fondo-uso4.jpg" alt="imagen Registro" class="img">
+
             </article>
             <%- include('./partials/footer') %>
                 <script src="\js\register.js"></script>
+                <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+                <script src="\js\validacion.js"></script>
     </body>
 
 </html>

@@ -43,15 +43,8 @@ const productController = {
         })
         res.redirect("/user/admin")
     },
-    productCard_v2:function (req, res) {
-        db.Order.findAll()
-            .then(cart=>{
-                return res.render("productCard",{cart,user: req.session.user})
-            })
-            .catch(err=>{
-                console.error(err);
-                return res.redirect("/")
-            })
+    productCart_v2:function (req, res) {
+        res.render("productCard",{user:req.session.user})
     },
     catalogoProductos_v2: function (req, res){
         let fragrances = db.Fragrance.findAll()
@@ -59,6 +52,18 @@ const productController = {
         Promise.all([fragrances,products])
             .then(([fragrances,products])=>{
                 res.render("catalogoProductos",{products,fragrances, user: req.session.user})
+            })
+            .catch(err=>{
+                console.log(err);
+                res.redirect("/")
+            })
+    },
+    favoritos_v2: function (req, res){
+        let fragrances = db.Fragrance.findAll()
+        let products = db.Product.findAll()
+        Promise.all([fragrances,products])
+            .then(([fragrances,products])=>{
+                res.render("favoritos",{products,fragrances, user: req.session.user})
             })
             .catch(err=>{
                 console.log(err);

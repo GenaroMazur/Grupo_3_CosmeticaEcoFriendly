@@ -33,7 +33,6 @@ body {
     width: 12vw;
     justify-content: space-evenly;
     align-items: center;
-    align-content: center;
 }
 .boton.heartBoton {
     background: white;
@@ -251,7 +250,7 @@ ion-icon {
     label {
         display: flex;
         align-self: center;
-        font-size: 1.8vw;
+        font-size: 1.5vw;
     }
 
     input[type="search"] {
@@ -299,19 +298,31 @@ ion-icon {
     }
 
     .iconoFIlter {
-    display: flex;
-    margin-top: 2.8vw;
-    border: solid 1.4px;
-    width: 33px;
-    margin-left: 10px;
-    justify-content: center;
+        display: flex;
+        margin-top: 2.8vw;
+        border: solid 1.4px;
+        width: 9%;
+        margin-left: 4vw;
+        justify-content: center;
     }
 
-    .oculto {
-        height: 0;
+    .iconoFIlter:active{
+        background-color:#efd8aa;
+    }
+
+    .contenido {
         overflow: hidden;
+        height: 0;
+        transition: all 0.5s ease;
     }
-
-
-
+    .contenido_ver{
+        height:100%;
+    }
+    ul.variantes {
+        display: block;
+    }
+    ion-icon.heartbuton.md.hydrated {
+        font-size: 2vw;
+    }
+    
 }

@@ -237,7 +237,7 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 
 
 ### Genaro Mazur:
-- Implementé el CRUD de usuarios al 100% usando las base de datos, junto con algunos temas de configuraciones de los modelos, implementé las validaciones para quese hagan a xampp. Mis complicaciones fueron pocas, como el tiempo como siempre y voy a tratar de terminar el CRUD de productos.
+- Implementé el CRUD de usuarios al 90% usando las base de datos, junto con algunos temas de configuraciones de los modelos, implementé las validaciones para quese hagan a xampp. Mis complicaciones fueron pocas, como el tiempo como siempre y voy a tratar de terminar el CRUD de productos.
 
 
 ### Camila Morand:
@@ -245,4 +245,49 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 
 
 ### Leandro Joel Ramos:
-- Lo que hic fue rehacer la página entera del index y del catálogo y le hice rsponsive. Agregué lógica del frontend al index. Tuve inconvenientes porque tenía windows de 32 bits, y me daba problemas con el xampp y el worbench, tuve virus, malwares y tardé en limpiarlos. Ahora, voy a implementar lógica frontend, quitaré el menú hamburguesa de ahora y lo sustituiré por otro.
+- Lo que hice fue rehacer la página entera del index y del catálogo y le hice rsponsive. Agregué lógica del frontend al index. Tuve inconvenientes porque tenía windows de 32 bits, y me daba problemas con el xampp y el worbench, tuve virus, malwares y tardé en limpiarlos. Ahora, voy a implementar lógica frontend, quitaré el menú hamburguesa de ahora y lo sustituiré por otro.
+
+
+### Daily 22/08
+
+### Fabricio Saucedo:
+- Lo que pude avanzar es que pude solucionar los problemas de las vistas del catálogo de productos y el del detalle del producto aún sin poder terminarlas porque tuve inconvenientes con el tiempo, así que pediré ayuda y comenzaré a ver el tema de las validaciones del lado del frontend.
+
+
+### Genaro Mazur:
+- Pude completar el CRUD de productos esta semana y no avancé en otras tareas porque tuve el inconveniente de estar muy desmotivado ultimamente así que voy a estar ayudando en lo que pueda en estos días
+
+
+### Camila Morand:
+- No pude aportar en esta semana en el proyecto por problemas de salud así que para la siguiente reunión voy a trabajar en la vista de 'favoritos' y voy a ayudar en las validaciones de los formularios.
+
+
+### Leandro Joel Ramos:
+- Hice modificaciones en la vista de register, en el panel de usuario, viendose bien en dispositivos móviles. Agruegé variables de CSS para que se pueda modificar el color de manera más sencilla, agregué lógica, en el abrir y cerrar los ojos de la vista de register y puse estilos en el ícono del corazón que se encuentra en el detalle del producto. Como inconveniente, no tuve ninguno esta semana entonces lo que voy a hacer será implementar la lógica del catálogo del producto y las validaciones de los formularios de la parte del front end.
+
+
+### Jeremías Palacios:
+- Completé el playground, el toolkit, para estar a la par del equipo y voy comenzar a tocar la vista de carrito para hacerla funcional.
+
+
+## Daily 04/09
+
+### Fabricio Saucedo:
+- Esta semana me comprometí y terminé las validaciones para el formulario de creación y edición de productos y también tuve que modificar varias veces la DER nuestra. Como inconvenientes sigue la situación del poco tiempo y a partir de hoy me dedicaré a ponerme al dia con lo de React para este próximo sprint.
+
+
+### Genaro Mazur:
+- Terminé las validaciones del parte del back y las arreglé, ayudé en las validaciones del front, arreglé los archivos .js de los modelos y como inconvenientes: estado de ánimo bajo es lo que mas me retraso en este sprint, motivación. Que es lo que voy a hacer: completar la logica de carrito.
+
+
+### Camila Morand:
+- Comencé a tocar las validaciones de el formulario de contacto pero no lo pude terminar. Creé la vista de 'favoritos' y voy a tratar de terminar la misma. Esta semana no tuve inconvenientes. 
+
+
+### Leandro Joel Ramos:
+- Lo que hice fue las validaciones de register y el del login (que tuve algun problema con los input), añadí el filtro en el catálogo pero al parecer tiene algun problema. Como inconvientes no tuve ninguno por suerte. Entonces lo que voy a hacer será arrreglar el header de la vista home, y comenzar a implementar la vista de favoritos.
+
+
+
+### Jeremías Palacios:
+- Estuve tratando de estar al día con las clases y los micro desafíos, ayudé en los estilos de css de login y home y a lo último, ayudé a Leandro con las validaciones. Como inconvenientes que tuve son pequeños ajones y problemas con la computadora asi que, lo que voy a hacer será ayudar en lo que se necesite para llegar al final, arreglar header y ajustar la estética del detalle del producto.
