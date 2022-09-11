@@ -32,6 +32,10 @@ routes.post("/newProduct",
     productsMiddlewares.validations,
     productsMiddlewares.product,
     productController.createProduct_v2);
+routes.post("/addCart/:id",
+    authUserMiddleware,
+    productController.addToCart
+    )
     
 //PUt
 routes.put("/editProduct/:idProduct",

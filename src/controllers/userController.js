@@ -140,6 +140,38 @@ const userController = {
             res.cookie("remember",req.session.user,{maxAge : 3600000*12})
         }
         return res.redirect("/")
+    },
+    apiGetUsers:async function(req, res){
+        try {
+
+            let users = await db.User.findAll({
+                attributes : [id, username, email]
+        })
+        users = users.map(user=>{
+            user.detail = "/api/users/"+user.id
+        })
+        let response = {
+            count : users.length,
+            users
+        }
+        return res.status(200).json(response)
+        } catch (err){
+            console.error(err);
+            return res.status().send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde")
+        }
+    },
+    apiGetUserById: async function (req, res){
+        try {
+            let user = await db.User.findByPk(req.params.idUser,{
+                attributes : {exclude: [passwordUser, idStatusUser]}
+            })
+    
+            return res.status(200).json(user)
+        } catch (error) {
+            console.error(error);
+            return res.status().send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde")
+        }
+        
     }
 }
 

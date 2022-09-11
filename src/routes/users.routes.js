@@ -38,7 +38,6 @@ routes.get("/myAccount/:id",
 routes.get("/editAccount/:id",
     authUserMiddleware,
     userController.editAccount_v2);
-
 //POST
 routes.post("/registro",
     multerMiddleware.usersImage().single("image"),

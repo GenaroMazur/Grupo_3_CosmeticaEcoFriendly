@@ -123,6 +123,58 @@ const productController = {
             console.log(err);
             res.redirect("/")
         })
+    },
+    addToCart: function(req, res){
+        db.User.findByPk(req.session.user.id)
+        .then(user=>{
+            
+        return db.Order.create({
+                idProduct:req.params.id,
+                idUser:req.session.user.id,
+                idDelivery:user.postalCode
+            })
+        })
+        return res.redirect("/product/DetalleDeProducto/2")
+    },
+    apiGetProducts: async function(req, res) {
+        try {
+            let product = await db.Product.findAll({
+                include:[{association:"category"}],
+                attributes:[id, nameProduct, idCategory]
+            })
+            let categories = {}
+            product = product.map(product=>{
+                if (categories[product.idCategory]){
+                    categories[product.idCategory]+=1
+                } else {
+                    categories[product.idCategory] = 0
+                }
+                product.detail ="/api/products/"+product.id
+            })
+            let response = {
+                count : product.length,
+                countByCategory : categories,
+                product
+            }
+    
+            return res.status(200).json(response)
+        } catch (error) {
+            console.error(error);
+            return res.status().send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde")
+        }
+        
+    },
+    apiGetProductById : async function(req, res) {
+        try {
+            let product = await db.Product.findByPk(req.params.idProduct,{
+                include:[{association:"category"},{association:"fragrance"}]
+            })
+    
+            return res.status(200).json(product)
+        } catch (error) {
+            console.error(error);
+            return res.status().send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde")
+        }
     }
 }
 

@@ -32,10 +32,12 @@
                                                 <option value="cabello liso">Cabello normal</option>
                                             </select>
                                         </div>
-                            </div> 
-                            <div class="carrito-index">
-                                <p>Añadir al carrito</p>
                             </div>
+                            <form action="/product/addCart/<%= product.id %>" method="post">
+                                <button class="carrito-index">
+                                    <p>Añadir al carrito</p>
+                                </button>
+                            </form> 
                         </div>
                     </div>
                     <!--bloque 2-->
