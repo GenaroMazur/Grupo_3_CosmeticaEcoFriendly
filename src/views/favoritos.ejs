@@ -22,11 +22,16 @@
                         <tr>
                             <td class="td-favoritos">
                                 <div class="card-info">
+                                    <div><ion-icon name="trash"></ion-icon>
                                     <img src="./../img/products_images/<%= product.Image %>" alt="LaVieNaturelle">
+                                    </div>
                                     <div class="style-name">
                                         <p><%= product.namePorduct %></p>
                                         <small class="price">Precio:<%= product.price %></small>
                                         <a href="#"><ion-icon name="close-outline"></ion-icon>
+                                    </div>
+                                    <div class="boton-compra">
+                                        <button type="button" class="buton">Agregar al carrito</button>
                                     </div>
                                 </td>
                                 <td class="td-favoritos">$599.99</td>
