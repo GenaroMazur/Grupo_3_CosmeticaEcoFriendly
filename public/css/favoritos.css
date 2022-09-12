@@ -1,9 +1,7 @@
 .article-favoritos{
     background-color: #ffebe0;
     display: flex;
-    border-radius: 20px;
-    flex-direction: column;
-    margin: 20px auto;
+    border-radius: 4px;
 }
 
 .tabla-favoritos {
@@ -113,8 +111,6 @@ th:last-child {
         display: flex;
         border-radius: 20px;
         flex-direction: column;
-        margin: 20px auto;
-        padding: 0px 0px 7px 0px;
     }
     .td-carrito img {
         /* width: 20%; */
@@ -151,6 +147,15 @@ th:last-child {
     background-position: bottom;
     height: 140px;
 }
+#favorito-icon {
+    color:#c5647c;
+    height: 70px;
+    width: 30px;
+    background-position: left;
+}
+#favorito-icon:hover{
+    color: palevioletred;
+}
 @media(min-width:900px) {
     .article-favoritos {
         background-color: #ffebe0;
@@ -158,7 +163,6 @@ th:last-child {
         display: flex;
         border-radius: 20px;
         flex-direction: column;
-        margin: 95px auto;
     }
     .td-favoritos img {
         width: 15%;
