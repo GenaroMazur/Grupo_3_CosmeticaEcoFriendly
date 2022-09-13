@@ -7,50 +7,59 @@ const userController = require("./../controllers/userController");
 //importar middlewares
 const userMiddlewares = require("./../middlewares/userMiddlewares");
 const multerMiddleware = require("./../middlewares/multerMiddleware");
-const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware");
-const authUserMiddleware = require ("./../middlewares/authUserMiddleware");
-const authGuestMiddleware = require ("./../middlewares/authGuestMiddleware");
-const maintainMiddleware = require ("./../middlewares/maintainMiddleware");
 const searchUserMiddleware = require("./../middlewares/searchUserMiddleware");
+
+const authAdminMiddleware = require("./../middlewares/authAdminMiddleware");
+const authUserMiddleware = require("./../middlewares/authUserMiddleware");
+const authGuestMiddleware = require("./../middlewares/authGuestMiddleware");
+
 const searchEditUserMiddleware = require("./../middlewares/searchEditUserMiddleware");
-const editAccountMiddleware = require("./../middlewares/editAccountMiddleware")
-const validationsEditMiddleware = require("./../middlewares/validationsEditMiddleware")
+const editAccountMiddleware = require("./../middlewares/editAccountMiddleware");
+const validationsEditMiddleware = require("./../middlewares/validationsEditMiddleware");
 
 //GET
 routes.get("/login",
-    authGuestMiddleware, 
+    authGuestMiddleware,
     userController.login);
+
 routes.get("/un-login",
     authUserMiddleware,
     userController.unlogin);
+
 routes.get("/registro",
-    authGuestMiddleware, 
+    authGuestMiddleware,
     userController.register);
+
 routes.get("/admin",
     authAdminMiddleware,
-    userController.admin_v2);
+    userController.admin);
+
 routes.get("/userPanel",
     authAdminMiddleware,
-    userController.userPanel_v2);
+    userController.userPanel);
+
 routes.get("/myAccount/:id",
     userMiddlewares.account_v2,
-    userController.myAccount_v2);
+    userController.myAccount);
+
 routes.get("/editAccount/:id",
     authUserMiddleware,
-    userController.editAccount_v2);
+    userController.editAccount);
+
 //POST
 routes.post("/registro",
     multerMiddleware.usersImage().single("image"),
     searchUserMiddleware,
     userMiddlewares.validationsCreate_v2,
     userMiddlewares.register,
-    userController.create_v2);
+    userController.create);
+    
 routes.post("/login",
     searchUserMiddleware,
     userMiddlewares.validationsLogin_v2,
     userMiddlewares.login,
-    userController.loginUser_v2);
-    
+    userController.loginUser);
+
 //PUT
 routes.put("/editAccount/:id",
     multerMiddleware.usersImage().single("image"),
@@ -58,9 +67,10 @@ routes.put("/editAccount/:id",
     searchEditUserMiddleware,
     validationsEditMiddleware,
     editAccountMiddleware,
-    userController.putAccount_v2)
+    userController.putAccount);
+
 //DELETE
 routes.delete("/delete/:id",
-    userController.delete_v2);
+    userController.delete);
 
 module.exports = routes
