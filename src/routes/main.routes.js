@@ -5,7 +5,7 @@ const routes = express.Router()
 const mainController = require("./../controllers/mainController")
 
 //controladores
-routes.get("/", mainController.index_v2)
+routes.get("/", mainController.index)
 routes.get("/nosotros", mainController.nosotros)
 routes.get("/contacto", mainController.contacto)
 module.exports = routes
