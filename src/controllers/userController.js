@@ -102,7 +102,7 @@ const userController = {
             .catch(err => {
                 console.log(err);
                 res.redirect("/");
-            })
+            });
     },
 
     //modificar el usuario en la DB
@@ -129,8 +129,9 @@ const userController = {
             .catch(err => {
                 console.error(err);
                 res.redirect("/user/editAccount/" + idUser);
-            })
+            });
     },
+
     //crear un usuario en la DB
     create: function (req, res) {
         let dateCreation = new Date();
@@ -154,7 +155,7 @@ const userController = {
             .catch(err => {
                 console.log(err);
                 res.redirect("/");
-            })
+            });
     },
 
     //eliminar usuario en la DB
@@ -169,7 +170,7 @@ const userController = {
         .catch(err => {
             console.log(err);
             res.redirect("/");
-        })
+        });
     },
 
 
@@ -200,8 +201,8 @@ const userController = {
         } catch (err) {
 
             console.error(err);
-            return res.status(500).send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde")
-        }
+            return res.status(500).send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde");
+        };
     },
 
     //api envia detalle de un usuario
@@ -220,7 +221,7 @@ const userController = {
 
             console.error(error);
             return res.status(500).send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde");
-        }
+        };
     },
 
     //envia la imagen del detalle del usuario
