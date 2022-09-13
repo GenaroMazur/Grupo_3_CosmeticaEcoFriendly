@@ -5,10 +5,11 @@ const routes = express.Router();
 //importar middlewares
 const multerMiddleware = require("./../middlewares/multerMiddleware");
 const productsMiddlewares = require ("./../middlewares/productsMiddlewares");
+const searchProductMiddleware = require("./../middlewares/searchProductMiddleware");
+
 const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware");
 const authUserMiddleware = require ("./../middlewares/authUserMiddleware");
-const maintainMiddleware = require ("./../middlewares/maintainMiddleware");
-const searchProductMiddleware = require("./../middlewares/searchProductMiddleware")
+
 //importa controlador
 const productController = require("./../controllers/productController");
 
