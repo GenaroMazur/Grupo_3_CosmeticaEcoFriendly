@@ -3,8 +3,61 @@
     <%- include('./partials/head') %>
     <link rel="stylesheet" href="/css/favoritos.css">
     <title>La Vie Naturelle - Favoritos</title>
-<body>
-    <%- include('./partials/header') %>
-    <h1></h1>
-</body>
+    <body>
+        <%- include('./partials/header') %>
+            <main class="main-favoritos">
+                <h1 class="title">
+                    <ion-icon name="heart-sharp" id="favorito-icon"></ion-icon>
+                    MIS FAVORITOS</h1>
+                <article class="article-favoritos">
+                    <table class="tabla-favoritos">
+                        <tr class="subtitulos">
+                            <th class="subtitulo-favoritos">Producto</th>
+                            <th class="subtitulo-favoritos">Stock</th>
+                            <th class="subtitulo-favoritos">Precio</th>
+                            <th class="subtitulo-favoritos">Agregar al carrito</th>
+                        </tr>
+                        <% if (locals.products) { %>
+                            <% products.forEach(product=>{ %>
+                        <tr>
+                            <td class="td-favoritos">
+                                <div class="card-info">
+                                    <div><ion-icon name="trash"></ion-icon>
+                                    <img src="./../img/products_images/<%= product.Image %>" alt="LaVieNaturelle">
+                                    </div>
+                                    <div class="style-name">
+                                        <p><%= product.namePorduct %></p>
+                                        <small class="price">Precio:<%= product.price %></small>
+                                        <a href="#"><ion-icon name="close-outline"></ion-icon>
+                                    </div>
+                                    <div class="boton-compra">
+                                        <button type="button" class="buton">Agregar al carrito</button>
+                                    </div>
+                                </td>
+                                <td class="td-favoritos">$599.99</td>
+                            </tr>
+                        <% }) %> 
+                    <% } %>
+                        
+                    </table>
+
+                    <div class="total-favoritos">
+                        <table>
+                            <tr>
+                                <td>subtotal</td>
+                                <td>$599.99</td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td>$1099.99</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="boton-compra">
+                        <button type="button" class="boton">Agregar al carrito</button>
+                    </div>
+                </article>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
 </html>
