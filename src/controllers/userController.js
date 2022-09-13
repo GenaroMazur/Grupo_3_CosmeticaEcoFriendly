@@ -2,7 +2,7 @@
 const db = require("./../database/models")
 //importa el modulo bcrypt
 const bcrypt = require("bcrypt")
-
+const path = require("path")
 const userController = {
 
     //pagina de login
@@ -154,7 +154,7 @@ const userController = {
             })
 
             users = users.map(user => {
-                user.detail = "/api/users/" + user.id
+                user.detail = "localhost:8080/api/users/" + user.id
                 return user
             })
             let response = {
@@ -172,15 +172,19 @@ const userController = {
     apiGetUserById: async function (req, res) {
         try {
             let user = await db.User.findByPk(req.params.idUser, {
-                attributes: { exclude: ["passwordUser", "idStatusUser"] }
+                attributes: { exclude: ["passwordUser", "idStatusUser", "postalCode", "telephone", "direction"] }
             })
-
+            user = user.dataValues
+            user.image="localhost:8080/api/users/image/"+user.image
             return res.status(200).json(user)
         } catch (error) {
             console.error(error);
             return res.status(500).send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde")
         }
-
+    },
+    apiShowUserImage: function (req, res) {
+        let image = path.join(__dirname,"./../../public/img/users_images/",req.params.image)
+        return res.sendFile(image)
     }
 }
 
