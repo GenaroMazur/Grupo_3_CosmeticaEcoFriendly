@@ -5,7 +5,7 @@ module.exports = function (sequelize, DataTypes) {
             "type": DataTypes.DATE,
             "allowNull": false
         },
-        "username": {
+        "userName": {
             "type": DataTypes.STRING(15),
             "allowNull":false
         },

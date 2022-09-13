@@ -7,6 +7,6 @@ routes.get("/users/:idUser",userController.apiGetUserById)
 
 const productController = require("./../controllers/productController")
 routes.get("/products",productController.apiGetProducts)
-routes.get("/products/idProduct",productController.apiGetProductById)
+routes.get("/products/:idProduct",productController.apiGetProductById)
 
 module.exports = routes

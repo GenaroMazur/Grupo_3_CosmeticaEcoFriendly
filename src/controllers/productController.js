@@ -144,41 +144,47 @@ const productController = {
     apiGetProducts: async function(req, res) {
         try {
             let product = await db.Product.findAll({
-                include:[{association:"category"}],
-                attributes:[id, nameProduct, idCategory]
+                include:[{association:"category", attributes:{exclude:["id","image"]}}],
+                attributes:["id", "nameProduct"]
             })
+            let products = []
             let categories = {}
-            product = product.map(product=>{
-                if (categories[product.idCategory]){
-                    categories[product.idCategory]+=1
+            product.map(producto=>{
+                products.push(producto.dataValues)
+            })
+            products = products.map(product=>{
+                if (categories[product.category.dataValues.categoryName] == undefined){
+                    categories[product.category.dataValues.categoryName]=1  
                 } else {
-                    categories[product.idCategory] = 0
+                    categories[product.category.dataValues.categoryName] ++
                 }
-                product.detail ="/api/products/"+product.id
+                product.detail ="localhost:8080/api/products/"+product.id
+                return product
             })
             let response = {
-                count : product.length,
+                count : products.length,
                 countByCategory : categories,
-                product
+                products
             }
     
             return res.status(200).json(response)
         } catch (error) {
             console.error(error);
-            return res.status().send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde")
+            return res.status(500).send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde")
         }
         
     },
     apiGetProductById : async function(req, res) {
         try {
             let product = await db.Product.findByPk(req.params.idProduct,{
-                include:[{association:"category"},{association:"fragrance"}]
+                include:[{association:"category",attributes:{exclude:["id","image"]}},{association:"fragrance",attributes:{exclude:["id"]}}],
+                attributes:{exclude:["idCategory","idFragrance"]}
             })
     
             return res.status(200).json(product)
         } catch (error) {
             console.error(error);
-            return res.status().send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde")
+            return res.status(500).send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde")
         }
     }
 }
