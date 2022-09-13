@@ -15,16 +15,16 @@ const productController = require("./../controllers/productController");
 //GET
 routes.get("/CarritoDeCompras",
     authUserMiddleware, 
-    productController.productCart_v2);
-routes.get("/DetalleDeProducto/:id", productController.productDetail_v2);
-routes.get("/catalogoProductos", productController.catalogoProductos_v2);
-routes.get("/favoritos", productController.favoritos_v2);
+    productController.productCart);
+routes.get("/DetalleDeProducto/:id", productController.productDetail);
+routes.get("/catalogoProductos", productController.catalogoProductos);
+routes.get("/favoritos", productController.favoritos);
 routes.get("/newProduct",
     authAdminMiddleware,
     productController.newProduct);
 routes.get("/editProduct/:idProduct",
     authAdminMiddleware,
-    productController.editProduct_v2);
+    productController.editProduct);
     
 //POST
 routes.post("/newProduct",
@@ -32,7 +32,7 @@ routes.post("/newProduct",
     multerMiddleware.productsImage().single("image"),
     productsMiddlewares.validations,
     productsMiddlewares.product,
-    productController.createProduct_v2);
+    productController.createProduct_);
 routes.post("/addCart/:id",
     authUserMiddleware,
     productController.addToCart
@@ -45,10 +45,10 @@ routes.put("/editProduct/:idProduct",
     searchProductMiddleware,
     productsMiddlewares.putValidations,
     productsMiddlewares.putProduct,
-    productController.editProductId_v2);
+    productController.putProduct);
     
 //DELETE
 routes.delete("/deleteProduct/:idProduct",
-    productController.deleteProduct_v2);
+    productController.deleteProduct);
 
 module.exports = routes
