@@ -126,7 +126,7 @@ const productController = {
             });
     },
 
-    //
+    //logica para editar un producto
     putProduct: function (req, res) {
         let form = req.body;
         if (req.file) {
@@ -219,7 +219,7 @@ const productController = {
         } catch (error) {
             console.error(error);
             return res.status(500).send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde");
-        }
+        };
     },
 
     //envia informacion de un producto
@@ -228,7 +228,7 @@ const productController = {
             let product = await db.Product.findByPk(req.params.idProduct, {
                 include: [{ association: "category", attributes: { exclude: ["id", "image"] } }, { association: "fragrance", attributes: { exclude: ["id"] } }],
                 attributes: { exclude: ["idCategory", "idFragrance"] }
-            })
+            });
             product = product.dataValues;
             product.Image = "localhost:8080/api/products/image/" + product.Image;
 
@@ -236,7 +236,7 @@ const productController = {
         } catch (error) {
             console.error(error);
             return res.status(500).send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde");
-        }
+        };
     },
 
     //envia la imagen de un producto
