@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    let name = "User"
+    let name = "User";
     let cols = {
         "dateCreation": {
             "type": DataTypes.DATE,
@@ -7,15 +7,15 @@ module.exports = function (sequelize, DataTypes) {
         },
         "userName": {
             "type": DataTypes.STRING(15),
-            "allowNull":false
+            "allowNull": false
         },
         "lastname": {
             "type": DataTypes.STRING(15),
-            "allowNull":false
+            "allowNull": false
         },
         "passwordUser": {
             "type": DataTypes.STRING(100),
-            "allowNull":false
+            "allowNull": false
         },
         "email": {
             "type": DataTypes.STRING(45)
@@ -35,36 +35,36 @@ module.exports = function (sequelize, DataTypes) {
         "postalCode": {
             "type": DataTypes.INTEGER
         },
-    }
+    };
     let config = {
         "tableName": "users",
         "timestamps": false
-    }
+    };
 
-    let User = sequelize.define(name, cols, config)
+    let User = sequelize.define(name, cols, config);
 
     User.associate = function (models) {
-        
-        User.hasMany(models.Card,{
+
+        User.hasMany(models.Card, {
             "as": "cards",
             "foreignKey": "idUser"
-        })
+        });
 
-        User.belongsTo(models.StatusUser,{
+        User.belongsTo(models.StatusUser, {
             "as": "status",
-            "foreignKey":"idStatusUser"
-        })
+            "foreignKey": "idStatusUser"
+        });
 
-        User.belongsTo(models.Delivery,{
-            "as":"ubication",
+        User.belongsTo(models.Delivery, {
+            "as": "ubication",
             "foreignKey": "postalCode"
-        })
-         
-        User.hasMany(models.Cart,{
-            "as":"user",
+        });
+
+        User.hasMany(models.Cart, {
+            "as": "user",
             "foreignKey": "idUser"
-        })
-    }
+        });
+    };
 
     return User
 }

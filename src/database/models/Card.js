@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    const name = "Card"
+    const name = "Card";
     const cols = {
         "numbercard": {
             "primaryKey": true,
@@ -26,19 +26,21 @@ module.exports = function (sequelize, DataTypes) {
         "idUser": {
             "type": DataTypes.INTEGER
         }
-    }
+    };
     const config = {
         "tableName": "cards",
         "timestamps": false
-    }
+    };
 
-    const Card = sequelize.define(name, cols, config)
+    const Card = sequelize.define(name, cols, config);
+
     Card.associate = function (models) {
         Card.belongsTo(models.User,{
             "as":"cards",
             "foreignKey":"idUser"
-        })
-    }
+        });
+
+    };
 
     return Card
 }

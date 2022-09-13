@@ -1,17 +1,17 @@
-module.exports=function(sequelize,DataTypes){
+module.exports = function (sequelize, DataTypes) {
 
-    let name="ProductCart"
+    let name = "ProductCart";
     let cols = {
-        quantity :{
-            type:DataTypes.INTEGER
+        quantity: {
+            type: DataTypes.INTEGER
         }
-    }
+    };
     let config = {
-        tableName:"productCart",
-        timestamps:false
-    }
+        tableName: "productCart",
+        timestamps: false
+    };
 
-    const ProductCart = sequelize.define(name,cols,config)
+    const ProductCart = sequelize.define(name, cols, config);
 
 
     return ProductCart

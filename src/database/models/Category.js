@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    let name = "Category"
+    let name = "Category";
     let cols = {
         "categoryName": {
             "type": DataTypes.STRING(20),
@@ -11,11 +11,11 @@ module.exports = function (sequelize, DataTypes) {
         "image": {
             "type": DataTypes.STRING(60)
         }
-    }
+    };
     let config = {
         "tableName": "category",
         "timestamps": false
-    }
+    };
     const Category = sequelize.define(name, cols, config);
 
     Category.associate = function (models) {
@@ -23,9 +23,9 @@ module.exports = function (sequelize, DataTypes) {
         Category.hasMany(models.Product,{
             "as":"category",
             "foreignKey":"idCategory"
-        })
+        });
 
-    }
+    };
 
     return Category
 }
