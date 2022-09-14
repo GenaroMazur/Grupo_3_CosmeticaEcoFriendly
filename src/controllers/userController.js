@@ -4,9 +4,6 @@ const db = require("./../database/models");
 //importa el modulo bcrypt
 const bcrypt = require("bcrypt");
 
-//importar el modulo path
-const path = require("path");
-
 const userController = {
 
     //pagina de login
@@ -171,64 +168,6 @@ const userController = {
             console.log(err);
             res.redirect("/");
         });
-    },
-
-
-    //_________APIS__________
-    //api para enviar usuarios
-    apiGetUsers: async function (req, res) {
-        try {
-
-            let users = [];
-            let responseDb = await db.User.findAll({
-                attributes: ["id", "userName", "email"]
-            });
-
-            responseDb.map(user => {
-                users.push(user.dataValues)
-            });
-
-            users = users.map(user => {
-                user.detail = "localhost:8080/api/users/" + user.id;
-                return user
-            });
-            let response = {
-                count: users.length,
-                users
-            };
-            return res.status(200).json(response);
-
-        } catch (err) {
-
-            console.error(err);
-            return res.status(500).send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde");
-        };
-    },
-
-    //api envia detalle de un usuario
-    apiGetUserById: async function (req, res) {
-        try {
-            let user = await db.User.findByPk(req.params.idUser, {
-                attributes: { exclude: ["passwordUser", "idStatusUser", "postalCode", "telephone", "direction"] }
-            });
-
-            user = user.dataValues;
-            user.image = "localhost:8080/api/users/image/" + user.image;
-
-            return res.status(200).json(user);
-
-        } catch (error) {
-
-            console.error(error);
-            return res.status(500).send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde");
-        };
-    },
-
-    //envia la imagen del detalle del usuario
-    apiShowUserImage: function (req, res) {
-        let image = path.join(__dirname, "./../../public/img/users_images/", req.params.image);
-        return res.sendFile(image);
     }
 }
-
 module.exports = userController

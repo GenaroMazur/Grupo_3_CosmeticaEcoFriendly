@@ -181,68 +181,6 @@ const productController = {
                 })
             })
         return res.redirect("/product/DetalleDeProducto/2")
-    },
-
-    //_________________APIS________________
-    //Envia todos los productos
-    apiGetProducts: async function (req, res) {
-        try {
-            let productDb = await db.Product.findAll({
-                include: [{ association: "category", attributes: { exclude: ["id", "image"] } }],
-                attributes: ["id", "nameProduct"]
-            });
-            let products = [];
-            let categories = {};
-
-            productDb.map(producto => {
-                products.push(producto.dataValues);
-            });
-
-            products = products.map(product => {
-
-                if (categories[product.category.dataValues.categoryName] == undefined) {
-                    categories[product.category.dataValues.categoryName] = 1;
-                } else {
-                    categories[product.category.dataValues.categoryName]++;
-                };
-
-                product.detail = "localhost:8080/api/products/" + product.id;
-                return product
-            });
-            let response = {
-                count: products.length,
-                countByCategory: categories,
-                products
-            };
-
-            return res.status(200).json(response);
-        } catch (error) {
-            console.error(error);
-            return res.status(500).send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde");
-        };
-    },
-
-    //envia informacion de un producto
-    apiGetProductById: async function (req, res) {
-        try {
-            let product = await db.Product.findByPk(req.params.idProduct, {
-                include: [{ association: "category", attributes: { exclude: ["id", "image"] } }, { association: "fragrance", attributes: { exclude: ["id"] } }],
-                attributes: { exclude: ["idCategory", "idFragrance"] }
-            });
-            product = product.dataValues;
-            product.Image = "localhost:8080/api/products/image/" + product.Image;
-
-            return res.status(200).json(product);
-        } catch (error) {
-            console.error(error);
-            return res.status(500).send("Opps, no se pudo realizar la solicitud.\n Intente mas tarde");
-        };
-    },
-
-    //envia la imagen de un producto
-    apiShowProductImage: function (req, res) {
-        let imagen = path.join(__dirname, "./../../public/img/products_images/", req.params.image);
-        return res.sendFile(imagen);
     }
 }
 

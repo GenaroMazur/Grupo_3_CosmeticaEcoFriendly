@@ -14,7 +14,7 @@ routes.use("/user", users)
 const products = require("./products.routes")
 routes.use("/product", products)
 
-const apis = require("./apis.routes")
+const apis = require("./../api/apis.routes")
 routes.use("/api",apis)
 
 module.exports = routes
