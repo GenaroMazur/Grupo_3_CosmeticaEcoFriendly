@@ -48,7 +48,7 @@ const userMiddlewares = {
     },
     //-------- dataBase ---------
     validationsCreate_v2: [
-        body("username")
+        body("name")
             .notEmpty().withMessage("Debe ingresar un nombre de usuario").bail()
             .isLength({min:2}).withMessage("El nombre debe tener al menos 2 caracteres"),
         body("lastname")

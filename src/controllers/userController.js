@@ -140,7 +140,7 @@ const userController = {
 
         let createdUser = {
             dateCreation: dateCreation,
-            username: req.body.username,
+            userName: req.body.name,
             lastname: req.body.lastname,
             passwordUser: bcrypt.hashSync(req.body.password, 10),
             email: req.body.userEmail,

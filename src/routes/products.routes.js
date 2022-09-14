@@ -33,7 +33,7 @@ routes.post("/newProduct",
     multerMiddleware.productsImage().single("image"),
     productsMiddlewares.validations,
     productsMiddlewares.product,
-    productController.createProduct_);
+    productController.createProduct);
 routes.post("/addCart/:id",
     authUserMiddleware,
     productController.addToCart

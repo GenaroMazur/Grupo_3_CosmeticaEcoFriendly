@@ -13,7 +13,7 @@ multerMiddleware = {
                 cb(null,destino)
             },
             filename:(req,file,cb)=>{
-                let filename=req.body.username+req.body.lastname+path.extname(file.originalname)
+                let filename=req.body.name+req.body.lastname+path.extname(file.originalname)
                 cb(null,filename)
             }
         })

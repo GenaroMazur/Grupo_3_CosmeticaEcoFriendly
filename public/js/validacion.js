@@ -100,7 +100,6 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (e) => {
 
 	if(campos.lastname && campos.name && campos.password && campos.userEmail ){
-		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 		setTimeout(() => {
