@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    let name = "Product"
+    let name = "Product";
     let cols = {
         "nameProduct": {
             "type": DataTypes.STRING(40),
@@ -37,32 +37,32 @@ module.exports = function (sequelize, DataTypes) {
         "dateCreation": {
             "type": DataTypes.DATE
         }
-    }
+    };
     let config = {
         "tableName": "products",
         "timestamps": false
-    }
+    };
 
-    let Product = sequelize.define(name, cols, config)
+    let Product = sequelize.define(name, cols, config);
 
     Product.associate = function (models) {
-        Product.belongsTo(models.Category,{
-            "as":"category",
-            "foreignKey":"idCategory"
-        })
-        
-        Product.belongsTo(models.Fragrance,{
-            "as":"fragrance",
-            "foreignKey":"idFragrance"
-        })
+        Product.belongsTo(models.Category, {
+            "as": "category",
+            "foreignKey": "idCategory"
+        });
 
-        Product.belongsToMany(models.Cart,{
-            "through":"productCart",
-            "foreignKey":"idProduct",
-            "otherKey":"idCart",
-            "as":"ProductCart"
-        })
-    }
-    
+        Product.belongsTo(models.Fragrance, {
+            "as": "fragrance",
+            "foreignKey": "idFragrance"
+        });
+
+        Product.belongsToMany(models.Cart, {
+            "through": "productCart",
+            "foreignKey": "idProduct",
+            "otherKey": "idCart",
+            "as": "ProductCart"
+        });
+    };
+
     return Product
 }

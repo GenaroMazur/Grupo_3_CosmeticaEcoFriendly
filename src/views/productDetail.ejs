@@ -21,9 +21,15 @@
                                 <%= product.nameProduct%>
                             </h2>
                             <div class="precio-detalle">
-                                <h3 class="price">
-                                    <%= product.price%>
-                                </h3>
+                                <div class="signo">
+                                    <h3 class="price">
+                                        <%= product.price%>
+                                    </h3>
+                                    <h3>
+                                        $
+                                    </h3>
+                                </div>
+                                
                                 <h3 class="cantidad">Cantidad:</h3>
                                 <input type="number" min="0" max="100" placeholder="1" id="input_product">
                             </div>
@@ -40,6 +46,11 @@
                             <div class="carrito-index">
                                 <p>Añadir al carrito</p>
                             </div>
+                            <form action="/product/addCart/<%= product.id %>" method="post">
+                                <button class="carrito-index">
+                                    <p>Añadir al carrito</p>
+                                </button>
+                            </form> 
                         </div>
                     </div>
                     <!--bloque 2-->
@@ -62,7 +73,7 @@
                                 <%= product.modeOfUse%>
                             </p>
                             <div class="mododeuso">
-                                <img src="./../img/lavie_images/mododeuso.png" alt="imagen mododeuso">
+                                <img src="./../../img/lavie_images/mododeuso.png" alt="imagen mododeuso">
                             </div>
                         </details>
                     </nav>
@@ -76,7 +87,7 @@
                         <h3>Promocion</h3>
                     </div>
                     <div>
-                        <img src="./../img/promos_images/promoción.jpeg" alt="promoción del dia">
+                        <img src="./../../img/promos_images/promoción.jpeg" alt="promoción del dia">
                     </div>
                     <div class="subtitulo-categorias">
                         <h3>Categorias</h3>
@@ -93,7 +104,7 @@
                         </div>
                     </div>
                     <div>
-                        <img src="./../img/lavie_images/LavieSinFondo.png" alt="img">
+                        <img src="./../../img/lavie_images/LavieSinFondo.png" alt="img">
                     </div>
                 </aside>
             </main>

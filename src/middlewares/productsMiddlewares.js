@@ -46,7 +46,6 @@ productsMiddlewares = {
     product: function (req, res, next) {
         let validaciones = validationResult(req)
         if (!validaciones.isEmpty()) {
-            
             if (req.file) {
                 let directory = path.join(__dirname, "./../../public/img/products_images", req.file.filename)
                 fs.unlink(directory)
@@ -63,8 +62,13 @@ productsMiddlewares = {
                         })
                     })
             }
-
-            return res.render("newProduct", { errors: validaciones.mapped(), old: req.body, user: req.session.user })
+            let categories = db.Category.findAll()
+            let fragrances = db.Fragrance.findAll()
+            Promise.all([categories,fragrances])
+                .then(([categories,fragrances])=>{
+                    return res.render("newProduct", { errors: validaciones.mapped(), old: req.body, user: req.session.user,categories,fragrances })
+                })
+            
         } else {
             return next()
         }

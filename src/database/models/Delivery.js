@@ -1,8 +1,8 @@
 module.exports = function (sequelize, DataTypes) {
-    let name = "Delivery"
+    let name = "Delivery";
     let cols = {
         "postalCode": {
-            "type":DataTypes.INTEGER,
+            "type": DataTypes.INTEGER,
             "allowNull": false
         },
         "locality": {
@@ -17,26 +17,26 @@ module.exports = function (sequelize, DataTypes) {
             "type": DataTypes.INTEGER,
             "allowNull": false
         }
-    }
+    };
     let config = {
         "tableName": "delivery",
         "timestamps": false
-    }
-    
+    };
+
     const Delivery = sequelize.define(name, cols, config);
 
     Delivery.associate = function (models) {
 
-        Delivery.hasMany(models.User,{
-            "as":"ubication",
-            "foreignKey":"postalCode"
-        })
+        Delivery.hasMany(models.User, {
+            "as": "ubication",
+            "foreignKey": "postalCode"
+        });
 
-        Delivery.hasMany(models.Cart,{
-            "as":"delivery",
-            "foreignKey":"idDelivery"
-        })
-    }
+        Delivery.hasMany(models.Cart, {
+            "as": "delivery",
+            "foreignKey": "idDelivery"
+        });
+    };
 
     return Delivery
 }

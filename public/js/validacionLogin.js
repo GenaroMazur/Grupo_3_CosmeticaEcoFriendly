@@ -1,6 +1,5 @@
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
-let prueba = document.querySelectorAll("#password");
 
 const expresiones = {
 	password: /^.{8,15}$/, // acepta de 8 a 15 digitos.
@@ -8,8 +7,8 @@ const expresiones = {
 }
 
 const campos = {
-	password: false,
-	userEmail: false
+	userEmail: false,
+	password: false
 }
 
 const validarFormulario = (e) => {
@@ -22,8 +21,6 @@ const validarFormulario = (e) => {
 		break;
 	}
 }
-
-
 
 
 const validarCampo = (expresion, input, campo) => {
@@ -53,20 +50,15 @@ inputs.forEach((input) => {
 
 formulario.addEventListener('submit', (e) => {
 	
-	let errores = 0
 
 	if(campos.password && campos.userEmail){
-
-		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
-			icono.classList.remove('formulario__grupo-correcto');
-		});
-	} else {
+	}
+	 else {
+		e.preventDefault();
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
 		}, 20000);
 	}
-	if(campos == false){
-		e.preventDefault();
-	}
+
 });

@@ -5,26 +5,27 @@ const routes = express.Router();
 //importar middlewares
 const multerMiddleware = require("./../middlewares/multerMiddleware");
 const productsMiddlewares = require ("./../middlewares/productsMiddlewares");
+const searchProductMiddleware = require("./../middlewares/searchProductMiddleware");
+
 const authAdminMiddleware = require ("./../middlewares/authAdminMiddleware");
 const authUserMiddleware = require ("./../middlewares/authUserMiddleware");
-const maintainMiddleware = require ("./../middlewares/maintainMiddleware");
-const searchProductMiddleware = require("./../middlewares/searchProductMiddleware")
+
 //importa controlador
 const productController = require("./../controllers/productController");
 
 //GET
 routes.get("/CarritoDeCompras",
     authUserMiddleware, 
-    productController.productCart_v2);
-routes.get("/DetalleDeProducto/:id", productController.productDetail_v2);
-routes.get("/catalogoProductos", productController.catalogoProductos_v2);
-routes.get("/favoritos", productController.favoritos_v2);
+    productController.productCart);
+routes.get("/DetalleDeProducto/:id", productController.productDetail);
+routes.get("/catalogoProductos", productController.catalogoProductos);
+routes.get("/favoritos", productController.favoritos);
 routes.get("/newProduct",
     authAdminMiddleware,
     productController.newProduct);
 routes.get("/editProduct/:idProduct",
     authAdminMiddleware,
-    productController.editProduct_v2);
+    productController.editProduct);
     
 //POST
 routes.post("/newProduct",
@@ -32,7 +33,11 @@ routes.post("/newProduct",
     multerMiddleware.productsImage().single("image"),
     productsMiddlewares.validations,
     productsMiddlewares.product,
-    productController.createProduct_v2);
+    productController.createProduct);
+routes.post("/addCart/:id",
+    authUserMiddleware,
+    productController.addToCart
+    )
     
 //Put
 routes.put("/editProduct/:idProduct",
@@ -41,10 +46,10 @@ routes.put("/editProduct/:idProduct",
     searchProductMiddleware,
     productsMiddlewares.putValidations,
     productsMiddlewares.putProduct,
-    productController.editProductId_v2);
+    productController.putProduct);
     
 //DELETE
 routes.delete("/deleteProduct/:idProduct",
-    productController.deleteProduct_v2);
+    productController.deleteProduct);
 
 module.exports = routes
