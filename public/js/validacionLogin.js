@@ -3,8 +3,8 @@ const inputs = document.querySelectorAll('#formulario input');
 let prueba = document.querySelectorAll("#password");
 
 const expresiones = {
-	password: /^.{8,15}$/, // acepta de 6 a 15 digitos.
-	userEmail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,// acepta todo tipo de caracter numero e simbolo
+	password: /^.{8,15}$/, // acepta de 8 a 15 digitos.
+	userEmail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,// acepta todo tipo de caracter, numero y simbolo. pide que sea un email
 }
 
 const campos = {
@@ -14,11 +14,11 @@ const campos = {
 
 const validarFormulario = (e) => {
 	switch (e.target.name) {
-		case "password":
-			validarCampo(expresiones.password, e.target, 'password');
-
 		case "userEmail":
 			validarCampo(expresiones.userEmail, e.target, 'userEmail');
+		break;
+		case "password":
+			validarCampo(expresiones.password, e.target, 'password');
 		break;
 	}
 }
