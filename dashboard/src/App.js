@@ -4,7 +4,7 @@ import Stats from "./components/stats/Stats.jsx"
 function App() {
   return (
     <div className="App">
-      <Stats request="porducts"/>
+      <Stats request="products"/>
       <Stats request="users"/>
     </div>
   );
