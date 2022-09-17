@@ -75,7 +75,15 @@ function actualizarManual(){
                     <p>detalle</p>
                     <ul>
                         {response.map((data,i)=>{
-                            {props.request == "products"?<li key={data+i}>{data.nameProduct}</li>:<li key={data+i}>{data.userName}</li>;}
+                            if(props.request === "products"){
+                                return (
+                                    <li key={data.nameProduct+i}>{data.nameProduct}</li>
+                                    )
+                            }else if(props.request === "users"){
+                                return (
+                                    <li key={data.userName+i}>{data.userName}</li>
+                                    )
+                            }
                         })}
                     </ul>
                 </div>
