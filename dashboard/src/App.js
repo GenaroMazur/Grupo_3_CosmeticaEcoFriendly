@@ -1,11 +1,12 @@
 import './App.css';
-import Stats from "./components/stats/Stats.jsx"
+
+import Main from "./Views/Main/Main"
+
 //se encargan de los estilos
 function App() {
   return (
     <div className="App">
-      <Stats request="products"/>
-      <Stats request="users"/>
+      <Main/>
     </div>
   );
 }

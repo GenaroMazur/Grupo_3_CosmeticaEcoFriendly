@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const cors = require('cors')
 const routes = require("./routes/index.routes");
+app.use(cors());
 
 //utiliza la carpeta public
 const directory = path.join(__dirname, "./../public");
@@ -42,6 +44,7 @@ app.listen(port, () => {
         console.log("Corriendo el servidor en modo desarrollo");
     };
 });
+
 
 //Importa las rutas
 app.use("/", routes);

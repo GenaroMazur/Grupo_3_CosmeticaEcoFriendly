@@ -6,7 +6,7 @@ import {useEffect, useState} from "react"
 // y count para la cantidad de elementos en ese array
 
 function Stats(props) {
-    let apiDirection = "/api/"+props.request;
+    let apiDirection = "http://localhost:8080/api/"+props.request;
     let [response, setResponse] = useState([]);
     let [count, setCount] = useState(0)
 

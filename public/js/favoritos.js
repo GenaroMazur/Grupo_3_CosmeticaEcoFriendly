@@ -1,48 +1,51 @@
-var printButton = document.getElementById("printable");
-printButton.addEventListener("click", printView);
+// var printButton = document.getElementById("printable");
+// printButton.addEventListener("click", printView);
 
-var addButton = document.getElementById("addIt");
-addButton.addEventListener("click", addTheThing);
+// var addButton = document.getElementById("addIt");
+// addButton.addEventListener("click", addTheThing);
+// var products=[]
+// var myList = [];
+// var myListArea = document.getElementById("wishList");
 
+fetch("http://localhost:8080/api/products").then(response=>response.json()).then(products=>{
+    console.log(products);
+}).catch(err=>{
+    console.error(err.msg);
+})
 
-var myList = [];
-var myListArea = document.getElementById("wishList");
+// function addTheThing() {
 
+//     var theThing = document.getElementById("iWant");
 
+//     addToTheList(theThing);
+//     resetInput(theThing);
 
-function addTheThing() {
+// }
 
-    var theThing = document.getElementById("iWant");
+// function addToTheList(thingToAdd) {
+//     myList.push(thingToAdd.value);
+//     var newListItem = document.createElement("li");
+//     newListItem.innerHTML = myList[myList.length - 1];
 
-    addToTheList(theThing);
-    resetInput(theThing);
+//     myListArea.appendChild(newListItem);
 
-}
+// }
 
-function addToTheList(thingToAdd) {
-    myList.push(thingToAdd.value);
-    var newListItem = document.createElement("li");
-    newListItem.innerHTML = myList[myList.length - 1];
+// function resetInput(inputToReset) {
+//     inputToReset.value = "";
+// }
 
-    myListArea.appendChild(newListItem);
+// function printView() {
+//     var listPage = document.getElementById("listPage");
+//     var formArea = document.getElementById("formArea");
 
-}
+//     formArea.style.display = "none";
+//     listPage.className = "print";
+//     myListArea.innerHTML = "";
+//     myList.sort();
 
-function resetInput(inputToReset) {
-    inputToReset.value = "";
-}
-
-function printView() {
-    var listPage = document.getElementById("listPage");
-    var formArea = document.getElementById("formArea");
-
-    formArea.style.display = "none";
-    listPage.className = "print";
-    myListArea.innerHTML = "";
-    myList.sort();
-
-    for (var i = 0; i < myList.length; i++) {
-        wishList.innerHTML += "<li>" + myList[i] + "</li>";
-    }
-    window.print();
-}
+//     for (var i = 0; i < myList.length; i++) {
+//         wishList.innerHTML += "<li>" + myList[i] + "</li>";
+//     }
+//     window.print();
+// }
