@@ -1,6 +1,10 @@
 import "./Stats.css"
 import {useEffect, useState} from "react"
 
+// respuesta de la api se guarda en la variable products o users dependiendo de la prop ingresada
+// para acceder a las propiedades se tiene que hacer uso de la variable response para el array 
+// y count para la cantidad de elementos en ese array
+
 function Stats(props) {
     let apiDirection = "/api/"+props.request;
     let [response, setResponse] = useState([]);
@@ -69,6 +73,9 @@ function actualizarManual(){
 
     return (
         <div>
+            {/* esto lo deje asi para que entiendan que funciona la base de datos y 
+            los pedidos...
+            ahora hagan lo que quieran */}
             {count != 0? 
                 <div>
                     <p>{count}</p>
