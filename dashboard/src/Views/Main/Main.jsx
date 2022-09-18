@@ -1,5 +1,5 @@
 import React from "react";
-import Stats from "./../../Components/stats/Stats"
+import Stats from "./../../components/stats/Stats"
 function Main() {
     return(
         <div>
