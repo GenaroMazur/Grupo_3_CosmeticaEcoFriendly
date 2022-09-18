@@ -1,4 +1,4 @@
-
+//iconos con acciones
 let corazon = document.querySelector(".boton.heartBoton");
 
 corazon.addEventListener("click", function () {
@@ -6,6 +6,14 @@ corazon.addEventListener("click", function () {
     icono.setAttribute("name", "heart");
     myP = document.querySelector("ion-icon.heartbuton.md.hydrated");
     myP.style.color = "hotpink";
+});
+//iconofilter
+
+let filter = document.querySelector(".iconoFIlter")
+let contenido = document.querySelector(".contenido");
+
+filter.addEventListener("click", function(){
+  contenido.classList.toggle("contenido_ver");
 });
 
 //carousel de produtos
@@ -36,7 +44,17 @@ flecha.forEach((arrow,indice)=>{
         })
     }
 })
+//categorias
+let todo = document.querySelectorAll(".todo")
+let coso = document.querySelectorAll(".shampoo")
+let acondicionador = document.querySelectorAll(".acondicionador")
+let jabon = document.querySelectorAll(".jabon")
+let desodorante = document.querySelectorAll(".desodorante")
+let grupo_shampoos = document.querySelector(".grupo_shampoos")
 
+coso.addEventListener("click", function(){
+console.log("hola");
+});
 /*let valor = "-15.52";
 let contrario = "15.52";
 productos.forEach((producto,i) => {
@@ -48,12 +66,3 @@ productos.forEach((producto,i) => {
         }
 });
  */
-
-
-let filter = document.querySelector(".iconoFIlter")
-let contenido = document.querySelector(".contenido");
-
-filter.addEventListener("click", function(){
-  contenido.classList.toggle("contenido_ver")
-})
-
