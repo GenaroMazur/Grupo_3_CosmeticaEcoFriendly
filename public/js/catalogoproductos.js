@@ -46,30 +46,15 @@ flecha.forEach((arrow,indice)=>{
 })
 //categorias
 let todo = document.querySelectorAll(".todo")
-let shampoo = document.querySelectorAll(".shampoo")
+let coso = document.querySelectorAll(".shampoo")
 let acondicionador = document.querySelectorAll(".acondicionador")
 let jabon = document.querySelectorAll(".jabon")
 let desodorante = document.querySelectorAll(".desodorante")
+let grupo_shampoos = document.querySelector(".grupo_shampoos")
 
-const products = (e) => {
-	switch (e.target.name) {
-		case "shampoo":
-			validarCampo(e.target, 'grupo_shampoos');
-            shampoo.addEventListener("click",function(){
-                
-            })
-		break;
-		case "acondicionador":
-			validarCampo(e.target, 'name');
-		break;
-		case "desodorante":
-			validarCampo(e.target, 'password');
-		break;
-		case "jabon":
-			validarCampo(expresiones.userEmail, e.target, 'userEmail');
-		break;
-	}
-}
+coso.addEventListener("click", function(){
+console.log("hola");
+});
 /*let valor = "-15.52";
 let contrario = "15.52";
 productos.forEach((producto,i) => {
