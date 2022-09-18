@@ -91,6 +91,13 @@ select {
     color: black;
     text-decoration: none;
 }
+.grupo_shampoos ,.grupo_acondicionadores,.grupo_jabones,.grupo_desodorantes{
+    display: flex;
+}
+.grupo_shampoos_activo ,.grupo_acondicionadores_activo,.grupo_jabones_activo,.grupo_desodorantes_activo{
+    display: block;
+}
+
 
 .catalogo {
     display: flex;

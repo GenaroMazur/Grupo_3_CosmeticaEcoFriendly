@@ -1,4 +1,4 @@
-
+//iconos con acciones
 let corazon = document.querySelector(".boton.heartBoton");
 
 corazon.addEventListener("click", function () {
@@ -6,6 +6,14 @@ corazon.addEventListener("click", function () {
     icono.setAttribute("name", "heart");
     myP = document.querySelector("ion-icon.heartbuton.md.hydrated");
     myP.style.color = "hotpink";
+});
+//iconofilter
+
+let filter = document.querySelector(".iconoFIlter")
+let contenido = document.querySelector(".contenido");
+
+filter.addEventListener("click", function(){
+  contenido.classList.toggle("contenido_ver");
 });
 
 //carousel de produtos
@@ -36,7 +44,32 @@ flecha.forEach((arrow,indice)=>{
         })
     }
 })
+//categorias
+let todo = document.querySelectorAll(".todo")
+let shampoo = document.querySelectorAll(".shampoo")
+let acondicionador = document.querySelectorAll(".acondicionador")
+let jabon = document.querySelectorAll(".jabon")
+let desodorante = document.querySelectorAll(".desodorante")
 
+const products = (e) => {
+	switch (e.target.name) {
+		case "shampoo":
+			validarCampo(e.target, 'grupo_shampoos');
+            shampoo.addEventListener("click",function(){
+                
+            })
+		break;
+		case "acondicionador":
+			validarCampo(e.target, 'name');
+		break;
+		case "desodorante":
+			validarCampo(e.target, 'password');
+		break;
+		case "jabon":
+			validarCampo(expresiones.userEmail, e.target, 'userEmail');
+		break;
+	}
+}
 /*let valor = "-15.52";
 let contrario = "15.52";
 productos.forEach((producto,i) => {
@@ -48,12 +81,3 @@ productos.forEach((producto,i) => {
         }
 });
  */
-
-
-let filter = document.querySelector(".iconoFIlter")
-let contenido = document.querySelector(".contenido");
-
-filter.addEventListener("click", function(){
-  contenido.classList.toggle("contenido_ver")
-})
-
