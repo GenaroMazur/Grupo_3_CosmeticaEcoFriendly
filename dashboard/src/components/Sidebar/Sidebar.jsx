@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"; 
+import Logo from "../../Assets/images/La vie (5).png"
 
 function Sidebar () {
     return(
@@ -7,7 +8,7 @@ function Sidebar () {
 			{/*<!-- Sidebar - Brand -->*/}
 			<a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
 				<div className="sidebar-brand-icon">
-					<img className="w-100" src={ Logo } alt="Digital House"/>
+					<img className="w-100" src={ Logo } alt="La vie Naturelle"/>
 				</div>
 			</a>
 
@@ -18,7 +19,7 @@ function Sidebar () {
 			<li className="nav-item active">
 				<a className="nav-link" href="/">
 					<i className="fas fa-fw fa-tachometer-alt"></i>
-					<span>Dashboard - DH movies</span></a>
+					<span>Dashboard - La Vie Naturelle</span></a>
 			</li>
 
 			{/* <!-- Divider --> */}
@@ -54,3 +55,5 @@ function Sidebar () {
 		</ul>
     )
 }
+
+export default Sidebar;
