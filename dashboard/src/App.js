@@ -1,7 +1,7 @@
 import '../src/Assets/css/app.css';
 
 import ContentWrapper from "./Views/ContentWrapper/ContentWrapper"
-import Sidebar from './Components/Sidebar/Sidebar';
+import Sidebar from './components/Sidebar/Sidebar';
 
 //se encargan de los estilos
 function App() {

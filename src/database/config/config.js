@@ -1,9 +1,10 @@
+require("dotenv").config()
 module.exports={
   "development": {
-    "username": "root",
-    "password": "",
-    "database": "bd_cosmetica",
-    "host": "127.0.0.1",
+    "username": process.env.usernameDb,
+    "password": process.env.passwordDb,
+    "database": process.env.databaseDb,
+    "host": process.env.hostDb,
     "dialect": "mysql"
   },
   "test": {
