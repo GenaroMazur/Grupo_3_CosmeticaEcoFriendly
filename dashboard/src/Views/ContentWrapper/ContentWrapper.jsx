@@ -1,11 +1,11 @@
 import React from "react";
-import ContentRowTop from "../../components/ContentRowTop/ContentRowTop";
-import Footer from "../../components/Footer/Footer";
-import Topbar from "../../components/Topbar/Topbar";
-import Stats from "../../components/stats/Stats"
+import ContentRowTop from "../../Components/ContentRowTop/ContentRowTop";
+import Footer from "../../Components/Footer/Footer";
+import Topbar from "../../Components/Topbar/Topbar";
+import Stats from "../../Components/stats/Stats";
 
 
-function Main() {
+function ContentWrapper() {
     return(
         <div>
             <Topbar/>
@@ -18,4 +18,4 @@ function Main() {
         </div>
     )
 }
-export default Main
+export default ContentWrapper;

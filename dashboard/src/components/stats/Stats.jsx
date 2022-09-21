@@ -18,11 +18,11 @@ function Stats(props) {
             return res.json()
         })
         .then(data=>{
-            if (props.request == "products"){
+            if (props.request === "products"){
                 let {count,products} = data
                 setCount(count)
                 setResponse(products)
-            } else if (props.request == "users"){
+            } else if (props.request === "users"){
                 let {count,users} = data
                 setCount(count)
                 setResponse(users)
@@ -76,7 +76,7 @@ function actualizarManual(){
             {/* esto lo deje asi para que entiendan que funciona la base de datos y 
             los pedidos...
             ahora hagan lo que quieran */}
-            {count != 0? 
+            {count !== 0? 
                 <div>
                     <p>{count}</p>
                     <p>detalle</p>
