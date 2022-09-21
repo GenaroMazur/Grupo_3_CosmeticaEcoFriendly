@@ -85,7 +85,7 @@ apisController = {
             let response = {
                 count: products.length,
                 countByCategory: categories,
-                products
+                products:products
             };
 
             return res.status(200).json(response);

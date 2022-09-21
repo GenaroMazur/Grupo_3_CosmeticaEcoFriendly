@@ -22,42 +22,28 @@
                         <tr>
                             <td class="td-favoritos">
                                 <div class="card-info">
-                                    <div><ion-icon name="trash"></ion-icon>
+                                    <div class="basurero">
+                                        <ion-icon name="trash"></ion-icon>
+                                    </div>
+                                    <div>
                                     <img src="./../img/products_images/<%= product.Image %>" alt="LaVieNaturelle">
                                     </div>
                                     <div class="style-name">
-                                        <p><%= product.namePorduct %></p>
-                                        <small class="price">Precio:<%= product.price %></small>
-                                        <a href="#"><ion-icon name="close-outline"></ion-icon>
-                                    </div>
-                                    <div class="boton-compra">
-                                        <button type="button" class="buton">Agregar al carrito</button>
-                                    </div>
-                                </td>
-                                <td class="td-favoritos">$599.99</td>
-                            </tr>
+                                    <p><%= product.nameProduct %></p>
+                                    <div> disponible </div>
+                                    <small class="price"><%= product.price %>$</small>
+                                     <div class="boton-compra">
+                                    <button type="button" class="buton">Agregar al carrito</button>
+                                </div>
+                            </td>
+                        </tr>
                         <% }) %> 
                     <% } %>
                         
                     </table>
-
-                    <div class="total-favoritos">
-                        <table>
-                            <tr>
-                                <td>subtotal</td>
-                                <td>$599.99</td>
-                            </tr>
-                            <tr>
-                                <td>Total</td>
-                                <td>$1099.99</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="boton-compra">
-                        <button type="button" class="boton">Agregar al carrito</button>
-                    </div>
                 </article>
             </main>
             <%- include('./partials/footer') %>
+            <script src="\js\favoritos.js"></script>
     </body>
 </html>
