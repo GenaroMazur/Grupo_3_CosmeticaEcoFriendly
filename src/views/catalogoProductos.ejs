@@ -6,14 +6,14 @@
 
     <body>
         <%- include('./partials/header') %>
-        
-             <div class="menu">
-              <a href="http://localhost:8080/product/favoritos" >
-                <div class="boton heartBoton">
+
+            <div class="menu-favoritos">
+                <a href="http://localhost:8080/product/favoritos">
+                    <div class="boton heartBoton">
                         <label for="mis fav">Mis favoritos</label>
                         <ion-icon name="heart-outline" class="heartbuton"></ion-icon>
-                </div>
-               </a>
+                    </div>
+                </a>
                 <div class="barra barradebusqueda">
                     <input type="search" name="search" placeholder="buscar">
                     <div class="icono de busqueda">
@@ -63,11 +63,12 @@
                         <div>
                             <h1>Variantes</h1>
                             <ul class="variantes">
-                            <% for (let i=0; i < products.length; i++) { %>
-                                <label for="Variantes"><input type="radio" name="Variantes" id="variantes-productos">
-                                <%= products[i].nameProduct%>
-                                </label></li>
-                                <% } %>
+                                <% for (let i=0; i < products.length; i++) { %>
+                                    <label for="Variantes"><input type="radio" name="Variantes"
+                                            id="variantes-productos">
+                                        <%= products[i].nameProduct%>
+                                    </label></li>
+                                    <% } %>
                             </ul>
                         </div>
                     </div>
@@ -97,13 +98,14 @@
                         </div>
                         <div>
                             <h1>Variantes</h1>
-                                <ul>
-                                    <% for (let i=0; i < products.length; i++) { %>
-                                        <li> <label for="Variantes"><input type="radio" name="Variantes" id="variantes-productos">
-                                        <%= products[i].nameProduct%>
+                            <ul>
+                                <% for (let i=0; i < products.length; i++) { %>
+                                    <li> <label for="Variantes"><input type="radio" name="Variantes"
+                                                id="variantes-productos">
+                                            <%= products[i].nameProduct%>
                                         </label></li>
-                                        <% } %>
-                                 </ul>
+                                    <% } %>
+                            </ul>
                         </div>
                     </div>
                 </aside>

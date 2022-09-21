@@ -2,144 +2,97 @@
 <html lang="es">
 <title>La Vie Naturelle</title>
 <%- include('./partials/head') %>
-<link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/home.css">
+
     <body>
-        <div class="pos">
-            <div class="nav navegacion">
-                <div class="boton menu">
-                    <a href="/">
-                        <p>Inicio</p>
-                    </a>
-                </div>
-                <div class="boton menu">
-                    <a href="/nosotros">
-                        <p>Nosotros</p>
-                    </a>
-                </div>
-                <div class="boton menu">
-                    <a href="/product/catalogoproductos">
-                        <p>Productos</p>
-                    </a>
-                </div>
-                <div class="boton menu">
-                    <a href="/contacto">
-                        <p>Contacto</p>
-                    </a>
-    
-                </div>
-    
-                <div class="nav usuario">
-                    <div class="imagen">
-                        <img src="./../../img/users_images/<%= user.image %>" alt="Foto de perfil de usuario"
-                            class="foto usuario">
+        <%- include('./partials/header') %>
+            <section id="section-index">
+                <div class="wrap">
+                    <div class="titulo-parrafo">
+                        <h1 class="titulo-header">La Vie Naturelle</h1>
+                        <p class="parrafo-header">Cosmética natural, amigable con el medio ambiente, hecha
+                            artesanalmente con productos naturales, compostables y cruelty free</p>
+                        <p class="parrafo-header">Producto de calidad y gran diseño</p>
                     </div>
-                    <div id="menu">
-                        <ul>
-                            <% if (user.status == "Admin") { %>
-                                <li><a class="a-nav" href="/user/myAccount/<%= user.id %>">Mi perfil</a></li>
-                                <li><a class="a-nav" href="/user/admin">Admin Panel</a></li>
-                                <li><a class="a-nav" href="/user/un-login">Cerrar sesión</a></li>
-                            <% } else if (user.status == "User"){ %>
-                                <li><a class="a-nav" href="/user/myAccount/<%= user.id %>">Mi perfil</a></li>
-                                <li><a class="a-nav" href="/user/un-login">Cerrar sesión</a></li>
-                            <% }  else {%>
-                                    <li><a class="a-nav" href="/user/login">Iniciar sesión</a></li>
-                                    <li><a class="a-nav" href="/user/registro">Registrarse</a></li>
-                            <% } %>
-                        </ul>
-                    </div>
+                </div>
 
-                    <a href="/product/CarritoDeCompras"><ion-icon name="cart" class="carrito"></ion-icon></a>
-                </div>
-            </div>
-        </div>
-        <div class="wrap">
-            <div class="titulo-parrafo">
-                <h1 class="titulo-header">La Vie Naturelle</h1>
-                <p class="parrafo-header">Cosmética natural, amigable con el medio ambiente, hecha
-                    artesanalmente con productos naturales, compostables y cruelty free</p>
-                <p class="parrafo-header">Producto de calidad y gran diseño</p>
-            </div>
-    
-        </div>
-        </header>
+                <div class="info">
+                    <div class="cuadro">
+                        <a href="/product/DetalleDeProducto">
+                            <div class="tarjeta">
+                                <div>
+                                    <h3>Shampoo Sólido</h3>
+                                </div>
+                                <div>
+                                    <p>Es una pastilla concentrada de aceites, infusiones, plantas, arcillas y aceites
+                                        esenciales, que dejara tu cabello suave y brillante.</p>
+                                </div>
+                                <div class="boton-carrito-index">
 
-        <section id="section-index">
-            <div class="info">
-                <div class="cuadro">
-                    <a href="/product/DetalleDeProducto">
-                    <div class="tarjeta">
-                        <div>
-                            <h3>Shampoo Sólido</h3>
-                        </div>
-                        <div>
-                            <p>Es una pastilla concentrada de aceites, infusiones, plantas, arcillas y aceites
-                                esenciales, que dejara tu cabello suave y brillante.</p>
-                        </div>
-                        <div class="boton-carrito-index">
-                            
-                        </div>
-                        <div class="imagenes-index">
-                            <img src="./img/products_images/shampoo solido graso.jpeg">
-                        </div>
+                                </div>
+                                <div class="imagenes-index">
+                                    <img src="./img/products_images/shampoo solido graso.jpeg">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/product/DetalleDeProducto">
+                            <div class="tarjeta">
+                                <div>
+                                    <h3>Jabones sólidos</h3>
+                                </div>
+                                <div>
+                                    <p>Los jabones naturales son elaborados artesanalmente, produciendo una espuma suave
+                                        que
+                                        mantendra tu piel hidratada.</p>
+                                </div>
+                                <div class="boton-carrito-index">
+                                </div>
+                                <div class="imagenes-index">
+                                    <img src="./img/products_images/jabon_exfoliante_1.jpeg"
+                                        alt="imagen acondicionador">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/product/DetalleDeProducto">
+                            <div class="tarjeta">
+                                <div>
+                                    <h3>Acondicionador sólido</h3>
+                                </div>
+                                <div>
+                                    <p>El acondicionador sólido nutre el cabello con ingredientes naturales dejándolo
+                                        brilloso y
+                                        suave. Es libre de siliconas.</p>
+                                </div>
+                                <div class="boton-carrito-index">
+                                </div>
+                                <div class="imagenes-index">
+                                    <img src="./img/products_images/acondicionador_normal.jpeg" alt="imagen producto 3">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/product/DetalleDeProducto" class="carrito-index">
+                            <div class="tarjeta">
+                                <div>
+                                    <h3>Desodorante Sólido</h3>
+                                </div>
+                                <div>
+                                    <p>Combate de forma natural la humedad y los olores de la transpiración.
+                                        Fórmula suave y cremosa, de fácil absorción.
+                                    </p>
+                                </div>
+                                <div class="boton-carrito-index">
+                                </div>
+                                <div class="imagenes-index">
+                                    <img src="./img/products_images/desodorante.jpg" alt="imagen producto 4">
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-                <a href="/product/DetalleDeProducto">
-                    <div class="tarjeta">
-                        <div>
-                            <h3>Jabones sólidos</h3>
-                        </div>
-                        <div>
-                            <p>Los jabones naturales son elaborados artesanalmente, produciendo una espuma suave que
-                                mantendra tu piel hidratada.</p>
-                        </div>
-                        <div class="boton-carrito-index">
-                        </div>
-                        <div class="imagenes-index">
-                            <img src="./img/products_images/jabon_exfoliante_1.jpeg" alt="imagen acondicionador">
-                        </div>
-                    </div>
-                </a>
-                <a href="/product/DetalleDeProducto">
-                    <div class="tarjeta">
-                        <div>
-                            <h3>Acondicionador sólido</h3>
-                        </div>
-                        <div>
-                            <p>El acondicionador sólido nutre el cabello con ingredientes naturales dejándolo brilloso y
-                                suave. Es libre de siliconas.</p>
-                        </div>
-                        <div class="boton-carrito-index">
-                        </div>
-                        <div class="imagenes-index">
-                            <img src="./img/products_images/acondicionador_normal.jpeg" alt="imagen producto 3">
-                        </div>
-                    </div>
-                    </a>
-                    <a href="/product/DetalleDeProducto" class="carrito-index">
-                    <div class="tarjeta">
-                        <div>
-                            <h3>Desodorante Sólido</h3>
-                        </div>
-                        <div>
-                            <p>Combate de forma natural la humedad y los olores de la transpiración.
-                                Fórmula suave y cremosa, de fácil absorción.
-                            </p>
-                        </div>
-                        <div class="boton-carrito-index">
-                        </div>
-                        <div class="imagenes-index">
-                            <img src="./img/products_images/desodorante.jpg"
-                                alt="imagen producto 4">
-                        </div>
-                    </div>
-                </a>
                 </div>
-            </div>
-            <%- include('./partials/ultimosProductos')%>
-        </section>
-        <script src="\js\index.js"></script>
-        <%- include('./partials/footer') %>
+                <%- include('./partials/ultimosProductos')%>
+            </section>
+            <script src="\js\index.js"></script>
+            <%- include('./partials/footer') %>
     </body>
 
 </html>

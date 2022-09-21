@@ -1,7 +1,7 @@
-#contact {
+/* #contact {
     justify-content: center;
     flex-direction: row;
-}
+} */
 
 #contacto {
     display: flex;
@@ -71,11 +71,11 @@ h2{
         border-radius: 30px;
         margin: 6px;
     }
-        #contact {
+        /* #contact {
             justify-content: center;
             flex-direction: row;
             margin: 10px;
-        }
+        } */
 }
 
 @media(min-width:900px) {
