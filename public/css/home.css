@@ -12,20 +12,24 @@ body {
 }
 
 .wrap {
-    height: 50vw;
+    height: 45vw;
     display: flex;
     align-items: center;
-    margin-top: 0px;
     background: linear-gradient(to right, rgb(0 0 0 / .5), rgb(0 0 0 /.5)), url(/img/banners_fondos_images/fondo-index.webp);
     background-size: 100vw 45vw;
     background-position: center;
     background-repeat: no-repeat;
 }
-@keyframes opacidad {
-    from{ opacity: 0;}
 
-    to{ opacity: 1;}
-} 
+@keyframes opacidad {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 h1.titulo-header {
     padding: 0.5vw;
@@ -156,9 +160,10 @@ p.parrafo-header {
     display: flex;
     justify-content: center;
 }
-@media(max-width:900px){
 
-    .pos {
+@media(max-width:900px) {
+
+    /*     .pos {
         position: fixed;
         width: 100vw;
         height: 9.7vw;
@@ -205,7 +210,8 @@ p.parrafo-header {
         top: 2vw;
     }
 
-    .background-fondo-productos {
+ */
+    /* .background-fondo-productos {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -214,7 +220,7 @@ p.parrafo-header {
         padding: 3%;
         flex-direction: column;
     }
-
+ */
     .cuadro {
         width: 100%;
         max-width: 1200px;

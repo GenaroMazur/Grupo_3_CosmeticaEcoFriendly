@@ -10,7 +10,9 @@ body {
     margin: 0px 0px;
     background-color: #cdbd9d;
 }
-
+ main {
+    padding-top: 0;
+ }
 .catalogo {
     width: 100%;
     max-width: 100vw;
@@ -23,8 +25,7 @@ body {
     justify-content: space-between;
     align-content: center;
     width: 100vw;
-    padding: 3vw;
-    padding-top: 70px;
+    padding: 90px 3vw 20px 3vw;
 }
 
 .boton {
@@ -50,7 +51,6 @@ body {
 .barra.barradebusqueda {
     display: flex;
     text-align: center;
-    direction: rtl;
 }
 
 input[type="search"] {

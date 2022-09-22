@@ -1,6 +1,6 @@
 //click usuario
-let foto = document.querySelector(".foto.usuario");
-let menu = document.querySelector("div#menu");
+let foto = document.querySelector(".div-user-img");
+let menu = document.querySelector("#menu");
 
 
   foto.addEventListener("click", function() {

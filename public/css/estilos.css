@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -19,7 +20,6 @@ body::-webkit-scrollbar {
 } */
 main {
     padding-top: 70px;
-    border-color: #F0F2F5;
 }
 
 /* <HEADER> */
@@ -122,16 +122,29 @@ header {
 #menu {
     position: absolute;
     background: #a39883;
-    width: 15vw;
-    height: 145px;
+    width: 125px;
+    height: 55px;
     top: -200px;
     z-index: 20;
     border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu li:hover{
+    background-color: #91846e91;
+    border-radius: 5px;
 }
 
 #menu.mostrar {
-    top: 5.7vw;
-    left: 58vw;
+    top: 50px;
+    right: 120px;
+}
+
+.a-nav {
+    color: black;
+    padding: 5px;
 }
 
 /* CART */
@@ -161,11 +174,10 @@ header {
     font-size: 17px;
     border-radius: 10px;
     padding: 5px 13px;
-    font-weight: 500;
 }
 
-li a.active,
-li a:hover {
+.nav-ul li a.active,
+.nav-ul li a:hover {
     background-color: rgba(188, 172, 141, .7);
     transition: .5s;
 }
@@ -174,7 +186,7 @@ li a:hover {
 /* <FOOTER> */
 footer {
     background-color: #cdbd9d;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     margin: 2rem;
@@ -213,6 +225,7 @@ footer a {
     height: 50px;
     width: 50px;
     align-self: center;
+    display: none;
 }
 
 .ig-icon {
@@ -277,6 +290,11 @@ footer a {
         justify-content: center;
     }
 
+    #menu.mostrar {
+        top: 60px;
+        right: 15px;
+    }
+
     .div-logo {
         left: -10;
     }
@@ -289,7 +307,7 @@ footer a {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: linear-gradient(#cdbd9d, #749e79);
+        background: linear-gradient(#cdbd9d, #8c7000);
         top: 70px;
         padding: 20px 0;
         text-align: center;
@@ -307,9 +325,9 @@ footer a {
         font-size: 20px;
     }
 
-    li a.active,
-    li a:hover {
-        background-color: #749e79;
+    .nav-ul li a.active,
+    .nav-ul li a:hover {
+        background-color: #8c700085;
     }
 
     #btn-menu:checked~ul {
@@ -337,6 +355,6 @@ footer a {
     }
 
     .nav-ul {
-        margin: 140px;
+        margin-right: 140px;
     }
 }
