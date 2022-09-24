@@ -4,9 +4,8 @@
     flex-direction: column;
     text-align: center;
     background: antiquewhite;
-    margin: 30px;
     border-radius: 5px;
-
+    margin-top: 5vw;
 }
 .boton {
     margin: 40px;
@@ -26,7 +25,12 @@ a.button {
     background-color: #9fb478;
     color: #000;
 }
+
 .image {
-    width: 310px;
+    width: 60%;
     align-self: center;
+}
+
+img.img {
+    width: 100%;
 }
