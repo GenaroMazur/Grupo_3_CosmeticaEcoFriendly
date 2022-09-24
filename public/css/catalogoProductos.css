@@ -98,14 +98,14 @@ select {
 .grupo_acondicionadores,
 .grupo_jabones,
 .grupo_desodorantes {
-    display: none;
+    display: block;
 }
 
-.grupo_shampoos_activo,
-.grupo_acondicionadores_activo,
-.grupo_jabones_activo,
-.grupo_desodorantes_activo {
-    display: block;
+.grupo_shampoos_inactivo,
+.grupo_acondicionadores_inactivo,
+.grupo_jabones_inactivo,
+.grupo_desodorantes_inactivo {
+    display: none;
 }
 
 
@@ -149,13 +149,19 @@ fieldset {
     margin-left: 6px;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+}
+
 .producto {
     display: flex;
     background: #efd8aa;
     flex-direction: column;
     text-align: center;
     width: 15vw;
-    height: 100%
+    height: 100%;
+    align-items: center;
 }
 
 @keyframes traslado {
@@ -175,13 +181,16 @@ fieldset {
 }
 
 .img.product {
-    width: 15vw;
+    width: 13vw;
     height: 16vw;
     margin-top: 1vw;
 }
 
 .precio {
     display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
     justify-content: space-around;
 }
 
