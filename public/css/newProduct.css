@@ -11,7 +11,7 @@
 
 body {
     margin: 0px 0px;
-    background-color: #cdbd9d;
+    background-color: #181818;
 }
 
 
@@ -21,7 +21,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 10px;
+    padding: 100px 10px 30px 10px;
 }
 
 section {

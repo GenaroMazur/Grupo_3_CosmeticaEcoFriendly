@@ -114,6 +114,7 @@ header {
 
 .user-img {
     width: 30px;
+    height: 30px;
     border: 1px solid black;
     border-radius: 100%;
     cursor: pointer;
@@ -123,13 +124,18 @@ header {
     position: absolute;
     background: #a39883;
     width: 125px;
-    height: 55px;
+    height: auto;
     top: -200px;
     z-index: 20;
     border-radius: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5px;
+}
+
+#menu li{
+    padding: 5px 0;
 }
 
 #menu li:hover{

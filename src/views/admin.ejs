@@ -5,7 +5,7 @@
     <title>La Vie Naturelle - Admin</title>
 
     <body>
-        <header class="header-admin">
+        <!--         <header class="header-admin">
             <a href="/"><img src="./../img/lavie_images/La vie (5).png" alt="" class="img-icon"></a>
             <div class="icono-hamburguesa">
                 <div class="burguer-icon">
@@ -29,82 +29,87 @@
                 </div>
             </div>
         </header>
-        <main class="admin-main">
-            <div class="banner-admin">
-                <div class="welcome-text">
-                    <h1>Hola! <%= admin.username+" "+admin.lastname %></h1>
-                <p>Bienvenido al panel de administrador de La Vie Naturelle</p>
-            </div>
-            <div class=" photo-admin">
-                            <img src="./../img/users_images/<%=admin.image%>" alt="">
+ -->
+        <%- include('./partials/header') %>
+            <main class="admin-main">
+                <!--             <div class=" photo-admin">
+                    <img src="./../img/users_images/<%=admin.image%>" alt="">
                 </div>
-            </div>
-            <div class="info-admin">
-                <h2>Lista de Productos</h2>
-                <ul class="productos">
-                    <li>
-                        <a href="">Todos los productos</a>
-                    </li>
-                    <li>
-                        <a href="">Shampoos</a>
-                    </li>
-                    <li>
-                        <a href="">Jabones</a>
-                    </li>
-                    <li>
-                        <a href=""> Acondicionadores</a>
-                    </li>
-                    <li>
-                        <a href=""> Desodorantes</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="caja">
-                <div class="product-list">
-                    <% products.map(product=>{ %>
-                        <article>
-                            <div class="info-producto">
-                                <img src="/img/products_images/<%= product.Image %>" alt="imagen">
-                                <p>
-                                    <%= product.nameProduct %>
-                                </p>
-                                <p>
-                                    <span>
-                                        <%= product.price %>
-                                    </span>
-                                </p>
-                                <p>10</p>
-                            </div>
-                            <div class="editar-eliminar">
-                                <a href="/product/editProduct/<%= product.id %>">Editar</a>
-                                <form action="/product/deleteProduct/<%= product.id %>?_method=delete" method="post">
-                                    <button type="submit" class="button-delete">Eliminar</button>
-                                </form>
-                            </div>
-                        </article>
-                        <% }) %>
+            -->
+                <div class="banner-admin">
+                    <div class="welcome-text">
+                        <h1>Hola! <%= admin.username+" "+admin.lastname %></h1>
+                    <p>Bienvenido al panel de administrador de La Vie Naturelle</p>
                 </div>
-                <aside>
-                    <ul class="aside">
-                        <li>
-                            <a href="/nosotros">nosotros</a>
-                        </li>
-                        <li>
-                            <a href="/product/CarritoDeCompras">carrito</a>
-                        </li>
-                        <li>
-                            <a href="#">product</a>
-                        </li>
-                        <li>
-                            <a href="/product/newProduct"> Agregar Producto</a>
-                        </li>
-                        <li>
-                            <a href="/user/userPanel">panel de usuario</a>
-                        </li>
-                    </ul>
-                </aside>
+                <a href="/product/newProduct" class="agregar-producto"> Agregar Producto</a>
             </div>
-        </main>
+            <h2 class="title">Lista de Productos:</h2>
+                <div class="info-admin">
+                                <ul class="productos">
+                                    <li>
+                                        <a href="">Todos los productos</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Shampoos</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Jabones</a>
+                                    </li>
+                                    <li>
+                                        <a href=""> Acondicionadores</a>
+                                    </li>
+                                    <li>
+                                        <a href=""> Desodorantes</a>
+                                    </li>
+                                </ul>
+                    </div>
+                    <div class="caja">
+                        <div class="product-list">
+                            <% products.map(product=>{ %>
+                                <article>
+                                    <div class="info-producto">
+                                        <img src="/img/products_images/<%= product.Image %>" alt="imagen">
+                                        <p>
+                                            <%= product.nameProduct %>
+                                        </p>
+                                        <p>
+                                            <span>
+                                                <%= product.price %>
+                                            </span>
+                                        </p>
+                                        <p>10</p>
+                                    </div>
+                                    <div class="editar-eliminar">
+                                        <a href="/product/editProduct/<%= product.id %>">Editar</a>
+                                        <form action="/product/deleteProduct/<%= product.id %>?_method=delete"
+                                            method="post">
+                                            <button type="submit" class="button-delete">Eliminar</button>
+                                        </form>
+                                    </div>
+                                </article>
+                                <% }) %>
+                        </div>
+<!--                         <aside>
+                            <ul class="aside">
+                                <li>
+                                    <a href="/nosotros">nosotros</a>
+                                </li>
+                                <li>
+                                    <a href="/product/CarritoDeCompras">carrito</a>
+                                </li>
+                                <li>
+                                    <a href="#">product</a>
+                                </li>
+                                <li>
+                                    <a href="/product/newProduct"> Agregar Producto</a>
+                                </li>
+                                <li>
+                                    <a href="/user/userPanel">panel de usuario</a>
+                                </li>
+                            </ul>
+                        </aside>
+ -->                    </div>
+            </main>
     </body>
 
 </html>
