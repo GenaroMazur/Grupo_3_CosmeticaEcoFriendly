@@ -169,12 +169,14 @@ p {
     margin-right: 32px;
     padding: 5px;
     border-radius: 5px;
+    color: black;
+    background-color: #794c45a8;
+    border: 1px solid black;
+    font-size: 2rem;
 }
 
-.agregar-producto:hover{
-    background-color: #a1645aa8;
-    border: 1px solid red;
-    transition: .5s;
+.agregar-producto:hover {
+    background-color: #5a373225;
 }
 
 .banner-admin img {
@@ -187,8 +189,8 @@ p {
 
 
 .info-admin ul,
-li,
-a {
+.info-admin li,
+.info-admin a {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -223,7 +225,7 @@ a {
 }
 
 .info-producto img,
-p {
+.info-producto p {
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -355,8 +357,8 @@ aside {
     }
 
     .info-admin ul,
-    li,
-    a {
+    .info-admins li,
+    .info-admin a {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
