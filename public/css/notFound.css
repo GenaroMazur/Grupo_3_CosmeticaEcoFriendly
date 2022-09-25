@@ -5,12 +5,15 @@
     text-align: center;
     background: antiquewhite;
     border-radius: 5px;
-    margin-top: 5vw;
 }
+.error {
+    margin: 40px;
+}
+
 .boton {
     margin: 40px;
 }
-a.button {
+.button{
     background-color: #889b65;
     text-decoration: none;
     padding: 8px 18px;
@@ -31,6 +34,10 @@ a.button {
     align-self: center;
 }
 
-img.img {
+.img {
     width: 100%;
+}
+
+.msj {
+    margin-top: 40px;
 }
