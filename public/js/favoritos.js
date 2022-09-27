@@ -1,23 +1,16 @@
-let menos = document.querySelector("i.fa-solid.fa-minus");
-let mas =  document.querySelector("i.fa-solid.fa-plus");
-let cantidad =  document.querySelector("#numero");
+let menos = document.querySelectorAll("i.fa-solid.fa-minus");
+let mas =  document.querySelectorAll("i.fa-solid.fa-plus");
+let cantidad =  document.querySelectorAll("#numero");
 
-let cantidadProductos = 0;
+mas.forEach((element,index)=>{
+    cantidad[index].value=0
 
-mas.addEventListener("click", ()=>{
-    cantidadProductos++;
-    if(cantidadProductos >= 100)
-    {
-        cantidadProductos = 100;
-    }
-    cantidad.value = cantidadProductos;
-});
-
-menos.addEventListener("click", ()=>{
-    cantidadProductos--;
-    if(cantidadProductos <= 0)
-    {
-        cantidadProductos = 0;
-    }
-    cantidad.value = cantidadProductos;
+    mas[index].addEventListener("click",()=>{
+        cantidad[index].value<100? cantidad[index].value++:"" ;
+    }) 
+    
+    menos[index].addEventListener("click",()=>{
+        cantidad[index].value>0? cantidad[index].value--:"" ;
+    })
 })
+
