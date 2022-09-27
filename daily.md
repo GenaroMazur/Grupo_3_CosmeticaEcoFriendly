@@ -291,3 +291,27 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 
 ### Jeremías Palacios:
 - Estuve tratando de estar al día con las clases y los micro desafíos, ayudé en los estilos de css de login y home y a lo último, ayudé a Leandro con las validaciones. Como inconvenientes que tuve son pequeños ajones y problemas con la computadora asi que, lo que voy a hacer será ayudar en lo que se necesite para llegar al final, arreglar header y ajustar la estética del detalle del producto.
+
+
+## Daily 19/09
+
+### Fabricio Saucedo:
+- Me encargué de instalar React y configurando el dashboard de la página, encargándome también de crear los componentes del mismo. Lo que tuve si, son problemas de tiempo.
+
+
+### Genaro Mazur:
+- 
+
+
+### Camila Morand:
+-  Hice el maquetado de favoritos, el diseño de css y estoy arreglando la medias queries del home  y el cuadro de contacto. Al momento no tuve complicaciones además del tiempo y lo que quiero realizar es ir arreglando algunos detalles de las vistas.
+
+
+
+### Leandro Joel Ramos:
+- 
+
+
+
+### Jeremías Palacios:
+- 
