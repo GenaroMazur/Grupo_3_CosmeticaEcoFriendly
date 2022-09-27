@@ -14,6 +14,7 @@
                         <tr class="subtitulos">
                             <th class="subtitulo-favoritos">Producto</th>
                             <th class="subtitulo-favoritos">Stock</th>
+                            <th class="subtitulo-favoritos">Cantidad</th>
                             <th class="subtitulo-favoritos">Precio</th>
                             <th class="subtitulo-favoritos">Agregar al carrito</th>
                         </tr>
@@ -31,6 +32,9 @@
                                     <div class="style-name">
                                     <p><%= product.nameProduct %></p>
                                     <div> disponible </div>
+                                    <i class="fa-solid fa-plus"></i>
+                                    <input type="number" min="0" max="100" placeholder="1" id="numero">
+                                    <i class="fa-solid fa-minus"></i>
                                     <small class="price"><%= product.price %>$</small>
                                      <div class="boton-compra">
                                     <button type="button" class="buton">Agregar al carrito</button>

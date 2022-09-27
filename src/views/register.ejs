@@ -111,8 +111,7 @@
                                     <% if (locals.errors && old.userEmail) { %>
                                         value=<%= old.userEmail %>
                                     <% } %>>
-                                    <p class="formulario__input-error">El correo solo puede contener letras, numeros,
-                                        puntos, guiones y guion bajo.</p>
+                                    <p class="formulario__input-error">El correo solo permite letras,números,puntos,guion y guion bajo.</p>
                                     <% if ( locals.errors && errors.userEmail) { %>
                                         <p class="alerta">
                                             <%= errors.userEmail.msg %>

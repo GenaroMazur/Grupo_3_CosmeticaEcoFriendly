@@ -68,7 +68,7 @@ body {
 td input {
     padding: 5px;
     background-color: #fff7e7;
-    width: 40px;
+    width: 56px;
     border: 1px solid #a79776;
     height: 30px;
     margin-top: 2px;
@@ -187,8 +187,7 @@ th:last-child {
     }
 
     .td-favoritos img {
-        /* width: 15%; */
-        /* border-radius: 25px; */
+        width: 8vw;
         margin-right: 15px;
         height: 130px;
     }

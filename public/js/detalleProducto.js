@@ -1,6 +1,6 @@
 let menos = document.querySelector("i.fa-solid.fa-minus");
 let mas =  document.querySelector("i.fa-solid.fa-plus");
-let cantidad =  document.querySelector("#numero");
+let cantidad =  document.querySelector("#input_product");
 
 let cantidadProductos = 0;
 
@@ -11,6 +11,7 @@ mas.addEventListener("click", ()=>{
         cantidadProductos = 100;
     }
     cantidad.value = cantidadProductos;
+    console.log(cantidadProductos);
 });
 
 menos.addEventListener("click", ()=>{
@@ -20,4 +21,5 @@ menos.addEventListener("click", ()=>{
         cantidadProductos = 0;
     }
     cantidad.value = cantidadProductos;
+    console.log(cantidadProductos);
 })
