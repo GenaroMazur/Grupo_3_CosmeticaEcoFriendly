@@ -187,8 +187,7 @@ th:last-child {
     }
 
     .td-favoritos img {
-        /* width: 15%; */
-        /* border-radius: 25px; */
+        width: 8vw;
         margin-right: 15px;
         height: 130px;
     }
