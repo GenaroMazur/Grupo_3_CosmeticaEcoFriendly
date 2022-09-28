@@ -1,5 +1,6 @@
 import React from "react";
 import ProductsInDb from "../ProductsInDb/ProductsInDb";
+import LastProductInDb from "../LastProductInDb/LastProductInDb";
 
 function ContentRowTop() {
 
@@ -43,14 +44,14 @@ function ContentRowTop() {
 
             
             {/* <!-- Content Row Last Product in Data Base --> */}
-            {/* <div className="row">*/}
+            <div className="row">
                 {/* <!-- Last Product in DB --> */}
-                {/*<LastProductInDb />*/}
-                {/* <!-- End content row last movie in Data Base --> */}
+                <LastProductInDb />
+                {/* <!-- End content row last Product in Data Base --> */}
 
                 {/* <!-- Categories in DB --> */}
                 {/*<CategoriesInDb />*/}
-            {/*</div>*/}
+            </div>
         </div>
     )
 }
