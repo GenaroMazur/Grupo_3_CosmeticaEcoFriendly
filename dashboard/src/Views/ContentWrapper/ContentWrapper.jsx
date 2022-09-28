@@ -2,7 +2,7 @@ import React from "react";
 import * as Request from "../../utils/Request"
 import ContentRowTop from "../../Components/ContentRowTop/ContentRowTop";
 import Footer from "../../Components/Footer/Footer";
-import Topbar from "../../Components/Topbar/Topbar";
+
 import Stats from "../../Components/stats/Stats";
 import Table from "../../Components/Table/Table";
 
@@ -25,7 +25,6 @@ class ContentWrapper extends React.Component {
     render() {
         return(
             <div>
-                <Topbar/>
                 <ContentRowTop/>
     
                 <Stats request="products"/>
