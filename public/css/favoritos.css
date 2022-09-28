@@ -31,6 +31,10 @@ body {
     align-items: center;
 }
 
+img {
+    width: 100%;
+}
+
 .subtitulo-favoritos {
     /* text-align: left; */
     /* padding: 2px; */
@@ -145,11 +149,13 @@ th:last-child {
     background: var(--background);
     transform: scale(var(--scale, 1));
     transition: transform 0.4s cubic-bezier(0.36, 1.01, 0.32, 1.27);
-    }
-    .button:active {
+}
+
+.button:active {
     --scale: 0.95;
-    }
-    .button span {
+}
+
+.button span {
     font-size: 14px;
     font-weight: 500;
     display: block;
@@ -159,8 +165,10 @@ th:last-child {
     line-height: 26px;
     transform: translateY(var(--span-y, 0));
     transition: transform 0.7s ease;
-    }
-    .button span:before, .button span:after {
+}
+
+.button span:before,
+.button span:after {
     content: '';
     width: var(--w, 2px);
     height: var(--h, 14px);
@@ -171,26 +179,31 @@ th:last-child {
     background: currentColor;
     transform: scale(0.75) rotate(var(--icon-r, 0deg)) translateY(var(--icon-y, 0));
     transition: transform 0.65s ease 0.05s;
-    }
-    .button span:after {
+}
+
+.button span:after {
     --w: 14px;
     --h: 2px;
     --l: 2px;
     --t: 12px;
-    }
-    .button .cart {
+}
+
+.button .cart {
     position: absolute;
     left: 50%;
     top: 50%;
     margin: -13px 0 0 -18px;
     transform-origin: 12px 23px;
     transform: translateX(-120px) rotate(-18deg);
-    }
-    .button .cart:before, .button .cart:after {
+}
+
+.button .cart:before,
+.button .cart:after {
     content: '';
     position: absolute;
-    }
-    .button .cart:before {
+}
+
+.button .cart:before {
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -198,8 +211,9 @@ th:last-child {
     bottom: 0;
     left: 9px;
     filter: drop-shadow(11px 0 0 var(--cart));
-    }
-    .button .cart:after {
+}
+
+.button .cart:after {
     width: 16px;
     height: 9px;
     background: var(--cart);
@@ -208,8 +222,9 @@ th:last-child {
     transform-origin: 50% 100%;
     transform: perspective(4px) rotateX(-6deg) scaleY(var(--fill, 0));
     transition: transform 1.2s ease var(--fill-d);
-    }
-    .button .cart svg {
+}
+
+.button .cart svg {
     z-index: 1;
     width: 36px;
     height: 26px;
@@ -220,14 +235,16 @@ th:last-child {
     stroke-width: 2px;
     stroke-linecap: round;
     stroke-linejoin: round;
-    }
-    .button .cart svg polyline:last-child {
+}
+
+.button .cart svg polyline:last-child {
     stroke: var(--tick);
     stroke-dasharray: 10px;
     stroke-dashoffset: var(--offset, 10px);
     transition: stroke-dashoffset 0.4s ease var(--offset-d);
-    }
-    .button.loading {
+}
+
+.button.loading {
     --scale: 0.95;
     --span-y: -32px;
     --icon-r: 180deg;
@@ -235,43 +252,60 @@ th:last-child {
     --fill-d: 0.8s;
     --offset: 0;
     --offset-d: 1.73s;
-    }
-    .button.loading .cart {
+}
+
+.button.loading .cart {
     animation: cart 3.4s linear forwards 0.2s;
-    }
-    @keyframes cart {
+}
+
+@keyframes cart {
     12.5% {
-    transform: translateX(-60px) rotate(-18deg);
+        transform: translateX(-60px) rotate(-18deg);
     }
-    25%, 45%, 55%, 75% {
-    transform: none;
+
+    25%,
+    45%,
+    55%,
+    75% {
+        transform: none;
     }
+
     50% {
-    transform: scale(0.9);
+        transform: scale(0.9);
     }
-    44%, 56% {
-    transform-origin: 12px 23px;
+
+    44%,
+    56% {
+        transform-origin: 12px 23px;
     }
-    45%, 55% {
-    transform-origin: 50% 50%;
+
+    45%,
+    55% {
+        transform-origin: 50% 50%;
     }
+
     87.5% {
-    transform: translateX(70px) rotate(-18deg);
+        transform: translateX(70px) rotate(-18deg);
     }
+
     100% {
-    transform: translateX(140px) rotate(-18deg);
+        transform: translateX(140px) rotate(-18deg);
     }
-    }
-    html {
+}
+
+html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
-    }
-    * {
+}
+
+* {
     box-sizing: inherit;
-    }
-    *:before, *:after {
+}
+
+*:before,
+*:after {
     box-sizing: inherit;
-    }
+}
 
 .title {
     color: var(--e-global-color-text);
