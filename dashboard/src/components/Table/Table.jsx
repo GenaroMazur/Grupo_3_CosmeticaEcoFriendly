@@ -1,9 +1,11 @@
 import React from "react";
 import Row from "./Subcomponents/Row";
-
+import {useEffect} from "react"
 
 
 function Table(props) {
+    useEffect(()=>{
+    },[props])
     return (
         <div>
             <h3>Lista de Productos </h3>
@@ -19,9 +21,9 @@ function Table(props) {
                 </tr>
             </thead>
             <tbody>
-                {
-                    props.data?.map((element, i) => <Row key={element.title + i} rowData={element} />)
-                }
+                
+                    {props.data[0]?.map((element, i) => <Row key={element.nameProduct + i} rowData={element} />)}
+                
             </tbody>
 
         </table>

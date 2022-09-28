@@ -1,41 +1,33 @@
 import React from "react";
-import * as Request from "../../utils/Request"
+import {get} from "../../utils/Request"
 import ContentRowTop from "../../Components/ContentRowTop/ContentRowTop";
 import Footer from "../../Components/Footer/Footer";
-
-import Stats from "../../Components/stats/Stats";
+import { useEffect, useState} from "react"
 import Table from "../../Components/Table/Table";
 
 
-class ContentWrapper extends React.Component {
+function ContentWrapper(){
 
-    constructor() {
-        super();
-        this.state = {
-            products: []
-        }
-    }
+    const [products, setProducts] = useState([])
+    useEffect(()=>{
+        get("http://localhost:8080/api/products")
+        .then(data=>{
+            console.log(data);
+            setProducts([data.products])
+        })
+    },[])
 
-    // acá hago el fetch pero no funciona. Lo que quiero hacer es que en el componente Table se coloquen la lista de productos
-    async componentDidMount() {
-        const response = await Request.get("http://localhost:8080/api/products")
-        this.setState({products: response.data})
-    }
+    useEffect(()=>{},[products])
     
-    render() {
         return(
             <div>
                 <ContentRowTop/>
     
-                <Stats request="products"/>
-                <Stats request="users"/>
-    
-                <Table data={this.state.products}/>
+                <Table data={products}/>
     
                 <Footer/>
             </div >
         )
-    }
     
 }
 

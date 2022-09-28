@@ -1,29 +1,60 @@
 import React from "react";
+import {useEffect, useState} from "react"
 import ProductsInDb from "../ProductsInDb/ProductsInDb";
 import LastProductInDb from "../LastProductInDb/LastProductInDb";
+import {get} from "./../../utils/Request"
+import CategoriesInDb from "../Categories/CategoriesInDb";
 
 function ContentRowTop() {
+    const [products, setProducts] = useState();
+    const [categories, setCategories] = useState([])
+    const [requestData, setRequestData] = useState([]);
+    const [lastProduct, setLastProduct] = useState({});
+    useEffect(()=>{
+        const products = get("http://localhost:8080/api/products")
+        const users = get("http://localhost:8080/api/users")
+        Promise.all([products, users])
+        .then(([products, users])=>{
 
-    const productsData = [
-        {
-            title: 'Products in Data Base',
-            borderColor: 'border-left-primary',
-            value: 10,
-            icon: 'fa-film',
-        },
-        {
-            title: 'Total categories',
-            borderColor: 'border-left-success',
-            value: 4,
-            icon: 'fa-award',
-        },
-        {
-            title: 'Users quantity',
-            borderColor: 'border-left-warning',
-            value: 3,
-            icon: 'fa-user',
+            let categoryLength =  Object.entries(products.countByCategory).length
+            let usersQuantity={
+                title : "Users quantity",
+                borderColor: "border-left-warning",
+                value: users.count,
+                icon: "fa-user"
+            }
+            let productsQuantity={
+                title: 'Products in Data Base',
+                borderColor: 'border-left-primary',
+                value: products.count,
+                icon: 'fa-film',
+            }
+            let categoriesQuantity={
+                title: 'Total categories',
+                borderColor: 'border-left-success',
+                value:categoryLength,
+                icon: 'fa-award',
+            }
+            setCategories(products.countByCategory)
+            setProducts([products.products])
+            setRequestData( [usersQuantity, productsQuantity, categoriesQuantity]   )
+            let ultimo = products.products.pop();
+            return get("http://"+ultimo.detail)
+        }).then(last=>{
+            setLastProduct(last)
+        })
+    },[])
+
+    useEffect(()=>{
+
+    },[requestData, lastProduct, products, categories])
+
+    useEffect(()=>{
+        return function(){
+            requestData = undefined;
+            setRequestData = undefined;
         }
-    ]
+    },[])
 
     return (
         <div className="container-fluid">
@@ -34,7 +65,7 @@ function ContentRowTop() {
             {/* <!-- Content Row Products--> */}
             <div className="row">
                 {
-                    productsData.map(function (element, i) {
+                    requestData.map(function (element, i) {
                         return <ProductsInDb key={element.title + i} data={element} />
                     }
                     )
@@ -46,11 +77,11 @@ function ContentRowTop() {
             {/* <!-- Content Row Last Product in Data Base --> */}
             <div className="row">
                 {/* <!-- Last Product in DB --> */}
-                <LastProductInDb />
+                <LastProductInDb lastProduct = {lastProduct}/>
                 {/* <!-- End content row last Product in Data Base --> */}
 
                 {/* <!-- Categories in DB --> */}
-                {/*<CategoriesInDb />*/}
+                <CategoriesInDb categories = {categories}/>
             </div>
         </div>
     )
