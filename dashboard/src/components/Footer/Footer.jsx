@@ -1,4 +1,6 @@
 import React from "react";
+import iconImage from "../../Assets/images/la_vie_icon.png"
+import "../../Assets/css/app.css"
 
 function Footer() {
     return (
@@ -14,7 +16,7 @@ function Footer() {
                 </div>
             </div>
             <div className="logo-footer">
-                <img src="./../../img/lavie_images/la_vie_icon.png" alt="logo" class="icon-footer"/>
+                <img style={{ width: "3rem" }}src={iconImage} alt="logo" className="icon-footer"/>
             </div>
             <div className="legal-footer">
                 <div>
@@ -44,11 +46,11 @@ function Footer() {
                     <div>
                         <h4>Redes Sociales</h4>
                     </div>
-                    <div class="redes-sociales">
+                    <div className="redes-sociales">
                         <div className="wpp-icon">
                             <ion-icon name="logo-whatsapp"></ion-icon>
                         </div>
-                        <div class="ig-icon">
+                        <div className="ig-icon">
                             <ion-icon name="logo-instagram"></ion-icon>
                         </div>
                     </div>

@@ -74,8 +74,7 @@ function actualizarManual(){
     return (
         <div>
             {/* esto lo deje asi para que entiendan que funciona la base de datos y 
-            los pedidos...
-            ahora hagan lo que quieran */}
+            los pedidos... */}
             {count !== 0? 
                 <div>
                     <p>{count}</p>
