@@ -23,3 +23,10 @@ menos.addEventListener("click", ()=>{
     cantidad.value = cantidadProductos;
     console.log(cantidadProductos);
 })
+//guardar producto
+
+let corazon = document.querySelector("i.fa-regular.fa-heart");
+
+corazon.addEventListener("click", function () {
+ corazon.style.color = "hotpink";
+});

@@ -93,10 +93,7 @@ input#input_product {
 
 #favorito-icon {
     color: #9e855a;
-}
-
-#favorito-icon:hover {
-    color: palevioletred;
+    font-size: 26px;
 }
 
 .precio-cantidad-tipo {
