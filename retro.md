@@ -141,3 +141,17 @@ Viendo los avances como grupo y consolidándonos cada vez más, mantuvimos nueva
 
 ### Stop Doing: 
 - Parar de priorizar otras cosas dejando de lado el proyecto.
+
+## Sprint-7-Restrospectiva
+
+### Start Doing: 
+- Creemos que en este último tramo ya solo queda comenzar a disfrutar de todo lo aprendido como equipo...
+
+### More of:
+- Con el correr de los sprints, siempre se recalcó que debería de haber más salidas grupales para desestresarse y disfrutar como amigos, así que lo recalcamos de nuevo.
+
+### Keep Doing: 
+- Mantener la unión que venimos puliendo estos meses y seguir aconsejándonos y apoyándonos unos a otros.
+
+### Less of and Stop Doing
+- Una de las cosas importantes es dejar de pensar que uno no sabe nada, o parar de pensar cosas negativas de uno. Cada quien tiene sus fortalezas, se complementa con el otro y siempre puede pedir ayuda a los demás.
