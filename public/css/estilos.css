@@ -203,7 +203,6 @@ header {
 /* <FOOTER> */
 footer {
     background-color: #cdbd9d;
-    display: none;
     flex-direction: column;
     justify-content: space-between;
     margin: 2rem;
