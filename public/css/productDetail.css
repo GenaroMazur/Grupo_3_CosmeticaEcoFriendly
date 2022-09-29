@@ -263,7 +263,9 @@ aside a {
     margin: 3%;
 
 }
-
+.añadir{
+    cursor: pointer;
+}
 .producto-nuevo {
     background-color: #fce4d4;
     margin: 1%;

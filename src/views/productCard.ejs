@@ -2,62 +2,84 @@
 <html lang="en">
 <title>La Vie Naturelle - carrito</title>
 <%- include('./partials/head') %>
-<link rel="stylesheet" href="/css/productCart.css">
+    <link rel="stylesheet" href="/css/productCart.css">
 
     <body>
         <%- include('./partials/header') %>
             <main class="main-carrito">
-                <article class="article-carrito">
+                <article class="article-carrito" id="checkoutCart">
                     <table class="tabla-carrito">
                         <tr class="subtitulos">
-                            <th class="subtitulo-carrito">Producto</th>
-                            <th class="subtitulo-carrito">Cantidad</th>
-                            <th class="subtitulo-carrito">Precio</th>
+                            <th class="subtitulo-carrito">
+                                <strong>Producto</strong> 
+                            </th>
+                            <th class="subtitulo-carrito">
+                                <strong>Precio</strong> 
+                            </th>
+                            <th class="subtitulo-carrito">
+                                <strong>Cantidad</strong> 
+                            </th>
+                            <th class="subtitulo-carrito">
+                                <strong>Subtotal</strong> 
+                            </th>
+                            <th class="subtitulo-carrito">
+                                <strong>Eliminar</strong> 
+                            </th>
                         </tr>
-                        <% if (locals.products) { %>
-                            <% products.forEach(product=>{ %>
-        
-                        <tr>
-                            <td class="td-carrito">
-                                <div class="card-info">
-                                    <img src="./../img/products_images/<%= product.Image %>" alt="LaVieNaturelle">
-                                    <div class="style-name">
-                                        <p><%= product.namePorduct %></p>
-                                        <small class="price">Precio:<%= product.price %></small>
-                                        <a href="#"><ion-icon name="close-outline"></ion-icon>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td-carrito"><span></span>id="input-carrito"></td>
-                            <td class="td-carrito">$599.99</td>
-                        </tr>
-                        <% }) %> 
-                    <% } %>
-                        
-                    </table>
+                        <tbody class="cartRows">
 
+                        </tbody>
+                    </table>
+                    
                     <div class="total-carrito">
                         <table>
                             <tr>
                                 <td>subtotal</td>
-                                <td>$599.99</td>
+                                <td class="subtotal-sin-env">$ 0</td>
                             </tr>
                             <tr>
                                 <td>Envío</td>
-                                <td>$500</td>
+                                <td class="costo-envio">$ 0</td>
                             </tr>
                             <tr>
                                 <td>Total</td>
-                                <td>$1099.99</td>
+                                <td class="precio-final">$ 0</td>
                             </tr>
+                            <br>
+                            <div class="row" id="pagoEnvio">
+                                <div class=" col-md-6 mb-4">
+                                    <label for="country">Tipo Envio</label>
+                                    <select class="custom-select d-block w-100" id="shippingMethod"
+                                        name=" shippingMethod" required="">
+                                        <option value="">Elegir...</option>
+                                        <option value="Correo">Correo Argentino</option>
+                                        <option value="Andreani">Andreani</option>
+                                        <option value="DHL">Retiro en sucursal</option>
+                                    </select>
+                                </div>
+                                <div class=" col-md-6 mb-4">
+                                    <label for="country" class="tipo-pago">Pago</label>
+                                    <select class="custom-select d-block w-100" id="paymentMethod" name="paymentMethod"
+                                        required="">
+                                        <option value="">Elegir...</option>
+                                        <option value="Efectivo">Efectivo</option>
+                                        <option value="Débito">Tarjeta Débito</option>
+                                        <option value="Crédito">Tarjeta Crédito</option>
+                                    </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </table>
                     </div>
                     <div class="boton-compra">
-                        <button type="button" class="boton">Proceder al pago</button>
+                        <button type="button" class="boton boton-pagar">Proceder al pago</button>
                     </div>
                 </article>
             </main>
             <%- include('./partials/footer') %>
+                <script src="/js/cart.js"></script>
     </body>
 
 </html>

@@ -15,7 +15,7 @@
                         </div>
                         <div class="precio-cantidad-tipo">
                             <div class="fav">
-                                <i class="fa-regular fa-heart" ></i>
+                                <i class="fa-regular fa-heart"></i>
                             </div>
                             <h2 class="name">
                                 <%= product.nameProduct%>
@@ -47,14 +47,15 @@
                                             </select>
                                         </div>
                             </div>
-                            <div class="carrito-index">
-                                <p>Añadir al carrito</p>
+                            <div class="carrito-index añadir">
+                                <p class="agregar-carrito" data-id="<%= product.id %>">
+                                    Añadir al carrito
+                                </p>
+                                    
                             </div>
-                            <form action="/product/addCart/<%= product.id %>" method="post">
-                                <button class="carrito-index">
-                                    <p>Añadir al carrito</p>
-                                </button>
-                            </form>
+                            <div class="carrito-index">
+                                <a href="/product/catalogoproductos">Seguir comprando</a>
+                            </div>
                         </div>
                     </div>
                     <!--bloque 2-->
@@ -113,7 +114,7 @@
                 </aside>
             </main>
             <%- include('./partials/footer') %>
-            <script src="\js\detalleProducto.js"></script>
+                <script src="\js\detalleProducto.js"></script>
     </body>
 
 </html>

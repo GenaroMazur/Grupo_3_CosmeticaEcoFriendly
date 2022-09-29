@@ -162,6 +162,17 @@ header {
 .cart {
     font-size: 22px;
     color: black;
+    position: relative;
+}
+
+.cart-number {
+    position: absolute;
+    padding: 2px 4px 1px 4px;
+    background-color: #6b6147;
+    border-radius: 100%;
+    font-size: 13px;
+    top: -10px;
+    right: -10px;
 }
 
 /* NAV-UL */
