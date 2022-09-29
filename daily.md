@@ -296,11 +296,18 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 ## Daily 19/09
 
 ### Fabricio Saucedo:
-- Me encargué de instalar React y configurando el dashboard de la página, encargándome también de crear los componentes del mismo. Lo que tuve si, son problemas de tiempo.
+- Me encargué de instalar React y configurando el dashboard de la página, encargándome también de crear los componentes del mismo. Lo que tuve si, son problemas de tiempo asi que me dedicaré a terminar de hacer los componentes que quedaron pendientes.
 
 
 ### Genaro Mazur:
-- 
+- Que hice:
+- Exporté la base de datos a un servidor externo.
+- Comando para ejecutar el dashboard y el proyecto a la vez.
+- Generé la comunicación del dashboard a nuestra API.
+- Clarifiqué algunas partes de la sintaxis.
+- Como inconvenientes: no pude ayudar al grupo para que el carrito sea funcional.
+- Lo que pienso hacer es practicar para el día de presentación.
+
 
 
 ### Camila Morand:
@@ -309,9 +316,9 @@ Hemos hecho varias reuniones tipo dailys a lo largo de este trayecto, siendo los
 
 
 ### Leandro Joel Ramos:
-- 
+- Ayudé en la vista favoritos y reparé el register para que se vea bien en celulares. No presenté inconvenientes entonces seguiré puliendo la vista de favoritos, ayudaré en el header y en detalle del producto.
 
 
 
 ### Jeremías Palacios:
-- 
+- Me encargué de hacer una remake del header haciéndolo responsivo. Como complicaciones que tuve fueron temas de salud y falta de tiempo así que en adelante revisaré la estética de las páginas y hacer funcional el carrito de compras.
