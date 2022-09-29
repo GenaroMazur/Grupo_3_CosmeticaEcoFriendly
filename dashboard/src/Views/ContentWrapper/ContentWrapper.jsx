@@ -1,9 +1,9 @@
 import React from "react";
 import {get} from "../../utils/Request"
-import ContentRowTop from "../../Components/ContentRowTop/ContentRowTop";
-import Footer from "../../Components/Footer/Footer";
+import ContentRowTop from "../../components/ContentRowTop/ContentRowTop";
+import Footer from "../../components/Footer/Footer";
 import { useEffect, useState} from "react"
-import Table from "../../Components/Table/Table";
+import Table from "../../components/Table/Table";
 
 
 function ContentWrapper(){

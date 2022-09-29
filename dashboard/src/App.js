@@ -1,8 +1,8 @@
 import '../src/Assets/css/app.css';
 
 import ContentWrapper from "./Views/ContentWrapper/ContentWrapper"
-import Sidebar from './Components/Sidebar/Sidebar';
-import Error404 from './Components/Error404/Error404';
+import Sidebar from './components/Sidebar/Sidebar';
+import Error404 from './components/Error404/Error404';
 import { Routes, Route } from "react-router-dom";
 
 
