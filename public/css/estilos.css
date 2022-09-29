@@ -202,10 +202,11 @@ header {
 /* </HEADER> */
 /* <FOOTER> */
 footer {
-    background-color: #cdbd9d;
-    flex-direction: column;
+
+    background-color: #b39e75;
     justify-content: space-between;
-    margin: 2rem;
+    padding: 4rem 1rem;
+    align-items: center
 }
 
 footer a {
@@ -366,6 +367,14 @@ footer a {
 }
 
 @media (min-width: 900px) {
+    footer {
+        display: flex;
+        background-color: #b39e75;
+        justify-content: space-between;
+        padding: 4rem 1rem;
+        align-items: center
+    }
+
     header {
         justify-content: end;
     }
